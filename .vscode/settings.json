@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Code For a Cause Game Jam 2025.sln"
+    "dotnet.defaultSolution": "Code-For-A-Cause-Game-Jam-2025.sln"
 }
