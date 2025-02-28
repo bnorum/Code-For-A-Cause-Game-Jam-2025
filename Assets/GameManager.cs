@@ -18,11 +18,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         turnText.text = "Turn: " + turn;
-        currentPlayerText.text = $"Player: {players[currentPlayerIndex].name}, make your move!";
+        currentPlayerText.text = $"Player: {players[currentPlayerIndex]}, make your move!";
+        foreach(var player in players)
+        {
+            player.transform.position = FindFirstObjectByType<BoardTiles>().tiles[0].transform.position;
+        }
     }
     void Update()
     {
-        while(currentPlayerIndex < players.Count)
+        while(currentPlayerIndex <= players.Count)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {

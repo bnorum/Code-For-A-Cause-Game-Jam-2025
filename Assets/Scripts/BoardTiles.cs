@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class BoardTiles : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> tiles;
+    public List<GameObject> tiles;
     private int playerIndex = 0;
     public float cooldown = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,8 +28,8 @@ public class BoardTiles : MonoBehaviour
     }
 
     private void MovePlayer(GameObject player)
-    {
-        Debug.Log("trying to move");
+    {   
+        player.GetComponent<Player>().tile = playerIndex;
         playerIndex = (playerIndex + 1) % tiles.Count;
         StartCoroutine(LerpPosition(player.transform, tiles[playerIndex].transform.position, cooldown));
     }
