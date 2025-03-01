@@ -54,7 +54,10 @@ public class BoardTiles : MonoBehaviour
         }
     }
 
+    public void TryAttackPlayer(GameObject p) {
 
+        // Implement attack logic here
+    }
 
     public GameObject GetTileAt(int x, int y) //wrapped y is confusion but it just circles around to other side of the board.
     {

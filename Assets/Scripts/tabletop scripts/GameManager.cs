@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     private void CurrentPlayerAttack(Vector2Int direction)
     {
-        board.tryAttackPlayer(players[currentPlayerIndex]);
+        board.TryAttackPlayer(players[currentPlayerIndex]);
     }
 
     public void MoveCurrentPlayer(Vector2Int direction)
