@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,13 +9,15 @@ public class GameManager : MonoBehaviour
     public int turn = 1;
     private bool hasRolledDice = false;
     private int movesThisTurn = 0;
+
     [Header("UI")]
     public TextMeshProUGUI turnText;
     public TextMeshProUGUI currentPlayerText;
     public TextMeshProUGUI rollText;
     public TextMeshProUGUI remainingSteps;
+    
     private BoardTiles board;
-
+    private float moveCooldown = 0;
 
     void Start()
     {
@@ -36,7 +37,6 @@ public class GameManager : MonoBehaviour
             player.transform.position = position;
         }
     }
-    private float moveCooldown;
 
     void Update() 
     {
@@ -48,9 +48,10 @@ public class GameManager : MonoBehaviour
                 movesThisTurn = Random.Range(1, 7);
                 currentPlayerText.text = $"Player {currentPlayerIndex + 1}, Move Your Character!";
                 rollText.text = $"Rolled a {movesThisTurn}!";
+                remainingSteps.text = $"Remaining Steps: {movesThisTurn}";
             }  
         }
-        else if(movesThisTurn > 0)
+        else if (movesThisTurn > 0)
         {
             if (moveCooldown > 0)
             {
@@ -58,54 +59,59 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                MoveCurrentPlayer(Vector2Int.down);
-                moveCooldown = board.moveSpeed;
-                movesThisTurn--;
-            }
-
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 MoveCurrentPlayer(Vector2Int.up);
-                moveCooldown = board.moveSpeed;
-                movesThisTurn--;
             }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 MoveCurrentPlayer(Vector2Int.left);
-                moveCooldown = board.moveSpeed;
-                movesThisTurn--;
             }
-
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 MoveCurrentPlayer(Vector2Int.right);
-                moveCooldown = board.moveSpeed;
-                movesThisTurn--;
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Attack();
             }
         }
+    }
+
+    private void Attack()
+    {
+        //
     }
 
     public void MoveCurrentPlayer(Vector2Int direction)
     {
         board.TryMovePlayer(players[currentPlayerIndex], direction);
-        if(movesThisTurn == 0)
+        movesThisTurn--;
+
+        remainingSteps.text = $"Remaining Steps: {movesThisTurn}";
+        moveCooldown = board.moveSpeed;
+
+        if (movesThisTurn <= 0)
         {
-            currentPlayerIndex++;
+            EndTurn();
         }
+    }
+
+    private void EndTurn()
+    {
+        currentPlayerIndex++;
+
         if (currentPlayerIndex >= players.Count)
         {
             currentPlayerIndex = 0;
             turn++;
-            hasRolledDice = false;
-            movesThisTurn = 0;
             turnText.text = "Turn: " + turn;
-            rollText.text = "";
         }
 
-        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, make your move>:()";
+        hasRolledDice = false;
+        movesThisTurn = 0;
+        rollText.text = "";
+        remainingSteps.text = "";
+        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, Roll Your Dice!";
     }
-
 }
