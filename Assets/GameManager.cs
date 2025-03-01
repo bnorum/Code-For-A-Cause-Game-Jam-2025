@@ -71,16 +71,33 @@ public class GameManager : MonoBehaviour
             {
                 MoveCurrentPlayer(Vector2Int.right);
             }
-            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                Attack();
+                MoveCurrentPlayer(Vector2Int.down);
             }
+            else if (Input.GetKeyDown(KeyCode.W))
+            {
+                CurrentPlayerAttack(Vector2Int.up);
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                CurrentPlayerAttack(Vector2Int.left);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                CurrentPlayerAttack(Vector2Int.right);
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                CurrentPlayerAttack(Vector2Int.down);
+            }
+
         }
     }
 
-    private void Attack()
+    private void CurrentPlayerAttack(Vector2Int direction)
     {
-        //
+        board.tryAttackPlayer(players[currentPlayerIndex]);
     }
 
     public void MoveCurrentPlayer(Vector2Int direction)
