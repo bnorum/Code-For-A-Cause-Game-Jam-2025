@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
             {
                 hasRolledDice = true;
                 movesThisTurn = Random.Range(1, 7);
+                currentPlayerText.text = $"Player {currentPlayerIndex + 1}, Move Your Character!";
                 rollText.text = $"Rolled a {movesThisTurn}!";
             }  
         }
@@ -83,8 +84,10 @@ public class GameManager : MonoBehaviour
     public void MoveCurrentPlayer(Vector2Int direction)
     {
         board.TryMovePlayer(players[currentPlayerIndex], direction);
-        currentPlayerIndex++;
-
+        if(movesThisTurn == 0)
+        {
+            currentPlayerIndex++;
+        }
         if (currentPlayerIndex >= players.Count)
         {
             currentPlayerIndex = 0;
@@ -92,6 +95,7 @@ public class GameManager : MonoBehaviour
             hasRolledDice = false;
             movesThisTurn = 0;
             turnText.text = "Turn: " + turn;
+            rollText.text = "";
         }
 
         currentPlayerText.text = $"Player {currentPlayerIndex + 1}, make your move>:()";
