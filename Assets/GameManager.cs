@@ -58,6 +58,13 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                MoveCurrentPlayer(Vector2Int.down);
+                moveCooldown = board.moveSpeed;
+                movesThisTurn--;
+            }
+
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 MoveCurrentPlayer(Vector2Int.up);
