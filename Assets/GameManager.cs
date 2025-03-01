@@ -14,32 +14,68 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI p1ScoreText;
     public TextMeshProUGUI p2ScoreText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private BoardTiles board;
+
     void Start()
     {
+        board = FindFirstObjectByType<BoardTiles>();
+
         turnText.text = "Turn: " + turn;
-        currentPlayerText.text = $"Player: {players[currentPlayerIndex]}, make your move!";
-        foreach(var player in players)
+        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, make your move";
+
+        // Place players on starting tile
+        foreach (var player in players)
         {
-            player.transform.position = FindFirstObjectByType<BoardTiles>().tiles[0].transform.position;
+            player.transform.position = board.GetTilePosition(1, 0);
+            player.GetComponent<Player>().tileX = 1;
+            player.GetComponent<Player>().tileY = 0;
+            var position = player.transform.position;
+            position.z -= 1f;
+            player.transform.position = position;
         }
     }
-    void Update()
+    private float moveCooldown;
+
+    void Update() 
     {
-        while(currentPlayerIndex <= players.Count)
+        if (moveCooldown > 0)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                FindFirstObjectByType<BoardTiles>().TryMovePlayer(players[currentPlayerIndex]);
-                currentPlayerIndex++;
-                if(currentPlayerIndex == players.Count)
-                {
-                    currentPlayerIndex = 0;
-                    turn++;
-                    turnText.text = "Turn: " + turn;
-                    break;
-                }
-            }
-        }  
+            moveCooldown -= Time.deltaTime;
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            MoveCurrentPlayer(Vector2Int.up);
+            moveCooldown = board.moveSpeed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            MoveCurrentPlayer(Vector2Int.left);
+            moveCooldown = board.moveSpeed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            MoveCurrentPlayer(Vector2Int.right);
+            moveCooldown = board.moveSpeed;
+        }
     }
+
+    public void MoveCurrentPlayer(Vector2Int direction)
+    {
+        board.TryMovePlayer(players[currentPlayerIndex], direction);
+        currentPlayerIndex++;
+
+        if (currentPlayerIndex >= players.Count)
+        {
+            currentPlayerIndex = 0;
+            turn++;
+            turnText.text = "Turn: " + turn;
+        }
+
+        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, make your move>:()";
+    }
+
 }

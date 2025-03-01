@@ -2,5 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int tile;
+    public int tileX;
+    public int tileY;
+
+
 }
