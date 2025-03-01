@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,21 +8,22 @@ public class GameManager : MonoBehaviour
     public List<GameObject> players;
     public int currentPlayerIndex = 0;
     public int turn = 1;
-
+    private bool hasRolledDice = false;
+    private int movesThisTurn = 0;
     [Header("UI")]
     public TextMeshProUGUI turnText;
     public TextMeshProUGUI currentPlayerText;
-    public TextMeshProUGUI p1ScoreText;
-    public TextMeshProUGUI p2ScoreText;
-
+    public TextMeshProUGUI rollText;
+    public TextMeshProUGUI remainingSteps;
     private BoardTiles board;
+
 
     void Start()
     {
         board = FindFirstObjectByType<BoardTiles>();
 
         turnText.text = "Turn: " + turn;
-        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, make your move";
+        currentPlayerText.text = $"Player {currentPlayerIndex + 1}, Roll Your Dice!";
 
         // Place players on starting tile
         foreach (var player in players)
@@ -38,28 +40,43 @@ public class GameManager : MonoBehaviour
 
     void Update() 
     {
-        if (moveCooldown > 0)
+        if (!hasRolledDice)
         {
-            moveCooldown -= Time.deltaTime;
-            return;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hasRolledDice = true;
+                movesThisTurn = Random.Range(1, 7);
+                rollText.text = $"Rolled a {movesThisTurn}!";
+            }  
         }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if(movesThisTurn > 0)
         {
-            MoveCurrentPlayer(Vector2Int.up);
-            moveCooldown = board.moveSpeed;
-        }
+            if (moveCooldown > 0)
+            {
+                moveCooldown -= Time.deltaTime;
+                return;
+            }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            MoveCurrentPlayer(Vector2Int.left);
-            moveCooldown = board.moveSpeed;
-        }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                MoveCurrentPlayer(Vector2Int.up);
+                moveCooldown = board.moveSpeed;
+                movesThisTurn--;
+            }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            MoveCurrentPlayer(Vector2Int.right);
-            moveCooldown = board.moveSpeed;
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                MoveCurrentPlayer(Vector2Int.left);
+                moveCooldown = board.moveSpeed;
+                movesThisTurn--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                MoveCurrentPlayer(Vector2Int.right);
+                moveCooldown = board.moveSpeed;
+                movesThisTurn--;
+            }
         }
     }
 
@@ -72,6 +89,8 @@ public class GameManager : MonoBehaviour
         {
             currentPlayerIndex = 0;
             turn++;
+            hasRolledDice = false;
+            movesThisTurn = 0;
             turnText.text = "Turn: " + turn;
         }
 
