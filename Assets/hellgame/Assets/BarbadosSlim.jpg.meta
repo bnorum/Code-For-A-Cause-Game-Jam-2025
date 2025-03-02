@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BarbadosSlim_0: 3226385883373346976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

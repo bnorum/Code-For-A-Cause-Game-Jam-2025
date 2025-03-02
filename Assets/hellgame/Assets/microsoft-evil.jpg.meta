@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      microsoft-evil_0: -5973138936350462648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
