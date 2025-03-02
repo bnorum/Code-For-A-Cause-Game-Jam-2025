@@ -22,6 +22,7 @@ public class EmailManager : MonoBehaviour
 
     public TMP_Dropdown dropdownMenu;
 
+    public AudioSource emailSound;
 
     private void Awake()
     {
@@ -53,12 +54,19 @@ public class EmailManager : MonoBehaviour
         {
             email.gameObject.SetActive(currentEmails.Contains(email));
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            AddEmail(emailSchemas[Random.Range(0, emailSchemas.Count)]);
+        }
     }
 
 
     public void AddEmail(EmailSchema emailSchema) {
+        emailSound.Play();
         GameObject newEmail = Instantiate(emailPrefab, transform);
         newEmail.transform.SetParent(emailContainer.transform, false);
+        newEmail.transform.SetSiblingIndex(0);
         Email email = newEmail.GetComponent<Email>();
         email.emailSchema = emailSchema;
         allEmails.Add(email);
