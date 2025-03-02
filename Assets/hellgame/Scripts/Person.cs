@@ -3,24 +3,22 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {   
-    // Person Variables
+    [Header("Person Vars")]
     private PersonSchema personSchema;
     public string personName;
     public int age;
     public string occupation;
     public int netWorth;
 
-    // Movement Variables
+    [Header("Movement Vars")]
     private Camera mainCamera;
     private Rigidbody2D rb;
-    private bool isDragging = false;
+    public bool isDragging = false;
     private bool shouldMove = true;
     private bool isFalling = false;
     private Vector3 offset;
     private Vector2 storedVelocity;
     public float dampener = 3.0f;
-
-    // Collider for bounds
     private Collider2D boundsCollider;
 
     public void Init(PersonSchema personSchema, Collider2D personBounds)
@@ -57,7 +55,7 @@ public class Person : MonoBehaviour
         }
         if (isDragging)
         {
-            FollowMouse();
+            FollowMouse();  
         }
     }
 
@@ -116,8 +114,7 @@ public class Person : MonoBehaviour
     {
         Vector3 mouseWorldPosition = GetMouseWorldPos();
         Vector3 newPosition = mouseWorldPosition + offset;
-
-        // Clamp position within bounds
+        transform.SetParent(FindFirstObjectByType<PersonManager>().gameObject.transform);
         newPosition = ClampPositionToBounds(newPosition);
 
         storedVelocity = (newPosition - transform.position) / Time.deltaTime;

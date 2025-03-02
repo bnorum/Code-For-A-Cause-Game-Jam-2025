@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7359659252381972324}
   m_Layer: 5
   m_Name: Staircase Person
-  m_TagString: Untagged
+  m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   age: 14
   occupation: Teenager
   netWorth: 1500
-  damener: 12
+  dampener: 3
 --- !u!50 &2178029060970206929
 Rigidbody2D:
   serializedVersion: 5

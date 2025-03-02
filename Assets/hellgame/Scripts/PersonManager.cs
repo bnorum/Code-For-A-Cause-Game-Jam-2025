@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandmentsGameManager : MonoBehaviour
+public class PersonManager : MonoBehaviour
 {
     public Transform startPoint;
     public Transform endPoint;
@@ -16,7 +16,7 @@ public class CommandmentsGameManager : MonoBehaviour
 
     void Start()
     {
-        SpawnObject(); // Initial spawn
+        SpawnObject();
     }
 
     void Update()
