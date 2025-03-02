@@ -8,6 +8,7 @@ public class Email : MonoBehaviour
     [Header("Details")]
     public EmailSchema emailSchema;
     public bool isRead = false;
+    public bool isStarred = false;
 
 
     [Header("UI")]
@@ -24,6 +25,9 @@ public class Email : MonoBehaviour
     public GameObject EmailBodyWithAttachment;
     public GameObject ForwardMenu;
     public GameObject OpenButton;
+    public GameObject StarButton;
+    public Sprite starOn;
+    public Sprite starOff;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,12 +59,17 @@ public class Email : MonoBehaviour
         OpenButton.transform.rotation *= Quaternion.Euler(0, 0, 180);
         isRead = true;
         RectTransform emailRect = EmailBG.GetComponent<RectTransform>();
-        emailRect.sizeDelta = new Vector2(emailRect.sizeDelta.x, emailRect.sizeDelta.y == 100 ? 512 : 54);
+        emailRect.sizeDelta = new Vector2(emailRect.sizeDelta.x, emailRect.sizeDelta.y == 54 ? 512 : 54);
         if (emailSchema.attachment != null) {
             EmailBodyWithAttachment.SetActive(!EmailBodyWithAttachment.activeSelf);
         } else {
             EmailBody.SetActive(!EmailBody.activeSelf);
         }
+    }
+
+    public void ToggleStar() {
+        isStarred = !isStarred;
+        StarButton.GetComponent<Image>().sprite = isStarred ? starOn : starOff;
     }
 
     public void ToggleForwardMenu() {
