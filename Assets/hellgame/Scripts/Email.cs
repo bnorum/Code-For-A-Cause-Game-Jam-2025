@@ -55,7 +55,7 @@ public class Email : MonoBehaviour
         OpenButton.transform.rotation *= Quaternion.Euler(0, 0, 180);
         isRead = true;
         RectTransform emailRect = EmailBG.GetComponent<RectTransform>();
-        emailRect.sizeDelta = new Vector2(emailRect.sizeDelta.x, emailRect.sizeDelta.y == 100 ? 512 : 100);
+        emailRect.sizeDelta = new Vector2(emailRect.sizeDelta.x, emailRect.sizeDelta.y == 100 ? 512 : 54);
         if (emailSchema.attachment != null) {
             EmailBodyWithAttachment.SetActive(!EmailBodyWithAttachment.activeSelf);
         } else {
