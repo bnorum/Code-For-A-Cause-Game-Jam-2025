@@ -13,6 +13,7 @@ public class TabManager : MonoBehaviour
         searchTabButton.onClick.AddListener(() => OpenTab(searchScreen));
         emailTabButton.onClick.AddListener(() => OpenTab(emailScreen));
         OpenTab(emailScreen);
+
     }
 
     private void OpenTab(GameObject tabToOpen)
@@ -20,5 +21,16 @@ public class TabManager : MonoBehaviour
 
         searchScreen.SetActive(tabToOpen == searchScreen);
         emailScreen.SetActive(tabToOpen == emailScreen);
+
+        if (tabToOpen == searchScreen) {
+            emailTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
+            searchTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
+        }
+        else if (tabToOpen == emailScreen) {
+            searchTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
+            emailTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
+        }
     }
 }
