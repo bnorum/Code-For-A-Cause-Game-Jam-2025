@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Test 2
   m_EditorClassIdentifier: 
+  emailID: -2
   senderEmail: god@heaven.com
   senderName: God
   subject: Hey....
