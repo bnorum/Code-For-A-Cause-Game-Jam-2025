@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
   m_Name: Riya O
   m_EditorClassIdentifier: 
-  personName: Gery T
+  personName: Riya O
   age: 14
   occupation: Teenager
   netWorth: 5

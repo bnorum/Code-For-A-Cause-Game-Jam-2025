@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: 7028e9eff6d53f2489c8359efaf174a1, type: 2}
   subject: About Devon T
-  body: 
+  body: HE KILLED MY SON
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}

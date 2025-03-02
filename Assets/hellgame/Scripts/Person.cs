@@ -2,21 +2,21 @@ using System.Collections;
 using UnityEngine;
 
 public class Person : MonoBehaviour
-{
+{   //Person Variables
     private PersonSchema personSchema;
     public string personName;
     public int age;
     public string occupation;
     public int netWorth;
-
-    private bool isDragging = false;
-    private Vector3 offset;
+    //Movement Variables
     private Camera mainCamera;
-    private bool shouldMove = true;
-    public float dragThreshold = 0.5f;
-    private bool isFalling = false;
-
     private Rigidbody2D rb;
+    private bool isDragging = false;
+    private bool shouldMove = true;
+    private bool isFalling = false;
+    private Vector3 offset;
+    private Vector2 storedVelocity;
+    public float dampener = 3.0f;
     public void Init(PersonSchema personSchema)
     {
         this.personSchema = personSchema;
@@ -36,17 +36,25 @@ public class Person : MonoBehaviour
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
-    private Vector3 GetMouseWorldPos()
+    private void Update()
     {
-        Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = mainCamera.WorldToScreenPoint(gameObject.transform.position).z;
-        return mainCamera.ScreenToWorldPoint(mousePoint);
+        if (Input.GetMouseButtonDown(0))
+        {
+            TryStartDragging();
+        }
+        else if (Input.GetMouseButtonUp(0) && isDragging)
+        {
+            DropObject();
+        }
+        if (isDragging)
+        {
+            FollowMouse();
+        }
     }
     public void StartMovement(Vector3 endPosition, float duration)
     {
         StartCoroutine(MoveToPosition(endPosition, duration));
     }
-
     private IEnumerator MoveToPosition(Vector3 endPosition, float duration)
     {
         float elapsedTime = 0.0f;
@@ -56,57 +64,67 @@ public class Person : MonoBehaviour
         {
             if (!isDragging && shouldMove && !isFalling)
             {
-                transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / duration);
+                float t = elapsedTime / duration;
+                transform.position = Vector3.Lerp(startPosition, endPosition, t);
+                Vector3 newPosition = transform.position;
+                newPosition.z = transform.parent.position.z;
+                transform.position = newPosition;
+                storedVelocity = (transform.position - startPosition) / Time.deltaTime;
+
                 elapsedTime += Time.deltaTime;
             }
             yield return null;
         }
-        if (!isDragging && !isFalling) 
+
+        if (!isDragging && !isFalling)
         {
             transform.position = endPosition;
             Destroy(gameObject);
         }
     }
 
-    private void OnMouseDown()
+    private void TryStartDragging()
     {
-        if (isFalling)
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            isFalling = false;
+            storedVelocity = rb.linearVelocity;
+            isDragging = true;
             shouldMove = false;
+
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = Vector2.zero;
+            Vector3 mouseWorldPosition = GetMouseWorldPos();
+            offset = transform.position - mouseWorldPosition;
         }
-        isDragging = true;
+    }
+
+    private void FollowMouse()
+    {
+        Vector3 mouseWorldPosition = GetMouseWorldPos();
+        Vector3 newPosition = mouseWorldPosition + offset;
+        storedVelocity = (newPosition - transform.position) / Time.deltaTime;
+        transform.position = newPosition;
+    }
+
+    private void DropObject()
+    {
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        isDragging = false;
+        isFalling = true;
         shouldMove = false;
 
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        rb.linearVelocity = Vector3.zero;
-
-        offset = transform.position - GetMouseWorldPos();
+        rb.gravityScale = dampener;
+        rb.linearVelocity = storedVelocity / dampener;
+        
+        Destroy(gameObject, 5.0f);
     }
-
-    private void OnMouseDrag()
+    private Vector3 GetMouseWorldPos()
     {
-        if (isDragging)
-        {
-            transform.position = GetMouseWorldPos() + offset;
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        isDragging = false;
-        float distance = Vector3.Distance(transform.position, GetMouseWorldPos());
-
-        if (distance > dragThreshold)
-        {
-            shouldMove = false;
-            isFalling = true;
-            rb.bodyType = RigidbodyType2D.Dynamic; 
-            rb.gravityScale = 1;
-        }
-        else
-        {
-            shouldMove = true;
-        }
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = mainCamera.WorldToScreenPoint(transform.position).z;
+        return mainCamera.ScreenToWorldPoint(mousePoint);
     }
 }

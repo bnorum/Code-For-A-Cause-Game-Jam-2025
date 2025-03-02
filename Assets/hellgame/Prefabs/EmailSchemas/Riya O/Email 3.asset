@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Email 3
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: 27d6c0490c1895740b74aedfac166ad7, type: 2}
-  subject: a story about gerard
+  subject: a story about Riya O
   body: 
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
