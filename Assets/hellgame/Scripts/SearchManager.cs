@@ -14,7 +14,7 @@ public class SearchManager : MonoBehaviour
     public Image profileImage;
     public Button backButton;
     public Button enterButton;
-    public List<Person> people = new List<Person>();
+    public List<PersonSchema> people = new List<PersonSchema>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,7 +38,7 @@ public class SearchManager : MonoBehaviour
 
     private void SearchForMatch(string text)
     {
-        foreach (Person person in people)
+        foreach (PersonSchema person in people)
         {
             if (person.personName == text)
             {

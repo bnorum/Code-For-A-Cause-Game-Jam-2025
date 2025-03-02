@@ -2076,6 +2076,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &739457593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739457595}
+  - component: {fileID: 739457594}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &739457594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739457593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba034cc0c4eeea640b72769bac87b5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPeople:
+  - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
+  - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
+  - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
+  spamEmails:
+  - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
+--- !u!4 &739457595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739457593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.46, y: -0.8957999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &749309825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,9 +4205,9 @@ MonoBehaviour:
   backButton: {fileID: 1203949829}
   enterButton: {fileID: 1705321460}
   people:
-  - {fileID: -679954541608365700, guid: 912101b29d66a6c4e8c6568c76e0949f, type: 3}
-  - {fileID: -679954541608365700, guid: 192fc5a2764bf884cad5dc7bf92ca053, type: 3}
-  - {fileID: -679954541608365700, guid: 982f84d8c70be12499c2e305b18e9889, type: 3}
+  - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
+  - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
+  - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
 --- !u!114 &1352755867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,3 +6764,4 @@ SceneRoots:
   - {fileID: 1656577177}
   - {fileID: 1763060057}
   - {fileID: 1974096120}
+  - {fileID: 739457595}

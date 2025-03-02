@@ -4,12 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/EmailSchema", order = 1)]
 public class EmailSchema : ScriptableObject
 {
-    public int emailID;
-    public string senderEmail;
-    public string senderName;
+    public SenderSchema sender;
     public string subject;
     public string body;
-    public Sprite profileImage;
     public Sprite attachment;
+    public PersonSchema relatedPerson;
 
 }

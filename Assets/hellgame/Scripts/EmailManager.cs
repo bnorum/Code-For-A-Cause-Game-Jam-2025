@@ -37,6 +37,11 @@ public class EmailManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        emailSchemas = GameManager.Instance.GetAllEmailSchemas();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -57,10 +62,17 @@ public class EmailManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            AddEmail(emailSchemas[Random.Range(0, emailSchemas.Count)]);
+            int spamChance = Random.Range(0, 100);
+            if (spamChance < 20)
+            {
+                AddEmail(GameManager.Instance.GetRandomSpamEmail());
+            }
+            else
+            {
+                AddEmail(emailSchemas[Random.Range(0, emailSchemas.Count)]);
+            }
         }
     }
-
 
     public void AddEmail(EmailSchema emailSchema) {
         emailSound.Play();
@@ -69,6 +81,10 @@ public class EmailManager : MonoBehaviour
         newEmail.transform.SetSiblingIndex(0);
         Email email = newEmail.GetComponent<Email>();
         email.emailSchema = emailSchema;
+
+
         allEmails.Add(email);
+        emailSchemas.Remove(emailSchema);
     }
+
 }

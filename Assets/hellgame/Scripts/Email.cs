@@ -38,10 +38,10 @@ public class Email : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        profileImage.sprite = emailSchema.profileImage;
-        senderName.text = emailSchema.senderName;
-        senderEmail.text = emailSchema.senderEmail;
-        sendEmailWithAttachment.text = emailSchema.senderEmail;
+        profileImage.sprite = emailSchema.sender.profileImage;
+        senderName.text = emailSchema.sender.senderName;
+        senderEmail.text = emailSchema.sender.senderEmail;
+        sendEmailWithAttachment.text = emailSchema.sender.senderEmail;
         subject.text = emailSchema.subject;
         body.text = emailSchema.body;
         bodyWithAttachment.text = emailSchema.body;

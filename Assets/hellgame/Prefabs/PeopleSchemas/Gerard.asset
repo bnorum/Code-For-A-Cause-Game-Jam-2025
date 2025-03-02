@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: Gerard
+  m_EditorClassIdentifier: 
+  personName: Gerard
+  age: 14
+  occupation: Teenager
+  netWorth: 5
+  profileImage: {fileID: 0}
+  challengeLevel: 6
+  relatedEmails:
+  - {fileID: 11400000, guid: 6f31ede0c0a558f4bb8eb006af66c9e3, type: 2}
+  - {fileID: 11400000, guid: 72e88db65fca31c42a1dd7a8b15f8773, type: 2}
+  - {fileID: 11400000, guid: 149d59a06d2b2584397b58bbb356cd3c, type: 2}
+  - {fileID: 11400000, guid: 023101af5fe163e4ab3197eddd913717, type: 2}
