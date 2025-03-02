@@ -2,13 +2,15 @@ using System.Collections;
 using UnityEngine;
 
 public class Person : MonoBehaviour
-{   //Person Variables
+{   
+    // Person Variables
     private PersonSchema personSchema;
     public string personName;
     public int age;
     public string occupation;
     public int netWorth;
-    //Movement Variables
+
+    // Movement Variables
     private Camera mainCamera;
     private Rigidbody2D rb;
     private bool isDragging = false;
@@ -17,14 +19,20 @@ public class Person : MonoBehaviour
     private Vector3 offset;
     private Vector2 storedVelocity;
     public float dampener = 3.0f;
-    public void Init(PersonSchema personSchema)
+
+    // Collider for bounds
+    private Collider2D boundsCollider;
+
+    public void Init(PersonSchema personSchema, Collider2D personBounds)
     {
         this.personSchema = personSchema;
         personName = personSchema.personName;
         age = personSchema.age;
         occupation = personSchema.occupation;
         netWorth = personSchema.netWorth;
+        boundsCollider = personBounds;
     }
+
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -36,6 +44,7 @@ public class Person : MonoBehaviour
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -51,10 +60,12 @@ public class Person : MonoBehaviour
             FollowMouse();
         }
     }
+
     public void StartMovement(Vector3 endPosition, float duration)
     {
         StartCoroutine(MoveToPosition(endPosition, duration));
     }
+
     private IEnumerator MoveToPosition(Vector3 endPosition, float duration)
     {
         float elapsedTime = 0.0f;
@@ -105,6 +116,10 @@ public class Person : MonoBehaviour
     {
         Vector3 mouseWorldPosition = GetMouseWorldPos();
         Vector3 newPosition = mouseWorldPosition + offset;
+
+        // Clamp position within bounds
+        newPosition = ClampPositionToBounds(newPosition);
+
         storedVelocity = (newPosition - transform.position) / Time.deltaTime;
         transform.position = newPosition;
     }
@@ -118,13 +133,22 @@ public class Person : MonoBehaviour
 
         rb.gravityScale = dampener;
         rb.linearVelocity = storedVelocity / dampener;
-        
+
         Destroy(gameObject, 5.0f);
     }
+
     private Vector3 GetMouseWorldPos()
     {
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mainCamera.WorldToScreenPoint(transform.position).z;
         return mainCamera.ScreenToWorldPoint(mousePoint);
+    }
+
+    private Vector3 ClampPositionToBounds(Vector3 position)
+    {
+        Bounds bounds = boundsCollider.bounds;
+        position.x = Mathf.Clamp(position.x, bounds.min.x, bounds.max.x);
+        position.y = Mathf.Clamp(position.y, bounds.min.y, bounds.max.y);
+        return position;
     }
 }

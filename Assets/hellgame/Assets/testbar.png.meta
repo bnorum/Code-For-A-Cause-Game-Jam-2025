@@ -131,7 +131,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1280
+        width: 1143
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,11 +147,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: testbar_1
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 0
+        width: 136
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339cf2e54a79c994cb54d97d87553bd1
+      internalID: 1251549911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 13ee9d73eb7c1f342afea60c507ce6fb
     internalID: 0
     vertices: []
     indices: 
@@ -162,6 +184,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       testbar_0: -8567761635192667405
+      testbar_1: 1251549911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

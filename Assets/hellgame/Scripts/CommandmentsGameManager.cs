@@ -9,6 +9,7 @@ public class CommandmentsGameManager : MonoBehaviour
     public GameObject physicalPerson;
     public float duration = 5.0f;
     public float spawnFrequency = 1.0f;
+    public Collider2D personBounds;
     
     private float spawnTimer = 0.0f;
     public Transform peopleScreen2D;
@@ -38,7 +39,7 @@ public class CommandmentsGameManager : MonoBehaviour
 
         if (personScript != null)
         {
-            personScript.Init(personSchemas[index]);
+            personScript.Init(personSchemas[index], personBounds);
             personScript.StartMovement(endPoint.position, duration);
         }
     }
