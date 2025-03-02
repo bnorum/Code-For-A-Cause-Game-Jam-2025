@@ -10,7 +10,6 @@ public class TabManager : MonoBehaviour
 
     private void Start()
     {
-
         searchTabButton.onClick.AddListener(() => OpenTab(searchScreen));
         emailTabButton.onClick.AddListener(() => OpenTab(emailScreen));
         OpenTab(emailScreen);

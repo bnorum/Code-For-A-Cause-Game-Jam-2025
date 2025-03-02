@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
-    public string name;
+    public string personName;
     public int age;
     public string occupation;
     public int netWorth;

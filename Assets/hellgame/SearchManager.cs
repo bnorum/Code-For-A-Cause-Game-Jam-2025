@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 using TMPro;
 using System;
+using System.Collections.Generic;
 
 public class SearchManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SearchManager : MonoBehaviour
     public Image profileImage;
     public Button backButton;
     public Button enterButton;
+    public List<Person> people = new List<Person>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,8 +32,24 @@ public class SearchManager : MonoBehaviour
 
     public void OnEnterButtonClicked()
     {
-        string name = nameInputField.text;
+        SearchForMatch(nameInputField.text);
         DisplayProfile(name);
+    }
+
+    private void SearchForMatch(string text)
+    {
+        foreach (Person person in people)
+        {
+            if (person.personName == text)
+            {
+                name = person.personName;
+                break;
+            }
+            else
+            {
+                name = "No match found, must be exact name";
+            }
+        }
     }
 
     void DisplayProfile(string name)
@@ -40,12 +58,14 @@ public class SearchManager : MonoBehaviour
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
     }
-
-    void OnBackButtonClicked()
+    void DisplaySearch()
     {
         profilePanel.SetActive(false);
         searchPanel.SetActive(true);
-
+    }
+    void OnBackButtonClicked()
+    {
+        DisplaySearch();
     }
 
 }

@@ -124,6 +124,43 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1119829395372346146, guid: 7a3cf09a9884781428b3ba022fae8e3d, type: 3}
   m_PrefabInstance: {fileID: 857716465}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &99177191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99177192}
+  m_Layer: 5
+  m_Name: Commandments
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &99177192
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99177191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2135082226}
+  - {fileID: 863437911}
+  m_Father: {fileID: 1835996765}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &282757421
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +730,10 @@ MonoBehaviour:
   profileImage: {fileID: 0}
   backButton: {fileID: 306758050}
   enterButton: {fileID: 1726909916}
+  people:
+  - {fileID: -679954541608365700, guid: 912101b29d66a6c4e8c6568c76e0949f, type: 3}
+  - {fileID: -679954541608365700, guid: 192fc5a2764bf884cad5dc7bf92ca053, type: 3}
+  - {fileID: -679954541608365700, guid: 982f84d8c70be12499c2e305b18e9889, type: 3}
 --- !u!1 &527967271
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,9 +1007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Souls Damned:
-
-    0'
+  m_text: '#1: Thou shall not be a teenager when they die'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -995,8 +1034,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26.42
+  m_fontSizeBase: 26.42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1160,7 +1199,7 @@ GameObject:
   - component: {fileID: 863437913}
   - component: {fileID: 863437912}
   m_Layer: 5
-  m_Name: People Saved
+  m_Name: Commandment #1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1173,13 +1212,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863437910}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 855716159}
-  m_Father: {fileID: 1835996765}
+  m_Father: {fileID: 99177192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3401,8 +3440,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 863437911}
-  - {fileID: 2135082226}
+  - {fileID: 99177192}
   m_Father: {fileID: 1851112535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4059,7 +4097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 4.8366}
+  m_AnchoredPosition: {x: -0, y: -26.5}
   m_SizeDelta: {x: 224.012, y: 190.6416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044172178
@@ -4082,9 +4120,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Souls Saved:
-
-    0'
+  m_text: '#2: thou shall not be a carpenter'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4111,8 +4147,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 31.6
+  m_fontSizeBase: 31.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4311,7 +4347,7 @@ GameObject:
   - component: {fileID: 2135082228}
   - component: {fileID: 2135082227}
   m_Layer: 5
-  m_Name: People Damned
+  m_Name: Commandment #2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4324,18 +4360,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135082225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2044172177}
-  m_Father: {fileID: 1835996765}
+  m_Father: {fileID: 99177192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573, y: -149}
-  m_SizeDelta: {x: 273.9714, y: 250.39}
+  m_AnchoredPosition: {x: -521, y: 110}
+  m_SizeDelta: {x: 261.1, y: 148.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135082227
 MonoBehaviour:
