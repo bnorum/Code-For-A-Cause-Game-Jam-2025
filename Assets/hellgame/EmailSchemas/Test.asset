@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
+  emailID: -1
   senderEmail: donotreply@evilsoft.com
   senderName: EvilSoft
   subject: FREE DOWNLOAD
