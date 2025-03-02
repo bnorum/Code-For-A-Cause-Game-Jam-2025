@@ -12,7 +12,7 @@ public class heswalkingby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0.1f, 0, 0) * Time.deltaTime;
+        transform.position += new Vector3(0.3f, 0, 0) * Time.deltaTime;
         transform.position += new Vector3(0, Mathf.Sin(sinaccumulator) * 0.05f * Time.deltaTime, 0);
 
         sinaccumulator += Time.deltaTime;

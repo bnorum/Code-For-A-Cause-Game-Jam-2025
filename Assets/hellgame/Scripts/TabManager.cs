@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TabManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class TabManager : MonoBehaviour
     public Button emailTabButton;
     public GameObject searchScreen;
     public GameObject emailScreen;
+    public TextMeshProUGUI addressBar;
 
     private void Start()
     {
@@ -26,13 +28,14 @@ public class TabManager : MonoBehaviour
             emailTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
             searchTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
             searchTabButton.transform.SetAsLastSibling();
+            addressBar.text = "https://www.googleinHELL.com";
 
         }
         else if (tabToOpen == emailScreen) {
             searchTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
             emailTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
             emailTabButton.transform.SetAsLastSibling();
-
+            addressBar.text = "https://www.evilmail.net";
         }
     }
 }

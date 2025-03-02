@@ -39,7 +39,7 @@ public class ViewToggler : MonoBehaviour
                 new Vector3(ComputerRoute.transform.position.x, ComputerRoute.transform.position.y, mainCamera.transform.position.z),
                 Time.deltaTime * 5f);
 
-            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 3.5f, Time.deltaTime * 5f);
+            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 3.42f, Time.deltaTime * 5f);
 
         }
 
