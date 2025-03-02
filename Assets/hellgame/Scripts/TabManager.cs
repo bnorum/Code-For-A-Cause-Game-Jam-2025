@@ -25,11 +25,13 @@ public class TabManager : MonoBehaviour
         if (tabToOpen == searchScreen) {
             emailTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
             searchTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            searchTabButton.transform.SetAsLastSibling();
 
         }
         else if (tabToOpen == emailScreen) {
             searchTabButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
             emailTabButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            emailTabButton.transform.SetAsLastSibling();
 
         }
     }
