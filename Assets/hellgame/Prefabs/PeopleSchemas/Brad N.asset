@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Gerard
+  m_Name: Brad N
   m_EditorClassIdentifier: 
-  personName: Gerard
-  age: 14
-  occupation: Teenager
-  netWorth: 5
+  personName: Bradley N
+  age: 22
+  occupation: Developer
+  netWorth: 25000
   profileImage: {fileID: 0}
-  challengeLevel: 6
+  challengeLevel: 3
   relatedEmails:
-  - {fileID: 11400000, guid: 6f31ede0c0a558f4bb8eb006af66c9e3, type: 2}
-  - {fileID: 11400000, guid: 72e88db65fca31c42a1dd7a8b15f8773, type: 2}
-  - {fileID: 11400000, guid: 149d59a06d2b2584397b58bbb356cd3c, type: 2}
-  - {fileID: 11400000, guid: 023101af5fe163e4ab3197eddd913717, type: 2}
+  - {fileID: 11400000, guid: 61532ad68373d324cbf80f61e9d0399a, type: 2}
+  - {fileID: 11400000, guid: e354a4f83be46cf43b57963eb3c9e4c4, type: 2}
+  - {fileID: 11400000, guid: 5de22048a258fcd4285baf22d0ba977f, type: 2}
+  - {fileID: 11400000, guid: ff00ce0c12fa4f845820dda1cca5b610, type: 2}

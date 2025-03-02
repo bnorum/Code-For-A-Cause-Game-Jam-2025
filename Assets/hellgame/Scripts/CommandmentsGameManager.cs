@@ -5,10 +5,13 @@ public class CommandmentsGameManager : MonoBehaviour
 {
     public Transform startPoint;
     public Transform endPoint;
-    public List<GameObject> objectPrefabs = new List<GameObject>();
+    public List<PersonSchema> personSchemas = new List<PersonSchema>();
+    public GameObject physicalPerson;
     public float duration = 5.0f;
-    public float spawnFrequency = 1.0f; // Frequency in seconds
+    public float spawnFrequency = 1.0f;
+    
     private float spawnTimer = 0.0f;
+    public Transform peopleScreen2D;
 
     void Start()
     {
@@ -27,20 +30,16 @@ public class CommandmentsGameManager : MonoBehaviour
 
     void SpawnObject()
     {
-        if (objectPrefabs.Count == 0) return;
-        int index = Random.Range(0, objectPrefabs.Count);
+        if (personSchemas.Count == 0) return;
 
-        GameObject obj = Instantiate(objectPrefabs[index], startPoint.position, Quaternion.identity);
-        
+        int index = Random.Range(0, personSchemas.Count);
+        GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, peopleScreen2D);
         Person personScript = obj.GetComponent<Person>();
 
         if (personScript != null)
         {
-            personScript.StartMovement(endPoint.position, duration); // Move person to endPoint
-        }
-        else
-        {
-            Debug.LogError("Spawned object is missing Person script!");
+            personScript.Init(personSchemas[index]);
+            personScript.StartMovement(endPoint.position, duration);
         }
     }
 }

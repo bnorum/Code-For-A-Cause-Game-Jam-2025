@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
-    public PersonSchema personSchema;
+    private PersonSchema personSchema;
     public string personName;
     public int age;
     public string occupation;
@@ -17,8 +17,9 @@ public class Person : MonoBehaviour
     private bool isFalling = false;
 
     private Rigidbody2D rb;
-    void Start()
+    public void Init(PersonSchema personSchema)
     {
+        this.personSchema = personSchema;
         personName = personSchema.personName;
         age = personSchema.age;
         occupation = personSchema.occupation;
