@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class TabManager : MonoBehaviour
 {
+
+    public static TabManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+
     [Header("Tab Buttons")]
     public Button searchTabButton;
     public Button emailTabButton;
@@ -44,7 +47,7 @@ public class TabManager : MonoBehaviour
     public GameObject trashCanHiddenPosition;
 
     private GameObject lastActiveTab;
-    public static TabManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+    public int currentTabIndex = 1;
     
     private void Awake()
     {
@@ -54,7 +57,7 @@ public class TabManager : MonoBehaviour
             Destroy(this);
         }
         else
-        { 
+        {
             Instance = this;
         }
     }
@@ -86,6 +89,11 @@ public class TabManager : MonoBehaviour
             trashCanPanel.SetActive(false);
             trashCanHolder.transform.position = trashCanHiddenPosition.transform.position;
         }
+
+        if (searchScreen.activeSelf) {currentTabIndex = 0;}
+        if (emailScreen.activeSelf) {currentTabIndex = 1;}
+        if (escalatorScreen.activeSelf) {currentTabIndex = 2;}
+
     }
 
     private void AddEventTrigger(GameObject obj, EventTriggerType type, Action action)
@@ -98,10 +106,12 @@ public class TabManager : MonoBehaviour
 
     public void OpenTab(GameObject tabToOpen, Person person)
     {
+
+
         searchScreen.SetActive(tabToOpen == searchScreen);
         emailScreen.SetActive(tabToOpen == emailScreen);
         escalatorScreen.SetActive(tabToOpen == escalatorScreen);
-        
+
         lastActiveTab = tabToOpen;
 
         searchTabButton.GetComponent<Image>().color = (tabToOpen == searchScreen) ? onColor : offColor;
