@@ -121,8 +121,6 @@ public class Person : MonoBehaviour
 
         rb.gravityScale = dampener;
         rb.linearVelocity = storedVelocity / dampener;
-
-        Destroy(gameObject, 5.0f);
     }
 
     private Vector3 GetMouseWorldPos()

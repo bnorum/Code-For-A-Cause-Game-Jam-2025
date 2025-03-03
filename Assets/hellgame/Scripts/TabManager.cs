@@ -78,7 +78,7 @@ public class TabManager : MonoBehaviour
         if (tabToOpen == searchScreen)
         {
             addressBar.text = "https://www.googleinHELL.com";
-            searchPeopleHolder.transform.position = new Vector3(0, 0, -1);
+            searchPeopleHolder.transform.position = new Vector3(2, -2, -1);
             emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
             escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
         }
