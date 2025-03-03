@@ -187,7 +187,12 @@ MonoBehaviour:
   addressBar: {fileID: 1300134143}
   onColor: {r: 1, g: 1, b: 1, a: 1}
   offColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  peopleHolder: {fileID: 271951037}
+  escalatorPeopleHolder: {fileID: 0}
+  searchPeopleHolder: {fileID: 0}
+  emailPeopleHolder: {fileID: 0}
+  escalatorPhysicsHiddenPosition: {fileID: 0}
+  searchPhysicsHiddenPosition: {fileID: 0}
+  emailPhysicsHiddenPosition: {fileID: 0}
 --- !u!114 &37701114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2205,6 +2210,7 @@ GameObject:
   - component: {fileID: 624392532}
   - component: {fileID: 624392534}
   - component: {fileID: 624392533}
+  - component: {fileID: 624392535}
   m_Layer: 5
   m_Name: Label (1)
   m_TagString: Untagged
@@ -2330,6 +2336,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624392531}
   m_CullTransparentMesh: 1
+--- !u!114 &624392535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624392531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0974f9e5917c49447b599719182fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dateTimeText: {fileID: 624392533}
+  time: 
+  date: 
+  dateList: []
 --- !u!1 &642389171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,8 +2873,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
   - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
   - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
+  - {fileID: 11400000, guid: 516526946a5582e428d333425ab1ffbb, type: 2}
   spamEmails:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
+  time: 540
+  datenum: 1
+  timeUntilNextEmail: 5
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0
@@ -6189,13 +6215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22851bf347a6e3b4185034e1743d8942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 365477334}
   profilePanel: {fileID: 1017010132}
+  nameField: {fileID: 0}
+  ageField: {fileID: 0}
+  occupationField: {fileID: 0}
+  netWorthField: {fileID: 0}
   searchPanel: {fileID: 1829106049}
-  profileNameText: {fileID: 991976770}
   profileImage: {fileID: 0}
-  backButton: {fileID: 1203949829}
-  enterButton: {fileID: 1705321460}
   people:
   - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
   - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}

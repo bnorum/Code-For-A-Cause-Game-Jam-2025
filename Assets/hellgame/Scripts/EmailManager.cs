@@ -60,6 +60,8 @@ public class EmailManager : MonoBehaviour
             email.gameObject.SetActive(currentEmails.Contains(email));
         }
 
+
+        /*
         if (Input.GetKeyDown(KeyCode.E))
         {
             int spamChance = Random.Range(0, 100);
@@ -72,6 +74,7 @@ public class EmailManager : MonoBehaviour
                 AddEmail(emailSchemas[Random.Range(0, emailSchemas.Count)]);
             }
         }
+        */
     }
 
     public void AddEmail(EmailSchema emailSchema) {

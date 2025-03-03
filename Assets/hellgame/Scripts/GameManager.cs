@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ public class GameManager : MonoBehaviour
     public List<PersonSchema> allPeople = new List<PersonSchema>();
     private List<PersonSchema> chosenPeople = new List<PersonSchema>();
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
+
+    public float time = 540f;
+    public int datenum = 1;
+
+    public float timeUntilNextEmail = 5f;
 
 
     private void Awake()
@@ -27,13 +33,29 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChoosePeople(10);
+        ChoosePeople(20);
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+        timeUntilNextEmail -= Time.deltaTime;
+        if (timeUntilNextEmail <= 0)
 
+        {
+            timeUntilNextEmail = UnityEngine.Random.Range(15, 35);
+            int spamChance = UnityEngine.Random.Range(0, 100);
+            if (spamChance < 10)
+            {
+                EmailManager.Instance.AddEmail(GetRandomSpamEmail());
+            }
+            else
+            {
+                //worst line EVER!
+                EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count)]);
+            }
+        }
     }
 
 
@@ -43,7 +65,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < allPeople.Count; i++)
         {
             PersonSchema temp = allPeople[i];
-            int randomIndex = Random.Range(i, allPeople.Count);
+            int randomIndex = UnityEngine.Random.Range(i, allPeople.Count);
             allPeople[i] = allPeople[randomIndex];
             allPeople[randomIndex] = temp;
         }
@@ -74,6 +96,11 @@ public class GameManager : MonoBehaviour
     }
 
     public EmailSchema GetRandomSpamEmail() {
-        return spamEmails[Random.Range(0, spamEmails.Count)];
+        return spamEmails[UnityEngine.Random.Range(0, spamEmails.Count)];
+    }
+
+    public string TimeToString()
+    {
+        return ((int)time / 60 % 12).ToString("00") + ":" + ((int)time % 60).ToString("00");
     }
 }
