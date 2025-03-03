@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float timeUntilNextCoworker = 120f;
 
     public bool isPaused = false;
+    public float difficultyScale = 1f;
 
 
     private void Awake()
@@ -43,9 +44,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (!isPaused) {
-            time += Time.deltaTime;
-            timeUntilNextEmail -= Time.deltaTime;
-            timeUntilNextCoworker -= Time.deltaTime;
+            time += Time.deltaTime * difficultyScale;
+            timeUntilNextEmail -= Time.deltaTime * difficultyScale;
+            timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
         }
         if (time >= 1440f)
         {

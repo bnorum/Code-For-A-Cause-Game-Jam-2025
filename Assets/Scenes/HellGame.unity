@@ -318,9 +318,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 106852697}
-  - {fileID: 1274141316}
   - {fileID: 642389172}
+  - {fileID: 1274141316}
+  - {fileID: 106852697}
   m_Father: {fileID: 1851112535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3215,11 +3215,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
   - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
   - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
+  - {fileID: 11400000, guid: 516526946a5582e428d333425ab1ffbb, type: 2}
+  chosenPeople: []
   spamEmails:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
   time: 540
   datenum: 1
   timeUntilNextEmail: 5
+  timeUntilNextCoworker: 120
+  isPaused: 0
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0
