@@ -114,6 +114,8 @@ public class TabManager : MonoBehaviour
             searchPeopleHolder.transform.position = new Vector3(2, -2, -1);
             emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
             escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
+
+            searchTabButton.transform.SetAsLastSibling();
         }
         else if (tabToOpen == emailScreen)
         {
@@ -121,6 +123,8 @@ public class TabManager : MonoBehaviour
             emailPeopleHolder.transform.position = new Vector3(0, 0, -1);
             searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
             escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
+
+            emailTabButton.transform.SetAsLastSibling();
         }
         else if (tabToOpen == escalatorScreen)
         {
@@ -128,6 +132,8 @@ public class TabManager : MonoBehaviour
             escalatorPeopleHolder.transform.position = new Vector3(0, 0, -1);
             searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
             emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
+
+            escalatorTabButton.transform.SetAsLastSibling();
         }
 
         if (person != null)
@@ -136,6 +142,9 @@ public class TabManager : MonoBehaviour
                                     tabToOpen == emailScreen ? emailPeopleHolder.transform :
                                     escalatorPeopleHolder.transform, false);
         }
+
+
+
     }
 
     public GameObject GetLastActiveTab()
@@ -151,4 +160,6 @@ public class TabManager : MonoBehaviour
             datetimePanel.transform.SetAsLastSibling();
         }
     }
+
+
 }

@@ -8,13 +8,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
 
     public List<PersonSchema> allPeople = new List<PersonSchema>();
-    private List<PersonSchema> chosenPeople = new List<PersonSchema>();
+    public List<PersonSchema> chosenPeople = new List<PersonSchema>();
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
 
     public float time = 540f;
     public int datenum = 1;
 
     public float timeUntilNextEmail = 5f;
+    public float timeUntilNextCoworker = 120f;
 
     public bool isPaused = false;
 
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
         else
-        { 
+        {
             Instance = this;
         }
     }
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         if (!isPaused) {
             time += Time.deltaTime;
             timeUntilNextEmail -= Time.deltaTime;
+            timeUntilNextCoworker -= Time.deltaTime;
         }
         if (time >= 1440f)
         {
@@ -53,9 +55,9 @@ public class GameManager : MonoBehaviour
         if (timeUntilNextEmail <= 0)
 
         {
-            timeUntilNextEmail = UnityEngine.Random.Range(15, 35);
+            timeUntilNextEmail = UnityEngine.Random.Range(20, 27);
             int spamChance = UnityEngine.Random.Range(0, 100);
-            if (spamChance < 10)
+            if (spamChance < 7)
             {
                 EmailManager.Instance.AddEmail(GetRandomSpamEmail());
             }
@@ -64,6 +66,12 @@ public class GameManager : MonoBehaviour
                 //worst line EVER!
                 EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count)]);
             }
+        }
+
+        if (timeUntilNextCoworker <= 0 && CoworkerManager.Instance.isActive == false)
+        {
+            timeUntilNextCoworker = UnityEngine.Random.Range(120, 180);
+            CoworkerManager.Instance.SummonCoworker();
         }
     }
 
@@ -110,7 +118,15 @@ public class GameManager : MonoBehaviour
 
     public string TimeToString()
     {
-        return ((int)time / 60 % 12).ToString("00") + ":" + ((int)time % 60).ToString("00");
+        if (time > 780f)
+        {
+            return ((int)time / 60 % 12).ToString("00") + ":" + ((int)time % 60).ToString("00");
+        }
+        else
+        {
+
+            return ((int)time / 60).ToString("00") + ":" + ((int)time % 60).ToString("00");
+        }
     }
 
     public void DecideFateOfPerson(PersonSchema person, bool save)

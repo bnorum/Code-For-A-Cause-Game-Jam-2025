@@ -30,6 +30,7 @@ public class PersonManager : MonoBehaviour
     void Start()
     {
         SpawnObject();
+        personSchemas = GameManager.Instance.chosenPeople;
     }
 
     void Update()
