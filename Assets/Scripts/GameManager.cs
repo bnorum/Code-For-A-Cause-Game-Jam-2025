@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
 
     public List<PersonSchema> allPeople = new List<PersonSchema>();
-    private List<PersonSchema> chosenPeople = new List<PersonSchema>();
+    public List<PersonSchema> chosenPeople = new List<PersonSchema>();
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
 
     public float time = 540f;
