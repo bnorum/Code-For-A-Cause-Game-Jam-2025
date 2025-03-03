@@ -13,7 +13,20 @@ public class PersonManager : MonoBehaviour
     
     private float spawnTimer = 0.0f;
     public Transform peopleScreen2D;
+    public static PersonManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+    
+    private void Awake()
+    {
 
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        { 
+            Instance = this;
+        }
+    }
     void Start()
     {
         SpawnObject();
@@ -32,7 +45,6 @@ public class PersonManager : MonoBehaviour
     void SpawnObject()
     {
         if (personSchemas.Count == 0) return;
-
         int index = Random.Range(0, personSchemas.Count);
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, peopleScreen2D);
         Person personScript = obj.GetComponent<Person>();

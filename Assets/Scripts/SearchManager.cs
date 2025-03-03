@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class SearchManager : MonoBehaviour
 {
+    public static SearchManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+
     public GameObject profilePanel;
     public TextMeshProUGUI nameField;
     public TextMeshProUGUI ageField;
@@ -16,6 +18,18 @@ public class SearchManager : MonoBehaviour
     public Image profileImage;
 
     public List<PersonSchema> people = new List<PersonSchema>();
+    private void Awake()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        { 
+            Instance = this;
+        }
+    }
     void Start()
     {
         profilePanel.SetActive(false);

@@ -7,9 +7,6 @@ public class EmailManager : MonoBehaviour
 {
 
     public static EmailManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
-
-
-
     public List<EmailSchema> emailSchemas;
     public GameObject emailPrefab;
     public GameObject emailContainer;

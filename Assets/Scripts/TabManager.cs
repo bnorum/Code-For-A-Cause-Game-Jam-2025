@@ -44,7 +44,21 @@ public class TabManager : MonoBehaviour
     public GameObject trashCanHiddenPosition;
 
     private GameObject lastActiveTab;
+    public static TabManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+    
+    private void Awake()
+    {
 
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        { 
+            Instance = this;
+        }
+    }
+    
     private void Start()
     {
         searchTabButton.onClick.AddListener(() => OpenTab(searchScreen, null));
