@@ -38,6 +38,11 @@ public class TabManager : MonoBehaviour
     public GameObject searchPhysicsHiddenPosition;
     public GameObject emailPhysicsHiddenPosition;
 
+    [Header("Trash Can")]
+    public GameObject trashCanPanel;
+    public GameObject trashCanHolder;
+    public GameObject trashCanHiddenPosition;
+
     private GameObject lastActiveTab;
 
     private void Start()
@@ -51,6 +56,22 @@ public class TabManager : MonoBehaviour
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerEnter, () => ShowDateTimePanel(true));
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerExit, () => ShowDateTimePanel(false));
         datetimePanel.SetActive(false);
+
+        trashCanPanel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.G))
+        {
+            trashCanPanel.SetActive(true);
+            trashCanHolder.transform.position = new Vector3(5.83f, -3.17f, -1);
+        }
+        else
+        {
+            trashCanPanel.SetActive(false);
+            trashCanHolder.transform.position = trashCanHiddenPosition.transform.position;
+        }
     }
 
     private void AddEventTrigger(GameObject obj, EventTriggerType type, Action action)
@@ -63,13 +84,11 @@ public class TabManager : MonoBehaviour
 
     public void OpenTab(GameObject tabToOpen, Person person)
     {
-
         searchScreen.SetActive(tabToOpen == searchScreen);
         emailScreen.SetActive(tabToOpen == emailScreen);
         escalatorScreen.SetActive(tabToOpen == escalatorScreen);
         
         lastActiveTab = tabToOpen;
-
 
         searchTabButton.GetComponent<Image>().color = (tabToOpen == searchScreen) ? onColor : offColor;
         emailTabButton.GetComponent<Image>().color = (tabToOpen == emailScreen) ? onColor : offColor;
@@ -97,15 +116,13 @@ public class TabManager : MonoBehaviour
             emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
         }
 
-
         if (person != null)
-        {// Parent the Person object if provided
+        {
             person.transform.SetParent(tabToOpen == searchScreen ? searchPeopleHolder.transform :
                                     tabToOpen == emailScreen ? emailPeopleHolder.transform :
                                     escalatorPeopleHolder.transform, false);
         }
     }
-
 
     public GameObject GetLastActiveTab()
     {
