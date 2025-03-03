@@ -24,6 +24,8 @@ public class EmailManager : MonoBehaviour
 
     public AudioSource emailSound;
 
+    public TextMeshProUGUI emailCountText;
+
     private void Awake()
     {
 
@@ -60,6 +62,16 @@ public class EmailManager : MonoBehaviour
             email.gameObject.SetActive(currentEmails.Contains(email));
         }
 
+        if (unreadEmails.Count == 0)
+        {
+            emailCountText.transform.parent.gameObject.SetActive(false);
+        }
+        else
+        {
+            emailCountText.transform.parent.gameObject.SetActive(true);
+            emailCountText.text = unreadEmails.Count.ToString();
+        }
+        emailCountText.text = unreadEmails.Count.ToString();
 
         /*
         if (Input.GetKeyDown(KeyCode.E))
