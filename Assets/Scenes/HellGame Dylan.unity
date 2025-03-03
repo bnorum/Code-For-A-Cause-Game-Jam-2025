@@ -3375,8 +3375,17 @@ MonoBehaviour:
   datenum: 1
   timeUntilNextEmail: 5
   timeUntilNextCoworker: 120
+  timeUntilNextPerson: 0
   isPaused: 0
-  difficultyScale: 1
+  difficultyScale: 0.98
+  startPoint: {fileID: 1832197316}
+  endPoint: {fileID: 1853687397}
+  physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
+  escalatorTravelDuration: 25
+  personBounds: {fileID: 907841764}
+  reservedEndTime: 50
+  escalatorWindowPersonHolder: {fileID: 271951038}
+  endTime: 740
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0

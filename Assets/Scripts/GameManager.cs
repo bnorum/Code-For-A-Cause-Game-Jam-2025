@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public static GameManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+    public static GameManager Instance { get; private set; } // SINGLETON
 
     public List<PersonSchema> allPeople = new List<PersonSchema>();
     public List<PersonSchema> chosenPeople = new List<PersonSchema>();
@@ -16,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public float timeUntilNextEmail = 5f;
     public float timeUntilNextCoworker = 120f;
+      public float timeUntilNextPerson = 0f; // debugging, doesnt matter
 
     public bool isPaused = false;
     public float difficultyScale = 1f;
@@ -23,85 +23,87 @@ public class GameManager : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
     public GameObject physicalPerson;
-    public float duration = 5.0f;
-    public float spawnFrequency = 1.0f;
+    public float escalatorTravelDuration = 5.0f;
     public Collider2D personBounds;
     private float spawnTimer = 0.0f;
-    public Transform peopleScreen2D;
-
-
+    private float spawnInterval;
+    [SerializeField] private float reservedEndTime;
+    private int totalSpawns;
+    private float nextSpawnTime;
+    public Transform escalatorWindowPersonHolder;
+    [SerializeField] private float endTime = 1440f;
 
     private void Awake()
     {
-
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            Instance = this;
-        }
+        Instance = this;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ChoosePeople(20);
-        spawnInterval = (1440f - reservedEndTime) / totalSpawns;
-        nextSpawnTime = time + spawnInterval;
-    }
+        totalSpawns = chosenPeople.Count;
 
-    // Update is called once per frame
-    void Update()
-    {
-        void Update()
+        // Ensure at least one spawn
+        if (totalSpawns > 0)
         {
-            if (!isPaused)
-            {
-                time += Time.deltaTime * difficultyScale;
-                timeUntilNextEmail -= Time.deltaTime * difficultyScale;
-                timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
-
-                // Check if it's time to spawn a new person
-                if (time >= nextSpawnTime && time < 1440f - reservedEndTime)
-                {
-                    SpawnPerson();
-                    nextSpawnTime += spawnInterval; // Schedule the next spawn
-                }
-            }
-
-            if (time >= 1440f)
-            {
-                // Do some sort of cutscene, then load next day
-            }
-
-            if (timeUntilNextEmail <= 0)
-            {
-                timeUntilNextEmail = UnityEngine.Random.Range(20, 27);
-                int spamChance = UnityEngine.Random.Range(0, 100);
-                if (spamChance < 7)
-                {
-                    EmailManager.Instance.AddEmail(GetRandomSpamEmail());
-                }
-                else
-                {//oh god
-                    EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count)]);
-                }
-            }
-
-            if (timeUntilNextCoworker <= 0 && CoworkerManager.Instance.isActive == false)
-            {
-                timeUntilNextCoworker = UnityEngine.Random.Range(120, 180);
-                CoworkerManager.Instance.SummonCoworker();
-            }
+            spawnInterval = (endTime - time - reservedEndTime) / (totalSpawns - 1);
+            nextSpawnTime = time; // First spawn happens immediately
+            SpawnPerson(); // Immediately spawn the first person
         }
     }
 
+    void Update()
+    {
+        if (!isPaused)
+        {
+            time += Time.deltaTime * difficultyScale;
+            timeUntilNextEmail -= Time.deltaTime * difficultyScale;
+            timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
+            timeUntilNextPerson = Mathf.Max(0, nextSpawnTime - time);
 
-    void ChoosePeople(int cumulativeChallengeLevel) {
+            // Check if it's time to spawn the next person
+            if (time >= nextSpawnTime && totalSpawns > 1)
+            {
+                SpawnPerson();
+                nextSpawnTime = time + spawnInterval; // Schedule the next spawn
+                totalSpawns--;
+            }
+        }
 
-        // Randomize the allPeople list
+        if (time >= endTime)
+        {
+            // End of day logic (e.g., cutscene, transition to next day)
+        }
+
+        if (timeUntilNextEmail <= 0)
+        {
+            timeUntilNextEmail = UnityEngine.Random.Range(20, 27);
+            int spamChance = UnityEngine.Random.Range(0, 100);
+            if (spamChance < 7)
+            {
+                EmailManager.Instance.AddEmail(GetRandomSpamEmail());
+            }
+            else
+            {
+                EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[
+                    UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count)]);
+            }
+        }
+
+        if (timeUntilNextCoworker <= 0 && CoworkerManager.Instance.isActive == false)
+        {
+            timeUntilNextCoworker = UnityEngine.Random.Range(120, 180);
+            CoworkerManager.Instance.SummonCoworker();
+        }
+    }
+
+    void ChoosePeople(int cumulativeChallengeLevel)
+    {
         for (int i = 0; i < allPeople.Count; i++)
         {
             PersonSchema temp = allPeople[i];
@@ -126,7 +128,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public List<EmailSchema> GetAllEmailSchemas() {
+    public List<EmailSchema> GetAllEmailSchemas()
+    {
         List<EmailSchema> allEmailSchemas = new List<EmailSchema>();
         foreach (PersonSchema person in chosenPeople)
         {
@@ -135,7 +138,8 @@ public class GameManager : MonoBehaviour
         return allEmailSchemas;
     }
 
-    public EmailSchema GetRandomSpamEmail() {
+    public EmailSchema GetRandomSpamEmail()
+    {
         return spamEmails[UnityEngine.Random.Range(0, spamEmails.Count)];
     }
 
@@ -147,7 +151,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
             return ((int)time / 60).ToString("00") + ":" + ((int)time % 60).ToString("00");
         }
     }
@@ -163,15 +166,16 @@ public class GameManager : MonoBehaviour
             PersistentData.peopleDamned.Add(person);
         }
     }
+
     void SpawnPerson()
     {
         if (chosenPeople.Count == 0) return;
 
         int index = UnityEngine.Random.Range(0, chosenPeople.Count);
-        GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, peopleScreen2D);
+        GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
         personScript.Init(chosenPeople[index], personBounds);
-        personScript.StartMovement(endPoint.position, duration);
+        personScript.StartMovement(endPoint.position, escalatorTravelDuration);
+        Debug.Log("Spawned Person");
     }
-
 }
