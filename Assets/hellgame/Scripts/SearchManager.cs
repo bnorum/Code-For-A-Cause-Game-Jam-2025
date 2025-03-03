@@ -7,65 +7,52 @@ using System.Collections.Generic;
 
 public class SearchManager : MonoBehaviour
 {
-    public TMP_InputField nameInputField;
     public GameObject profilePanel;
+    public TextMeshProUGUI nameField;
+    public TextMeshProUGUI ageField;
+    public TextMeshProUGUI occupationField;
+    public TextMeshProUGUI netWorthField;
     public GameObject searchPanel;
-    public TextMeshProUGUI profileNameText;
     public Image profileImage;
-    public Button backButton;
-    public Button enterButton;
-    public List<PersonSchema> people = new List<PersonSchema>();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public List<PersonSchema> people = new List<PersonSchema>();
     void Start()
     {
         profilePanel.SetActive(false);
-        backButton.onClick.AddListener(OnBackButtonClicked);
-        enterButton.onClick.AddListener(OnEnterButtonClicked);
+        searchPanel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void OnEnterButtonClicked()
+    void DisplayProfile(Person person)
     {
-        SearchForMatch(nameInputField.text);
-        DisplayProfile(name);
-    }
-
-    private void SearchForMatch(string text)
-    {
-        foreach (PersonSchema person in people)
-        {
-            if (person.personName == text)
-            {
-                name = person.personName;
-                break;
-            }
-            else
-            {
-                name = "No match found, must be exact name";
-            }
-        }
-    }
-
-    void DisplayProfile(string name)
-    {
-        profileNameText.text = name;
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
+        profileImage.sprite = person.personSchema.profileImage;
+        nameField.text = person.personSchema.name;
+        ageField.text = person.personSchema.age.ToString();
+        occupationField.text = person.personSchema.occupation;
+        netWorthField.text = person.personSchema.netWorth.ToString();
     }
     void DisplaySearch()
     {
         profilePanel.SetActive(false);
         searchPanel.SetActive(true);
     }
-    void OnBackButtonClicked()
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        DisplaySearch();
+        if (collision.gameObject.tag == "Person")
+        {
+            DisplayProfile(collision.gameObject.GetComponent<Person>());
+        }     
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Person")
+        {
+            DisplaySearch();
+        }         
+
     }
 
 }

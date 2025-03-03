@@ -16,7 +16,7 @@ MonoBehaviour:
   age: 20
   occupation: Carpenter
   netWorth: 5000
-  profileImage: {fileID: 0}
+  profileImage: {fileID: 6861894420282137670, guid: 6fd546f5b52af5944b217116218315f4, type: 3}
   challengeLevel: 1
   relatedEmails:
   - {fileID: 11400000, guid: 54fe9045ef74908409bfcf77fada497a, type: 2}

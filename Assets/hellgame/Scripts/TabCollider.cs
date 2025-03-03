@@ -6,6 +6,6 @@ public class TabCollider : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Person" && collision.gameObject.GetComponent<Person>().isDragging)
-            FindFirstObjectByType<TabManager>().OpenTab(tabToOpen);
+            FindFirstObjectByType<TabManager>().OpenTab(tabToOpen, collision.gameObject.GetComponent<Person>());
     }
 }

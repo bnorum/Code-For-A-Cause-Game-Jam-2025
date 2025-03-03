@@ -16,7 +16,7 @@ MonoBehaviour:
   age: 14
   occupation: Teenager
   netWorth: 5
-  profileImage: {fileID: 0}
+  profileImage: {fileID: 6387465841501640120, guid: c3380ef2a032a5347aadf0f30b56f3b8, type: 3}
   challengeLevel: 6
   relatedEmails:
   - {fileID: 11400000, guid: 6f31ede0c0a558f4bb8eb006af66c9e3, type: 2}

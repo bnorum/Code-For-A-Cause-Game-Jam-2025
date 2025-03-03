@@ -4,11 +4,7 @@ using UnityEngine;
 public class Person : MonoBehaviour
 {   
     [Header("Person Vars")]
-    private PersonSchema personSchema;
-    public string personName;
-    public int age;
-    public string occupation;
-    public int netWorth;
+    public PersonSchema personSchema;
 
     [Header("Movement Vars")]
     private Camera mainCamera;
@@ -24,10 +20,6 @@ public class Person : MonoBehaviour
     public void Init(PersonSchema personSchema, Collider2D personBounds)
     {
         this.personSchema = personSchema;
-        personName = personSchema.personName;
-        age = personSchema.age;
-        occupation = personSchema.occupation;
-        netWorth = personSchema.netWorth;
         boundsCollider = personBounds;
     }
 
@@ -114,7 +106,6 @@ public class Person : MonoBehaviour
     {
         Vector3 mouseWorldPosition = GetMouseWorldPos();
         Vector3 newPosition = mouseWorldPosition + offset;
-        transform.SetParent(FindFirstObjectByType<PersonManager>().gameObject.transform);
         newPosition = ClampPositionToBounds(newPosition);
 
         storedVelocity = (newPosition - transform.position) / Time.deltaTime;

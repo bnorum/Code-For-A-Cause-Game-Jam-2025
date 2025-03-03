@@ -30,20 +30,23 @@ public class TabManager : MonoBehaviour
     public Color onColor = new Color(1f, 1f, 1f, 1f);
     public Color offColor = new Color(0.8f, 0.8f, 0.8f, 1f);
 
-    [Header("People Holder")]
-    public GameObject peopleHolder;
-    private Vector3 peopleHolderStartPosition;
+    [Header("Physics Holders")]
+    public GameObject escalatorPeopleHolder;
+    public GameObject searchPeopleHolder;
+    public GameObject emailPeopleHolder;
+    public GameObject escalatorPhysicsHiddenPosition;
+    public GameObject searchPhysicsHiddenPosition;
+    public GameObject emailPhysicsHiddenPosition;
 
     private GameObject lastActiveTab;
 
     private void Start()
     {
-        peopleHolderStartPosition = peopleHolder.transform.position;
-        searchTabButton.onClick.AddListener(() => OpenTab(searchScreen));
-        emailTabButton.onClick.AddListener(() => OpenTab(emailScreen));
-        escalatorTabButton.onClick.AddListener(() => OpenTab(escalatorScreen));
+        searchTabButton.onClick.AddListener(() => OpenTab(searchScreen, null));
+        emailTabButton.onClick.AddListener(() => OpenTab(emailScreen, null));
+        escalatorTabButton.onClick.AddListener(() => OpenTab(escalatorScreen, null));
 
-        OpenTab(emailScreen);
+        OpenTab(emailScreen, null);
 
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerEnter, () => ShowDateTimePanel(true));
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerExit, () => ShowDateTimePanel(false));
@@ -58,58 +61,51 @@ public class TabManager : MonoBehaviour
         trigger.triggers.Add(entry);
     }
 
-    public void OpenTab(GameObject tabToOpen)
+    public void OpenTab(GameObject tabToOpen, Person person)
     {
+
         searchScreen.SetActive(tabToOpen == searchScreen);
         emailScreen.SetActive(tabToOpen == emailScreen);
         escalatorScreen.SetActive(tabToOpen == escalatorScreen);
-
+        
         lastActiveTab = tabToOpen;
+
+
+        searchTabButton.GetComponent<Image>().color = (tabToOpen == searchScreen) ? onColor : offColor;
+        emailTabButton.GetComponent<Image>().color = (tabToOpen == emailScreen) ? onColor : offColor;
+        escalatorTabButton.GetComponent<Image>().color = (tabToOpen == escalatorScreen) ? onColor : offColor;
 
         if (tabToOpen == searchScreen)
         {
-            emailTabButton.GetComponent<Image>().color = offColor;
-            escalatorTabButton.GetComponent<Image>().color = offColor;
-            searchTabButton.GetComponent<Image>().color = onColor;
-            searchTabButton.transform.SetAsLastSibling();
             addressBar.text = "https://www.googleinHELL.com";
-            peopleHolder.transform.position = peopleHolderStartPosition + new Vector3(0, 0, 1);
+            searchPeopleHolder.transform.position = new Vector3(0, 0, -1);
+            emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
+            escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
         }
         else if (tabToOpen == emailScreen)
         {
-            searchTabButton.GetComponent<Image>().color = offColor;
-            escalatorTabButton.GetComponent<Image>().color = offColor;
-            emailTabButton.GetComponent<Image>().color = onColor;
-            emailTabButton.transform.SetAsLastSibling();
             addressBar.text = "https://www.evilmail.net";
-            peopleHolder.transform.position = peopleHolderStartPosition + new Vector3(0, 0, 1);
+            emailPeopleHolder.transform.position = new Vector3(0, 0, -1);
+            searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
+            escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
         }
         else if (tabToOpen == escalatorScreen)
         {
-            searchTabButton.GetComponent<Image>().color = offColor;
-            emailTabButton.GetComponent<Image>().color = offColor;
-            escalatorTabButton.GetComponent<Image>().color = onColor;
-            escalatorTabButton.transform.SetAsLastSibling();
             addressBar.text = "C:/Users/Employee/ProgramFiles/escalator.exe";
-            peopleHolder.transform.position = peopleHolderStartPosition;
+            escalatorPeopleHolder.transform.position = new Vector3(0, 0, -1);
+            searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
+            emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
+        }
+
+
+        if (person != null)
+        {// Parent the Person object if provided
+            person.transform.SetParent(tabToOpen == searchScreen ? searchPeopleHolder.transform :
+                                    tabToOpen == emailScreen ? emailPeopleHolder.transform :
+                                    escalatorPeopleHolder.transform, false);
         }
     }
 
-    public void OpenTabByCollider(Collider2D collider)
-    {
-        if (collider == searchTabCollider)
-        {
-            OpenTab(searchScreen);
-        }
-        else if (collider == emailTabCollider)
-        {
-            OpenTab(emailScreen);
-        }
-        else if (collider == escalatorTabCollider)
-        {
-            OpenTab(escalatorScreen);
-        }
-    }
 
     public GameObject GetLastActiveTab()
     {
