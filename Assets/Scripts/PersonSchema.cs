@@ -9,7 +9,6 @@ public class PersonSchema : ScriptableObject
     public int age;
     public string occupation;
     public int netWorth;
-    public Sprite profileImage;
     public int challengeLevel;
 
     public List<EmailSchema> relatedEmails;

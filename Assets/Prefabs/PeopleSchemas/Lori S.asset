@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Riya O
+  m_Name: Lori S
   m_EditorClassIdentifier: 
-  personName: Riya O
-  age: 14
-  occupation: Teenager
-  netWorth: 5
-  profileImage: {fileID: 934683400, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
+  personName: Lori S
+  age: 55
+  occupation: Painter
+  netWorth: 50000
+  profileImage: {fileID: -7442331896231211263, guid: 0f860ca1b6e94f443a72db342606cee5, type: 3}
   challengeLevel: 6
   relatedEmails: []

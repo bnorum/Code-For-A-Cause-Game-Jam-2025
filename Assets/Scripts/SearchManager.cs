@@ -41,7 +41,6 @@ public class SearchManager : MonoBehaviour
     {
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
-        profileImage.sprite = person.personSchema.profileImage;
         nameField.text = $"Name: {person.personSchema.name}";
         ageField.text = $"Age: {person.personSchema.age}";
         occupationField.text = $"Occupation: {person.personSchema.occupation}";

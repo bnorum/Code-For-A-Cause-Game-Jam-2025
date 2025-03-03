@@ -363,6 +363,7 @@ MonoBehaviour:
   trashCanPanel: {fileID: 320446184}
   trashCanHolder: {fileID: 937834689}
   trashCanHiddenPosition: {fileID: 11459355}
+  currentTabIndex: 1
 --- !u!114 &37701114
 MonoBehaviour:
   m_ObjectHideFlags: 0
