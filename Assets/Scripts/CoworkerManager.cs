@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class CoworkerManager : MonoBehaviour
 {
+
+    public static CoworkerManager Instance { get; private set; }
+
     public List<CoworkerSchema> coworkers;
     private int coworkerIndex;
     public GameObject coworkerHolder;
@@ -17,6 +20,23 @@ public class CoworkerManager : MonoBehaviour
     public bool isActive = false;
     public bool isMoving = false;
     public bool playerHasResponded = false;
+
+    private void Awake()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,10 +48,11 @@ public class CoworkerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Q)) {
             SummonCoworker();
         }
-
+        */
 
         if (isMoving) {
             Vector3 targetPosition = stopPosition.position;
@@ -68,6 +89,7 @@ public class CoworkerManager : MonoBehaviour
         coworkerHolder.transform.position = coworkerStartPosition;
         isActive = true;
         isMoving = true;
+        playerHasResponded = false;
         int randomIndex = Random.Range(0, coworkers.Count);
         coworkerIndex = randomIndex;
         coworkerImage.sprite = coworkers[randomIndex].coworkerImage;
