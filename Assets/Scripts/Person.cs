@@ -80,6 +80,7 @@ public class Person : MonoBehaviour
         if (!isDragging && !isFalling)
         {
             transform.position = endPosition;
+            PersistentData.peopleSaved.Add(personSchema);
             Destroy(gameObject);
         }
     }

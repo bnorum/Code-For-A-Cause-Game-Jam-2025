@@ -4,15 +4,18 @@ using TMPro;
 public class escalatorScreenManager : MonoBehaviour
 {
     public TMP_Text uiText;
-    private string[] loadingFrames = { "--", "\\", "|", "/" };
+    public TMP_Text sentToHeavenText;
+    public TMP_Text sentToHellText;
+    private string[] loadingFrames = { ".", "..", "..." };
     private int currentFrame = 0;
     private float timer = 0f;
-    private float frameRate = 0.2f;
+    private float frameRate = .75f; // Change frame every second
+
     void Start()
     {
         if (uiText != null)
         {
-            uiText.text = "excalator.exe running... " + loadingFrames[currentFrame];
+            uiText.text = "excalator.exe running" + loadingFrames[currentFrame];
         }
     }
 
@@ -26,7 +29,9 @@ public class escalatorScreenManager : MonoBehaviour
             {
                 timer = 0f;
                 currentFrame = (currentFrame + 1) % loadingFrames.Length;
-                uiText.text = "excalator.exe running... " + loadingFrames[currentFrame];
+                uiText.text = $"excalator.exe running {loadingFrames[currentFrame]}";
+                sentToHeavenText.text = $"People Saved Today: {PersistentData.peopleSaved.Count}";
+                sentToHellText.text = $"People Saved Today: {PersistentData.peopleDamned.Count}";
             }
         }
     }
