@@ -28,10 +28,10 @@ public class SearchManager : MonoBehaviour
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
         profileImage.sprite = person.personSchema.profileImage;
-        nameField.text = person.personSchema.name;
-        ageField.text = person.personSchema.age.ToString();
-        occupationField.text = person.personSchema.occupation;
-        netWorthField.text = person.personSchema.netWorth.ToString();
+        nameField.text = $"Name: {person.personSchema.name}";
+        ageField.text = $"Age: {person.personSchema.age}";
+        occupationField.text = $"Occupation: {person.personSchema.occupation}";
+        netWorthField.text = $"Net Worth: {person.personSchema.netWorth}";
     }
     void DisplaySearch()
     {
