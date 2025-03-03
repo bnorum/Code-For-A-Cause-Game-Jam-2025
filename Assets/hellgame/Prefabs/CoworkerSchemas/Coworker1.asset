@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
   m_Name: Coworker1
   m_EditorClassIdentifier: 
-  coworkerImage: {fileID: 7806903185615573512, guid: c5038a64114896f4d99e54f60250a1ee, type: 3}
+  coworkerImage: {fileID: 21300000, guid: b0d3ee780ca29cb499fbfc9867395fe3, type: 3}
+  forwardImage: {fileID: -7442331896231211263, guid: 0f860ca1b6e94f443a72db342606cee5, type: 3}
   coworkerSpeech: Hey bro, wanna get a beer later?
   responseOption1: Yes
   responseOption2: No

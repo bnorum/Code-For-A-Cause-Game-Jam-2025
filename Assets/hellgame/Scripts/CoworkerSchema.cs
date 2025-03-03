@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoworkerSchema : ScriptableObject
 {
     public Sprite coworkerImage;
+    public Sprite forwardImage;
     public string coworkerSpeech;
     public string responseOption1;
     public string responseOption2;
