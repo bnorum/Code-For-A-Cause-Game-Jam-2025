@@ -105,4 +105,13 @@ public class Email : MonoBehaviour
     public void ToggleForwardMenu() {
         ForwardMenu.SetActive(!ForwardMenu.activeSelf);
     }
+
+    public void DamnPerson() {
+        GameManager.Instance.DecideFateOfPerson(emailSchema.relatedPerson, false);
+    }
+
+    public void SavePerson() {
+        GameManager.Instance.DecideFateOfPerson(emailSchema.relatedPerson, true);
+
+    }
 }

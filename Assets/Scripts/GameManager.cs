@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public float timeUntilNextEmail = 5f;
 
+    public bool isPaused = false;
+
 
     private void Awake()
     {
@@ -39,8 +41,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        timeUntilNextEmail -= Time.deltaTime;
+        if (!isPaused) {
+            time += Time.deltaTime;
+            timeUntilNextEmail -= Time.deltaTime;
+        }
+        if (time >= 1440f)
+        {
+            //do some sort of cutscene, then load next day
+        }
+
         if (timeUntilNextEmail <= 0)
 
         {
@@ -102,5 +111,17 @@ public class GameManager : MonoBehaviour
     public string TimeToString()
     {
         return ((int)time / 60 % 12).ToString("00") + ":" + ((int)time % 60).ToString("00");
+    }
+
+    public void DecideFateOfPerson(PersonSchema person, bool save)
+    {
+        if (save)
+        {
+            PersistentData.peopleSaved.Add(person);
+        }
+        else
+        {
+            PersistentData.peopleDamned.Add(person);
+        }
     }
 }
