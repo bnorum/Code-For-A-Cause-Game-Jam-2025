@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         ChoosePeople(20);
         totalSpawns = chosenPeople.Count;
 
+        difficultyScale = PersistentData.difficultyScale;
         // Ensure at least one spawn
         if (totalSpawns > 0)
         {

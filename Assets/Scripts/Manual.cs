@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Manual : MonoBehaviour
 {
+    public static Manual Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private Vector3 startPosition;
     public Transform shownPosition;
     public bool isShown = false;
@@ -12,6 +26,9 @@ public class Manual : MonoBehaviour
     public List<string> manualText;
     public int pagenumber = 0;
     public TextMeshProUGUI pageNumberText;
+
+    public GameObject notesPage;
+    public bool notesShown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,10 +41,21 @@ public class Manual : MonoBehaviour
         if (isShown)
         {
             transform.position = Vector3.Lerp(transform.position, shownPosition.position, Time.deltaTime * 5f);
+            transform.SetAsLastSibling();
         }
         else
         {
             transform.position = Vector3.Lerp(transform.position, startPosition, Time.deltaTime * 5f);
+        }
+
+        if (notesShown)
+        {
+            notesPage.transform.position = Vector3.Lerp(notesPage.transform.position, shownPosition.position, Time.deltaTime * 5f);
+            notesPage.transform.SetAsLastSibling();
+        }
+        else
+        {
+            notesPage.transform.position = Vector3.Lerp(notesPage.transform.position, startPosition, Time.deltaTime * 5f);
         }
 
         pageNumberText.text = (pagenumber + 1) + "/" + manualText.Count;
@@ -36,6 +64,12 @@ public class Manual : MonoBehaviour
 
     public void ToggleShown() {
         isShown = !isShown;
+        if (isShown) notesShown = false;
+    }
+
+    public void ShowNotesPage() {
+        notesShown = !notesShown;
+        if (notesShown) isShown = false;
     }
 
     public void SwitchPage(bool isForward) {
