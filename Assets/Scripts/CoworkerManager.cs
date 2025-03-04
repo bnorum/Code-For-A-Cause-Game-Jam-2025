@@ -97,6 +97,10 @@ public class CoworkerManager : MonoBehaviour
                 coworkerHolder.transform.position = coworkerStartPosition;
             }
         }
+        if (!isActive) {
+            coworkerArms.gameObject.SetActive(false);
+            coworkerImage.gameObject.SetActive(false);
+        }
     }
 
     public void SummonCoworker() {
@@ -104,11 +108,14 @@ public class CoworkerManager : MonoBehaviour
             return;
         }
 
+
         int randomIndex = Random.Range(0, coworkers.Count);
         coworkerIndex = randomIndex;
         playerHasResponded = false;
 
         if (!metCoworkers.Contains(coworkers[randomIndex])) {
+            coworkerArms.gameObject.SetActive(true);
+            coworkerImage.gameObject.SetActive(true);
             metCoworkers.Add(coworkers[randomIndex]);
             coworkerHolder.transform.position = coworkerStartPosition;
             isActive = true;

@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Manual : MonoBehaviour
 {
+    public static Manual Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private Vector3 startPosition;
     public Transform shownPosition;
     public bool isShown = false;

@@ -8,8 +8,9 @@ public class ViewToggler : MonoBehaviour
     public Camera mainCamera;
     public GameObject DeskRoute;
     public GameObject ComputerRoute;
+    public GameObject PapersRoute;
 
-    public bool isDeskView = true;
+    public int viewnum = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,8 +20,7 @@ public class ViewToggler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDeskView) {
-            GetComponent<Image>().sprite = deskView;
+        if (viewnum == 0) {
 
             //ugliest code ever
             //but it works so who cares
@@ -31,22 +31,30 @@ public class ViewToggler : MonoBehaviour
 
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 5f, Time.deltaTime * 5f);
 
-        } else {
-            GetComponent<Image>().sprite = computerView;
+        } else if (viewnum == 1) {
 
             mainCamera.transform.position = Vector3.Lerp(
                 new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z),
                 new Vector3(ComputerRoute.transform.position.x, ComputerRoute.transform.position.y, mainCamera.transform.position.z),
                 Time.deltaTime * 5f);
 
+
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 3.42f, Time.deltaTime * 5f);
 
+        } else if (viewnum == 2) {
+            mainCamera.transform.position = Vector3.Lerp(
+                new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z),
+                new Vector3(PapersRoute.transform.position.x, PapersRoute.transform.position.y, mainCamera.transform.position.z),
+                Time.deltaTime * 5f);
+
+            Manual.Instance.isShown = true;
+            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 3.42f, Time.deltaTime * 5f);
         }
 
 
     }
 
-    public void ToggleView() {
-        isDeskView = !isDeskView;
+    public void ToggleView(int viewnumber) {
+        viewnum = viewnumber;
     }
 }
