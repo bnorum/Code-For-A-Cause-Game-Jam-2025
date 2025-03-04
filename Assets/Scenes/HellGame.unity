@@ -4991,6 +4991,7 @@ MonoBehaviour:
   coworkers:
   - {fileID: 11400000, guid: 3d4de6894cc761f4a945ab8dbd7be8e5, type: 2}
   coworkerHolder: {fileID: 558398733}
+  coworkerArms: {fileID: 0}
   stopPosition: {fileID: 2062940843}
   coworkerImage: {fileID: 1001807493}
   coworkerText: {fileID: 1865366791}
@@ -6249,6 +6250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149132865}
+  - component: {fileID: 1149132866}
   m_Layer: 5
   m_Name: EscalatorPhysicsLayer
   m_TagString: Untagged
