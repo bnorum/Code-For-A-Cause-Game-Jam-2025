@@ -32,6 +32,7 @@ public class Person : MonoBehaviour
         startPointGameRef = startPoint;
         endPointGameRef = endPoint;
         nameTagObject.SetActive(false);
+        nameTagDefaultLocation = nameTagObject.transform;
     }
 
     private void Awake()
