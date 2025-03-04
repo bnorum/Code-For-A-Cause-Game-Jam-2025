@@ -219,6 +219,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1159,7 +1185,49 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      microwave open_0: 4444711019213645375
+      microwave open_1: -2835171696992626362
+      microwave open_10: -4328798126663384705
+      microwave open_11: 8711415773308625844
+      microwave open_12: -6638004737323758773
+      microwave open_13: -7905802693245476796
+      microwave open_14: 4560972921986874997
+      microwave open_15: 6174883849898358659
+      microwave open_16: -5753292993298750639
+      microwave open_17: -8659747330719085044
+      microwave open_18: 7913668266774057006
+      microwave open_19: 7711153429736154365
+      microwave open_2: 6339182372549098339
+      microwave open_20: -3533994896938333086
+      microwave open_21: -1294843343017231175
+      microwave open_22: 7892542009921482449
+      microwave open_23: 7037792215003686271
+      microwave open_24: 9075455245466086550
+      microwave open_25: -2441736340362968552
+      microwave open_26: -6796856159507518510
+      microwave open_27: 48901472033327721
+      microwave open_28: 2635912091412307432
+      microwave open_29: 1466696441298145305
+      microwave open_3: 1187148476984404860
+      microwave open_30: 2614210937950819710
+      microwave open_31: 2215291565183747561
+      microwave open_32: -2998005087715236260
+      microwave open_33: 7682109302679493011
+      microwave open_34: -4981062942918890037
+      microwave open_35: 9117495050574817241
+      microwave open_36: -4017482659132688907
+      microwave open_37: -5675793998257322022
+      microwave open_38: 3332833647101458153
+      microwave open_39: -3210467774032826043
+      microwave open_4: -2998793916157932054
+      microwave open_40: 6477059119921486604
+      microwave open_41: 7642107165867140323
+      microwave open_5: -2437181512073364056
+      microwave open_6: -1885052824829573831
+      microwave open_7: 8344394317826311340
+      microwave open_8: 7357723472952634706
+      microwave open_9: -424713865499688276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
