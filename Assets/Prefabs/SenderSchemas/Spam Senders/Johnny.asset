@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Vlod U
+  m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
+  m_Name: Johnny
   m_EditorClassIdentifier: 
-  personName: Vlod U
-  age: 77
-  occupation: Pioneer
-  netWorth: 120000
-  challengeLevel: 6
-  relatedEmails:
-  - {fileID: 11400000, guid: 516bfee56ea7b994f8e546262de1916f, type: 2}
+  senderEmail: johnny@georgia.gov
+  senderName: Johnny
+  profileImage: {fileID: 4227833842622223954, guid: edc8e15ccc4bb7748b0916c4040629a3, type: 3}

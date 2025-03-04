@@ -16,6 +16,9 @@ MonoBehaviour:
   age: 24
   occupation: Musical Artist
   netWorth: 1000000
-  profileImage: {fileID: -1017651442, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   challengeLevel: 3
-  relatedEmails: []
+  relatedEmails:
+  - {fileID: 11400000, guid: c40759fef1a37ee4f8ea3bb2ebfadca9, type: 2}
+  - {fileID: 11400000, guid: 629845c6a1a27604784afd53c4ec113b, type: 2}
+  - {fileID: 11400000, guid: afd3f439af88b4d4b82053cee3c67867, type: 2}
+  - {fileID: 11400000, guid: bd3afb43527dea146b24db04b29aa936, type: 2}

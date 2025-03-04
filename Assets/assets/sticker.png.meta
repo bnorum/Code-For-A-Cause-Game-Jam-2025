@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44870df8a2295bc40a3c5936bb44e4f2
+guid: 5e91d5f7c5a4eb84396e0ea750a7e79a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2908525160962987065
-    second: microwave closed_0
+      213: -6813374612988561086
+    second: sticker_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: microwave closed_0
+      name: sticker_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 59
-        width: 412
-        height: 259
+        x: 1
+        y: 7
+        width: 180
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7cbe380b6c7d2a7d0800000000000000
-      internalID: -2908525160962987065
+      spriteID: 249f62763e70271a0800000000000000
+      internalID: -6813374612988561086
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      microwave closed_0: -2908525160962987065
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,6 +16,9 @@ MonoBehaviour:
   age: 44
   occupation: Contractor
   netWorth: 200000
-  profileImage: {fileID: -2078283046, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   challengeLevel: 6
-  relatedEmails: []
+  relatedEmails:
+  - {fileID: 11400000, guid: ea342f24ed9efa949b1b926c8895b422, type: 2}
+  - {fileID: 11400000, guid: 76bb95dacdfe0bb4f9ef29e5ec6d71ce, type: 2}
+  - {fileID: 11400000, guid: 9fdb771f96e6ff94fadfb1b4d113b8eb, type: 2}
+  - {fileID: 11400000, guid: dfa3336189466ff41a88499571d2c2ef, type: 2}

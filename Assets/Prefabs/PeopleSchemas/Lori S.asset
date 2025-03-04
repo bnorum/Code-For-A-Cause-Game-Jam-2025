@@ -16,6 +16,9 @@ MonoBehaviour:
   age: 55
   occupation: Painter
   netWorth: 50000
-  profileImage: {fileID: -7442331896231211263, guid: 0f860ca1b6e94f443a72db342606cee5, type: 3}
   challengeLevel: 6
-  relatedEmails: []
+  relatedEmails:
+  - {fileID: 11400000, guid: 7490c56bcb4476b49b6fd96de2e8833c, type: 2}
+  - {fileID: 11400000, guid: bd30464dcc0e9594a93cadd32660eba6, type: 2}
+  - {fileID: 11400000, guid: dc5d9de499391944f9cc290beb27c44f, type: 2}
+  - {fileID: 11400000, guid: 58e91e3b919e34541b938f8c5ef5d802, type: 2}

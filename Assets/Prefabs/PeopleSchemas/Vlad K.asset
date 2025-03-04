@@ -16,6 +16,9 @@ MonoBehaviour:
   age: 45
   occupation: Tech Support Agent
   netWorth: 200000
-  profileImage: {fileID: -2078283046, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   challengeLevel: 6
-  relatedEmails: []
+  relatedEmails:
+  - {fileID: 11400000, guid: 9b4ed8db923d81b4e90fd33c2ef01785, type: 2}
+  - {fileID: 11400000, guid: 65307b41f68316e4cbe922dc63ff794a, type: 2}
+  - {fileID: 11400000, guid: 98d33f336fafe6e478049b8018341abc, type: 2}
+  - {fileID: 11400000, guid: d3fc07fdd87c12f4da3ffd1c5f0f6081, type: 2}

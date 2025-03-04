@@ -16,6 +16,9 @@ MonoBehaviour:
   age: 75
   occupation: Dad
   netWorth: 200000
-  profileImage: {fileID: 1883823577, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   challengeLevel: 6
-  relatedEmails: []
+  relatedEmails:
+  - {fileID: 11400000, guid: d4bde5338e685594c9f8b52dd6ce1122, type: 2}
+  - {fileID: 11400000, guid: 8734127e128c9cd41b06013fe5abf4fe, type: 2}
+  - {fileID: 11400000, guid: bc89beb28637aaa4aa619efaf6b4268f, type: 2}
+  - {fileID: 11400000, guid: 82d22063258d4744e80197ef0fad36ab, type: 2}

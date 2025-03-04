@@ -88,10 +88,9 @@ public class GameManager : MonoBehaviour
             {
                 EmailManager.Instance.AddEmail(GetRandomSpamEmail());
             }
-            else
+            else if(EmailManager.Instance.emailSchemas.Count > 0)
             {
-                EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[
-                    UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count)]);
+                EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count-1)]);
             }
         }
 
