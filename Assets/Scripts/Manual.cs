@@ -11,6 +11,7 @@ public class Manual : MonoBehaviour
     public TextMeshProUGUI manualTextBox;
     public List<string> manualText;
     public int pagenumber = 0;
+    public TextMeshProUGUI pageNumberText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +30,7 @@ public class Manual : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, startPosition, Time.deltaTime * 5f);
         }
 
+        pageNumberText.text = (pagenumber + 1) + "/" + manualText.Count;
 
     }
 
