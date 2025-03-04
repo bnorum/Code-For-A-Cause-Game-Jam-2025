@@ -10,24 +10,28 @@ public class Person : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D rb;
     public bool isDragging = false;
-    private bool shouldMove = true;
     public bool isFalling = false;
     private Vector3 offset;
     private Vector2 storedVelocity;
     public float dampener = 3.0f;
     private Collider2D boundsCollider;
-    private Vector3 endPointReference;
-    private Vector3 startPointReference;
     private float durationReference;
+    private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
-    public GameObject childObject;
-    private Transform childDefaultPoint;
+    public GameObject nameTagObject;
+    private Transform nameTagDefaultLocation;
+    private GameObject startPointGameRef;
+    private GameObject endPointGameRef;
+    public bool isMicrowaving = false;
+    public bool hasBeenMicrowaved = false;
 
-    public void Init(PersonSchema personSchema, Collider2D personBounds)
+    public void Init(PersonSchema personSchema, Collider2D personBounds, GameObject startPoint, GameObject endPoint)
     {
         this.personSchema = personSchema;
         boundsCollider = personBounds;
-        childObject.SetActive(false); // Initially set the child object to inactive
+        startPointGameRef = startPoint;
+        endPointGameRef = endPoint;
+        nameTagObject.SetActive(false);
     }
 
     private void Awake()
@@ -40,8 +44,6 @@ public class Person : MonoBehaviour
         }
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        startPointReference = transform.position;
-        childDefaultPoint = childObject.transform;
     }
 
     private void Update()
@@ -59,14 +61,19 @@ public class Person : MonoBehaviour
             FollowMouse();  
         }
         CheckMouseHover();
+        elapsedTime += Time.deltaTime;
+        if (isBeingTransported && !isDragging && !isFalling)
+        {
+            MoveToPosition(durationReference);
+        }
     }
 
-    public void StartMovement(Vector3 endPosition, float duration)
+    public void StartMovement(float duration)
     {
-        endPointReference = endPosition;
+        Debug.Log("Starting movement...");
         durationReference = duration;
+        elapsedTime = 0.0f;
         isBeingTransported = true;
-        StartCoroutine(MoveToPosition(endPosition, duration));
     }
 
     public void RestartMovement()
@@ -76,33 +83,28 @@ public class Person : MonoBehaviour
         isFalling = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
-        StartCoroutine(MoveToPosition(endPointReference, durationReference));
     }
 
-    private IEnumerator MoveToPosition(Vector3 endPosition, float duration)
+    private void MoveToPosition(float duration)
     {
-        float elapsedTime = 0.0f;
-        Vector3 startPosition = transform.position;
+        float t = elapsedTime / duration;
+        transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
+        Vector3 newPosition = transform.position;
+        newPosition.z = transform.parent.position.z;
+        transform.position = newPosition;
 
-        while (elapsedTime < duration)
-        {
-            if (!isDragging && isBeingTransported && !isFalling)
+        if (t >= 1.0f)  
+        {//time expired
+            if(transform.position == endPointGameRef.transform.position)
             {
-                float t = elapsedTime / duration;
-                transform.position = Vector3.Lerp(startPosition, endPosition, t);
-                Vector3 newPosition = transform.position;
-                newPosition.z = transform.parent.position.z;
-                transform.position = newPosition;
-
-                elapsedTime += Time.deltaTime;
+                PersistentData.peopleSaved.Add(personSchema);
+                Destroy(gameObject);
             }
-            yield return null;
-        }
-
-        if (transform.position == endPosition && isBeingTransported)
-        {
-            PersistentData.peopleSaved.Add(personSchema);
-            Destroy(gameObject);
+            else
+            {
+                Destroy(gameObject);
+                //TODO: Add to list of people who were not saved
+            }
         }
     }
 
@@ -110,7 +112,7 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        if (hit.collider != null && hit.collider.gameObject == gameObject && !isMicrowaving)
         {
             storedVelocity = rb.linearVelocity;
             isDragging = true;
@@ -138,7 +140,6 @@ public class Person : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         isDragging = false;
         isFalling = true;
-        shouldMove = false;
 
         rb.gravityScale = dampener;
         rb.linearVelocity = storedVelocity / dampener;
@@ -163,21 +164,24 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject && !isDragging)
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            childObject.SetActive(true);
-            if(childObject.transform.position != ClampPositionToBounds(childObject.transform.position))
+            nameTagObject.SetActive(true);
+
+            Vector3 clampedPosition = ClampPositionToBounds(nameTagObject.transform.position);
+            if (nameTagObject.transform.position != clampedPosition)
             {
-                childObject.transform.position = ClampPositionToBounds(childObject.transform.position);
+                nameTagObject.transform.position = clampedPosition;
             }
             else
             {
-                childObject.transform.position = childDefaultPoint.position;
+                nameTagObject.transform.position = nameTagDefaultLocation.position;
             }
         }
         else
         {
-            childObject.SetActive(false);
+            nameTagObject.SetActive(false);
         }
     }
+
 }

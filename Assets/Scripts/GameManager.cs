@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
         {
             spawnInterval = (endTime - time - reservedEndTime) / (totalSpawns - 1);
             nextSpawnTime = time; // First spawn happens immediately
-            SpawnPerson(); // Immediately spawn the first person
         }
     }
 
@@ -173,8 +172,8 @@ public class GameManager : MonoBehaviour
         int index = UnityEngine.Random.Range(0, chosenPeople.Count);
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
-        personScript.Init(chosenPeople[index], personBounds);
-        personScript.StartMovement(endPoint.position, escalatorTravelDuration);
+        personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
+        personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
     }
 }

@@ -13,20 +13,19 @@ public class TabManager : MonoBehaviour
     public Button searchTabButton;
     public Button emailTabButton;
     public Button escalatorTabButton;
+    public Button datetimeButton;
 
     [Header("Tab Screens")]
     public GameObject searchScreen;
     public GameObject emailScreen;
     public GameObject escalatorScreen;
+    public GameObject garbageBinScreen;
+    public GameObject datetimeScreen;
 
     [Header("Tab Colliders")]
     public Collider2D searchTabCollider;
     public Collider2D emailTabCollider;
     public Collider2D escalatorTabCollider;
-
-    [Header("DateTime")]
-    public Button datetimeButton;
-    public GameObject datetimePanel;
 
     [Header("UI Elements")]
     public TextMeshProUGUI addressBar;
@@ -34,17 +33,16 @@ public class TabManager : MonoBehaviour
     public Color offColor = new Color(0.8f, 0.8f, 0.8f, 1f);
 
     [Header("Physics Holders")]
-    public GameObject escalatorPeopleHolder;
-    public GameObject searchPeopleHolder;
-    public GameObject emailPeopleHolder;
+    public GameObject escalatorPhysicsLayer;
+    public GameObject searchPhysicsLayer;
+    public GameObject emailPhysicsLayer;
+    public GameObject garbageBinPhysicsLayer;
     public GameObject escalatorPhysicsHiddenPosition;
     public GameObject searchPhysicsHiddenPosition;
     public GameObject emailPhysicsHiddenPosition;
+    public GameObject garbageBinPhysicsHiddenPosition;
 
     [Header("Trash Can")]
-    public GameObject trashCanPanel;
-    public GameObject trashCanHolder;
-    public GameObject trashCanHiddenPosition;
 
     private GameObject lastActiveTab;
     public int currentTabIndex = 1;
@@ -72,22 +70,22 @@ public class TabManager : MonoBehaviour
 
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerEnter, () => ShowDateTimePanel(true));
         AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerExit, () => ShowDateTimePanel(false));
-        datetimePanel.SetActive(false);
+        datetimeScreen.SetActive(false);
 
-        trashCanPanel.SetActive(false);
+        garbageBinScreen.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.G))
         {
-            trashCanPanel.SetActive(true);
-            trashCanHolder.transform.position = new Vector3(5.83f, -3.17f, -1);
+            garbageBinScreen.SetActive(true);
+            garbageBinPhysicsLayer.transform.position = new Vector3(0, 0, -1);
         }
         else
         {
-            trashCanPanel.SetActive(false);
-            trashCanHolder.transform.position = trashCanHiddenPosition.transform.position;
+            garbageBinScreen.SetActive(false);
+            garbageBinPhysicsLayer.transform.position = garbageBinPhysicsHiddenPosition.transform.position;
         }
 
         if (searchScreen.activeSelf) {currentTabIndex = 0;}
@@ -121,36 +119,36 @@ public class TabManager : MonoBehaviour
         if (tabToOpen == searchScreen)
         {
             addressBar.text = "https://www.googleinHELL.com";
-            searchPeopleHolder.transform.position = new Vector3(3, -4, -1);
-            emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
-            escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
+            searchPhysicsLayer.transform.position = new Vector3(0, -0, -1);
+            emailPhysicsLayer.transform.position = emailPhysicsHiddenPosition.transform.position;
+            escalatorPhysicsLayer.transform.position = escalatorPhysicsHiddenPosition.transform.position;
 
             searchTabButton.transform.SetAsLastSibling();
         }
         else if (tabToOpen == emailScreen)
         {
             addressBar.text = "https://www.evilmail.net";
-            emailPeopleHolder.transform.position = new Vector3(0, 0, -1);
-            searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
-            escalatorPeopleHolder.transform.position = escalatorPhysicsHiddenPosition.transform.position;
+            emailPhysicsLayer.transform.position = new Vector3(0, 0, -1);
+            searchPhysicsLayer.transform.position = searchPhysicsHiddenPosition.transform.position;
+            escalatorPhysicsLayer.transform.position = escalatorPhysicsHiddenPosition.transform.position;
 
             emailTabButton.transform.SetAsLastSibling();
         }
         else if (tabToOpen == escalatorScreen)
         {
             addressBar.text = "C:/Users/Employee/ProgramFiles/escalator.exe";
-            escalatorPeopleHolder.transform.position = new Vector3(0, 0, -1);
-            searchPeopleHolder.transform.position = searchPhysicsHiddenPosition.transform.position;
-            emailPeopleHolder.transform.position = emailPhysicsHiddenPosition.transform.position;
+            escalatorPhysicsLayer.transform.position = new Vector3(0, 0, -1);
+            searchPhysicsLayer.transform.position = searchPhysicsHiddenPosition.transform.position;
+            emailPhysicsLayer.transform.position = emailPhysicsHiddenPosition.transform.position;
 
             escalatorTabButton.transform.SetAsLastSibling();
         }
 
         if (person != null)
         {
-            person.transform.SetParent(tabToOpen == searchScreen ? searchPeopleHolder.transform :
-                                    tabToOpen == emailScreen ? emailPeopleHolder.transform :
-                                    escalatorPeopleHolder.transform, false);
+            person.transform.SetParent(tabToOpen == searchScreen ? searchPhysicsLayer.transform :
+                                    tabToOpen == emailScreen ? emailPhysicsLayer.transform :
+                                    escalatorPhysicsLayer.transform, false);
         }
 
 
@@ -164,10 +162,10 @@ public class TabManager : MonoBehaviour
 
     private void ShowDateTimePanel(bool show)
     {
-        datetimePanel.SetActive(show);
+        datetimeScreen.SetActive(show);
         if (show)
         {
-            datetimePanel.transform.SetAsLastSibling();
+            datetimeScreen.transform.SetAsLastSibling();
         }
     }
 
