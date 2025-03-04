@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,5 +30,10 @@ public class SceneManager : MonoBehaviour
     public void LoadBetweenDay()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

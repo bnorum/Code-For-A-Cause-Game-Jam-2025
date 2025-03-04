@@ -19,3 +19,5 @@ MonoBehaviour:
   responseOption2: 1000
   response1Response: That's pathetic.
   response2Response: I believe it.
+  friendlinessScore: 5
+  isCorrectResponse1: 0

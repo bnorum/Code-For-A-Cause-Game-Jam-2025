@@ -19,3 +19,5 @@ MonoBehaviour:
   responseOption2: No
   response1Response: Great, see you after work.
   response2Response: Well, whatever.
+  friendlinessScore: 10
+  isCorrectResponse1: 1
