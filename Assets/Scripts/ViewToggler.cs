@@ -60,7 +60,6 @@ public class ViewToggler : MonoBehaviour
             buttonImages[0].color = new Color(1f, 1f, 1f, 1f);
             buttonImages[1].color = new Color(1f, 1f, 1f, 1f);
             buttonImages[2].color = new Color(1f, 0f, 0f, 1f);
-            Manual.Instance.isShown = true;
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 3.42f, Time.deltaTime * 5f);
         }
 
