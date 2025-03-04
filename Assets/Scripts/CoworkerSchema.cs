@@ -11,5 +11,7 @@ public class CoworkerSchema : ScriptableObject
     public string responseOption2;
     public string response1Response;
     public string response2Response;
+    public int friendlinessScore;
+    public bool isCorrectResponse1;
 
 }

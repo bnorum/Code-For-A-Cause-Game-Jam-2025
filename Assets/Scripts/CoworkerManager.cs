@@ -150,6 +150,13 @@ public class CoworkerManager : MonoBehaviour
         responseOption1.transform.parent.gameObject.SetActive(false);
         responseOption2.transform.parent.gameObject.SetActive(false);
         coworkerText.text = coworkers[coworkerIndex].response1Response;
+        if (coworkers[coworkerIndex].isCorrectResponse1) {
+            PersistentData.coworkerFriendlinessScore += coworkers[coworkerIndex].friendlinessScore;
+        } else {
+            PersistentData.coworkerFriendlinessScore -= coworkers[coworkerIndex].friendlinessScore;
+        }
+                Debug.Log("Friendliness score: " + PersistentData.coworkerFriendlinessScore);
+
     }
 
     public void Respond2() {
@@ -157,5 +164,11 @@ public class CoworkerManager : MonoBehaviour
         responseOption1.transform.parent.gameObject.SetActive(false);
         responseOption2.transform.parent.gameObject.SetActive(false);
         coworkerText.text = coworkers[coworkerIndex].response2Response;
+        if (!coworkers[coworkerIndex].isCorrectResponse1) {
+            PersistentData.coworkerFriendlinessScore += coworkers[coworkerIndex].friendlinessScore;
+        } else {
+            PersistentData.coworkerFriendlinessScore -= coworkers[coworkerIndex].friendlinessScore;
+        }
+        Debug.Log("Friendliness score: " + PersistentData.coworkerFriendlinessScore);
     }
 }
