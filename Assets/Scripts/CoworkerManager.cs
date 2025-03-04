@@ -100,9 +100,10 @@ public class CoworkerManager : MonoBehaviour
     }
 
     public void SummonCoworker() {
-        if (coworkers.Count == 0) {
+        if (metCoworkers.Count == coworkers.Count) {
             return;
         }
+
         int randomIndex = Random.Range(0, coworkers.Count);
         coworkerIndex = randomIndex;
         playerHasResponded = false;

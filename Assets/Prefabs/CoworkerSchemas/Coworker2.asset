@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coworker2
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: -1880120661550918566, guid: 51babfae07291f049848f09fbd29ac04, type: 3}
-  armsImage: {fileID: 3015177024873187116, guid: f4068fc20d9fac945955221462710f58, type: 3}
+  armsImage: {fileID: 21300000, guid: f4068fc20d9fac945955221462710f58, type: 3}
   coworkerSpeech: How many pushups do you think you can do?
   responseOption1: 0
   responseOption2: 1000
