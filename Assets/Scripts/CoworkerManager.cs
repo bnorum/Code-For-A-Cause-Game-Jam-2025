@@ -11,6 +11,7 @@ public class CoworkerManager : MonoBehaviour
     public List<CoworkerSchema> coworkers;
     private int coworkerIndex;
     public GameObject coworkerHolder;
+    public Image coworkerArms;
     private Vector3 coworkerStartPosition;
     public Transform stopPosition;
     public Image coworkerImage;
@@ -48,6 +49,7 @@ public class CoworkerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        coworkerArms.transform.position = coworkerHolder.transform.position;
         /*
         if (Input.GetKeyDown(KeyCode.Q)) {
             SummonCoworker();
@@ -55,6 +57,8 @@ public class CoworkerManager : MonoBehaviour
         */
 
         if (isMoving) {
+            coworkerArms.gameObject.SetActive(false);
+            coworkerImage.transform.localScale = new Vector3(1, 1, 1);
             Vector3 targetPosition = stopPosition.position;
             float speed = 2f;
             float step = speed * Time.deltaTime;
@@ -62,7 +66,7 @@ public class CoworkerManager : MonoBehaviour
 
             if (Vector3.Distance(coworkerHolder.transform.position, targetPosition) < 0.001f) {
                 isMoving = false;
-                if (coworkers[coworkerIndex].forwardImage != null) coworkerImage.sprite = coworkers[coworkerIndex].forwardImage;
+                coworkerArms.gameObject.SetActive(true);
                 TalkToPlayer();
             }
 
@@ -70,6 +74,7 @@ public class CoworkerManager : MonoBehaviour
         if (playerHasResponded) {
 
             coworkerImage.sprite = coworkers[coworkerIndex].coworkerImage;
+            coworkerArms.gameObject.SetActive(false);
             coworkerImage.transform.localScale = new Vector3(-1, 1, 1);
             Vector3 targetPosition = coworkerStartPosition;
             float speed = 2f;
@@ -93,6 +98,7 @@ public class CoworkerManager : MonoBehaviour
         int randomIndex = Random.Range(0, coworkers.Count);
         coworkerIndex = randomIndex;
         coworkerImage.sprite = coworkers[randomIndex].coworkerImage;
+        coworkerArms.sprite = coworkers[coworkerIndex].armsImage;
         coworkerText.text = coworkers[randomIndex].coworkerSpeech;
         responseOption1.text = coworkers[randomIndex].responseOption1;
         responseOption2.text = coworkers[randomIndex].responseOption2;
@@ -103,6 +109,8 @@ public class CoworkerManager : MonoBehaviour
     public void TalkToPlayer() {
         isMoving = false;
         coworkerText.transform.parent.gameObject.SetActive(true);
+        responseOption1.transform.parent.gameObject.SetActive(true);
+        responseOption2.transform.parent.gameObject.SetActive(true);
     }
 
     public void Respond1() {
