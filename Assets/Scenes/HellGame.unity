@@ -3360,9 +3360,9 @@ MonoBehaviour:
   endPoint: {fileID: 1853687397}
   physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
   escalatorTravelDuration: 5
-  personBounds: {fileID: 0}
+  personBounds: {fileID: 907841764}
   reservedEndTime: 0
-  escalatorWindowPersonHolder: {fileID: 0}
+  escalatorWindowPersonHolder: {fileID: 271951038}
   endTime: 1440
 --- !u!4 &739457595
 Transform:

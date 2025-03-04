@@ -1,0 +1,1167 @@
+fileFormatVersion: 2
+guid: 831ab47dfe729054a9d7f656d77699cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4444711019213645375
+    second: microwave open_0
+  - first:
+      213: -2835171696992626362
+    second: microwave open_1
+  - first:
+      213: 6339182372549098339
+    second: microwave open_2
+  - first:
+      213: 1187148476984404860
+    second: microwave open_3
+  - first:
+      213: -2998793916157932054
+    second: microwave open_4
+  - first:
+      213: -2437181512073364056
+    second: microwave open_5
+  - first:
+      213: -1885052824829573831
+    second: microwave open_6
+  - first:
+      213: 8344394317826311340
+    second: microwave open_7
+  - first:
+      213: 7357723472952634706
+    second: microwave open_8
+  - first:
+      213: -424713865499688276
+    second: microwave open_9
+  - first:
+      213: -4328798126663384705
+    second: microwave open_10
+  - first:
+      213: 8711415773308625844
+    second: microwave open_11
+  - first:
+      213: -6638004737323758773
+    second: microwave open_12
+  - first:
+      213: -7905802693245476796
+    second: microwave open_13
+  - first:
+      213: 4560972921986874997
+    second: microwave open_14
+  - first:
+      213: 6174883849898358659
+    second: microwave open_15
+  - first:
+      213: -5753292993298750639
+    second: microwave open_16
+  - first:
+      213: -8659747330719085044
+    second: microwave open_17
+  - first:
+      213: 7913668266774057006
+    second: microwave open_18
+  - first:
+      213: 7711153429736154365
+    second: microwave open_19
+  - first:
+      213: -3533994896938333086
+    second: microwave open_20
+  - first:
+      213: -1294843343017231175
+    second: microwave open_21
+  - first:
+      213: 7892542009921482449
+    second: microwave open_22
+  - first:
+      213: 7037792215003686271
+    second: microwave open_23
+  - first:
+      213: 9075455245466086550
+    second: microwave open_24
+  - first:
+      213: -2441736340362968552
+    second: microwave open_25
+  - first:
+      213: -6796856159507518510
+    second: microwave open_26
+  - first:
+      213: 48901472033327721
+    second: microwave open_27
+  - first:
+      213: 2635912091412307432
+    second: microwave open_28
+  - first:
+      213: 1466696441298145305
+    second: microwave open_29
+  - first:
+      213: 2614210937950819710
+    second: microwave open_30
+  - first:
+      213: 2215291565183747561
+    second: microwave open_31
+  - first:
+      213: -2998005087715236260
+    second: microwave open_32
+  - first:
+      213: 7682109302679493011
+    second: microwave open_33
+  - first:
+      213: -4981062942918890037
+    second: microwave open_34
+  - first:
+      213: 9117495050574817241
+    second: microwave open_35
+  - first:
+      213: -4017482659132688907
+    second: microwave open_36
+  - first:
+      213: -5675793998257322022
+    second: microwave open_37
+  - first:
+      213: 3332833647101458153
+    second: microwave open_38
+  - first:
+      213: -3210467774032826043
+    second: microwave open_39
+  - first:
+      213: 6477059119921486604
+    second: microwave open_40
+  - first:
+      213: 7642107165867140323
+    second: microwave open_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: microwave open_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1380
+        width: 248
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f366e757f19cead30800000000000000
+      internalID: 4444711019213645375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1499
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649538bec5277a8d0800000000000000
+      internalID: -2835171696992626362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_2
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1524
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bf43a08cc49f750800000000000000
+      internalID: 6339182372549098339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1380
+        width: 248
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b2d420049997010800000000000000
+      internalID: 1187148476984404860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_4
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1499
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedcdc052d42266d0800000000000000
+      internalID: -2998793916157932054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_5
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1524
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adb7b7d3546d2ed0800000000000000
+      internalID: -2437181512073364056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_6
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1380
+        width: 248
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 935cf297172f6d5e0800000000000000
+      internalID: -1885052824829573831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_7
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 1499
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca443dbeb6e3dc370800000000000000
+      internalID: 8344394317826311340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_8
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1524
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d25e80482eb1660800000000000000
+      internalID: 7357723472952634706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_9
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1380
+        width: 248
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca245b35dfc1b1af0800000000000000
+      internalID: -424713865499688276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_10
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 1499
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f714adbe9050de3c0800000000000000
+      internalID: -4328798126663384705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_11
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1524
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3abc2ad7a25e870800000000000000
+      internalID: 8711415773308625844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_12
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 1531
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b057e6cd111e3a0800000000000000
+      internalID: -6638004737323758773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 94
+        width: 2384
+        height: 1407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440e6c45652f84290800000000000000
+      internalID: -7905802693245476796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_14
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1479
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ef33d15b4db4f30800000000000000
+      internalID: 4560972921986874997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_15
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1479
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387fc72452891b550800000000000000
+      internalID: 6174883849898358659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_16
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 1479
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1532fad31823820b0800000000000000
+      internalID: -5753292993298750639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_17
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 1479
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e0adb1fa562d780800000000000000
+      internalID: -8659747330719085044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_18
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 1103
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2059573c5ff2dd60800000000000000
+      internalID: 7913668266774057006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_19
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 930
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df465fb5035830b60800000000000000
+      internalID: 7711153429736154365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_20
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 502
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c82f97d5ab4fec0800000000000000
+      internalID: -3533994896938333086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_21
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 329
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcbda307dac70ee0800000000000000
+      internalID: -1294843343017231175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_22
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 18
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dea73c3421f78d60800000000000000
+      internalID: 7892542009921482449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_23
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 43
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75ed425bb24ba160800000000000000
+      internalID: 7037792215003686271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_24
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c26f0467e72fd70800000000000000
+      internalID: 9075455245466086550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_25
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 18
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812c08d3cb53d1ed0800000000000000
+      internalID: -2441736340362968552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_26
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 43
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbe02f8557bca1a0800000000000000
+      internalID: -6796856159507518510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_27
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 0
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a4a8531abbda000800000000000000
+      internalID: 48901472033327721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_28
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 18
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed99cbd414a49420800000000000000
+      internalID: 2635912091412307432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_29
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 43
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910d7e874a0ca5410800000000000000
+      internalID: 1466696441298145305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_30
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 0
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75df745ffa874420800000000000000
+      internalID: 2614210937950819710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_31
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 18
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e542b001fb4ebe10800000000000000
+      internalID: 2215291565183747561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_32
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 43
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c566befb142f466d0800000000000000
+      internalID: -2998005087715236260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_33
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 0
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3995fef85b55c9a60800000000000000
+      internalID: 7682109302679493011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_34
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd257be4a5bfdab0800000000000000
+      internalID: -4981062942918890037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_35
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 0
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7e4e22179d78e70800000000000000
+      internalID: 9117495050574817241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_36
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5ba1b9ec80f38c0800000000000000
+      internalID: -4017482659132688907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_37
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad704932e678b31b0800000000000000
+      internalID: -5675793998257322022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_38
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6b3fe3b8a904e20800000000000000
+      internalID: 3332833647101458153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_39
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 0
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5413fedb1902273d0800000000000000
+      internalID: -3210467774032826043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_40
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bdf10e3f223e950800000000000000
+      internalID: 6477059119921486604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: microwave open_41
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e46afc4af73e0a60800000000000000
+      internalID: 7642107165867140323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
