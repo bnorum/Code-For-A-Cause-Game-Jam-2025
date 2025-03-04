@@ -96,6 +96,7 @@ public class EmailManager : MonoBehaviour
 
 
         allEmails.Add(email);
+        unreadEmails.Add(email);
         emailSchemas.Remove(emailSchema);
     }
 

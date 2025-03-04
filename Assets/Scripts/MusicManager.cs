@@ -25,9 +25,17 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        StartMusic();
+    }
+
 
     public void StartMusic() {
         baseSong.Play();
+        foreach (AudioSource stemSong in stemSongs) {
+            stemSong.Play();
+        }
     }
 
     void Update()
