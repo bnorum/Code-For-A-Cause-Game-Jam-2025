@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 public class Person : MonoBehaviour
-{   
+{
     [Header("Person Vars")]
     public PersonSchema personSchema;
 
@@ -11,16 +11,23 @@ public class Person : MonoBehaviour
     private Rigidbody2D rb;
     public bool isDragging = false;
     private bool shouldMove = true;
-    private bool isFalling = false;
+    public bool isFalling = false;
     private Vector3 offset;
     private Vector2 storedVelocity;
     public float dampener = 3.0f;
     private Collider2D boundsCollider;
+    private Vector3 endPointReference;
+    private Vector3 startPointReference;
+    private float durationReference;
+    public bool isBeingTransported = false;
+    public GameObject childObject;
+    private Transform childDefaultPoint;
 
     public void Init(PersonSchema personSchema, Collider2D personBounds)
     {
         this.personSchema = personSchema;
         boundsCollider = personBounds;
+        childObject.SetActive(false); // Initially set the child object to inactive
     }
 
     private void Awake()
@@ -33,6 +40,8 @@ public class Person : MonoBehaviour
         }
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        startPointReference = transform.position;
+        childDefaultPoint = childObject.transform;
     }
 
     private void Update()
@@ -49,11 +58,25 @@ public class Person : MonoBehaviour
         {
             FollowMouse();  
         }
+        CheckMouseHover();
     }
 
     public void StartMovement(Vector3 endPosition, float duration)
     {
+        endPointReference = endPosition;
+        durationReference = duration;
+        isBeingTransported = true;
         StartCoroutine(MoveToPosition(endPosition, duration));
+    }
+
+    public void RestartMovement()
+    {
+        isBeingTransported = true;
+        isDragging = false;
+        isFalling = false;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.linearVelocity = Vector2.zero;
+        StartCoroutine(MoveToPosition(endPointReference, durationReference));
     }
 
     private IEnumerator MoveToPosition(Vector3 endPosition, float duration)
@@ -63,23 +86,21 @@ public class Person : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            if (!isDragging && shouldMove && !isFalling)
+            if (!isDragging && isBeingTransported && !isFalling)
             {
                 float t = elapsedTime / duration;
                 transform.position = Vector3.Lerp(startPosition, endPosition, t);
                 Vector3 newPosition = transform.position;
                 newPosition.z = transform.parent.position.z;
                 transform.position = newPosition;
-                storedVelocity = (transform.position - startPosition) / Time.deltaTime;
 
                 elapsedTime += Time.deltaTime;
             }
             yield return null;
         }
 
-        if (!isDragging && !isFalling)
+        if (transform.position == endPosition && isBeingTransported)
         {
-            transform.position = endPosition;
             PersistentData.peopleSaved.Add(personSchema);
             Destroy(gameObject);
         }
@@ -89,13 +110,12 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
             storedVelocity = rb.linearVelocity;
             isDragging = true;
-            shouldMove = false;
-
+            isBeingTransported = false;
+            isFalling = false;
             rb.bodyType = RigidbodyType2D.Kinematic;
             rb.linearVelocity = Vector2.zero;
             Vector3 mouseWorldPosition = GetMouseWorldPos();
@@ -137,5 +157,27 @@ public class Person : MonoBehaviour
         position.x = Mathf.Clamp(position.x, bounds.min.x, bounds.max.x);
         position.y = Mathf.Clamp(position.y, bounds.min.y, bounds.max.y);
         return position;
+    }
+
+    private void CheckMouseHover()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if (hit.collider != null && hit.collider.gameObject == gameObject && !isDragging)
+        {
+            childObject.SetActive(true);
+            if(childObject.transform.position != ClampPositionToBounds(childObject.transform.position))
+            {
+                childObject.transform.position = ClampPositionToBounds(childObject.transform.position);
+            }
+            else
+            {
+                childObject.transform.position = childDefaultPoint.position;
+            }
+        }
+        else
+        {
+            childObject.SetActive(false);
+        }
     }
 }

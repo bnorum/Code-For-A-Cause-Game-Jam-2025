@@ -37,7 +37,7 @@ public class SearchManager : MonoBehaviour
     }
 
 
-    void DisplayProfile(Person person)
+    public void DisplayProfile(Person person)
     {
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
