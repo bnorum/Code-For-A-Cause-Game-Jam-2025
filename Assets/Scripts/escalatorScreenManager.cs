@@ -30,8 +30,6 @@ public class escalatorScreenManager : MonoBehaviour
                 timer = 0f;
                 currentFrame = (currentFrame + 1) % loadingFrames.Length;
                 uiText.text = $"excalator.exe running {loadingFrames[currentFrame]}";
-                sentToHeavenText.text = $"People Saved Today: {PersistentData.peopleSaved.Count}";
-                sentToHellText.text = $"People Saved Today: {PersistentData.peopleDamned.Count}";
             }
         }
     }
