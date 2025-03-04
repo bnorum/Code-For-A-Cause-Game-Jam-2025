@@ -13,4 +13,6 @@ public class PersonSchema : ScriptableObject
 
     public List<EmailSchema> relatedEmails;
 
+    public bool shouldGoToHeaven;
+
 }
