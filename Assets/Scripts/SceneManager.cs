@@ -51,8 +51,8 @@ public class SceneManager : MonoBehaviour
 
     public void LoadNewGame()
     {
-        enableLoadingCanvas(1);
-        PersistentData.currentDay=1;
+        enableLoadingCanvas(3);
+        PersistentData.currentDay=0;
     }
 
     public void LoadMainMenu(bool isEndGame = false)

@@ -637,7 +637,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 346912763}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heading home for the day...
+  m_text: Going to Orientation...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
   m_sharedMaterial: {fileID: -1872252588528590606, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
@@ -1037,7 +1037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1597839930
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1410,6 +1410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingCanvas: {fileID: 682138185}
   OnOpenCanvas: {fileID: 1597839933}
+  clockOutMachineBill: {fileID: 0}
+  clockOutMachineBillTarget: {fileID: 0}
+  startedLoadingBetweenDay: 0
 --- !u!4 &1850858900
 Transform:
   m_ObjectHideFlags: 0
