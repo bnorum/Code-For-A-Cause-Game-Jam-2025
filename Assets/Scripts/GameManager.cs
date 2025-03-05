@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Transform endPoint;
     public GameObject physicalPerson;
     public float escalatorTravelDuration = 5.0f;
-    public Collider2D personBounds;
+    public BoxCollider2D personBounds;
     private float spawnTimer = 0.0f;
     public float spawnInterval;
     [SerializeField] private float reservedEndTime;

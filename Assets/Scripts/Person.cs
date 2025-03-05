@@ -11,10 +11,10 @@ public class Person : MonoBehaviour
     private Rigidbody2D rb;
     public bool isDragging = false;
     public bool isFalling = false;
-    private Vector3 offset;
     private Vector2 storedVelocity;
     public float dampener = 3.0f;
-    private Collider2D boundsCollider;
+    public BoxCollider2D personCollider;
+    private BoxCollider2D boundsCollider;
     private float durationReference;
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
@@ -25,12 +25,13 @@ public class Person : MonoBehaviour
     private GameObject endPointGameRef;
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
-    public GameObject springPoint;
+    public GameObject cursorPoint;
+    public SpringJoint2D springJoint;
 
-    public void Init(PersonSchema personSchema, Collider2D personBounds, GameObject startPoint, GameObject endPoint)
+    public void Init(PersonSchema personSchema, BoxCollider2D collider, GameObject startPoint, GameObject endPoint)
     {
         this.personSchema = personSchema;
-        boundsCollider = personBounds;
+        boundsCollider = collider;
         startPointGameRef = startPoint;
         endPointGameRef = endPoint;
         nameTagObject.SetActive(false);
@@ -41,18 +42,9 @@ public class Person : MonoBehaviour
     {
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            rb = gameObject.AddComponent<Rigidbody2D>();
-        }
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        SpringJoint2D springJoint = gameObject.AddComponent<SpringJoint2D>();
-        springJoint.connectedBody = springPoint.GetComponent<Rigidbody2D>();
-        springJoint.autoConfigureDistance = false;
-        springJoint.distance = 0.5f;
-        springJoint.dampingRatio = 0.7f;
-        springJoint.frequency = 1.0f;
+        springJoint.enabled = false; // Disable initially
     }
 
     private void Update()
@@ -68,6 +60,8 @@ public class Person : MonoBehaviour
         if (isDragging)
         {
             FollowMouse();  
+            rb.angularVelocity *= 0.7f; // Stronger damping to prevent excessive spinning
+            rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -200f, 200f); // Limit max spin speed
         }
         CheckMouseHover();
         elapsedTime += Time.deltaTime;
@@ -84,7 +78,6 @@ public class Person : MonoBehaviour
         isBeingTransported = true;
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
-
     public void RestartMovement()
     {
         isBeingTransported = true;
@@ -93,92 +86,71 @@ public class Person : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
         transform.rotation = Quaternion.Euler(0, 0, 0);
-
     }
-
     private void MoveToPosition(float duration)
     {
-        float t = elapsedTime / (duration/GameManager.Instance.difficultyScale);
+        float t = elapsedTime / duration;
         transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;
         transform.position = newPosition;
 
-        if (t >= 1.0f)  
-        {//time expired
-            if(transform.position == endPointGameRef.transform.position)
+        if (t >= 1.0f)
+        {
+            if (transform.position == endPointGameRef.transform.position)
             {
                 PersistentData.peopleSaved.Add(personSchema);
                 Destroy(gameObject);
             }
             else
             {
-                Destroy(gameObject);
-                //TODO: Add to list of people who were not saved
                 PersistentData.peopleDamned.Add(personSchema);
+                Destroy(gameObject);
             }
         }
     }
-
     private void TryStartDragging()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject && !isMicrowaving)
+        if (hit.collider != null && hit.collider == personCollider && !isMicrowaving)
         {
-            storedVelocity = rb.linearVelocity;
+            Debug.Log("Dragging started");
+            storedVelocity = Vector2.zero; // Reset velocity to prevent unwanted movement
+            rb.angularVelocity = 0; // Stop any spinning immediately
             isDragging = true;
-            isBeingTransported = false;
             isFalling = false;
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.linearVelocity = Vector2.zero;
-            Vector3 mouseWorldPosition = GetMouseWorldPos();
-            offset = transform.position - mouseWorldPosition;
+            cursorPoint.transform.position = GetMouseWorldPos(cursorPoint.transform); // Move cursorPoint to mouse position
+            
+            // Enable and configure the Spring Joint immediately
+            springJoint.enabled = true;
+            springJoint.autoConfigureDistance = false;
+            springJoint.distance = 0.05f; // Reduce the distance for tighter control
+            springJoint.connectedBody = null;
+            springJoint.connectedAnchor = cursorPoint.transform.position; // Use world space position
         }
     }
 
     private void FollowMouse()
     {
-        Vector3 mouseWorldPosition = GetMouseWorldPos();
-        Vector3 newPosition = mouseWorldPosition + offset;
-        newPosition = ClampPositionToBounds(newPosition);
-
-        // Set the spring point to move towards the cursor
-        springPoint.transform.position = newPosition;
-
-        // --- FIX 1: Prevent Excessive Spinning ---
-        rb.angularVelocity *= 0.95f;  // Apply damping to slow down extreme spinning
-
-        // --- FIX 2: Ensure Proper Orientation ---
-        Vector2 direction = (mouseWorldPosition - transform.position).normalized;
-        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-
-        // If the mouse isn't moving much, gently realign the sprite
-        if (rb.linearVelocity.magnitude < 0.5f)
-        {
-            float angleDifference = Mathf.DeltaAngle(transform.eulerAngles.z, targetAngle);
-            rb.angularVelocity -= angleDifference * 2f; // Gradually adjust rotation
-        }
+        Vector3 mouseWorldPos = GetMouseWorldPos(cursorPoint.transform);
+        cursorPoint.transform.position = mouseWorldPos; // Move cursorPoint in real time
+        springJoint.connectedAnchor = cursorPoint.transform.position; // Keep anchor in sync
     }
-
 
     private void DropObject()
     {
-        rb.bodyType = RigidbodyType2D.Dynamic;
         isDragging = false;
         isFalling = true;
-
+        rb.bodyType = RigidbodyType2D.Dynamic;
         rb.gravityScale = dampener;
         rb.linearVelocity = storedVelocity / dampener;
-
-        SpringJoint2D spring = GetComponent<SpringJoint2D>();
-        if (spring != null)
-        {
-            spring.distance = 0.5f; // Reset to default value
-        }
+        rb.angularVelocity = 0; // Reset angular velocity on drop
+        springJoint.enabled = false; // Disable the spring joint
+        cursorPoint.transform.position = transform.position; // Reset cursorPoint to parent transform
     }
 
-    private Vector3 GetMouseWorldPos()
+    private Vector3 GetMouseWorldPos(Transform transform = null)
     {
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mainCamera.WorldToScreenPoint(transform.position).z;
@@ -200,7 +172,7 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        if (hit.collider != null && hit.collider.gameObject == gameObject && hit.collider == personCollider)
         {
             hoverTime += Time.deltaTime;
             if (hoverTime >= hoverThreshold)
@@ -214,5 +186,4 @@ public class Person : MonoBehaviour
             nameTagObject.SetActive(false);
         }
     }
-
 }
