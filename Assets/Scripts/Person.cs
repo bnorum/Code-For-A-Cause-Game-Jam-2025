@@ -76,6 +76,7 @@ public class Person : MonoBehaviour
         durationReference = duration;
         elapsedTime = 0.0f;
         isBeingTransported = true;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     public void RestartMovement()
@@ -85,6 +86,8 @@ public class Person : MonoBehaviour
         isFalling = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
     }
 
     private void MoveToPosition(float duration)
@@ -169,7 +172,7 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject && !isDragging)
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
             hoverTime += Time.deltaTime;
             if (hoverTime >= hoverThreshold)

@@ -29,8 +29,6 @@ public class TabManager : MonoBehaviour
 
     [Header("UI Elements")]
     public TextMeshProUGUI addressBar;
-    public Color onColor = new Color(1f, 1f, 1f, 1f);
-    public Color offColor = new Color(0.8f, 0.8f, 0.8f, 1f);
 
     [Header("Physics Holders")]
     public GameObject escalatorPhysicsLayer;
@@ -43,6 +41,7 @@ public class TabManager : MonoBehaviour
     public GameObject garbageBinPhysicsHiddenPosition;
 
     [Header("Trash Can")]
+    public Button garbageBinButton;
 
     private GameObject lastActiveTab;
     public int currentTabIndex = 1;
@@ -68,30 +67,18 @@ public class TabManager : MonoBehaviour
 
         OpenTab(emailScreen, null);
 
-        AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerEnter, () => ShowDateTimePanel(true));
-        AddEventTrigger(datetimeButton.gameObject, EventTriggerType.PointerExit, () => ShowDateTimePanel(false));
+        datetimeButton.onClick.AddListener(() => ToggleDateTimePanel());
         datetimeScreen.SetActive(false);
 
+        garbageBinButton.onClick.AddListener(() => ToggleGarbageBin());
         garbageBinScreen.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.G))
-        {
-            garbageBinScreen.SetActive(true);
-            garbageBinPhysicsLayer.transform.position = new Vector3(0, 0, -1);
-        }
-        else
-        {
-            garbageBinScreen.SetActive(false);
-            garbageBinPhysicsLayer.transform.position = garbageBinPhysicsHiddenPosition.transform.position;
-        }
-
         if (searchScreen.activeSelf) {currentTabIndex = 0;}
         if (emailScreen.activeSelf) {currentTabIndex = 1;}
         if (escalatorScreen.activeSelf) {currentTabIndex = 2;}
-
     }
 
     private void AddEventTrigger(GameObject obj, EventTriggerType type, Action action)
@@ -104,17 +91,15 @@ public class TabManager : MonoBehaviour
 
     public void OpenTab(GameObject tabToOpen, Person person)
     {
-
-
         searchScreen.SetActive(tabToOpen == searchScreen);
         emailScreen.SetActive(tabToOpen == emailScreen);
         escalatorScreen.SetActive(tabToOpen == escalatorScreen);
 
         lastActiveTab = tabToOpen;
 
-        searchTabButton.GetComponent<Image>().color = (tabToOpen == searchScreen) ? onColor : offColor;
-        emailTabButton.GetComponent<Image>().color = (tabToOpen == emailScreen) ? onColor : offColor;
-        escalatorTabButton.GetComponent<Image>().color = (tabToOpen == escalatorScreen) ? onColor : offColor;
+        SetTabSprites(searchTabButton.gameObject, tabToOpen == searchScreen);
+        SetTabSprites(emailTabButton.gameObject, tabToOpen == emailScreen);
+        SetTabSprites(escalatorTabButton.gameObject, tabToOpen == escalatorScreen);
 
         if (tabToOpen == searchScreen)
         {
@@ -150,9 +135,12 @@ public class TabManager : MonoBehaviour
                                     tabToOpen == emailScreen ? emailPhysicsLayer.transform :
                                     escalatorPhysicsLayer.transform, false);
         }
+    }
 
-
-
+    private void SetTabSprites(GameObject tabButton, bool isActive)
+    {
+        tabButton.transform.GetChild(0).gameObject.SetActive(isActive);
+        tabButton.transform.GetChild(1).gameObject.SetActive(!isActive);
     }
 
     public GameObject GetLastActiveTab()
@@ -160,14 +148,20 @@ public class TabManager : MonoBehaviour
         return lastActiveTab;
     }
 
-    private void ShowDateTimePanel(bool show)
+    private void ToggleDateTimePanel()
     {
-        datetimeScreen.SetActive(show);
-        if (show)
+        bool isActive = datetimeScreen.activeSelf;
+        datetimeScreen.SetActive(!isActive);
+        if (!isActive)
         {
             datetimeScreen.transform.SetAsLastSibling();
         }
     }
 
-
+    private void ToggleGarbageBin()
+    {
+        bool isActive = garbageBinScreen.activeSelf;
+        garbageBinScreen.SetActive(!isActive);
+        garbageBinPhysicsLayer.transform.position = !isActive ? new Vector3(0, 0, -1) : garbageBinPhysicsHiddenPosition.transform.position;
+    }
 }
