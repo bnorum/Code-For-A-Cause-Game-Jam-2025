@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public List<PersonSchema> chosenPeople = new List<PersonSchema>();
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
 
+    public List<PersonSchema> day5People = new List<PersonSchema>();
+
     public float time = 540f;
     public int datenum;
 
@@ -138,6 +140,10 @@ public class GameManager : MonoBehaviour
 
     void ChoosePeople()
     {
+        if (PersistentData.currentDay == 5) {
+            chosenPeople = day5People;
+            return;
+        }
         for (int i = 0; i < 4; i++)
         {
             if (allPeople.Count == 0) break;
@@ -147,6 +153,7 @@ public class GameManager : MonoBehaviour
             allPeople.RemoveAt(index);
             PersistentData.remainingPeople.Remove(selectedPerson);
         }
+
     }
 
     public List<EmailSchema> GetAllEmailSchemas()

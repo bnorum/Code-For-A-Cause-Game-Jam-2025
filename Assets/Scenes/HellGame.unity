@@ -6044,6 +6044,11 @@ MonoBehaviour:
   spamEmails:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
   - {fileID: 11400000, guid: 0b7464ce10ed9ac4dbf06b50a6472232, type: 2}
+  day5People:
+  - {fileID: 11400000, guid: 276f089e4f1d11b4fb0a35702fd256ef, type: 2}
+  - {fileID: 11400000, guid: 7c8361abebc42a842aec44f5ab478f1c, type: 2}
+  - {fileID: 11400000, guid: cd603f42bc355ed4f960549f20cc6f66, type: 2}
+  - {fileID: 11400000, guid: 158036c8f10edf14991e8d01ec052779, type: 2}
   time: 540
   datenum: 0
   timeUntilNextEmail: 5
