@@ -5616,7 +5616,7 @@ MonoBehaviour:
   spawnInterval: 110
   reservedEndTime: 100
   escalatorWindowPersonHolder: {fileID: 2087555962}
-  endTime: 750
+  endTime: 1020
   endDayCanvas: {fileID: 2069517475}
   isDayOver: 0
   currentPersonSpawned: 0
