@@ -22,7 +22,7 @@ public class microwaveScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Person")&& !isMicrowaving)
+        if (collision.CompareTag("Person")&& !isMicrowaving && collision.gameObject.GetComponent<Person>())
         {
             if(collision.gameObject.GetComponent<Person>().hasBeenMicrowaved)
             {
@@ -41,7 +41,7 @@ public class microwaveScript : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Person"))
+        if (collision.CompareTag("Person") && collision.gameObject.GetComponent<Person>())
         {
             if (microwaveCoroutine != null)
             {
@@ -50,7 +50,7 @@ public class microwaveScript : MonoBehaviour
             }
             childSpriteRenderer.SetActive(false);
             isMicrowaving = false;
-            collision.GetComponent<Person>().isMicrowaving = false;
+            collision.gameObject.GetComponent<Person>().isMicrowaving = false;
             transform.localPosition = originalPosition;
             spriteRenderer.enabled = true;
         }
@@ -58,7 +58,6 @@ public class microwaveScript : MonoBehaviour
     private Coroutine microwaveCoroutine;
     IEnumerator StartMicrowaveTimer(GameObject person)
     {
-        isMicrowaving = true;
         float elapsedTime = 0f;
 
         while (elapsedTime < microwaveTime)

@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class personDropScript : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        var person = collision.gameObject.GetComponent<Person>();
-        if (collision.CompareTag("Person") && !person.isBeingTransported && !person.isDragging)
-        {// && person.isFalling
-            // collision.gameObject.GetComponent<Person>().RestartMovement();
+        if(collision.gameObject.GetComponent<Person>() == null) return;
+
+        Person myPerson = collision.gameObject.GetComponent<Person>();
+        if (!myPerson.isBeingTransported && !myPerson.isDragging && myPerson.isFalling)
+        {
+            myPerson.RestartMovement();
         }
     }
 }
