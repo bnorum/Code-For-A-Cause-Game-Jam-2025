@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Transform endPoint;
     public GameObject physicalPerson;
     public float escalatorTravelDuration = 5.0f;
-    public Collider2D personBounds;
+    public BoxCollider2D personBounds;
     private float spawnTimer = 0.0f;
     public float spawnInterval;
     [SerializeField] private float reservedEndTime;
@@ -244,7 +244,7 @@ public class GameManager : MonoBehaviour
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
         personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
-        // personScript.StartMovement(escalatorTravelDuration);
+        personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
     }
 

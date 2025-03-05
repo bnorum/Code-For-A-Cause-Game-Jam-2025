@@ -11,10 +11,13 @@ public class Person : MonoBehaviour
     private Rigidbody2D rb;
     public bool isDragging = false;
     public bool isFalling = false;
-    private Vector3 offset;
     private Vector2 storedVelocity;
-    public float dampener = 3.0f;
-    private Collider2D boundsCollider;
+    public float dampener = 1.5f;
+    public float startGravity = 1.0f;
+    public float endGravity = 5.0f;
+    private float elapsedGravityTime = 0.0f;
+    public BoxCollider2D personCollider;
+    private BoxCollider2D boundsCollider;
     private float durationReference;
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
@@ -25,12 +28,14 @@ public class Person : MonoBehaviour
     private GameObject endPointGameRef;
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
-    public GameObject springPoint;
+    public GameObject cursorPoint;
+    public SpringJoint2D springJoint;
+    public float angularVelocityCap = 200f;
 
-    public void Init(PersonSchema personSchema, Collider2D personBounds, GameObject startPoint, GameObject endPoint)
+    public void Init(PersonSchema personSchema, BoxCollider2D collider, GameObject startPoint, GameObject endPoint)
     {
         this.personSchema = personSchema;
-        boundsCollider = personBounds;
+        boundsCollider = collider;
         startPointGameRef = startPoint;
         endPointGameRef = endPoint;
         nameTagObject.SetActive(false);
@@ -41,18 +46,8 @@ public class Person : MonoBehaviour
     {
         mainCamera = Camera.main;
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            rb = gameObject.AddComponent<Rigidbody2D>();
-        }
         rb.gravityScale = 0;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        SpringJoint2D springJoint = gameObject.AddComponent<SpringJoint2D>();
-        springJoint.connectedBody = springPoint.GetComponent<Rigidbody2D>();
-        springJoint.autoConfigureDistance = false;
-        springJoint.distance = 0.5f;
-        springJoint.dampingRatio = 0.7f;
-        springJoint.frequency = 1.0f;
+        springJoint.enabled = false;
     }
 
     private void Update()
@@ -63,17 +58,23 @@ public class Person : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && isDragging)
         {
-            DropObject();
+            FlingObject();
         }
         if (isDragging)
         {
-            FollowMouse();  
+            FollowMouse();
+            rb.angularVelocity *= 0.5f;
+            rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -angularVelocityCap, angularVelocityCap);
         }
         CheckMouseHover();
         elapsedTime += Time.deltaTime;
         if (isBeingTransported && !isDragging && !isFalling)
         {
             MoveToPosition(durationReference);
+        }
+        if (isFalling)
+        {
+            UpdateGravityScale();
         }
     }
 
@@ -83,6 +84,8 @@ public class Person : MonoBehaviour
         elapsedTime = 0.0f;
         isBeingTransported = true;
         transform.rotation = Quaternion.Euler(0, 0, 0);
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
     }
 
     public void RestartMovement()
@@ -93,29 +96,27 @@ public class Person : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
         transform.rotation = Quaternion.Euler(0, 0, 0);
-
     }
 
     private void MoveToPosition(float duration)
     {
-        float t = elapsedTime / (duration/GameManager.Instance.difficultyScale);
+        float t = elapsedTime / duration;
         transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;
         transform.position = newPosition;
 
-        if (t >= 1.0f)  
-        {//time expired
-            if(transform.position == endPointGameRef.transform.position)
+        if (t >= 1.0f)
+        {
+            if (transform.position == endPointGameRef.transform.position)
             {
                 PersistentData.peopleSaved.Add(personSchema);
                 Destroy(gameObject);
             }
             else
             {
-                Destroy(gameObject);
-                //TODO: Add to list of people who were not saved
                 PersistentData.peopleDamned.Add(personSchema);
+                Destroy(gameObject);
             }
         }
     }
@@ -124,46 +125,51 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject && !isMicrowaving)
+        if ((hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>()) && !isMicrowaving)
         {
-            storedVelocity = rb.linearVelocity;
-            isDragging = true;
-            isBeingTransported = false;
-            isFalling = false;
             rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.linearVelocity = Vector2.zero;
-            Vector3 mouseWorldPosition = GetMouseWorldPos();
-            offset = transform.position - mouseWorldPosition;
+            rb.angularVelocity = 0;
+            isDragging = true;
+            isFalling = false;
+            isBeingTransported = false;
+            cursorPoint.transform.position = GetMouseWorldPos(cursorPoint.transform);
+            springJoint.enabled = true;
+            springJoint.autoConfigureDistance = false;
+            springJoint.distance = 0.05f;
+            springJoint.connectedBody = null;
+            springJoint.connectedAnchor = cursorPoint.transform.position;
         }
     }
 
     private void FollowMouse()
     {
-        Vector3 mouseWorldPosition = GetMouseWorldPos();
-        Vector3 newPosition = mouseWorldPosition + offset;
-        newPosition = ClampPositionToBounds(newPosition);
-
-        storedVelocity = (newPosition - transform.position) / Time.deltaTime;
-        rb.linearVelocity = (newPosition - transform.position) * 10f;
+        Vector3 mouseWorldPos = GetMouseWorldPos(cursorPoint.transform);
+        cursorPoint.transform.position = ClampPositionToBounds(mouseWorldPos);
+        springJoint.connectedAnchor = cursorPoint.transform.position;
+        Vector3 clampedPosition = ClampPositionToBounds(transform.position);
+        transform.position = clampedPosition;
+        storedVelocity = rb.linearVelocity;
     }
 
-    private void DropObject()
+    private void FlingObject()
     {
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        elapsedGravityTime = 0f;
         isDragging = false;
         isFalling = true;
-
-        rb.gravityScale = dampener;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = startGravity;
         rb.linearVelocity = storedVelocity / dampener;
-
-        SpringJoint2D spring = GetComponent<SpringJoint2D>();
-        if (spring != null)
-        {
-            spring.distance = 0.5f; // Reset to default value
-        }
+        springJoint.enabled = false;
+        cursorPoint.transform.position = transform.position;
     }
 
-    private Vector3 GetMouseWorldPos()
+    private void UpdateGravityScale()
+    {
+        elapsedGravityTime += Time.deltaTime;
+        rb.gravityScale = Mathf.Lerp(startGravity, endGravity, elapsedGravityTime);
+    }
+
+    private Vector3 GetMouseWorldPos(Transform transform = null)
     {
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mainCamera.WorldToScreenPoint(transform.position).z;
@@ -185,7 +191,7 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        if (hit.collider != null && hit.collider == personCollider)
         {
             hoverTime += Time.deltaTime;
             if (hoverTime >= hoverThreshold)
@@ -199,5 +205,4 @@ public class Person : MonoBehaviour
             nameTagObject.SetActive(false);
         }
     }
-
 }

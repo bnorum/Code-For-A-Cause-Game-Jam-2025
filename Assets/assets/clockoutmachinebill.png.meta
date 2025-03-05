@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clockoutmachinebill_0: 8947895940883247521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
