@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 3
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: 27d6c0490c1895740b74aedfac166ad7, type: 2}
-  subject: Bradley's Virtues
-  body: 
+  sender: {fileID: 11400000, guid: f484991983e50e640a90b382faedba87, type: 2}
+  subject: dangerous man on loose
+  body: bradley norman is a dangerous man who puts other peoples lives in danger
+    last week I heard he blew up the orphanareum!
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}

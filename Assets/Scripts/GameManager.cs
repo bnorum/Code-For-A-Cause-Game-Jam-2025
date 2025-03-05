@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,8 +15,8 @@ public class GameManager : MonoBehaviour
     public int datenum;
 
     public float timeUntilNextEmail = 5f;
-    public float timeUntilNextCoworker = 120f;
-      public float timeUntilNextPerson = 0f; // debugging, doesnt matter
+    public float timeUntilNextCoworker = 60f;
+    public float timeUntilNextPerson = 0f; // debugging, doesnt matter //brady: SIKE!!!!!!! MATTERS NOW!
 
     public bool isPaused = false;
     public float difficultyScale = 1f;
@@ -38,6 +39,12 @@ public class GameManager : MonoBehaviour
 
     public int currentPersonSpawned=0;
 
+    //HACK: I fucked up big time and have to use these four arrays. They tell if an email has been sent yet
+    public List<bool> emailSent0 = new List<bool>(4);
+    public List<bool> emailSent1 = new List<bool>(4);
+    public List<bool> emailSent2 = new List<bool>(4);
+    public List<bool> emailSent3 = new List<bool>(4);
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -50,12 +57,19 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
+        RefreshEmailsUsed();
         if (Application.isEditor && PersistentData.currentDay == 0)
         {
             PersistentData.currentDay = 1;
         }
+
+        if (PersistentData.currentDay == 1)
+        {
+            PersistentData.remainingPeople = allPeople;
+        }
         datenum = PersistentData.currentDay;
-        ChoosePeople(20);
+        ChoosePeople(20 + 10*(PersistentData.currentDay-1));
         totalSpawns = chosenPeople.Count;
 
         difficultyScale = PersistentData.difficultyScale;
@@ -88,6 +102,7 @@ public class GameManager : MonoBehaviour
         {
             isDayOver = true;
             // Call the function to end the day
+            RefreshEmailsUsed();
             SceneManager.Instance.LoadBetweenDay();
         }
         {
@@ -96,7 +111,7 @@ public class GameManager : MonoBehaviour
 
         if (timeUntilNextEmail <= 0)
         {
-            timeUntilNextEmail = UnityEngine.Random.Range(20, 27);
+            timeUntilNextEmail = UnityEngine.Random.Range(25, 35);
             int spamChance = UnityEngine.Random.Range(0, 100);
             if (spamChance < 7)
             {
@@ -110,28 +125,29 @@ public class GameManager : MonoBehaviour
 
         if (timeUntilNextCoworker <= 0 && CoworkerManager.Instance.isActive == false)
         {
-            timeUntilNextCoworker = UnityEngine.Random.Range(120, 180);
+            timeUntilNextCoworker = UnityEngine.Random.Range(110, 130);
             CoworkerManager.Instance.SummonCoworker();
         }
     }
 
     void ChoosePeople(int cumulativeChallengeLevel)
     {
-        for (int i = 0; i < allPeople.Count; i++)
+        for (int i = 0; i < PersistentData.remainingPeople.Count; i++)
         {
-            PersonSchema temp = allPeople[i];
-            int randomIndex = UnityEngine.Random.Range(i, allPeople.Count);
-            allPeople[i] = allPeople[randomIndex];
-            allPeople[randomIndex] = temp;
+            PersonSchema temp = PersistentData.remainingPeople[i];
+            int randomIndex = UnityEngine.Random.Range(i, PersistentData.remainingPeople.Count);
+            PersistentData.remainingPeople[i] = PersistentData.remainingPeople[randomIndex];
+            PersistentData.remainingPeople[randomIndex] = temp;
         }
 
         int currentChallengeLevel = 0;
-        foreach (PersonSchema person in allPeople)
+        foreach (PersonSchema person in PersistentData.remainingPeople)
         {
             if (person.challengeLevel + currentChallengeLevel <= cumulativeChallengeLevel)
             {
                 currentChallengeLevel += person.challengeLevel;
                 chosenPeople.Add(person);
+
             }
 
             if (chosenPeople.Count == 4)
@@ -139,6 +155,11 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+        foreach (PersonSchema person in chosenPeople)
+        {
+            PersistentData.remainingPeople.Remove(person);
+        }
+        allPeople = PersistentData.remainingPeople;
     }
 
     public List<EmailSchema> GetAllEmailSchemas()
@@ -158,55 +179,48 @@ public class GameManager : MonoBehaviour
 
     public EmailSchema GetPseudoRandomEmail() {
         EmailSchema es;
-        if (time is > 540 and < 620)
+        if (time is > 540 and < 620 && chosenPeople[0].relatedEmails.Count > 0)
         {
-            es = chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-            chosenPeople[0].relatedEmails.Remove(es);
-            return es;
+            return SelectEmailFromPool(0);
         }
-        else if (time is > 620 and < 700)
+        else if (time is > 620 and < 700 )
         {
-            if (UnityEngine.Random.Range(0, 100) < 70) {
-                es = chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-                chosenPeople[0].relatedEmails.Remove(es);
-                return es;
+            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[0].relatedEmails.Count > 0) {
+                return SelectEmailFromPool(0);
             }
-
-            es = chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-            chosenPeople[1].relatedEmails.Remove(es);
-            return es;
+            else
+            {
+                return SelectEmailFromPool(1);
+            }
         }
         else if (time is > 700 and < 780)
         {
-            if (UnityEngine.Random.Range(0, 100) < 70) {
-                es = chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-                chosenPeople[1].relatedEmails.Remove(es);
-                return es;
+            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[1].relatedEmails.Count > 0) {
+                return SelectEmailFromPool(1);
             }
-            es = chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-            chosenPeople[2].relatedEmails.Remove(es);
-            return es;
+            else
+            {
+                return SelectEmailFromPool(2);
+            }
         }
         else if (time is > 860 and < 940)
         {
-            if (UnityEngine.Random.Range(0, 100) < 70) {
-                    es = chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-                    chosenPeople[2].relatedEmails.Remove(es);
-                    return es;
+            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[2].relatedEmails.Count > 0) {
+                return SelectEmailFromPool(2);
             }
-            es = chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-            chosenPeople[3].relatedEmails.Remove(es);
-            return es;
+            else
+            {
+                return SelectEmailFromPool(3);
+            }
+
         }
-        else if (time is > 940 and < 1020)
+        else if (time is > 940 and < 1020 && chosenPeople[3].relatedEmails.Count > 0)
         {
-            es = chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
-            chosenPeople[3].relatedEmails.Remove(es);
-            return es;
+            return SelectEmailFromPool(3);
         }
         else
         {
-            return null;
+            return GetRandomSpamEmail();
         }
 
     }
@@ -246,5 +260,27 @@ public class GameManager : MonoBehaviour
         personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
         personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
+    }
+
+    EmailSchema SelectEmailFromPool(int personIndex) {
+        int index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
+        Debug.Log(personIndex);
+        Debug.Log(index);
+        while (chosenPeople[personIndex].relatedEmailsUsed[index] && chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
+        {
+            index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
+        }
+        chosenPeople[personIndex].relatedEmailsUsed[index] = true;
+        return chosenPeople[personIndex].relatedEmails[index];
+    }
+
+    public void RefreshEmailsUsed()
+    {
+        foreach (PersonSchema person in chosenPeople)
+        {
+
+            person.relatedEmailsUsed = new List<bool>(4);
+
+        }
     }
 }

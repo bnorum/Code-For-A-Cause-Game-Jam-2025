@@ -19,3 +19,5 @@ MonoBehaviour:
   challengeLevel: 6
   relatedEmails:
   - {fileID: 11400000, guid: 516bfee56ea7b994f8e546262de1916f, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0

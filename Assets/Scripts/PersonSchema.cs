@@ -12,6 +12,7 @@ public class PersonSchema : ScriptableObject
     public int challengeLevel;
 
     public List<EmailSchema> relatedEmails;
+    public List<bool> relatedEmailsUsed = new List<bool>(4);
 
     public bool shouldGoToHeaven;
 

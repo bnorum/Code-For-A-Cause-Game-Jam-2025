@@ -41,7 +41,7 @@ public class SearchManager : MonoBehaviour
     {
         profilePanel.SetActive(true);
         searchPanel.SetActive(false);
-        nameField.text = $"Name: {person.personSchema.name}";
+        nameField.text = $"Name: {person.personSchema.personName}";
         ageField.text = $"Age: {person.personSchema.age}";
         occupationField.text = $"Occupation: {person.personSchema.occupation}";
         netWorthField.text = $"Net Worth: {person.personSchema.netWorth}";

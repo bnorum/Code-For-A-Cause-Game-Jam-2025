@@ -5762,7 +5762,7 @@ MonoBehaviour:
   time: 540
   datenum: 1
   timeUntilNextEmail: 5
-  timeUntilNextCoworker: 110
+  timeUntilNextCoworker: 60
   timeUntilNextPerson: 113
   isPaused: 0
   difficultyScale: 2
@@ -5778,6 +5778,10 @@ MonoBehaviour:
   endDayCanvas: {fileID: 2069517475}
   isDayOver: 0
   currentPersonSpawned: 0
+  emailSent0: 00000000
+  emailSent1: 00000000
+  emailSent2: 00000000
+  emailSent3: 00000000
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0
@@ -13012,6 +13016,9 @@ MonoBehaviour:
     duties, expectations, and survival tips for navigating Hell\u2019s bureaucracy.
     Failure to comply will result in immediate reassignment to the Eternal Spreadsheet
     Torture Division."
+  - 'Commandments\n\nThese are our rules to the road. Every hear about someone lying?
+    They go to hell. Stealing? Hell. Having another God than the one sending us emails?
+    Strangely, straight to hell. The full list is below:'
   pagenumber: 0
   pageNumberText: {fileID: 1243205195}
   notesPage: {fileID: 1888878922}
