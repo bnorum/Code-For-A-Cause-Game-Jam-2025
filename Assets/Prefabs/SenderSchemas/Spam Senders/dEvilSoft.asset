@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
-  m_Name: Barbados Slim
+  m_Name: dEvilSoft
   m_EditorClassIdentifier: 
-  senderEmail: bslim@limbofanpage.net
-  senderName: Barbados Slim
-  profileImage: {fileID: 3226385883373346976, guid: 789d7dd1ab65ae1468038614e7c87cf9, type: 3}
+  senderEmail: donotreply@evilsoft.com
+  senderName: EvilSoft
+  profileImage: {fileID: -3454151544417765969, guid: 6635e33d94215f94bbb7ee35c7e45bc8, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: 3e327e6ed02eb2d479e599fee5431d41, type: 2}
+  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Ethan M Email
   body: TIM R will be retiring today with an amazing history of loyalty
   attachment: {fileID: 0}

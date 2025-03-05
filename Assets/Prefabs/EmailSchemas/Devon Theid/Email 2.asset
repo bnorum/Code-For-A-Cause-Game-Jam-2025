@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: 7028e9eff6d53f2489c8359efaf174a1, type: 2}
+  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Devon T Email
   body: empty
   attachment: {fileID: 0}

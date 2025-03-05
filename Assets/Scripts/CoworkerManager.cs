@@ -46,13 +46,19 @@ public class CoworkerManager : MonoBehaviour
         coworkerStartPosition = coworkerHolder.transform.position;
 
         coworkerText.transform.parent.gameObject.SetActive(false);
+
+        coworkerIndex = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (coworkerArms != null) {
+        if (coworkers[coworkerIndex].armsImage != null) {
             coworkerArms.transform.position = coworkerHolder.transform.position;
+        }
+        if (coworkers[coworkerIndex].armsImage == null) {
+            coworkerArms.gameObject.SetActive(false);
         }
         /*
         if (Input.GetKeyDown(KeyCode.Q)) {
@@ -61,7 +67,7 @@ public class CoworkerManager : MonoBehaviour
         */
 
         if (isMoving) {
-            if (coworkerArms != null) {
+            if (coworkers[coworkerIndex].armsImage != null) {
                 coworkerArms.gameObject.SetActive(false);
             }
             coworkerImage.transform.localScale = new Vector3(1, 1, 1);
@@ -72,7 +78,7 @@ public class CoworkerManager : MonoBehaviour
 
             if (Vector3.Distance(coworkerHolder.transform.position, targetPosition) < 0.001f) {
                 isMoving = false;
-                if (coworkerArms != null) {
+                if (coworkers[coworkerIndex].armsImage != null) {
                     coworkerArms.gameObject.SetActive(true);
                 }
                 TalkToPlayer();
@@ -98,7 +104,8 @@ public class CoworkerManager : MonoBehaviour
             }
         }
         if (!isActive) {
-            coworkerArms.gameObject.SetActive(false);
+            if (coworkers[coworkerIndex].armsImage != null)
+                coworkerArms.gameObject.SetActive(false);
             coworkerImage.gameObject.SetActive(false);
         }
     }
@@ -114,7 +121,8 @@ public class CoworkerManager : MonoBehaviour
         playerHasResponded = false;
 
         if (!metCoworkers.Contains(coworkers[randomIndex])) {
-            coworkerArms.gameObject.SetActive(true);
+            if (coworkers[coworkerIndex].armsImage != null)
+                coworkerArms.gameObject.SetActive(true);
             coworkerImage.gameObject.SetActive(true);
             metCoworkers.Add(coworkers[randomIndex]);
             coworkerHolder.transform.position = coworkerStartPosition;
@@ -122,7 +130,8 @@ public class CoworkerManager : MonoBehaviour
             isMoving = true;
             playerHasResponded = false;
             coworkerImage.sprite = coworkers[randomIndex].coworkerImage;
-            coworkerArms.sprite = coworkers[randomIndex].armsImage;
+            if (coworkers[coworkerIndex].armsImage != null)
+                coworkerArms.sprite = coworkers[randomIndex].armsImage;
             coworkerText.text = coworkers[randomIndex].coworkerSpeech;
             responseOption1.text = coworkers[randomIndex].responseOption1;
             responseOption2.text = coworkers[randomIndex].responseOption2;

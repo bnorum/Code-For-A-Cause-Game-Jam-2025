@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: f484991983e50e640a90b382faedba87, type: 2}
+  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Charlotte P Email
   body: lori assaulted me in 5th grade
   attachment: {fileID: 0}

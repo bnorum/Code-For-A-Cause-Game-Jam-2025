@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
-  m_Name: EvilSoft
+  m_Name: dSampleSender
   m_EditorClassIdentifier: 
-  senderEmail: donotreply@evilsoft.com
-  senderName: EvilSoft
-  profileImage: {fileID: -5973138936350462648, guid: 5ad49e149c8f422479c064db37101b87, type: 3}
+  senderEmail: samplesender@samplesender.com
+  senderName: Sample Sender
+  profileImage: {fileID: 3226385883373346976, guid: 789d7dd1ab65ae1468038614e7c87cf9, type: 3}
