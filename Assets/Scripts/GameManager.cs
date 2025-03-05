@@ -40,10 +40,6 @@ public class GameManager : MonoBehaviour
     public int currentPersonSpawned=0;
 
     //HACK: I fucked up big time and have to use these four arrays. They tell if an email has been sent yet
-    public List<bool> emailSent0 = new List<bool>(4);
-    public List<bool> emailSent1 = new List<bool>(4);
-    public List<bool> emailSent2 = new List<bool>(4);
-    public List<bool> emailSent3 = new List<bool>(4);
 
     private void Awake()
     {
@@ -177,7 +173,6 @@ public class GameManager : MonoBehaviour
     }
 
     public EmailSchema GetPseudoRandomEmail() {
-        EmailSchema es;
         if (time is > 540 and < 620 && chosenPeople[0].relatedEmails.Count > 0)
         {
             return SelectEmailFromPool(0);
@@ -278,7 +273,10 @@ public class GameManager : MonoBehaviour
         foreach (PersonSchema person in chosenPeople)
         {
 
-            person.relatedEmailsUsed = new List<bool>(4);
+            for (int i = 0; i < person.relatedEmailsUsed.Count; i++)
+            {
+                person.relatedEmailsUsed[i] = false;
+            }
 
         }
     }

@@ -5602,7 +5602,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
   - {fileID: 11400000, guid: 0b7464ce10ed9ac4dbf06b50a6472232, type: 2}
   time: 540
-  datenum: 1
+  datenum: 0
   timeUntilNextEmail: 5
   timeUntilNextCoworker: 60
   timeUntilNextPerson: 113
@@ -5620,10 +5620,6 @@ MonoBehaviour:
   endDayCanvas: {fileID: 2069517475}
   isDayOver: 0
   currentPersonSpawned: 0
-  emailSent0: 00000000
-  emailSent1: 00000000
-  emailSent2: 00000000
-  emailSent3: 00000000
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0
