@@ -5762,20 +5762,22 @@ MonoBehaviour:
   time: 540
   datenum: 1
   timeUntilNextEmail: 5
-  timeUntilNextCoworker: 120
-  timeUntilNextPerson: 0
+  timeUntilNextCoworker: 110
+  timeUntilNextPerson: 100
   isPaused: 0
   difficultyScale: 2
   startPoint: {fileID: 140547399}
   endPoint: {fileID: 720780164}
   physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
-  escalatorTravelDuration: 50
+  escalatorTravelDuration: 130
   personBounds: {fileID: 735114281}
+  spawnInterval: 110
   reservedEndTime: 100
   escalatorWindowPersonHolder: {fileID: 2087555962}
   endTime: 750
   endDayCanvas: {fileID: 2069517475}
   isDayOver: 0
+  currentPersonSpawned: 0
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0

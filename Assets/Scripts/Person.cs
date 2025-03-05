@@ -92,7 +92,7 @@ public class Person : MonoBehaviour
 
     private void MoveToPosition(float duration)
     {
-        float t = elapsedTime / duration;
+        float t = elapsedTime / duration * GameManager.Instance.difficultyScale;
         transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;

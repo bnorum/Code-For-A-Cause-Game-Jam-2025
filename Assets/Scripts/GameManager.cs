@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public float escalatorTravelDuration = 5.0f;
     public Collider2D personBounds;
     private float spawnTimer = 0.0f;
-    private float spawnInterval;
+    public float spawnInterval;
     [SerializeField] private float reservedEndTime;
     private int totalSpawns;
     private float nextSpawnTime;
@@ -59,12 +59,11 @@ public class GameManager : MonoBehaviour
         totalSpawns = chosenPeople.Count;
 
         difficultyScale = PersistentData.difficultyScale;
+
         // Ensure at least one spawn
-        if (totalSpawns > 0)
-        {
-            spawnInterval = (endTime - time - reservedEndTime) / (totalSpawns - 1);
-            nextSpawnTime = time; // First spawn happens immediately
-        }
+        SpawnPerson();
+        timeUntilNextPerson = spawnInterval;
+        totalSpawns--;
     }
 
     void Update()
@@ -74,13 +73,13 @@ public class GameManager : MonoBehaviour
             time += Time.deltaTime * difficultyScale;
             timeUntilNextEmail -= Time.deltaTime * difficultyScale;
             timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
-            timeUntilNextPerson = Mathf.Max(0, nextSpawnTime - time);
+            timeUntilNextPerson -= Time.deltaTime * difficultyScale;
             DateTimeManager.Instance.UpdateProgress(chosenPeople.Count);
             // Check if it's time to spawn the next person
-            if (time >= nextSpawnTime && totalSpawns > 1)
+            if (timeUntilNextPerson < 0 && totalSpawns > 1)
             {
                 SpawnPerson();
-                nextSpawnTime = time + spawnInterval; // Schedule the next spawn
+                timeUntilNextPerson = spawnInterval;
                 totalSpawns--;
             }
         }
