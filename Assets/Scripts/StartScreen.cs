@@ -25,7 +25,7 @@ public class StartScreen : MonoBehaviour
     void Update()
     {
         PersistentData.difficultyScale = difficultySlider.value;
-        difficultyText.text = Mathf.RoundToInt(difficultySlider.value * 100f - 50) + "%";
+        difficultyText.text = Mathf.RoundToInt(difficultySlider.value * 100f) + "%";
 
         if (isDifficultyShown) {
             StartMenu.transform.position = Vector3.Lerp(StartMenu.transform.position, hidePosition.position, Time.deltaTime * 5f);

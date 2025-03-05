@@ -157,35 +157,52 @@ public class GameManager : MonoBehaviour
     }
 
     public EmailSchema GetPseudoRandomEmail() {
+        EmailSchema es;
         if (time is > 540 and < 620)
         {
-            return chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            es = chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            chosenPeople[0].relatedEmails.Remove(es);
+            return es;
         }
         else if (time is > 620 and < 700)
         {
             if (UnityEngine.Random.Range(0, 100) < 70) {
-                return chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                es = chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                chosenPeople[0].relatedEmails.Remove(es);
+                return es;
             }
 
-            return chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[1].relatedEmails.Count)];
+            es = chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            chosenPeople[1].relatedEmails.Remove(es);
+            return es;
         }
         else if (time is > 700 and < 780)
         {
             if (UnityEngine.Random.Range(0, 100) < 70) {
-                return chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                es = chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                chosenPeople[1].relatedEmails.Remove(es);
+                return es;
             }
-            return chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[2].relatedEmails.Count)];
+            es = chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            chosenPeople[2].relatedEmails.Remove(es);
+            return es;
         }
         else if (time is > 860 and < 940)
         {
             if (UnityEngine.Random.Range(0, 100) < 70) {
-                return chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                    es = chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+                    chosenPeople[2].relatedEmails.Remove(es);
+                    return es;
             }
-            return chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[3].relatedEmails.Count)];
+            es = chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            chosenPeople[3].relatedEmails.Remove(es);
+            return es;
         }
         else if (time is > 940 and < 1020)
         {
-            return chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[3].relatedEmails.Count)];
+            es = chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            chosenPeople[3].relatedEmails.Remove(es);
+            return es;
         }
         else
         {

@@ -5763,13 +5763,13 @@ MonoBehaviour:
   datenum: 1
   timeUntilNextEmail: 5
   timeUntilNextCoworker: 110
-  timeUntilNextPerson: 100
+  timeUntilNextPerson: 113
   isPaused: 0
   difficultyScale: 2
   startPoint: {fileID: 140547399}
   endPoint: {fileID: 720780164}
   physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
-  escalatorTravelDuration: 130
+  escalatorTravelDuration: 133
   personBounds: {fileID: 735114281}
   spawnInterval: 110
   reservedEndTime: 100
