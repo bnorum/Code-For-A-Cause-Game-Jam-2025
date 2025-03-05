@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: a47abd66d288f354f98b23aec8a97c56
+guid: 8fff2f93722c6c44880f50525c7a4c9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -661766990909252259
-    second: hell_0
+      213: -7014787354615885862
+    second: newButtons_0
+  - first:
+      213: -674791412052426364
+    second: newButtons_1
+  - first:
+      213: 2935845940198916271
+    second: newButtons_2
+  - first:
+      213: 1219259442044068993
+    second: newButtons_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hell_0
+      name: newButtons_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1280
-        height: 640
+        y: 111
+        width: 94
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5d56ce8d6ee0d6f0800000000000000
-      internalID: -661766990909252259
+      spriteID: adfc731211876ae90800000000000000
+      internalID: -7014787354615885862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newButtons_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 94
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481812339c8a2a6f0800000000000000
+      internalID: -674791412052426364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newButtons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 95
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa044dce3583eb820800000000000000
+      internalID: 2935845940198916271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newButtons_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 95
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184e31ca00eabe010800000000000000
+      internalID: 1219259442044068993
       vertices: []
       indices: 
       edges: []
@@ -160,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      hell_0: -661766990909252259
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
