@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
 
     public float time = 540f;
-    public int datenum = 1;
+    public int datenum;
 
     public float timeUntilNextEmail = 5f;
     public float timeUntilNextCoworker = 120f;
@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public Transform escalatorWindowPersonHolder;
     [SerializeField] private float endTime = 1440f;
 
+    public GameObject endDayCanvas;
+    public bool isDayOver = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        datenum = PersistentData.currentDay;
         ChoosePeople(20);
         totalSpawns = chosenPeople.Count;
 
@@ -75,7 +79,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (time >= endTime)
+        if (time >= endTime + 10 && !isDayOver)
+        {
+            isDayOver = true;
+            // Call the function to end the day
+            SceneManager.Instance.LoadBetweenDay();
+        }
         {
             // End of day logic (e.g., cutscene, transition to next day)
         }

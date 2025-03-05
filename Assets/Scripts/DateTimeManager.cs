@@ -58,7 +58,10 @@ public class DateTimeManager : MonoBehaviour
         float damnedProgress = (float)peopleDamned / total;
         float savedProgress = (float)peopleSaved / total;
 
+        if (damnedProgressBar != null)
         damnedProgressBarFill.localScale = new Vector3(1, damnedProgress, 1);
+
+        if (savedProgressBar != null)
         savedProgressBarFill.localScale = new Vector3(1, savedProgress, 1);
     }
 }
