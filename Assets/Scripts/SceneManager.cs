@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+    public Canvas loadingCanvas;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,21 +20,32 @@ public class SceneManager : MonoBehaviour
     public void LoadNewDay(int daynum)
     {
         PersistentData.currentDay = daynum;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        enableLoadingCanvas();
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
     }
 
     public void LoadMainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        enableLoadingCanvas();
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
     }
 
     public void LoadBetweenDay()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        enableLoadingCanvas();
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(2);
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    void enableLoadingCanvas()
+    {
+        if (loadingCanvas != null)
+        {
+            loadingCanvas.gameObject.SetActive(true);
+        }
     }
 }

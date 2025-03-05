@@ -44,7 +44,8 @@ public class ViewToggler : MonoBehaviour
                 new Vector3(ComputerRoute.transform.position.x, ComputerRoute.transform.position.y, mainCamera.transform.position.z),
                 Time.deltaTime * 5f);
 
-
+            Manual.Instance.isShown = false;
+            Manual.Instance.notesShown = false;
             buttonImages[0].color = new Color(1f, 1f, 1f, 1f);
             buttonImages[1].color = new Color(1f, 0f, 0f, 1f);
             buttonImages[2].color = new Color(1f, 1f, 1f, 1f);
