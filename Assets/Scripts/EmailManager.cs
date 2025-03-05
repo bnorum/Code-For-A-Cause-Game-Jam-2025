@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class EmailManager : MonoBehaviour
 {
-
     public static EmailManager Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
     public List<EmailSchema> emailSchemas;
     public GameObject emailPrefab;
@@ -23,9 +22,11 @@ public class EmailManager : MonoBehaviour
 
     public TextMeshProUGUI emailCountText;
 
+    public ScrollRect scrollView;
+    public bool canScroll = true;
+
     private void Awake()
     {
-
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -44,6 +45,11 @@ public class EmailManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!canScroll)
+            scrollView.vertical = false;
+        else
+            scrollView.vertical = true;
+
         if (dropdownMenu.value == 0) {
             currentEmails = allEmails;
         } else if (dropdownMenu.value == 1) {
@@ -69,21 +75,6 @@ public class EmailManager : MonoBehaviour
             emailCountText.text = unreadEmails.Count.ToString();
         }
         emailCountText.text = unreadEmails.Count.ToString();
-
-        /*
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            int spamChance = Random.Range(0, 100);
-            if (spamChance < 20)
-            {
-                AddEmail(GameManager.Instance.GetRandomSpamEmail());
-            }
-            else
-            {
-                AddEmail(emailSchemas[Random.Range(0, emailSchemas.Count)]);
-            }
-        }
-        */
     }
 
     public void AddEmail(EmailSchema emailSchema) {
@@ -94,10 +85,9 @@ public class EmailManager : MonoBehaviour
         Email email = newEmail.GetComponent<Email>();
         email.emailSchema = emailSchema;
 
-
         allEmails.Add(email);
         unreadEmails.Add(email);
         emailSchemas.Remove(emailSchema);
     }
-
+    
 }
