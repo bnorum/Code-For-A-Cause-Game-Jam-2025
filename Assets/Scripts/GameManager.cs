@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        RefreshEmailsUsed();
         if (Application.isEditor && PersistentData.currentDay == 0)
         {
             PersistentData.currentDay = 1;
@@ -66,6 +65,8 @@ public class GameManager : MonoBehaviour
         }
         datenum = PersistentData.currentDay;
         ChoosePeople(20 + 10*(PersistentData.currentDay-1));
+
+        RefreshEmailsUsed();
         totalSpawns = chosenPeople.Count;
         difficultyScale = PersistentData.difficultyScale;
 
@@ -258,8 +259,6 @@ public class GameManager : MonoBehaviour
 
     EmailSchema SelectEmailFromPool(int personIndex) {
         int index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
-        Debug.Log(personIndex);
-        Debug.Log(index);
         while (chosenPeople[personIndex].relatedEmailsUsed[index] && chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
         {
             index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
@@ -270,6 +269,7 @@ public class GameManager : MonoBehaviour
 
     public void RefreshEmailsUsed()
     {
+        Debug.Log("Refreshing Emails");
         foreach (PersonSchema person in chosenPeople)
         {
 
