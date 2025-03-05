@@ -109,6 +109,7 @@ public class Person : MonoBehaviour
             {
                 Destroy(gameObject);
                 //TODO: Add to list of people who were not saved
+                PersistentData.peopleDamned.Add(personSchema);
             }
         }
     }
