@@ -19,6 +19,7 @@ public class Person : MonoBehaviour
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
     public GameObject nameTagObject;
+    public Transform nameTagBounds;
     private Transform nameTagDefaultLocation;
     private GameObject startPointGameRef;
     private GameObject endPointGameRef;
@@ -161,26 +162,24 @@ public class Person : MonoBehaviour
         return position;
     }
 
+    private float hoverTime = 0.0f;
+    private float hoverThreshold = 1.0f;
+
     private void CheckMouseHover()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        if (hit.collider != null && hit.collider.gameObject == gameObject && !isDragging)
         {
-            nameTagObject.SetActive(true);
-
-            Vector3 clampedPosition = ClampPositionToBounds(nameTagObject.transform.position);
-            if (nameTagObject.transform.position != clampedPosition)
+            hoverTime += Time.deltaTime;
+            if (hoverTime >= hoverThreshold)
             {
-                nameTagObject.transform.position = clampedPosition;
-            }
-            else
-            {
-                nameTagObject.transform.position = nameTagDefaultLocation.position;
+                nameTagObject.SetActive(true);
             }
         }
         else
         {
+            hoverTime = 0.0f;
             nameTagObject.SetActive(false);
         }
     }

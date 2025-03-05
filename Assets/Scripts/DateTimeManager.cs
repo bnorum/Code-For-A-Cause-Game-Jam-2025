@@ -9,12 +9,26 @@ public class DateTimeManager : MonoBehaviour
 
     public TextMeshProUGUI dateTimeText;
 
-    public string time;
-
-    public string date;
+    public RectTransform damnedProgressBar;
+    public RectTransform damnedProgressBarFill;
+    public RectTransform savedProgressBar;
+    public RectTransform savedProgressBarFill;
+    private string time;
+    private string date;
 
     public List<string> dateList;
+    private void Awake()
+    {
 
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,9 +44,21 @@ public class DateTimeManager : MonoBehaviour
         DisplayDateTime();
     }
 
-    void DisplayDateTime() {
+    void DisplayDateTime()
+    {
         if (GameManager.Instance.time > 720) dateTimeText.text = date +"	" + time + " PM";
         else dateTimeText.text = date + "	" + time + " AM";
 
+    }
+    public void UpdateProgress(int total)
+    {
+        int peopleDamned = PersistentData.peopleDamned.Count;
+        int peopleSaved = PersistentData.peopleSaved.Count;
+
+        float damnedProgress = (float)peopleDamned / total;
+        float savedProgress = (float)peopleSaved / total;
+
+        damnedProgressBarFill.localScale = new Vector3(1, damnedProgress, 1);
+        savedProgressBarFill.localScale = new Vector3(1, savedProgress, 1);
     }
 }

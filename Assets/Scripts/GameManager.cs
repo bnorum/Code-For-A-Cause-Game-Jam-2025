@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             timeUntilNextEmail -= Time.deltaTime * difficultyScale;
             timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
             timeUntilNextPerson = Mathf.Max(0, nextSpawnTime - time);
-
+            DateTimeManager.Instance.UpdateProgress(chosenPeople.Count);
             // Check if it's time to spawn the next person
             if (time >= nextSpawnTime && totalSpawns > 1)
             {
