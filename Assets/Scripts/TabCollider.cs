@@ -9,7 +9,7 @@ public class TabCollider : MonoBehaviour
         {
             Person myPerson = collision.gameObject.GetComponent<Person>();
 
-            if (myPerson.isDragging && !myPerson.isFalling)
+            if (myPerson.isDragging && !myPerson.isFalling && myPerson.rb.linearVelocity.magnitude < myPerson.velocityThresholdToTrigger)
             {
                 FindFirstObjectByType<TabManager>().OpenTab(tabToOpen, myPerson);
             }

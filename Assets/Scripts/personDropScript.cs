@@ -7,7 +7,7 @@ public class personDropScript : MonoBehaviour
         if(collision.gameObject.GetComponent<Person>() == null) return;
 
         Person myPerson = collision.gameObject.GetComponent<Person>();
-        if (!myPerson.isBeingTransported && !myPerson.isDragging && myPerson.isFalling)
+        if (!myPerson.isBeingTransported && !myPerson.isDragging && myPerson.isFalling && myPerson.rb.linearVelocity.magnitude < myPerson.escalatorThresholdToTrigger)
         {
             myPerson.RestartMovement();
         }

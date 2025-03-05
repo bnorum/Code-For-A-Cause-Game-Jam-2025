@@ -8,7 +8,7 @@ public class Person : MonoBehaviour
 
     [Header("Movement Vars")]
     private Camera mainCamera;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool isDragging = false;
     public bool isFalling = false;
     private Vector2 storedVelocity;
@@ -31,6 +31,9 @@ public class Person : MonoBehaviour
     public GameObject cursorPoint;
     public SpringJoint2D springJoint;
     public float angularVelocityCap = 200f;
+    public float velocityThresholdToTrigger = 50f;
+    public float escalatorThresholdToTrigger = 10f;
+    public float springJointDistance = .03f;
 
     public void Init(PersonSchema personSchema, BoxCollider2D collider, GameObject startPoint, GameObject endPoint)
     {
@@ -96,6 +99,7 @@ public class Person : MonoBehaviour
         isFalling = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
@@ -138,7 +142,7 @@ public class Person : MonoBehaviour
             cursorPoint.transform.position = GetMouseWorldPos(cursorPoint.transform);
             springJoint.enabled = true;
             springJoint.autoConfigureDistance = false;
-            springJoint.distance = 0.05f;
+            springJoint.distance = springJointDistance;
             springJoint.connectedBody = null;
             springJoint.connectedAnchor = cursorPoint.transform.position;
             EmailManager.Instance.canScroll = false;
@@ -197,7 +201,7 @@ public class Person : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-        if (hit.collider != null && hit.collider == personCollider)
+        if (hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>() && hasBeenMicrowaved)
         {
             hoverTime += Time.deltaTime;
             if (hoverTime >= hoverThreshold)

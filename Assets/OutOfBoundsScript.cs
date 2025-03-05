@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class OutOfBoundsScript : MonoBehaviour
 {
     public static OutOfBoundsScript Instance { get; private set; }
-    private List<GameObject> alivePeople = new List<GameObject>();
+    public List<GameObject> alivePeople = new List<GameObject>();
     public BoxCollider2D boundaryCollider1;
     public BoxCollider2D boundaryCollider2;
     public BoxCollider2D boundaryCollider3;
@@ -31,25 +32,53 @@ public class OutOfBoundsScript : MonoBehaviour
 
     void Update()
     {
-        foreach (var obj in alivePeople)
+        StartCoroutine(CheckOutOfBounds());
+    }
+
+    private IEnumerator CheckOutOfBounds()
+    {
+        while (true)
         {
+            foreach (var obj in alivePeople)
+            {
             bool isWithinBounds = false;
             foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
             {
-            if (collider.bounds.Contains(obj.transform.position))
-            {
+                if (collider.bounds.Contains(obj.transform.position))
+                {
                 isWithinBounds = true;
                 break;
+                }
             }
-            }
-
             if (!isWithinBounds)
             {
-            obj.transform.position = respawn.position;
-            obj.GetComponent<Person>().ResetToDefault();
-            obj.transform.SetParent(limboPeopleHolder.transform);
+                StartCoroutine(OutOfBoundsTimer(obj));
+            }
+            }
+            yield return new WaitForSeconds(1f);
+        }
+        }
+
+        private IEnumerator OutOfBoundsTimer(GameObject obj)
+        {
+        yield return new WaitForSeconds(1f);
+        bool isStillOutOfBounds = true;
+        foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
+        {
+            if (collider.bounds.Contains(obj.transform.position))
+            {
+            isStillOutOfBounds = false;
+            break;
             }
         }
+        if (isStillOutOfBounds)
+        {
+            Debug.Log($"Out of Bounds: {obj.name} at {obj.transform.position}");;
+            obj.GetComponent<Person>().ResetToDefault();
+            obj.transform.SetParent(limboPeopleHolder.transform);
+            obj.transform.position = respawn.position;
+        }
+        
     }
 
     public void UpdateAlivePeople(GameObject obj)
