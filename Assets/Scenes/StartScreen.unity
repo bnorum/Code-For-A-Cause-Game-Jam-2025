@@ -1151,13 +1151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0934a843491b1634ea23b47df064707d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultySlider: {fileID: 693094020}
-  difficultyText: {fileID: 1367181839}
-  StartMenu: {fileID: 883328918}
-  DifficultyMenu: {fileID: 572583922}
-  targetPosition: {fileID: 1006982336}
-  hidePosition: {fileID: 132395056}
-  isDifficultyShown: 0
 --- !u!4 &552141495
 Transform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1452, y: -366}
+  m_AnchoredPosition: {x: -537, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &582503082
@@ -1601,7 +1594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -741.99994, y: -372.99997}
+  m_AnchoredPosition: {x: 279, y: -248}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &920897008
@@ -3055,7 +3048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -662.03, y: 317.55}
+  m_AnchoredPosition: {x: -436, y: 101}
   m_SizeDelta: {x: 474.9, y: 340.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822200198
