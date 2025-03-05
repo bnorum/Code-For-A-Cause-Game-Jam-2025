@@ -138,6 +138,7 @@ public class Person : MonoBehaviour
             springJoint.distance = 0.05f;
             springJoint.connectedBody = null;
             springJoint.connectedAnchor = cursorPoint.transform.position;
+            EmailManager.Instance.canScroll = false;
         }
     }
 
@@ -161,6 +162,8 @@ public class Person : MonoBehaviour
         rb.linearVelocity = storedVelocity / dampener;
         springJoint.enabled = false;
         cursorPoint.transform.position = transform.position;
+        EmailManager.Instance.canScroll = true;
+
     }
 
     private void UpdateGravityScale()

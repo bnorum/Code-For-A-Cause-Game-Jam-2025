@@ -14463,6 +14463,8 @@ MonoBehaviour:
   dropdownMenu: {fileID: 1032684927}
   emailSound: {fileID: 993234920}
   emailCountText: {fileID: 879404534}
+  scrollView: {fileID: 355625216}
+  canScroll: 1
 --- !u!4 &1656577177
 Transform:
   m_ObjectHideFlags: 0
