@@ -6,7 +6,7 @@ public class LoadingTextChange : MonoBehaviour
 {
     public List<string> loadingTexts;
     public TextMeshProUGUI loadingTextUI;
-    int index = 0;
+    public int index = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +16,12 @@ public class LoadingTextChange : MonoBehaviour
             "Loading..",
             "Loading..."
         };
+
+    }
+
+    void Awake()
+    {
+        StartCoroutine(ChangeLoadingText(0.3f));
     }
 
     // Update is called once per frame
@@ -29,7 +35,6 @@ public class LoadingTextChange : MonoBehaviour
         while (true)
         {
             // Update the loading text
-            GetComponent<UnityEngine.UI.Text>().text = loadingTexts[index];
             index = (index + 1) % loadingTexts.Count;
 
             // Wait for the specified time

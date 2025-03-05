@@ -1,4 +1,7 @@
+using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
@@ -18,47 +21,53 @@ public class SceneManager : MonoBehaviour
     }
 
     public Canvas loadingCanvas;
+    public Canvas OnOpenCanvas;
+
+    public GameObject clockOutMachineBill;
+    public GameObject clockOutMachineBillTarget;
+    public bool startedLoadingBetweenDay;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (OnOpenCanvas != null) StartCoroutine(OnOpen());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (startedLoadingBetweenDay) {
+            clockOutMachineBill.transform.position = Vector3.Lerp(clockOutMachineBill.transform.position, clockOutMachineBillTarget.transform.position, Time.deltaTime * 5f);
 
+
+        }
     }
 
     public void LoadNewDay()
     {
-        enableLoadingCanvas();
+        enableLoadingCanvas(1);
         PersistentData.currentDay++;
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
     }
 
     public void LoadNewGame()
     {
-        enableLoadingCanvas();
+        enableLoadingCanvas(1);
         PersistentData.currentDay=1;
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
     }
 
     public void LoadMainMenu(bool isEndGame = false)
     {
-        enableLoadingCanvas();
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
+        enableLoadingCanvas(0);
     }
 
     public void LoadBetweenDay()
     {
-        enableLoadingCanvas();
+        startedLoadingBetweenDay = true;
         if (PersistentData.currentDay == 5)
         {
             LoadMainMenu(true);
         } else {
-            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(2);
+            enableLoadingCanvas(2);
         }
     }
 
@@ -67,14 +76,55 @@ public class SceneManager : MonoBehaviour
         Application.Quit();
     }
 
-    void enableLoadingCanvas()
+    void enableLoadingCanvas(int scenenum)
     {
-        if (loadingCanvas != null)
+        StartCoroutine(FadeInLoadingCanvasIntoScene(scenenum));
+    }
+
+    IEnumerator FadeInLoadingCanvasIntoScene(int scenenum)
+    {
+        CanvasGroup canvasGroup = loadingCanvas.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
         {
-            loadingCanvas.gameObject.SetActive(true);
+            canvasGroup = loadingCanvas.gameObject.AddComponent<CanvasGroup>();
         }
+
+        canvasGroup.alpha = 0;
+        loadingCanvas.gameObject.SetActive(true);
+
+        while (canvasGroup.alpha < 1)
+        {
+            canvasGroup.alpha += Time.deltaTime / 1.0f; // 1 second fade in
+            yield return null;
+        }
+
+        canvasGroup.alpha = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scenenum);
+
     }
 
 
-    
+    public IEnumerator OnOpen() {
+        OnOpenCanvas.gameObject.SetActive(true);
+        CanvasGroup canvasGroup = OnOpenCanvas.GetComponent<CanvasGroup>();
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1;
+            yield return new WaitForSeconds(1);
+            while (canvasGroup.alpha > 0)
+            {
+            canvasGroup.alpha -= Time.deltaTime / 2;
+            yield return null;
+            }
+            canvasGroup.alpha = 0;
+        }
+        OnOpenCanvas.gameObject.SetActive(false);
+    }
+
+
+
+
+
+
 }

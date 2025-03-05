@@ -9,7 +9,6 @@ public class PersonSchema : ScriptableObject
     public int age;
     public string occupation;
     public int netWorth;
-    public int challengeLevel;
 
     public List<EmailSchema> relatedEmails;
     public List<bool> relatedEmailsUsed = new List<bool>(4);
