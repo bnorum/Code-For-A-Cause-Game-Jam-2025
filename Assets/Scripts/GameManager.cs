@@ -31,10 +31,12 @@ public class GameManager : MonoBehaviour
     private int totalSpawns;
     private float nextSpawnTime;
     public Transform escalatorWindowPersonHolder;
-    [SerializeField] private float endTime = 1440f;
+    [SerializeField] private float endTime = 1020f;
 
     public GameObject endDayCanvas;
     public bool isDayOver = false;
+
+    public int currentPersonSpawned=0;
 
     private void Awake()
     {
@@ -103,7 +105,7 @@ public class GameManager : MonoBehaviour
             }
             else if(EmailManager.Instance.emailSchemas.Count > 0)
             {
-                EmailManager.Instance.AddEmail(EmailManager.Instance.emailSchemas[UnityEngine.Random.Range(0, EmailManager.Instance.emailSchemas.Count-1)]);
+                EmailManager.Instance.AddEmail(GetPseudoRandomEmail());
             }
         }
 
@@ -155,6 +157,44 @@ public class GameManager : MonoBehaviour
         return spamEmails[UnityEngine.Random.Range(0, spamEmails.Count)];
     }
 
+    public EmailSchema GetPseudoRandomEmail() {
+        if (time is > 540 and < 620)
+        {
+            return chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+        }
+        else if (time is > 620 and < 700)
+        {
+            if (UnityEngine.Random.Range(0, 100) < 70) {
+                return chosenPeople[0].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            }
+
+            return chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[1].relatedEmails.Count)];
+        }
+        else if (time is > 700 and < 780)
+        {
+            if (UnityEngine.Random.Range(0, 100) < 70) {
+                return chosenPeople[1].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            }
+            return chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[2].relatedEmails.Count)];
+        }
+        else if (time is > 860 and < 940)
+        {
+            if (UnityEngine.Random.Range(0, 100) < 70) {
+                return chosenPeople[2].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[0].relatedEmails.Count)];
+            }
+            return chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[3].relatedEmails.Count)];
+        }
+        else if (time is > 940 and < 1020)
+        {
+            return chosenPeople[3].relatedEmails[UnityEngine.Random.Range(0, chosenPeople[3].relatedEmails.Count)];
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
     public string TimeToString()
     {
         if (time > 780f)
@@ -183,7 +223,8 @@ public class GameManager : MonoBehaviour
     {
         if (chosenPeople.Count == 0) return;
 
-        int index = UnityEngine.Random.Range(0, chosenPeople.Count);
+        int index = currentPersonSpawned;
+        currentPersonSpawned++;
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
         personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
