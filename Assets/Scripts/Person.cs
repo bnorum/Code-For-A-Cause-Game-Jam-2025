@@ -143,9 +143,24 @@ public class Person : MonoBehaviour
         Vector3 newPosition = mouseWorldPosition + offset;
         newPosition = ClampPositionToBounds(newPosition);
 
-        storedVelocity = (newPosition - transform.position) / Time.deltaTime;
-        rb.linearVelocity = (newPosition - transform.position) * 10f;
+        // Set the spring point to move towards the cursor
+        springPoint.transform.position = newPosition;
+
+        // --- FIX 1: Prevent Excessive Spinning ---
+        rb.angularVelocity *= 0.95f;  // Apply damping to slow down extreme spinning
+
+        // --- FIX 2: Ensure Proper Orientation ---
+        Vector2 direction = (mouseWorldPosition - transform.position).normalized;
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+
+        // If the mouse isn't moving much, gently realign the sprite
+        if (rb.linearVelocity.magnitude < 0.5f)
+        {
+            float angleDifference = Mathf.DeltaAngle(transform.eulerAngles.z, targetAngle);
+            rb.angularVelocity -= angleDifference * 2f; // Gradually adjust rotation
+        }
     }
+
 
     private void DropObject()
     {
