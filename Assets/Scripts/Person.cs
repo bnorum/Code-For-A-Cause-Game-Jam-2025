@@ -25,6 +25,7 @@ public class Person : MonoBehaviour
     private GameObject endPointGameRef;
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
+    public GameObject springPoint;
 
     public void Init(PersonSchema personSchema, Collider2D personBounds, GameObject startPoint, GameObject endPoint)
     {
@@ -46,6 +47,12 @@ public class Person : MonoBehaviour
         }
         rb.gravityScale = 0;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        SpringJoint2D springJoint = gameObject.AddComponent<SpringJoint2D>();
+        springJoint.connectedBody = springPoint.GetComponent<Rigidbody2D>();
+        springJoint.autoConfigureDistance = false;
+        springJoint.distance = 0.5f;
+        springJoint.dampingRatio = 0.7f;
+        springJoint.frequency = 1.0f;
     }
 
     private void Update()
@@ -72,7 +79,6 @@ public class Person : MonoBehaviour
 
     public void StartMovement(float duration)
     {
-        Debug.Log("Starting movement...");
         durationReference = duration;
         elapsedTime = 0.0f;
         isBeingTransported = true;
@@ -124,7 +130,7 @@ public class Person : MonoBehaviour
             isDragging = true;
             isBeingTransported = false;
             isFalling = false;
-            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
             Vector3 mouseWorldPosition = GetMouseWorldPos();
             offset = transform.position - mouseWorldPosition;
@@ -138,7 +144,7 @@ public class Person : MonoBehaviour
         newPosition = ClampPositionToBounds(newPosition);
 
         storedVelocity = (newPosition - transform.position) / Time.deltaTime;
-        transform.position = newPosition;
+        rb.linearVelocity = (newPosition - transform.position) * 10f;
     }
 
     private void DropObject()
@@ -149,6 +155,12 @@ public class Person : MonoBehaviour
 
         rb.gravityScale = dampener;
         rb.linearVelocity = storedVelocity / dampener;
+
+        SpringJoint2D spring = GetComponent<SpringJoint2D>();
+        if (spring != null)
+        {
+            spring.distance = 0.5f; // Reset to default value
+        }
     }
 
     private Vector3 GetMouseWorldPos()

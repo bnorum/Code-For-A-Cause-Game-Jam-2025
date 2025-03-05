@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
         datenum = PersistentData.currentDay;
         ChoosePeople(20 + 10*(PersistentData.currentDay-1));
         totalSpawns = chosenPeople.Count;
-
         difficultyScale = PersistentData.difficultyScale;
 
         // Ensure at least one spawn
@@ -258,7 +257,7 @@ public class GameManager : MonoBehaviour
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
         personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
-        personScript.StartMovement(escalatorTravelDuration);
+        // personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
     }
 
