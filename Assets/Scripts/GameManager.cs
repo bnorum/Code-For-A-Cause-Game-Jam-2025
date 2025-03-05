@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float endTime = 1020f;
 
     public GameObject endDayCanvas;
+    public GameObject clockOutCanvas;
+    public GameObject clockOutMachine;
+    public GameObject clockOutMachineTarget;
+    public UnityEngine.UI.Image clockOutScreenDarken;
+    public EmailSchema clockoutEmail;
     public bool isDayOver = false;
 
     public int currentPersonSpawned=0;
@@ -53,8 +58,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        endDayCanvas.SetActive(false);
+        clockOutCanvas.SetActive(false);
+        clockOutScreenDarken.color = new Color(0, 0, 0, 0);
 
-        RefreshEmailsUsed();
+
         if (Application.isEditor && PersistentData.currentDay == 0)
         {
             PersistentData.currentDay = 1;
@@ -64,8 +72,11 @@ public class GameManager : MonoBehaviour
         {
             PersistentData.remainingPeople = allPeople;
         }
+        allPeople = PersistentData.remainingPeople;
         datenum = PersistentData.currentDay;
-        ChoosePeople(20 + 10*(PersistentData.currentDay-1));
+        ChoosePeople();
+
+        RefreshEmailsUsed();
         totalSpawns = chosenPeople.Count;
         difficultyScale = PersistentData.difficultyScale;
 
@@ -93,12 +104,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (time >= endTime + 10 && !isDayOver)
+        if (time >= endTime - 30 && !isDayOver)
         {
             isDayOver = true;
             // Call the function to end the day
             RefreshEmailsUsed();
-            SceneManager.Instance.LoadBetweenDay();
+            StartCoroutine(EndDay());
         }
         {
             // End of day logic (e.g., cutscene, transition to next day)
@@ -106,7 +117,7 @@ public class GameManager : MonoBehaviour
 
         if (timeUntilNextEmail <= 0)
         {
-            timeUntilNextEmail = UnityEngine.Random.Range(25, 35);
+            timeUntilNextEmail = UnityEngine.Random.Range(20, 25);
             int spamChance = UnityEngine.Random.Range(0, 100);
             if (spamChance < 7)
             {
@@ -125,36 +136,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void ChoosePeople(int cumulativeChallengeLevel)
+    void ChoosePeople()
     {
-        for (int i = 0; i < PersistentData.remainingPeople.Count; i++)
+        for (int i = 0; i < 4; i++)
         {
-            PersonSchema temp = PersistentData.remainingPeople[i];
-            int randomIndex = UnityEngine.Random.Range(i, PersistentData.remainingPeople.Count);
-            PersistentData.remainingPeople[i] = PersistentData.remainingPeople[randomIndex];
-            PersistentData.remainingPeople[randomIndex] = temp;
+            if (allPeople.Count == 0) break;
+            int index = UnityEngine.Random.Range(0, allPeople.Count);
+            PersonSchema selectedPerson = allPeople[index];
+            chosenPeople.Add(selectedPerson);
+            allPeople.RemoveAt(index);
+            PersistentData.remainingPeople.Remove(selectedPerson);
         }
-
-        int currentChallengeLevel = 0;
-        foreach (PersonSchema person in PersistentData.remainingPeople)
-        {
-            if (person.challengeLevel + currentChallengeLevel <= cumulativeChallengeLevel)
-            {
-                currentChallengeLevel += person.challengeLevel;
-                chosenPeople.Add(person);
-
-            }
-
-            if (chosenPeople.Count == 4)
-            {
-                break;
-            }
-        }
-        foreach (PersonSchema person in chosenPeople)
-        {
-            PersistentData.remainingPeople.Remove(person);
-        }
-        allPeople = PersistentData.remainingPeople;
     }
 
     public List<EmailSchema> GetAllEmailSchemas()
@@ -258,8 +250,6 @@ public class GameManager : MonoBehaviour
 
     EmailSchema SelectEmailFromPool(int personIndex) {
         int index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
-        Debug.Log(personIndex);
-        Debug.Log(index);
         while (chosenPeople[personIndex].relatedEmailsUsed[index] && chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
         {
             index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
@@ -270,6 +260,7 @@ public class GameManager : MonoBehaviour
 
     public void RefreshEmailsUsed()
     {
+        Debug.Log("Refreshing Emails");
         foreach (PersonSchema person in chosenPeople)
         {
 
@@ -279,5 +270,26 @@ public class GameManager : MonoBehaviour
             }
 
         }
+    }
+
+    void SendClockOutEmail() {
+        EmailManager.Instance.AddEmail(clockoutEmail);
+    }
+
+    public System.Collections.IEnumerator EndDay() {
+        SendClockOutEmail();
+        yield return new WaitForSeconds(30);
+        clockOutCanvas.SetActive(true);
+
+        while (Vector3.Distance(clockOutMachine.transform.position, clockOutMachineTarget.transform.position) > 0.1f)
+        {
+            if (clockOutScreenDarken.color.a < 0.5f)
+            {
+                clockOutScreenDarken.color = new Color(0, 0, 0, clockOutScreenDarken.color.a + Time.deltaTime / 1.0f);
+            }
+            clockOutMachine.transform.position = Vector3.Lerp(clockOutMachine.transform.position, clockOutMachineTarget.transform.position, Time.deltaTime * 2.0f);
+            yield return null;
+        }
+
     }
 }

@@ -22,5 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d8a2ea6b4042a14ca43b3194e323930, type: 2}
   - {fileID: 11400000, guid: 5ce8b2f817f3ada44bd39d83555e0db6, type: 2}
   - {fileID: 11400000, guid: c547c9e6ed9aab84992cea7d3733317f, type: 2}
-  relatedEmailsUsed: 
+  relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
