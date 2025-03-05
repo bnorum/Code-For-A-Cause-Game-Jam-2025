@@ -4624,7 +4624,6 @@ GameObject:
   - component: {fileID: 624392532}
   - component: {fileID: 624392534}
   - component: {fileID: 624392533}
-  - component: {fileID: 624392535}
   m_Layer: 5
   m_Name: DateTime
   m_TagString: Untagged
@@ -4754,24 +4753,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624392531}
   m_CullTransparentMesh: 1
---- !u!114 &624392535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624392531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0974f9e5917c49447b599719182fc7af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dateTimeText: {fileID: 624392533}
-  damnedProgressBar: {fileID: 0}
-  damnedProgressBarFill: {fileID: 0}
-  savedProgressBar: {fileID: 0}
-  savedProgressBarFill: {fileID: 0}
-  dateList: []
 --- !u!1 &645728452
 GameObject:
   m_ObjectHideFlags: 0
@@ -18027,9 +18008,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 883724545}
   - {fileID: 1851112535}
+  - {fileID: 786897450}
   - {fileID: 1896046987}
   - {fileID: 1763060057}
-  - {fileID: 786897450}
   - {fileID: 447632349}
   - {fileID: 689987222}
   - {fileID: 2005264511}
