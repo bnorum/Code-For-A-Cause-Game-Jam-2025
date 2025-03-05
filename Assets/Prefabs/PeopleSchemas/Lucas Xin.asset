@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: Lucas Xin
+  m_EditorClassIdentifier: 
+  personName: Lucas Xin
+  age: 33
+  occupation: Police Officer
+  netWorth: 200000
+  relatedEmails:
+  - {fileID: 11400000, guid: 9b4ed8db923d81b4e90fd33c2ef01785, type: 2}
+  - {fileID: 11400000, guid: 65307b41f68316e4cbe922dc63ff794a, type: 2}
+  - {fileID: 11400000, guid: 98d33f336fafe6e478049b8018341abc, type: 2}
+  - {fileID: 11400000, guid: d3fc07fdd87c12f4da3ffd1c5f0f6081, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0

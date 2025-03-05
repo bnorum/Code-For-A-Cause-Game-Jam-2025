@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: Liam Brown
+  m_EditorClassIdentifier: 
+  personName: Liam Brown
+  age: 20
+  occupation: Carpenter
+  netWorth: 5000
+  relatedEmails:
+  - {fileID: 11400000, guid: d4bde5338e685594c9f8b52dd6ce1122, type: 2}
+  - {fileID: 11400000, guid: 8734127e128c9cd41b06013fe5abf4fe, type: 2}
+  - {fileID: 11400000, guid: bc89beb28637aaa4aa619efaf6b4268f, type: 2}
+  - {fileID: 11400000, guid: 82d22063258d4744e80197ef0fad36ab, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0

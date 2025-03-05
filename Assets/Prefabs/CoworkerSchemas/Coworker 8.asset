@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
+  m_Name: Coworker 8
+  m_EditorClassIdentifier: 
+  coworkerImage: {fileID: -986331008, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
+  armsImage: {fileID: 0}
+  coworkerSpeech: Hey bro, wanna get a beer later?
+  responseOption1: Yes
+  responseOption2: No
+  response1Response: Great, see you after work.
+  response2Response: Well, whatever.
+  friendlinessScore: 10
+  isCorrectResponse1: 1

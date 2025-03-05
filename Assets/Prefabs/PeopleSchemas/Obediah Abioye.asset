@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: Obediah Abioye
+  m_EditorClassIdentifier: 
+  personName: Obediah Abioye
+  age: 14
+  occupation: Teenager
+  netWorth: 5
+  relatedEmails:
+  - {fileID: 11400000, guid: 8bc2bee0c03c2af4e8ca8a5e6e44880f, type: 2}
+  - {fileID: 11400000, guid: cd7e4b907f7f84641b5f30f818cbf055, type: 2}
+  - {fileID: 11400000, guid: 95ceaf8887aeafd42b01e521482de4ab, type: 2}
+  - {fileID: 11400000, guid: 9fad4fdbc2708d34c966a9998641ccaf, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: Ethan Martinez
+  m_EditorClassIdentifier: 
+  personName: Ethan Martinez
+  age: 21
+  occupation: College Student
+  netWorth: 5000
+  relatedEmails:
+  - {fileID: 11400000, guid: ea342f24ed9efa949b1b926c8895b422, type: 2}
+  - {fileID: 11400000, guid: 76bb95dacdfe0bb4f9ef29e5ec6d71ce, type: 2}
+  - {fileID: 11400000, guid: 9fdb771f96e6ff94fadfb1b4d113b8eb, type: 2}
+  - {fileID: 11400000, guid: dfa3336189466ff41a88499571d2c2ef, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0

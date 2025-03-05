@@ -5996,13 +5996,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPeople:
-  - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
-  - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
-  - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
-  - {fileID: 11400000, guid: a2d2c7271ad1f1d4ca200c2f15202b56, type: 2}
-  - {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}
   - {fileID: 11400000, guid: 4ed806588edfb7f4d987656a5dcbc689, type: 2}
+  - {fileID: 11400000, guid: 52440f3fe60507846842396df6a6c87b, type: 2}
+  - {fileID: 11400000, guid: d78f1f8f68b7bb342b57e81a4c128192, type: 2}
+  - {fileID: 11400000, guid: e9323b36df5079b47aea1f2a550ce747, type: 2}
+  - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
+  - {fileID: 11400000, guid: 00bf96f32884a3b49a7c24663425f7cd, type: 2}
   - {fileID: 11400000, guid: 06b0ace67a49d4a4290354d490434048, type: 2}
+  - {fileID: 11400000, guid: a2d2c7271ad1f1d4ca200c2f15202b56, type: 2}
+  - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
+  - {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}
+  - {fileID: 11400000, guid: 7ee6da2829e183a469a7a7f997504f16, type: 2}
+  - {fileID: 11400000, guid: 33d58a5a6ff2a0b46a84c0a74f29b9bb, type: 2}
+  - {fileID: 11400000, guid: 516526946a5582e428d333425ab1ffbb, type: 2}
+  - {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
+  - {fileID: 11400000, guid: 92a7efda47b137948b192c44024f011f, type: 2}
   - {fileID: 11400000, guid: 7d2174c0c6ba0c649b13f2e06e83e484, type: 2}
   chosenPeople: []
   spamEmails:
