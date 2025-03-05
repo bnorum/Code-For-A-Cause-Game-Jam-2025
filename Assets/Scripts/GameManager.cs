@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (Application.isEditor && PersistentData.currentDay == 0)
+        {
+            PersistentData.currentDay = 1;
+        }
         datenum = PersistentData.currentDay;
         ChoosePeople(20);
         totalSpawns = chosenPeople.Count;

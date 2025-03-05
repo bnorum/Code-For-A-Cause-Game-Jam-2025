@@ -1151,6 +1151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0934a843491b1634ea23b47df064707d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultySlider: {fileID: 693094020}
+  difficultyText: {fileID: 1367181839}
+  StartMenu: {fileID: 883328918}
+  DifficultyMenu: {fileID: 572583922}
+  targetPosition: {fileID: 1006982336}
+  hidePosition: {fileID: 132395056}
+  isDifficultyShown: 0
 --- !u!4 &552141495
 Transform:
   m_ObjectHideFlags: 0

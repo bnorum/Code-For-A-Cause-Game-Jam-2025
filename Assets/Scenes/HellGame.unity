@@ -13615,7 +13615,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 750ae4032eac7d44d913c7fe4b23ac8a, type: 2}
   - {fileID: 11400000, guid: df97a13280d4cd348892e1c1a68963f5, type: 2}
   emailPrefab: {fileID: 5416900680921421043, guid: 7a3cf09a9884781428b3ba022fae8e3d, type: 3}
-  emailContainer: {fileID: 596435157}
+  emailContainer: {fileID: 59319614}
   currentEmails: []
   allEmails: []
   unreadEmails: []

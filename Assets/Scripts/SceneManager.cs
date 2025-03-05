@@ -74,4 +74,7 @@ public class SceneManager : MonoBehaviour
             loadingCanvas.gameObject.SetActive(true);
         }
     }
+
+
+    
 }
