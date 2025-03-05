@@ -1397,6 +1397,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 5839fbd298239fc44a183aae4e60708d, type: 3}
   - {fileID: 32900000, guid: 5839fbd298239fc44a183aae4e60708d, type: 3}
   - {fileID: 32900000, guid: 5839fbd298239fc44a183aae4e60708d, type: 3}
+  - {fileID: 32900000, guid: 5839fbd298239fc44a183aae4e60708d, type: 3}
   associatedDetails:
   - Welcome to orientation! I'll be showing you the essential functions of your new
     job today.
@@ -1415,6 +1416,9 @@ MonoBehaviour:
   - Close by are your notes, where you can write down important information.
   - We evaluate after the first week based on your success with clients, and how
     you mesh with your coworkers. Don't be shy!
+  - At 5:00 PM, we ask that all employees clock out. We'll email you 30 minutes before
+    it's time to clock out. You can also view the time by clicking the time badge
+    in the task bar.
   - That's all I got for you. Good luck and don't get fired!
   videoPlayer: {fileID: 1529116568}
   associatedDetailsText: {fileID: 450448205}
