@@ -3911,8 +3911,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1715728408}
   - {fileID: 1001807492}
+  - {fileID: 1715728408}
   m_Father: {fileID: 924431152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7944,7 +7944,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coworkers:
-  - {fileID: 11400000, guid: 3d4de6894cc761f4a945ab8dbd7be8e5, type: 2}
+  - {fileID: 11400000, guid: b6b106af7abbb1043997f15c2d07422e, type: 2}
+  - {fileID: 11400000, guid: f54a9671c7f635845b6e44bebb9590c4, type: 2}
+  - {fileID: 11400000, guid: 3e574740683a98b4e81f6e23fb99f6fb, type: 2}
+  - {fileID: 11400000, guid: 6e012b05c142bac428fad1b3dca458b6, type: 2}
+  - {fileID: 11400000, guid: c9d0ae6d68c95914fbe7912e7786b5ae, type: 2}
+  - {fileID: 11400000, guid: 42a4a75964ec74f479f9ddb245a87056, type: 2}
+  - {fileID: 11400000, guid: ce556ff3add16af4d9b2acd8a99fa38d, type: 2}
+  - {fileID: 11400000, guid: 2b87fa0b04527c94b85e6a44244d3696, type: 2}
+  - {fileID: 11400000, guid: 6a6d761263db2fc4e840296add89fb6b, type: 2}
+  - {fileID: 11400000, guid: ae0c502275d21f54cbd0384bb8805992, type: 2}
+  - {fileID: 11400000, guid: e0ef7093c38951045b6043860ef59764, type: 2}
+  - {fileID: 11400000, guid: 5d8d3e84fbd9aae43a3a4264590ce50b, type: 2}
+  - {fileID: 11400000, guid: bc10174ea64e0824ba45822e1944bef6, type: 2}
+  - {fileID: 11400000, guid: 5af1b5a717be9a440b89dc71b85cca7c, type: 2}
+  - {fileID: 11400000, guid: 6103cde516a8a54439d8174d8bc635ff, type: 2}
+  - {fileID: 11400000, guid: a16b03bf86043e7459de13036a046e07, type: 2}
+  - {fileID: 11400000, guid: a5205943685d87646b22999f3d76f7a1, type: 2}
+  - {fileID: 11400000, guid: 16e0bb38c5f4aa44eb9d8273f1be5371, type: 2}
+  - {fileID: 11400000, guid: 7db7b3f6bbc491b4099178eac1589dce, type: 2}
+  - {fileID: 11400000, guid: 521c67252eb8c3242a32cdc24ff86495, type: 2}
   metCoworkers: []
   coworkerHolder: {fileID: 558398733}
   coworkerArms: {fileID: 590568722}

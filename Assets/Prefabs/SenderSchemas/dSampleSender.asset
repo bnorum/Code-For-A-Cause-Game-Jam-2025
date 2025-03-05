@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
   m_Name: dSampleSender
   m_EditorClassIdentifier: 
-  senderEmail: 
-  senderName: 
-  profileImage: {fileID: 0}
+  senderEmail: samplesender@samplesender.com
+  senderName: Sample Sender
+  profileImage: {fileID: 3226385883373346976, guid: 789d7dd1ab65ae1468038614e7c87cf9, type: 3}
