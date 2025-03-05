@@ -4218,7 +4218,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &618488880
 MonoBehaviour:
@@ -8674,7 +8674,7 @@ Transform:
   m_GameObject: {fileID: 1036697622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 29.71, y: -13.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8715,7 +8715,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 5.87, y: -2.87}
+  m_Offset: {x: 7.2661266, y: -3.2018416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8725,7 +8725,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9244885, y: 1.2430763}
+  m_Size: {x: 1.8467598, y: 1.4643044}
   m_EdgeRadius: 0
 --- !u!114 &1036697625
 MonoBehaviour:
@@ -9817,8 +9817,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2129594442}
   m_HandleRect: {fileID: 2129594441}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.2
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13621,9 +13621,9 @@ MonoBehaviour:
   unreadEmails: []
   readEmails: []
   starredEmails: []
-  dropdownMenu: {fileID: 0}
+  dropdownMenu: {fileID: 1032684927}
   emailSound: {fileID: 993234920}
-  emailCountText: {fileID: 0}
+  emailCountText: {fileID: 879404534}
 --- !u!4 &1656577177
 Transform:
   m_ObjectHideFlags: 0
@@ -16010,13 +16010,13 @@ MonoBehaviour:
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -1872252588528590606, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -16029,7 +16029,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -18576,7 +18576,7 @@ RectTransform:
   m_Father: {fileID: 1979293800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.2}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
