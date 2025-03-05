@@ -40,6 +40,7 @@ public class Person : MonoBehaviour
         endPointGameRef = endPoint;
         nameTagObject.SetActive(false);
         nameTagDefaultLocation = nameTagObject.transform;
+        OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
     }
 
     private void Awake()
@@ -111,11 +112,13 @@ public class Person : MonoBehaviour
             if (transform.position == endPointGameRef.transform.position)
             {
                 PersistentData.peopleSaved.Add(personSchema);
+                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);
             }
             else
             {
                 PersistentData.peopleDamned.Add(personSchema);
+                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);
             }
         }
@@ -207,5 +210,19 @@ public class Person : MonoBehaviour
             hoverTime = 0.0f;
             nameTagObject.SetActive(false);
         }
+    }
+
+    public void ResetToDefault()
+    {
+        isDragging = false;
+        isFalling = true;
+        isBeingTransported = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = startGravity;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0;
+        springJoint.enabled = false;
+        cursorPoint.transform.position = transform.position;
+        EmailManager.Instance.canScroll = true;
     }
 }
