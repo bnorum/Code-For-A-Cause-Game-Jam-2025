@@ -5,6 +5,22 @@ using UnityEngine.UI;
 
 public class StartScreen : MonoBehaviour
 {
+    public static StartScreen Instance { get; private set; } //SINGLETON!!!!!!!!!!!!!!
+
+    private void Awake()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
+
     public Slider difficultySlider;
     public TextMeshProUGUI difficultyText;
 
@@ -19,6 +35,7 @@ public class StartScreen : MonoBehaviour
     public List<AudioSource> stems;
 
     public Canvas creditsCanvas;
+    public Canvas gameOverCanvas;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,6 +70,10 @@ public class StartScreen : MonoBehaviour
 
     public void ToggleCredits() {
         creditsCanvas.gameObject.SetActive(!creditsCanvas.gameObject.activeSelf);
+    }
+
+    public void ToggleGameOverScreen() {
+        gameOverCanvas.gameObject.SetActive(!gameOverCanvas.gameObject.activeSelf);
     }
 
     public void PlayMusic() {
