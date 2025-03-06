@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Olivia J Email
-  body: 
+  body: Subject is Good!
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 92a7efda47b137948b192c44024f011f, type: 2}

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Ava D Email
-  body: Jery should be going through your escalator today, just do me a favor and
-    send him up? regardless of what rules he broke.
+  body: Subject is Evil
   attachment: {fileID: 5127362706518272607, guid: 454d12f3dddbafb46be532fba29758dc, type: 3}
   relatedPerson: {fileID: 11400000, guid: d78f1f8f68b7bb342b57e81a4c128192, type: 2}

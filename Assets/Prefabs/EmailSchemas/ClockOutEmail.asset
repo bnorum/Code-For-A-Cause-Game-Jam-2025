@@ -16,5 +16,5 @@ MonoBehaviour:
   subject: Don't Forget to Clock Out
   body: We know it's your first week and wanted to remind you to clock out in 30
     minutes.
-  attachment: {fileID: 0}
+  attachment: {fileID: -551361136163835085, guid: fec84536293f7b8458a0412a08da3d53, type: 3}
   relatedPerson: {fileID: 0}

@@ -22,4 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1bd08bcab01b48743b465c5ded380f8b, type: 2}
   - {fileID: 11400000, guid: 6571632ebcba74d4191c8946b0fcb00a, type: 2}
   relatedEmailsUsed: 00000000
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1

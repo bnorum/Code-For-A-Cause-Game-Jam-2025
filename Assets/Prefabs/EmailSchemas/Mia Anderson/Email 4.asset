@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Mia A Email
-  body: Got Vlod's ticket if you want his seat... man he was such a great guy
+  body: Subject is Good!
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 7ee6da2829e183a469a7a7f997504f16, type: 2}

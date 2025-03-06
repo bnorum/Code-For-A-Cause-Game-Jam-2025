@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Charlotte P Email
-  body: I HATE LORI S
+  body: Subject is Evil
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: e9323b36df5079b47aea1f2a550ce747, type: 2}
