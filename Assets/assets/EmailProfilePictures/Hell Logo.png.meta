@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hell Logo_0: -551361136163835085
+      Hell Logo_1: 6928844819167993166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

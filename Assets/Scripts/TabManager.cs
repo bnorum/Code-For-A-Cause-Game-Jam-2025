@@ -13,14 +13,11 @@ public class TabManager : MonoBehaviour
     public Button searchTabButton;
     public Button emailTabButton;
     public Button escalatorTabButton;
-    public Button datetimeButton;
 
     [Header("Tab Screens")]
     public GameObject searchScreen;
     public GameObject emailScreen;
     public GameObject escalatorScreen;
-    public GameObject garbageBinScreen;
-    public GameObject datetimeScreen;
 
     [Header("Tab Colliders")]
     public Collider2D searchTabCollider;
@@ -38,11 +35,6 @@ public class TabManager : MonoBehaviour
     public GameObject escalatorPhysicsHiddenPosition;
     public GameObject searchPhysicsHiddenPosition;
     public GameObject emailPhysicsHiddenPosition;
-    public GameObject garbageBinPhysicsHiddenPosition;
-
-    [Header("Trash Can")]
-    public Button garbageBinButton;
-
     private GameObject lastActiveTab;
     public int currentTabIndex = 1;
     
@@ -64,15 +56,7 @@ public class TabManager : MonoBehaviour
         searchTabButton.onClick.AddListener(() => OpenTab(searchScreen, null));
         emailTabButton.onClick.AddListener(() => OpenTab(emailScreen, null));
         escalatorTabButton.onClick.AddListener(() => OpenTab(escalatorScreen, null));
-
         OpenTab(emailScreen, null);
-
-        datetimeButton.onClick.AddListener(() => ToggleDateTimePanel());
-        datetimeScreen.SetActive(false);
-
-        garbageBinButton.onClick.AddListener(() => ToggleGarbageBin());
-        garbageBinScreen.SetActive(false);
-        garbageBinPhysicsLayer.transform.position = garbageBinPhysicsHiddenPosition.transform.position;
     }
 
     private void Update()
@@ -147,18 +131,5 @@ public class TabManager : MonoBehaviour
     public GameObject GetLastActiveTab()
     {
         return lastActiveTab;
-    }
-
-    private void ToggleDateTimePanel()
-    {
-        bool isActive = datetimeScreen.activeSelf;
-        datetimeScreen.SetActive(!isActive);
-    }
-
-    private void ToggleGarbageBin()
-    {
-        bool isActive = garbageBinScreen.activeSelf;
-        garbageBinScreen.SetActive(!isActive);
-        garbageBinPhysicsLayer.transform.position = !isActive ? new Vector3(0, 0, -1) : garbageBinPhysicsHiddenPosition.transform.position;
     }
 }

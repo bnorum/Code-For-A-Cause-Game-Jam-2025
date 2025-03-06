@@ -26,6 +26,7 @@ public class Person : MonoBehaviour
     public Transform nameTagBounds;
     private Transform nameTagDefaultLocation;
     private GameObject startPointGameRef;
+    private Transform newstartRef;
     private GameObject endPointGameRef;
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
@@ -92,7 +93,6 @@ public class Person : MonoBehaviour
     public void StartMovement(float duration)
     {
         durationReference = duration;
-        elapsedTime = 0.0f;
         isBeingTransported = true;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         rb.bodyType = RigidbodyType2D.Kinematic;
@@ -101,9 +101,14 @@ public class Person : MonoBehaviour
 
     public void RestartMovement()
     {
+        float totalDistance = Vector3.Distance(startPointGameRef.transform.position, endPointGameRef.transform.position);
+        float remainingDistance = Vector3.Distance(transform.position, endPointGameRef.transform.position);
+        durationReference *= (remainingDistance / totalDistance);
+        startPointGameRef.transform.position = gameObject.transform.position;
         isBeingTransported = true;
         isDragging = false;
         isFalling = false;
+        elapsedTime = 0f;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;

@@ -10,7 +10,6 @@ public class OutOfBoundsScript : MonoBehaviour
     public BoxCollider2D boundaryCollider2;
     public BoxCollider2D boundaryCollider3;
     public BoxCollider2D boundaryCollider4;
-    public BoxCollider2D boundaryCollider5;
     public Transform respawn;
     public GameObject limboPeopleHolder;
 
@@ -39,7 +38,7 @@ public class OutOfBoundsScript : MonoBehaviour
             foreach (var obj in alivePeople)
             {
                 bool isWithinBounds = false;
-                foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
+                foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider4})
                 {
                     if (collider.bounds.Contains(obj.transform.position))
                     {
@@ -60,7 +59,7 @@ public class OutOfBoundsScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         bool isStillOutOfBounds = true;
-        foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
+        foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4})
         {
             if (collider.bounds.Contains(obj.transform.position))
             {
