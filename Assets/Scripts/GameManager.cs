@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public float timeUntilNextEmail = 5f;
     public float timeUntilNextCoworker = 60f;
-    public float timeUntilNextPerson = 0f; // debugging, doesnt matter //brady: SIKE!!!!!!! MATTERS NOW!
+    public float timeUntilNextPerson = 0f; // debugging, doesnt matter //brady: SIKE!!!!!!! MATTERS NOW! //yippee
 
     public bool isPaused = false;
     public float difficultyScale = 1f;
@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     public GameObject physicalPerson;
     public float escalatorTravelDuration = 5.0f;
     public BoxCollider2D personBounds;
-    private float spawnTimer = 0.0f;
     public float spawnInterval;
     [SerializeField] private float reservedEndTime;
     private int totalSpawns;

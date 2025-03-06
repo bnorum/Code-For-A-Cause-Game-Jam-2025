@@ -72,18 +72,18 @@ public class Manual : MonoBehaviour
         if (notesShown) isShown = false;
     }
 
-    public void SwitchPage(bool isForward) {
-        if (isForward) {
-            pagenumber++;
-            if (pagenumber >= manualText.Count) {
-                pagenumber = 0;
-            }
-        } else {
-            pagenumber--;
-            if (pagenumber < 0) {
-                pagenumber = manualText.Count - 1;
-            }
-        }
-        manualTextBox.text = manualText[pagenumber];
-    }
+    // public void SwitchPage(bool isForward) {
+    //     if (isForward) {
+    //         pagenumber++;
+    //         if (pagenumber >= manualText.Count) {
+    //             pagenumber = 0;
+    //         }
+    //     } else {
+    //         pagenumber--;
+    //         if (pagenumber < 0) {
+    //             pagenumber = manualText.Count - 1;
+    //         }
+    //     }
+    //     manualTextBox.text = manualText[pagenumber];
+    // }
 }
