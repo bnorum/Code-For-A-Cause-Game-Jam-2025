@@ -72,6 +72,7 @@ public class TabManager : MonoBehaviour
 
         garbageBinButton.onClick.AddListener(() => ToggleGarbageBin());
         garbageBinScreen.SetActive(false);
+        garbageBinPhysicsLayer.transform.position = garbageBinPhysicsHiddenPosition.transform.position;
     }
 
     private void Update()
@@ -152,10 +153,6 @@ public class TabManager : MonoBehaviour
     {
         bool isActive = datetimeScreen.activeSelf;
         datetimeScreen.SetActive(!isActive);
-        if (!isActive)
-        {
-            datetimeScreen.transform.SetAsLastSibling();
-        }
     }
 
     private void ToggleGarbageBin()
