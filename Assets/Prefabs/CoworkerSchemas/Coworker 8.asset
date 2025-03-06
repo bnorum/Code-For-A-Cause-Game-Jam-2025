@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: -986331008, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   armsImage: {fileID: 0}
-  coworkerSpeech: Hey bro, wanna get a beer later?
-  responseOption1: Yes
-  responseOption2: No
-  response1Response: Great, see you after work.
-  response2Response: Well, whatever.
-  friendlinessScore: 10
-  isCorrectResponse1: 1
+  coworkerSpeech: Hey dude, what religion are you?
+  responseOption1: Satanist
+  responseOption2: Other
+  response1Response: Alright, suck-up.
+  response2Response: Right on! I love other!
+  friendlinessScore: 13
+  isCorrectResponse1: 0

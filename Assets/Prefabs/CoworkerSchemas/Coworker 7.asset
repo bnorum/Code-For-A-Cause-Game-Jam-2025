@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: -2078283046, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   armsImage: {fileID: 0}
-  coworkerSpeech: Hey bro, wanna get a beer later?
-  responseOption1: Yes
+  coworkerSpeech: Wanna fight?
+  responseOption1: I'm busy, maybe later
   responseOption2: No
-  response1Response: Great, see you after work.
-  response2Response: Well, whatever.
-  friendlinessScore: 10
-  isCorrectResponse1: 1
+  response1Response: Fighting is scary, I changed my mind.
+  response2Response: Good! Fighting is bad!
+  friendlinessScore: 6
+  isCorrectResponse1: 0
