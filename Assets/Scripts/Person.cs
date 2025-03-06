@@ -32,10 +32,13 @@ public class Person : MonoBehaviour
     public GameObject cursorPoint;
     public SpringJoint2D springJoint;
     public float angularVelocityCap = 200f;
+    public float bounciness = 0.5f; // Adjust bounce intensity as needed
     public float velocityThresholdToTrigger = 50f;
     public float escalatorThresholdToTrigger = 10f;
     public float springJointDistance = .03f;
     private Vector3 latestFlingPoint;
+    private float angularDamping;
+    private float linearDamping;
 
     public void Init(PersonSchema personSchema, BoxCollider2D collider, GameObject startPoint, GameObject endPoint)
     {
@@ -54,6 +57,8 @@ public class Person : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         springJoint.enabled = false;
+        angularDamping = rb.angularDamping;
+        linearDamping = rb.linearDamping;
     }
 
     private void Update()
@@ -140,6 +145,8 @@ public class Person : MonoBehaviour
             rb.angularVelocity = 0;
             isDragging = true;
             isFalling = false;
+            rb.angularDamping = angularDamping;
+            rb.linearDamping = linearDamping;
             isBeingTransported = false;
             cursorPoint.transform.position = GetMouseWorldPos(cursorPoint.transform);
             springJoint.enabled = true;
@@ -174,7 +181,13 @@ public class Person : MonoBehaviour
         springJoint.enabled = false;
         cursorPoint.transform.position = transform.position;
         EmailManager.Instance.canScroll = true;
+        rb.angularDamping = 0f;
+        rb.linearDamping = 0f;
 
+        PhysicsMaterial2D bounceMaterial = new PhysicsMaterial2D();
+        bounceMaterial.bounciness = bounciness;
+        bounceMaterial.friction = 0.2f;
+        personCollider.sharedMaterial = bounceMaterial;
     }
 
     private void UpdateGravityScale()
@@ -232,6 +245,24 @@ public class Person : MonoBehaviour
         springJoint.enabled = false;
         cursorPoint.transform.position = transform.position;
         EmailManager.Instance.canScroll = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent<microwaveScript>() || collision.gameObject.GetComponent<TabCollider>() || collision.gameObject.GetComponent<personDropScript>())
+        {
+            return;
+        }
+        if (isFalling && rb.linearVelocity.y > 1f &&!isDragging)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Abs(rb.linearVelocity.y) * 0.8f);
+        }
+        else
+        {
+            PhysicsMaterial2D defaultMaterial = new PhysicsMaterial2D();
+            defaultMaterial.bounciness = 0.0f;
+            defaultMaterial.friction = 0.4f;
+            personCollider.sharedMaterial = defaultMaterial;
+        }
     }
 
     public void GetBonuses()

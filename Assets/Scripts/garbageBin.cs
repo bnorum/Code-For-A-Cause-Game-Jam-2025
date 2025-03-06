@@ -13,9 +13,8 @@ public class garbageBin : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Person" && gameObject.transform.position.z == collision.gameObject.transform.position.z)
+        if (collision.gameObject.tag == "Person")
         {
-
             PersistentData.peopleDamned.Add(collision.gameObject.GetComponent<Person>().personSchema);
             OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses();
