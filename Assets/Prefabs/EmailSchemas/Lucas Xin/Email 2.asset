@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Lucas Xin Email
-  body: straight to hell!
+  body: Subject is Good!
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}

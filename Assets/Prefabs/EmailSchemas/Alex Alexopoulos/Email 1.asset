@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
   subject: Alex A Email
-  body: He's A terrible guy. should be discarded
+  body: Subject is Evil
   attachment: {fileID: -8542653549661865833, guid: a6efc5fc6d0ae4f4cbbf94be4dd8026b, type: 3}
   relatedPerson: {fileID: 11400000, guid: 4ed806588edfb7f4d987656a5dcbc689, type: 2}
