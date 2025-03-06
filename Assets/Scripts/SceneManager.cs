@@ -30,7 +30,8 @@ public class SceneManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (OnOpenCanvas != null) StartCoroutine(OnOpen());
+        if (OnOpenCanvas != null || (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0 && PersistentData.isGameOver))
+            StartCoroutine(OnOpen());
     }
 
     // Update is called once per frame
@@ -57,6 +58,8 @@ public class SceneManager : MonoBehaviour
 
     public void LoadMainMenu(bool isEndGame = false)
     {
+
+        PersistentData.isGameOver = true;
         enableLoadingCanvas(0);
     }
 

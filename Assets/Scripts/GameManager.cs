@@ -127,7 +127,11 @@ public class GameManager : MonoBehaviour
             }
             else if(EmailManager.Instance.emailSchemas.Count > 0)
             {
-                EmailManager.Instance.AddEmail(GetPseudoRandomEmail());
+                EmailSchema email = GetPseudoRandomEmail();
+                if (email != null)
+                {
+                    EmailManager.Instance.AddEmail(email);
+                }
             }
         }
 
@@ -172,7 +176,7 @@ public class GameManager : MonoBehaviour
     }
 
     public EmailSchema GetPseudoRandomEmail() {
-        if (time is > 540 and < 620 && chosenPeople[0].relatedEmails.Count > 0)
+        if (time is > 540 and < 620 && chosenPeople[0].relatedEmails.Count > 0 )
         {
             return SelectEmailFromPool(0);
         }
@@ -256,11 +260,16 @@ public class GameManager : MonoBehaviour
     }
 
     EmailSchema SelectEmailFromPool(int personIndex) {
+        if (!chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
+        {
+            return null;
+        }
         int index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
         while (chosenPeople[personIndex].relatedEmailsUsed[index] && chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
         {
             index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
         }
+
         chosenPeople[personIndex].relatedEmailsUsed[index] = true;
         return chosenPeople[personIndex].relatedEmails[index];
     }
