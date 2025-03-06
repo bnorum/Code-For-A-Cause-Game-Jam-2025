@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Person : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Person : MonoBehaviour
     public float velocityThresholdToTrigger = 50f;
     public float escalatorThresholdToTrigger = 10f;
     public float springJointDistance = .03f;
+    private Vector3 latestFlingPoint;
 
     public void Init(PersonSchema personSchema, BoxCollider2D collider, GameObject startPoint, GameObject endPoint)
     {
@@ -144,6 +146,7 @@ public class Person : MonoBehaviour
             springJoint.autoConfigureDistance = false;
             springJoint.distance = springJointDistance;
             springJoint.connectedBody = null;
+            rb.gravityScale = startGravity;
             springJoint.connectedAnchor = cursorPoint.transform.position;
             EmailManager.Instance.canScroll = false;
         }
@@ -161,6 +164,7 @@ public class Person : MonoBehaviour
 
     private void FlingObject()
     {
+        latestFlingPoint = gameObject.transform.position;
         elapsedGravityTime = 0f;
         isDragging = false;
         isFalling = true;
@@ -228,5 +232,13 @@ public class Person : MonoBehaviour
         springJoint.enabled = false;
         cursorPoint.transform.position = transform.position;
         EmailManager.Instance.canScroll = true;
+    }
+
+    public void GetBonuses()
+    {
+        Vector2 lastLinearVelocity = rb.linearVelocity;
+        float lastAngularVelocity = rb.angularVelocity;
+        float distanceFromLastFlingPoint = Vector2.Distance(transform.position, latestFlingPoint);
+        FindFirstObjectByType<garbageBin>().DisplayStat(lastLinearVelocity, lastAngularVelocity, distanceFromLastFlingPoint, isDragging);
     }
 }

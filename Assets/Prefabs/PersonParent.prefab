@@ -201,6 +201,7 @@ MonoBehaviour:
   springJoint: {fileID: 194468966340231278}
   angularVelocityCap: 5
   velocityThresholdToTrigger: 30
+  escalatorThresholdToTrigger: 5
   springJointDistance: 0.02
 --- !u!50 &8621962947394949622
 Rigidbody2D:

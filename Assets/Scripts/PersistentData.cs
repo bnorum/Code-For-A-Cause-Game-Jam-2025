@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Numerics;
 
 public static class PersistentData
 {
@@ -8,7 +9,9 @@ public static class PersistentData
     public static List<PersonSchema> peopleSaved = new List<PersonSchema>();
     public static int coworkerFriendlinessScore = 0;
     public static float difficultyScale = 1f;
-
+    public static float bestLinearVelocity = 0f;
+    public static float bestDistance = 0f;
+    public static float bestAngularVelocity = 0f;
     //NOTE: Total score is calculated as follows:
     // coworkerFriendlinessScore
 
