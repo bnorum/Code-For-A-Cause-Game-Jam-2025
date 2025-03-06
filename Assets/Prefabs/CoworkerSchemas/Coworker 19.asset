@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: 1606003774, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   armsImage: {fileID: 0}
-  coworkerSpeech: Hey bro, wanna get a beer later?
-  responseOption1: Yes
-  responseOption2: No
-  response1Response: Great, see you after work.
-  response2Response: Well, whatever.
-  friendlinessScore: 10
+  coworkerSpeech: I'll give you 5 bucks if you send your next client to hell.
+  responseOption1: Deal
+  responseOption2: No deal
+  response1Response: GOTCHA! I don't have 5 dollars.
+  response2Response: You're so boring.
+  friendlinessScore: 5
   isCorrectResponse1: 1

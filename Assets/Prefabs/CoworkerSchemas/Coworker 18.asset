@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: 1606003774, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   armsImage: {fileID: 0}
-  coworkerSpeech: Hey bro, wanna get a beer later?
-  responseOption1: Yes
-  responseOption2: No
-  response1Response: Great, see you after work.
-  response2Response: Well, whatever.
+  coworkerSpeech: Hey, me and Dave are skipping work on Saturday, wanna come?
+  responseOption1: There's no work on Saturday
+  responseOption2: Sure
+  response1Response: True, we're just doing it spiritually.
+  response2Response: Great, meet me here Saturday. WAIT, let's meet somewhere else.
   friendlinessScore: 10
-  isCorrectResponse1: 1
+  isCorrectResponse1: 0

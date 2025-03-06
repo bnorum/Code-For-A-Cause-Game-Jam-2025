@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coworkerImage: {fileID: 686991572, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
   armsImage: {fileID: 0}
-  coworkerSpeech: Hey bro, wanna get a beer later?
-  responseOption1: Yes
-  responseOption2: No
-  response1Response: Great, see you after work.
-  response2Response: Well, whatever.
+  coworkerSpeech: Vo'hedoq-gluth!
+  responseOption1: I don't speak demon
+  responseOption2: Ashm! Ashm!
+  response1Response: I said happy birthday.
+  response2Response: Goluck Fr'z!
   friendlinessScore: 10
-  isCorrectResponse1: 1
+  isCorrectResponse1: 0
