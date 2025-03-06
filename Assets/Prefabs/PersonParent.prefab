@@ -200,6 +200,7 @@ MonoBehaviour:
   cursorPoint: {fileID: 3809505968826213225}
   springJoint: {fileID: 194468966340231278}
   angularVelocityCap: 5
+  bounciness: 0.3
   velocityThresholdToTrigger: 30
   escalatorThresholdToTrigger: 5
   springJointDistance: 0.02
