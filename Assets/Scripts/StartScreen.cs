@@ -17,6 +17,8 @@ public class StartScreen : MonoBehaviour
     public bool isDifficultyShown = false;
 
     public List<AudioSource> stems;
+
+    public Canvas creditsCanvas;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,6 +49,10 @@ public class StartScreen : MonoBehaviour
     public void LoadMainMenu()
     {
         isDifficultyShown = false;
+    }
+
+    public void ToggleCredits() {
+        creditsCanvas.gameObject.SetActive(!creditsCanvas.gameObject.activeSelf);
     }
 
     public void PlayMusic() {
