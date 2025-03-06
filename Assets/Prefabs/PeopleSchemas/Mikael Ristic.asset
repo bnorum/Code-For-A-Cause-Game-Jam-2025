@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Mikael Ristic
   age: 44
   occupation: Contractor
-  netWorth: 200000
+  netWorth: 2
+  isLefty: 0
+  marriageNum: 2
+  divorceNum: 4
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: c41fe58f6ac317344a6cf6e8285b8e62, type: 2}
   - {fileID: 11400000, guid: 0ced25680c566d848a76de15b0d0e058, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6571632ebcba74d4191c8946b0fcb00a, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
+  failedDailyParameters: 0

@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Bradley Norman
   age: 22
   occupation: Developer
-  netWorth: 25000
+  netWorth: 3
+  isLefty: 0
+  marriageNum: 1
+  divorceNum: 0
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 61532ad68373d324cbf80f61e9d0399a, type: 2}
   - {fileID: 11400000, guid: e354a4f83be46cf43b57963eb3c9e4c4, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff00ce0c12fa4f845820dda1cca5b610, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
+  failedDailyParameters: 0

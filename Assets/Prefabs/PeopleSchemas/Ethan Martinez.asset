@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Ethan Martinez
   age: 21
   occupation: College Student
-  netWorth: 5000
+  netWorth: 0
+  isLefty: 1
+  marriageNum: 0
+  divorceNum: 0
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: ea342f24ed9efa949b1b926c8895b422, type: 2}
   - {fileID: 11400000, guid: 76bb95dacdfe0bb4f9ef29e5ec6d71ce, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfa3336189466ff41a88499571d2c2ef, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
+  failedDailyParameters: 0

@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Zubair Banerjee
   age: 75
   occupation: Dad
-  netWorth: 200000
+  netWorth: 4
+  isLefty: 0
+  marriageNum: 1
+  divorceNum: 0
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 15953f9d28ad60d4e999c8fe2840cbac, type: 2}
   - {fileID: 11400000, guid: 7f2f79d5924374b44b05dba842176462, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d33e2190822a4a4291ffc36d8921c85, type: 2}
   relatedEmailsUsed: 01000000
   shouldGoToHeaven: 1
+  failedDailyParameters: 0

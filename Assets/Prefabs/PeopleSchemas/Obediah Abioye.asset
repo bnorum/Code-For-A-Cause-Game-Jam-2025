@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Obediah Abioye
   age: 14
   occupation: Teenager
-  netWorth: 5
+  netWorth: 0
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 8bc2bee0c03c2af4e8ca8a5e6e44880f, type: 2}
   - {fileID: 11400000, guid: cd7e4b907f7f84641b5f30f818cbf055, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9fad4fdbc2708d34c966a9998641ccaf, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
+  failedDailyParameters: 0

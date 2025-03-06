@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Mia Anderson
   age: 33
   occupation: Police Officer
-  netWorth: 200000
+  netWorth: 1
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 516bfee56ea7b994f8e546262de1916f, type: 2}
   - {fileID: 11400000, guid: 1e0bc11b872262545b7a74608a322059, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9870c257f537db142857f3b8d6928e74, type: 2}
   relatedEmailsUsed: 00010101
   shouldGoToHeaven: 1
+  failedDailyParameters: 0

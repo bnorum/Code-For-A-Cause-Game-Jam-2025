@@ -14,12 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Alphonse Hebert
   age: 14
+  emailHandle: AHerbLover
+  emailDomain: '@gmail.com'
+  address: 12 Rory Park, NY
+  zipCode: 10001
   occupation: Teenager
-  netWorth: 5
+  netWorth: 4
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  worstThing: Stole a crypto wallet.
+  hobby: bitcoin
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: c40759fef1a37ee4f8ea3bb2ebfadca9, type: 2}
   - {fileID: 11400000, guid: 629845c6a1a27604784afd53c4ec113b, type: 2}
   - {fileID: 11400000, guid: afd3f439af88b4d4b82053cee3c67867, type: 2}
   - {fileID: 11400000, guid: bd3afb43527dea146b24db04b29aa936, type: 2}
-  relatedEmailsUsed: 00000000
+  relatedEmailsUsed: 01010101
   shouldGoToHeaven: 0
+  failedDailyParameters: 1

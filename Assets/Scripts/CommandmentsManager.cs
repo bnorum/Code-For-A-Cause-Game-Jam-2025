@@ -96,6 +96,8 @@ public class JudgementParameters : MonoBehaviour
     void Start()
     { 
         SelectDailyParameters(3);
+        SetManualText();
+        CheckDailyParameterMatches();
     }
 
     void SetAllParams()
@@ -179,8 +181,8 @@ public class JudgementParameters : MonoBehaviour
 
     public void SetManualText()
     {
-        string parametersCombined = "Daily Parameters:\n";
-
+        string parametersCombined = "Commandments:\n Thou Shall not Lie!!!\n\nDaily Parameters:\n";
+        
         if (isLefty) parametersCombined += p1 + "\n";
         if (isBillionaire) parametersCombined += p2 + "\n";
         if (isDivorded3PlusTimes) parametersCombined += p3 + "\n";
@@ -207,5 +209,66 @@ public class JudgementParameters : MonoBehaviour
         isNameBeginsWithGandIsPoor = false;
         hasBeenToPrisonOrisOlderThan75 = false;
         is40to49andMarried = false;
+    }
+
+    public void CheckDailyParameterMatches()
+    {
+        foreach (var person in GameManager.Instance.chosenPeople)
+        {
+            person.failedDailyParameters = false;
+            bool failed = false;
+            if (isLefty && P1(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are left-handed.");
+            }
+            if (isBillionaire && P2(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are a billionaire.");
+            }
+            if (isDivorded3PlusTimes && P3(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they have been divorced 3 or more times.");
+            }
+            if (isMiddleClassAndNotMarried && P4(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are middle class and not married.");
+            }
+            if (isCarpenter && P5(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are a carpenter.");
+            }
+            if (isNameBeginsWithC && P6(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because their name begins with 'C'.");
+            }
+            if (isTeenagerandMillionaire && P7(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are a millionaire teenager.");
+            }
+            if (isNameBeginsWithGandIsPoor && P8(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because their name begins with 'G' and they are poor.");
+            }
+            if (hasBeenToPrisonOrisOlderThan75 && P9(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they have been to prison or are older than 75.");
+            }
+            if (is40to49andMarried && P10(person)) 
+            {
+                failed = true;
+                Debug.Log($"{person.name} failed because they are in their 40s and have been married before.");
+            }
+            if(failed)
+                person.failedDailyParameters = failed;
+        }
     }
 }

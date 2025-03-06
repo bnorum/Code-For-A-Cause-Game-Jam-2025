@@ -15,7 +15,11 @@ MonoBehaviour:
   personName: Dean Janikian
   age: 55
   occupation: Painter
-  netWorth: 50000
+  netWorth: 1
+  isLefty: 0
+  marriageNum: 4
+  divorceNum: 3
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 6f31ede0c0a558f4bb8eb006af66c9e3, type: 2}
   - {fileID: 11400000, guid: 72e88db65fca31c42a1dd7a8b15f8773, type: 2}
@@ -23,3 +27,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 023101af5fe163e4ab3197eddd913717, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
+  failedDailyParameters: 1
