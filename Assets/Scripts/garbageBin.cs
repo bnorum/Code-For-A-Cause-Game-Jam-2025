@@ -16,7 +16,7 @@ public class garbageBin : MonoBehaviour
         if (collision.gameObject.tag == "Person")
         {
             PersistentData.peopleDamned.Add(collision.gameObject.GetComponent<Person>().personSchema);
-            OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
+            OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses();
             Destroy(collision.gameObject);
 

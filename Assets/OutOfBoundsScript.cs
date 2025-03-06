@@ -26,10 +26,6 @@ public class OutOfBoundsScript : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         StartCoroutine(CheckOutOfBounds());
@@ -39,53 +35,57 @@ public class OutOfBoundsScript : MonoBehaviour
     {
         while (true)
         {
+
             foreach (var obj in alivePeople)
             {
-            bool isWithinBounds = false;
-            foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
-            {
-                if (collider.bounds.Contains(obj.transform.position))
+                bool isWithinBounds = false;
+                foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
                 {
-                isWithinBounds = true;
-                break;
+                    if (collider.bounds.Contains(obj.transform.position))
+                    {
+                        isWithinBounds = true;
+                        break;
+                    }
                 }
-            }
-            if (!isWithinBounds)
-            {
-                StartCoroutine(OutOfBoundsTimer(obj));
-            }
+                if (!isWithinBounds)
+                {
+                    StartCoroutine(OutOfBoundsTimer(obj));
+                }
             }
             yield return new WaitForSeconds(1f);
         }
-        }
+    }
 
-        private IEnumerator OutOfBoundsTimer(GameObject obj)
-        {
+    private IEnumerator OutOfBoundsTimer(GameObject obj)
+    {
         yield return new WaitForSeconds(1f);
         bool isStillOutOfBounds = true;
         foreach (var collider in new BoxCollider2D[] { boundaryCollider1, boundaryCollider2, boundaryCollider3, boundaryCollider4, boundaryCollider5 })
         {
             if (collider.bounds.Contains(obj.transform.position))
             {
-            isStillOutOfBounds = false;
-            break;
+                isStillOutOfBounds = false;
+                break;
             }
         }
         if (isStillOutOfBounds)
         {
-            Debug.Log($"Out of Bounds: {obj.name} at {obj.transform.position}");;
             obj.GetComponent<Person>().ResetToDefault();
             obj.transform.SetParent(limboPeopleHolder.transform);
             obj.transform.position = respawn.position;
         }
-        
     }
+
 
     public void UpdateAlivePeople(GameObject obj)
     {
-        if (!alivePeople.Contains(obj))
-            alivePeople.Add(obj);
-        else
+        if (alivePeople.Contains(obj))
+        {
             alivePeople.Remove(obj);
+        }
+        else
+        {
+            alivePeople.Add(obj);
+        }
     }
 }
