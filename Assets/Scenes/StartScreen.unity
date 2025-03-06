@@ -1778,9 +1778,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits
-
-'
+  m_text: Close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
   m_sharedMaterial: {fileID: -1872252588528590606, guid: 7eb895bc4a0dbca419f348ba04b62c4c, type: 2}
@@ -2733,6 +2731,7 @@ MonoBehaviour:
   - {fileID: 1914786246}
   - {fileID: 26027276}
   creditsCanvas: {fileID: 1159354029}
+  gameOverCanvas: {fileID: 1518627429}
 --- !u!4 &552141495
 Transform:
   m_ObjectHideFlags: 0
@@ -4462,7 +4461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1159354027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5447,7 +5446,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 552141494}
         m_TargetAssemblyTypeName: StartScreen, Assembly-CSharp
-        m_MethodName: ToggleCredits
+        m_MethodName: ToggleGameOverScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5565,7 +5564,8 @@ MonoBehaviour:
     Jess Flores - Artist
 
 
-    Royalty Free Images Sourced from Pixabay
+    Royalty Free Images and SFX Sourced
+    from Pixabay
 
 '
   m_isRightToLeft: 0
@@ -5664,7 +5664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1518627427
 MonoBehaviour:
   m_ObjectHideFlags: 0

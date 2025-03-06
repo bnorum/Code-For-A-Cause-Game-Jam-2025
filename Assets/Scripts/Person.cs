@@ -127,12 +127,17 @@ public class Person : MonoBehaviour
         {
             if (transform.position == endPointGameRef.transform.position)
             {
+
+                if (personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
                 PersistentData.peopleSaved.Add(personSchema);
                 OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);
+
+
             }
             else
             {
+                if (!personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
                 PersistentData.peopleDamned.Add(personSchema);
                 OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);

@@ -16,7 +16,6 @@ public static class PersistentData
     public static float bestDistance = 0f;
     public static float bestAngularVelocity = 0f;
     public static bool isGameOver = false;
-    //NOTE: Total score is calculated as follows:
-    // coworkerFriendlinessScore
+
 
 }

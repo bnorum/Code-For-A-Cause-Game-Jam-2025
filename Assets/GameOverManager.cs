@@ -18,7 +18,10 @@ public class GameOverManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(DisplaySummary());
+        if (PersistentData.isGameOver) {
+            StartCoroutine(DisplaySummary());
+
+        }
     }
 
     // Update is called once per frame
@@ -57,12 +60,14 @@ public class GameOverManager : MonoBehaviour
             determination.sprite = Hired;
             determination.gameObject.SetActive(true);
             determinationSFX.Play();
+            StartScreen.Instance.OnWin();
         }
         else {
             //do stuff to say fired
             determination.sprite = Fired;
             determination.gameObject.SetActive(true);
             determinationSFX.Play();
+            StartScreen.Instance.OnLose();
         }
 
         yield return new WaitForSeconds(3);
@@ -78,4 +83,6 @@ public class GameOverManager : MonoBehaviour
 
         return score;
     }
+
+
 }
