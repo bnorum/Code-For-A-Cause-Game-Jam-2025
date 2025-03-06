@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +15,12 @@ public class StartScreen : MonoBehaviour
     public Transform hidePosition;
 
     public bool isDifficultyShown = false;
+
+    public List<AudioSource> stems;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        PlayMusic();
         
     }
 
@@ -44,5 +47,23 @@ public class StartScreen : MonoBehaviour
     public void LoadMainMenu()
     {
         isDifficultyShown = false;
+    }
+
+    public void PlayMusic() {
+        foreach (AudioSource stem in stems) {
+            stem.Play();
+        }
+    }
+
+    public void OnLose() {
+        foreach (AudioSource stem in stems) {
+            stem.pitch = Random.Range(0.7f,1.3f);
+        }
+    }
+
+    public void OnWin() {
+        foreach (AudioSource stem in stems) {
+            stem.pitch = 1;
+        }
     }
 }

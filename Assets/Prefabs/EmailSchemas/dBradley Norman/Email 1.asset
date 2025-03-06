@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: 7028e9eff6d53f2489c8359efaf174a1, type: 2}
+  sender: {fileID: 11400000, guid: 2900b2c07933444439c60328123bddf3, type: 2}
   subject: On Bradley N
   body: Hi, I'm writing in reference to my friend Bradley. When I was moving apartments,
     the guy helped me with everything. Brought his truck, moving gear, everything.

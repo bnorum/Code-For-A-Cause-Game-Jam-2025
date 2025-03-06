@@ -7,6 +7,7 @@ public static class PersistentData
     public static List<PersonSchema> remainingPeople = new List<PersonSchema>();
     public static List<PersonSchema> peopleDamned = new List<PersonSchema>();
     public static List<PersonSchema> peopleSaved = new List<PersonSchema>();
+    public static List<CoworkerSchema> remainingCoworkers = new List<CoworkerSchema>();
     public static int coworkerFriendlinessScore = 0;
     public static float difficultyScale = 1f;
     public static float bestLinearVelocity = 0f;

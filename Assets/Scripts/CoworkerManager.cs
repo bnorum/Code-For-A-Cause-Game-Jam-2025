@@ -49,11 +49,18 @@ public class CoworkerManager : MonoBehaviour
 
         coworkerIndex = 0;
 
+        if (PersistentData.currentDay == 1) {
+            PersistentData.remainingCoworkers = coworkers;
+        } else {
+            coworkers = PersistentData.remainingCoworkers;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (coworkers[coworkerIndex].armsImage != null) {
             coworkerArms.transform.position = coworkerHolder.transform.position;
         }
@@ -125,6 +132,7 @@ public class CoworkerManager : MonoBehaviour
                 coworkerArms.gameObject.SetActive(true);
             coworkerImage.gameObject.SetActive(true);
             metCoworkers.Add(coworkers[randomIndex]);
+            PersistentData.remainingCoworkers.Remove(coworkers[randomIndex]);
             coworkerHolder.transform.position = coworkerStartPosition;
             isActive = true;
             isMoving = true;
