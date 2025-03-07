@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 4
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Dean J Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: f4ebf8244ba9a0940a0f0a9e2b9345de, type: 2}
+  subject: RIP Dean Janikian
+  body: Dean Janikian was a business partner of the magazine for decades. The deal
+    was, he'd give us donuts for our weekly stand-ups, and in exchange we'd commission
+    an artist to make him a chair once a year. Good deal, and the donuts were always
+    good. We support his entrance into Heaven.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 00bf96f32884a3b49a7c24663425f7cd, type: 2}

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Dean J Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: dc713408dcb2b41488c7f2db8cad220d, type: 2}
+  subject: Dean Janikian Theory?
+  body: A few years ago, I saw a suspicious vial on the counter at Dean's Donuts.
+    I was sure it was poison, because I'm experienced with that sorta thing. Anyway,
+    1 week later someone died eating a donut. Crazy, right? Food for thought.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 00bf96f32884a3b49a7c24663425f7cd, type: 2}

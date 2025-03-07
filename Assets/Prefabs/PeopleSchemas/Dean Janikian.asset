@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Dean Janikian
   m_EditorClassIdentifier: 
   personName: Dean Janikian
-  age: 55
-  emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Painter
-  netWorth: 1
-  isLefty: 0
+  age: 40
+  emailHandle: xxdeanjanikianxx
+  emailDomain: '@hmail.com'
+  address: 24 Candlepin Road, MI
+  zipCode: 17016
+  occupation: Donut Shop Owner
+  netWorth: 300000
+  isLefty: 1
   marriageNum: 4
   divorceNum: 3
-  worstThing: 
-  hobby: 
+  worstThing: Ravenous business practices
+  hobby: Chemistry
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 6f31ede0c0a558f4bb8eb006af66c9e3, type: 2}
@@ -34,4 +34,4 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
   failedDailyParameters: 0
-  commandment: fart
+  commandment: No poisoning.
