@@ -10,6 +10,7 @@ public class heavenCollider : MonoBehaviour
             if (collision.gameObject.GetComponent<Person>().personSchema.shouldGoToHeaven) {
                 PersistentData.peopleDeterminedCorrectly++;
             }
+            PersistentData.peopleSavedToday.Add(collision.gameObject.GetComponent<Person>().personSchema);
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses(false);
             Destroy(collision.gameObject);

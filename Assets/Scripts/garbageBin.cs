@@ -21,6 +21,7 @@ public class garbageBin : MonoBehaviour
             if (!collision.gameObject.GetComponent<Person>().personSchema.shouldGoToHeaven) {
                 PersistentData.peopleDeterminedCorrectly++;
             }
+            PersistentData.peopleDamnedToday.Add(collision.gameObject.GetComponent<Person>().personSchema);
             flames.PlayAnim();
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses(true);

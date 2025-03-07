@@ -60,6 +60,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PersistentData.peopleShouldveDamnedToday = new List<PersonSchema>();
+        PersistentData.peopleShouldveSavedToday = new List<PersonSchema>();
+        PersistentData.peopleDamnedToday = new List<PersonSchema>();
+        PersistentData.peopleSavedToday = new List<PersonSchema>();
 
         endDayCanvas.SetActive(false);
         clockOutCanvas.SetActive(false);
@@ -78,6 +82,15 @@ public class GameManager : MonoBehaviour
         allPeople = PersistentData.remainingPeople;
         datenum = PersistentData.currentDay;
         ChoosePeople();
+
+        foreach (PersonSchema person in chosenPeople)
+        {
+            if (person.shouldGoToHeaven) {
+                PersistentData.peopleShouldveSavedToday.Add(person);
+            } else {
+                PersistentData.peopleShouldveDamnedToday.Add(person);
+            }
+        }
 
         RefreshEmailsUsed();
         totalSpawns = chosenPeople.Count;
