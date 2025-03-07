@@ -10,7 +10,7 @@ public class PersonSchema : ScriptableObject
     public string emailHandle;
     public string emailDomain;
     public string address;
-    public int zipCode;
+    public string zipCode;
     public string occupation;
     /// <summary>
     /// 1-lower-class, 2-middle class, 3-upper-class, 4-billionaire

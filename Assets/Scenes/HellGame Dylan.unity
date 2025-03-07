@@ -3706,6 +3706,29 @@ MonoBehaviour:
   p9: Been to prison Or is older than 75? Straight to hell.
   is40to49andMarried: 0
   p10: Anyone in their 40s and they've been married before? To hell with them.
+  isGovernmentEmployee: 0
+  p11: Anyone who works for the government, straight to hell.
+  isZipCodeContains4: 0
+  p12: Anyone who's zip code or email contains a 4, drop em down.
+  isUsingYahooOrHobbyCoding: 0
+  p13: Send anyone who uses Yahoos or likes to Code to hell.
+  isNameBeginsWithVowelAndMiddleClass: 0
+  p14: If someone's name begins with a vowel, and they're middle class, send em to
+    hell
+  isRightyAndLowerClass: 0
+  p15: If someone is a Righty, and lower class, send em to hell, unless they also
+    like Woodworking
+  isDivordedAndEmailDoesntContainANumber: 0
+  p16: If Someone Has divorced, send them to hell! Unless their email handle contains
+    a number
+  isInvolvedWithCrypto: 0
+  p17: If the worst thing someome's ever done involves 'crypto', send em to hell!!!!!
+  isZipHasA2ButNotA1: 0
+  p18: If Someones zip has a 1 but not a 2 send em to hell
+  isAgeLessThan21: 0
+  p19: If Someone isn't legally allowed to drink, send em to hell
+  isTotalMarriages0BracketLower: 0
+  p20: If Someone was never married, and is in the lower class, send em to hell
   manualText: {fileID: 1962533528}
 --- !u!1 &473224203
 GameObject:
@@ -4925,7 +4948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &596435158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9570,7 +9593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1002959465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10479,7 +10502,7 @@ RectTransform:
   m_Father: {fileID: 1398356842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
