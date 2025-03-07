@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
 
         if (timeUntilNextEmail <= 0)
         {
-            timeUntilNextEmail = UnityEngine.Random.Range(20, 25);
+            timeUntilNextEmail = UnityEngine.Random.Range(15, 20);
             int spamChance = UnityEngine.Random.Range(0, 100);
             if (spamChance < 7)
             {
