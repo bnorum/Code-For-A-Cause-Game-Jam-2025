@@ -282,11 +282,12 @@ public class Person : MonoBehaviour
         }
     }
 
-    public void GetBonuses()
+    public void GetBonuses(bool wasDunked)
     {
         Vector2 lastLinearVelocity = rb.linearVelocity;
         float lastAngularVelocity = rb.angularVelocity;
         float distanceFromLastFlingPoint = Vector2.Distance(transform.position, latestFlingPoint);
-        FindFirstObjectByType<garbageBin>().DisplayStat(lastLinearVelocity, lastAngularVelocity, distanceFromLastFlingPoint, isDragging);
+        if(wasDunked)
+            FindFirstObjectByType<garbageBin>().DisplayStat(lastLinearVelocity, lastAngularVelocity, distanceFromLastFlingPoint, isDragging);
     }
 }

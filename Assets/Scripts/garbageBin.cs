@@ -23,7 +23,7 @@ public class garbageBin : MonoBehaviour
             }
             flames.PlayAnim();
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
-            collision.gameObject.GetComponent<Person>().GetBonuses();
+            collision.gameObject.GetComponent<Person>().GetBonuses(true);
             Destroy(collision.gameObject);
             Destroy(collision.gameObject.GetComponent<Person>().startPointGameRef);
             Destroy(collision.gameObject.GetComponent<Person>().endPointGameRef);
