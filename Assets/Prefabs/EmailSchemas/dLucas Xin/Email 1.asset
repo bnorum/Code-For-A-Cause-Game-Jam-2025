@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Lucas Xin Email
-  body: Subject is Good!
+  sender: {fileID: 11400000, guid: ec0654f39f07f1f4abffb21a5553ea2c, type: 2}
+  subject: Please let me go.
+  body: SCHEDULED EMAIL:\n\nSend me to heaven. Please.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}

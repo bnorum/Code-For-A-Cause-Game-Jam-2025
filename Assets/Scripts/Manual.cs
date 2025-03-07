@@ -36,7 +36,7 @@ public class Manual : MonoBehaviour
 
         manualText = new List<string> { "Employee Service Manual\n\nHell © 0 AD",
             "Congratulations, damned soul! \nYou’ve been selected for the prestigious role of Infernal Email Associate at Hell, LLC—The world’s premier soul-acquisition conglomerate. Your eternal tenure begins now.  \n\nThis handbook outlines your duties, expectations, and survival tips for navigating Hell’s bureaucracy. Failure to comply will result in immediate reassignment to the Eternal Spreadsheet Torture Division.",
-            "Commandments\n\nThese are our rules to the road. Every hear about someone lying? They go to hell. Stealing? Hell. Having another God than the one sending us emails? Strangely, straight to hell. The full list is below:\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God capital G.",
+            "Commandments\n\nThese are our rules to the road. Every hear about someone lying? They go to hell. Stealing? Hell. Having another God than the one sending us emails? Strangely, straight to hell. The full list is below:\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God capital G.\nNo adultery.\n",
             "Rotating Commandments: \n" + CommandmentsManager.Instance.DecideCommandments()
             };
     }

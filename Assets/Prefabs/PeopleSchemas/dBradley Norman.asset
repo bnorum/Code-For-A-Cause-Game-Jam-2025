@@ -16,15 +16,15 @@ MonoBehaviour:
   age: 22
   emailHandle: bradleynorman
   emailDomain: '@hmail.com'
-  address: 254 Park Ave
+  address: 254 Park Ave, MA
   zipCode: 01520
   occupation: Developer
   netWorth: 3000
   isLefty: 0
   marriageNum: 0
   divorceNum: 0
-  worstThing: 
-  hobby: 
+  worstThing: Failed a Test
+  hobby: Game Jams
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 61532ad68373d324cbf80f61e9d0399a, type: 2}
@@ -34,4 +34,4 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
   failedDailyParameters: 0
-  commandment: fart
+  commandment: People who help other people move houses go straight to heaven.

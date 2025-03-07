@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Liam Brown
+  m_Name: dLiam Brown
   m_EditorClassIdentifier: 
   personName: Liam Brown
-  age: 20
-  emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Carpenter
-  netWorth: 2
+  age: 52
+  emailHandle: freakyliam
+  emailDomain: '@singles.org'
+  address: 54 Lovelace Ave, ON
+  zipCode: 11550
+  occupation: Healthcare
+  netWorth: 100000
   isLefty: 0
-  marriageNum: 0
+  marriageNum: 1
   divorceNum: 0
-  worstThing: 
-  hobby: 
+  worstThing: You'll see
+  hobby: Dating
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: d4bde5338e685594c9f8b52dd6ce1122, type: 2}
   - {fileID: 11400000, guid: 8734127e128c9cd41b06013fe5abf4fe, type: 2}
   - {fileID: 11400000, guid: bc89beb28637aaa4aa619efaf6b4268f, type: 2}
   - {fileID: 11400000, guid: 82d22063258d4744e80197ef0fad36ab, type: 2}
-  relatedEmailsUsed: 00000000
+  relatedEmailsUsed: 01000000
   shouldGoToHeaven: 0
-  failedDailyParameters: 1
-  commandment: fart
+  failedDailyParameters: 0
+  commandment: 'I know we said it earlier, but I gotta stress: NO ADULTERY.'

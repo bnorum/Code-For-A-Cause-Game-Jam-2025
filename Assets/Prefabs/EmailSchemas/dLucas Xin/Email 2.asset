@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
-  m_Name: Email 3
+  m_Name: Email 2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
+  sender: {fileID: 11400000, guid: ec0654f39f07f1f4abffb21a5553ea2c, type: 2}
   subject: Lucas Xin Email
-  body: Subject is Good!
+  body: SCHEDULED EMAIL:\n\nI miss my wife, and it would mean the world if you sent
+    me up to see her.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}
