@@ -25,9 +25,9 @@ public class Person : MonoBehaviour
     public GameObject nameTagObject;
     public Transform nameTagBounds;
     private Transform nameTagDefaultLocation;
-    private GameObject startPointGameRef;
-    private Transform newstartRef;
-    private GameObject endPointGameRef;
+    public GameObject child;
+    public GameObject startPointGameRef;
+    public GameObject endPointGameRef;
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
     public GameObject cursorPoint;
@@ -45,8 +45,10 @@ public class Person : MonoBehaviour
     {
         this.personSchema = personSchema;
         boundsCollider = collider;
-        startPointGameRef = startPoint;
-        endPointGameRef = endPoint;
+        startPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
+        endPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
+        startPointGameRef.transform.position = startPoint.transform.position;
+        endPointGameRef.transform.position = endPoint.transform.position;
         nameTagObject.SetActive(false);
         nameTagDefaultLocation = nameTagObject.transform;
         OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
@@ -104,7 +106,7 @@ public class Person : MonoBehaviour
         float totalDistance = Vector3.Distance(startPointGameRef.transform.position, endPointGameRef.transform.position);
         float remainingDistance = Vector3.Distance(transform.position, endPointGameRef.transform.position);
         durationReference *= (remainingDistance / totalDistance);
-        startPointGameRef.transform.position = gameObject.transform.position;
+        startPointGameRef.transform.position= gameObject.transform.position;
         isBeingTransported = true;
         isDragging = false;
         isFalling = false;
@@ -132,6 +134,8 @@ public class Person : MonoBehaviour
                 PersistentData.peopleSaved.Add(personSchema);
                 OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);
+                Destroy(startPointGameRef);
+                Destroy(endPointGameRef);
 
 
             }
@@ -141,14 +145,19 @@ public class Person : MonoBehaviour
                 PersistentData.peopleDamned.Add(personSchema);
                 OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
                 Destroy(gameObject);
+                Destroy(startPointGameRef);
+                Destroy(endPointGameRef);
             }
         }
     }
 
     private void TryStartDragging()
     {
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+    int layerMask = 1 << 12;
+
+    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+    RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layerMask);
+
         if ((hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>()) && !isMicrowaving)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
@@ -226,8 +235,9 @@ public class Person : MonoBehaviour
 
     private void CheckMouseHover()
     {
+        int layerMask = 1 << 12; 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layerMask);
         if (hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>() && hasBeenMicrowaved)
         {
             hoverTime += Time.deltaTime;

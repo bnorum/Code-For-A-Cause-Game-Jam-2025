@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      woodworkersweekly_0: -5551910441914147935
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

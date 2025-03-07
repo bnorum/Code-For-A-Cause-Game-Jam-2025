@@ -46,7 +46,7 @@ public class OutOfBoundsScript : MonoBehaviour
                         break;
                     }
                 }
-                if (!isWithinBounds)
+                if (!isWithinBounds && !obj.GetComponent<Person>().isDragging && !obj.GetComponent<Person>().isBeingTransported)
                 {
                     StartCoroutine(OutOfBoundsTimer(obj));
                 }
@@ -72,6 +72,9 @@ public class OutOfBoundsScript : MonoBehaviour
             obj.GetComponent<Person>().ResetToDefault();
             obj.transform.SetParent(limboPeopleHolder.transform);
             obj.transform.position = respawn.position;
+            Vector3 newPosition = obj.transform.position;
+            newPosition.z = -1f;
+            obj.transform.position = newPosition;
         }
     }
 

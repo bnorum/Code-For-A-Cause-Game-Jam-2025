@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dukedungle_0: -2424745011863047128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

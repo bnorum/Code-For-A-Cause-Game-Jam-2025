@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      melbournepost_0: 4805726125044392076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
