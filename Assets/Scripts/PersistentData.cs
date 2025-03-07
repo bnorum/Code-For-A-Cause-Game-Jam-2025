@@ -18,10 +18,11 @@ public static class PersistentData
     public static float bestAngularVelocity = 0f;
     public static bool isGameOver = false;
 
-    public static List<PersonSchema> peopleDamnedToday = new List<PersonSchema>();
     public static List<PersonSchema> peopleSavedToday = new List<PersonSchema>();
-    public static List<PersonSchema> peopleWhoShouldBeDamnedToday = new List<PersonSchema>();
-    public static List<PersonSchema> peopleWhoShouldBeSavedToday = new List<PersonSchema>();
+    public static List<PersonSchema> peopleDamnedToday = new List<PersonSchema>();
+    public static List<PersonSchema> peopleShouldveSavedToday = new List<PersonSchema>();
+    public static List<PersonSchema> peopleShouldveDamnedToday = new List<PersonSchema>();
+
 
 
 }

@@ -68,10 +68,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PersistentData.peopleShouldveDamnedToday = new List<PersonSchema>();
+        PersistentData.peopleShouldveSavedToday = new List<PersonSchema>();
         PersistentData.peopleDamnedToday = new List<PersonSchema>();
         PersistentData.peopleSavedToday = new List<PersonSchema>();
-        PersistentData.peopleWhoShouldBeDamnedToday = new List<PersonSchema>();
-        PersistentData.peopleWhoShouldBeSavedToday = new List<PersonSchema>();
 
         endDayCanvas.SetActive(false);
         clockOutCanvas.SetActive(false);
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
             if (ps.shouldGoToHeaven) {
                 PersistentData.peopleWhoShouldBeSavedToday.Add(ps);
             } else {
-                PersistentData.peopleWhoShouldBeDamnedToday.Add(ps);
+                PersistentData.peopleShouldveDamnedToday.Add(person);
             }
         }
         foreach (PersonSchema  person in chosenParameterPeople) {

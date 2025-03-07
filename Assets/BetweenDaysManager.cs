@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BetweenDaysManager : MonoBehaviour
 {
@@ -20,10 +21,9 @@ public class BetweenDaysManager : MonoBehaviour
         }
     }
 
-    public TextMeshProUGUI detailsTopText;
-    public TextMeshProUGUI detailsLeftText;
-    public TextMeshProUGUI detailsRightText;
-
+    public TextMeshProUGUI detailsText;
+    public TextMeshProUGUI details2Text;
+    public TextMeshProUGUI details3Text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,19 +33,17 @@ public class BetweenDaysManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        detailsTopText.text = "Employee Performance Log\n" + "Day " + PersistentData.currentDay;
-        detailsLeftText.text = "People Saved: \n" + ListToText(PersistentData.peopleSavedToday) + "\n" + "People Damned: \n" + ListToText(PersistentData.peopleDamnedToday);
-        detailsRightText.text = "People Who Needed Saving: \n" + ListToText(PersistentData.peopleWhoShouldBeSavedToday) + "\n" + "People Who Needed Damning: \n" + ListToText(PersistentData.peopleWhoShouldBeDamnedToday);
+        detailsText.text = "Employee Performance Log\n" + "Day " + PersistentData.currentDay;
+        details2Text.text = "People Saved:\n" + ListToString(PersistentData.peopleSaved) + "\nPeople Damned: \n" + ListToString(PersistentData.peopleDamned);
+        details3Text.text = "People Who Should've Been Saved:\n" + ListToString(PersistentData.peopleShouldveSavedToday) + "\nPeople Who Should've Been Damned: \n" + ListToString(PersistentData.peopleShouldveDamnedToday);
     }
 
-
-    public string ListToText(List<PersonSchema> psList) {
+    string ListToString(List<PersonSchema> psList) {
         string returnString = "";
         foreach (PersonSchema ps in psList) {
-            returnString += ps.name + "\n";
+            returnString += ps.personName + "\n";
         }
         return returnString;
-
     }
 
 }
