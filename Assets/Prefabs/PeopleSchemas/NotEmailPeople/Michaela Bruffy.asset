@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Michael Durem
+  m_Name: Michaela Bruffy
   m_EditorClassIdentifier: 
   isEmailPerson: 0
-  personName: Michael Durem
-  age: 84
-  emailHandle: mrdurem
+  personName: Michaela Bruffy
+  age: 45
+  emailHandle: rPaskel546
   emailDomain: '@Hmail.com'
-  address: 93 Market Place
-  zipCode: 71247
-  occupation: Radio Host
-  netWorth: 4
-  isLefty: 1
-  marriageNum: 1
+  address: 164 Pimrose Blvd
+  zipCode: 66324
+  occupation: Pediatrist
+  netWorth: 2
+  isLefty: 0
+  marriageNum: 2
   divorceNum: 1
-  worstThing: Faking multiple radio-giveaways
-  hobby: Rowing
+  worstThing: Committed Adultery
+  hobby: Custom Nails
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 

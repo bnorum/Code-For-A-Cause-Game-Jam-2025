@@ -30,6 +30,6 @@ MonoBehaviour:
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1
   failedDailyParameters: 0
   commandment: 

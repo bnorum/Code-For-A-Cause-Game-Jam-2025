@@ -29,6 +29,6 @@ MonoBehaviour:
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 
-  shouldGoToHeaven: 1
+  shouldGoToHeaven: 0
   failedDailyParameters: 0
   commandment: 

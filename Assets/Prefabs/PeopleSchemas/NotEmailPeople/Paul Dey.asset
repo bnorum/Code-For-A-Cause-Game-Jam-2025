@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Michael Durem
+  m_Name: Paul Dey
   m_EditorClassIdentifier: 
   isEmailPerson: 0
-  personName: Michael Durem
-  age: 84
-  emailHandle: mrdurem
-  emailDomain: '@Hmail.com'
-  address: 93 Market Place
-  zipCode: 71247
-  occupation: Radio Host
+  personName: Paul Dey
+  age: 15
+  emailHandle: paulDey
+  emailDomain: '@yoohoo.com'
+  address: 36 Second Street
+  zipCode: 74258
+  occupation: Cashier
   netWorth: 4
-  isLefty: 1
-  marriageNum: 1
-  divorceNum: 1
-  worstThing: Faking multiple radio-giveaways
-  hobby: Rowing
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  worstThing: Stole tips from waiters at his job.
+  hobby: Video Games
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 
