@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Alphonse Hebert
+  m_Name: dAlphonse Hebert
   m_EditorClassIdentifier: 
-  personName: Alphonse Hebert
+  personName: Alphonse Herbert
   age: 14
   emailHandle: AHerbLover
   emailDomain: '@gmail.com'
   address: 12 Rory Park, NY
   zipCode: 10001
   occupation: Teenager
-  netWorth: 4
+  netWorth: 400000000
   isLefty: 0
   marriageNum: 0
   divorceNum: 0
-  worstThing: Stole a crypto wallet.
+  worstThing: Stole a crypto wallet
   hobby: bitcoin
   hasBeenToPrison: 0
   relatedEmails:

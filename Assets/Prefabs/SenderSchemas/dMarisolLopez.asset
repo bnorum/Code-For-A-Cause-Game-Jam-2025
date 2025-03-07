@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
-  m_Name: HR
+  m_Name: dMarisolLopez
   m_EditorClassIdentifier: 
-  senderEmail: hr@hell.com
-  senderName: Hell HR
-  profileImage: {fileID: -551361136163835085, guid: fec84536293f7b8458a0412a08da3d53, type: 3}
+  senderEmail: 
+  senderName: 
+  profileImage: {fileID: 0}

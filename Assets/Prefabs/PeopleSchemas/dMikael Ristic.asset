@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Mikael Ristic
+  m_Name: dMikael Ristic
   m_EditorClassIdentifier: 
   personName: Mikael Ristic
-  age: 44
-  emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Contractor
-  netWorth: 2
-  isLefty: 0
-  marriageNum: 2
-  divorceNum: 4
-  worstThing: 
-  hobby: 
+  age: 102
+  emailHandle: virgilmikael
+  emailDomain: '@hmail.com'
+  address: 20 Shadybrook Road
+  zipCode: 11553
+  occupation: Unemployed
+  netWorth: 40000
+  isLefty: 1
+  marriageNum: 24
+  divorceNum: 24
+  worstThing: Has never truly loved.
+  hobby: Fishing
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: c41fe58f6ac317344a6cf6e8285b8e62, type: 2}
@@ -34,4 +34,5 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
   failedDailyParameters: 0
-  commandment: fart
+  commandment: Divorce is often a sign of lying or cheating. Not all the time though,
+    plenty of divorcees in Heaven.
