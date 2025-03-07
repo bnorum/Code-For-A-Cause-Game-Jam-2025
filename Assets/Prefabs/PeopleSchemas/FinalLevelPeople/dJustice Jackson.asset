@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Charity Jackson
+  m_Name: dJustice Jackson
   m_EditorClassIdentifier: 
-  personName: Charity Jackson
+  personName: Justice Jackson
   age: 23
   emailHandle: 
   emailDomain: '@jacksonfour.co'
@@ -21,17 +21,17 @@ MonoBehaviour:
   occupation: Woodworker
   netWorth: 50000
   isLefty: 0
-  marriageNum: 0
-  divorceNum: 0
-  worstThing: 
-  hobby: 
+  marriageNum: 1
+  divorceNum: 1
+  worstThing: Lies about Hope
+  hobby: Weightlifting
   hasBeenToPrison: 0
   relatedEmails:
-  - {fileID: 11400000, guid: ef331b093ad56d34b8afcccbb05e5243, type: 2}
-  - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
-  - {fileID: 11400000, guid: 11116a2bd9bf06642861c4e0d3974d0d, type: 2}
-  - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
-  relatedEmailsUsed: 01010100
-  shouldGoToHeaven: 0
+  - {fileID: 11400000, guid: 3ab166e56be42134f939543ad52481cd, type: 2}
+  - {fileID: 11400000, guid: 9f8531d5ea5ef714da7b0cc6517ebb83, type: 2}
+  - {fileID: 11400000, guid: e8f491a73a57efd48a3cedcbe198112b, type: 2}
+  - {fileID: 11400000, guid: 880619da9b6a78445b969b541be20de7, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 1
   failedDailyParameters: 0
-  commandment: fart
+  commandment: 

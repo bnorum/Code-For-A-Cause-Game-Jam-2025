@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Faith Jackson
+  m_Name: dHope Jackson
   m_EditorClassIdentifier: 
-  personName: Faith Jackson
+  personName: Hope Jackson
   age: 23
   emailHandle: 
   emailDomain: '@jacksonfour.co'
@@ -23,15 +23,15 @@ MonoBehaviour:
   isLefty: 0
   marriageNum: 1
   divorceNum: 0
-  worstThing: 
-  hobby: 
+  worstThing: Lies about herself
+  hobby: Blogging
   hasBeenToPrison: 0
   relatedEmails:
-  - {fileID: 11400000, guid: ef331b093ad56d34b8afcccbb05e5243, type: 2}
-  - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
-  - {fileID: 11400000, guid: 11116a2bd9bf06642861c4e0d3974d0d, type: 2}
-  - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
+  - {fileID: 11400000, guid: d8d1a8a03439d5e44b71896be79a258e, type: 2}
+  - {fileID: 11400000, guid: 14d8b8a3cba908b4298e147a8b98c7be, type: 2}
+  - {fileID: 11400000, guid: 602c3f1dc90253448a470ca0cdfab8cc, type: 2}
+  - {fileID: 11400000, guid: 323d62410d98b754bae9a0d4ca43d0c9, type: 2}
   relatedEmailsUsed: 00000000
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1
   failedDailyParameters: 0
-  commandment: fart
+  commandment: 

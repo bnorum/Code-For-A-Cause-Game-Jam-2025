@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Hope Jackson
+  m_Name: dCharity Jackson
   m_EditorClassIdentifier: 
-  personName: Hope Jackson
+  personName: Charity Jackson
   age: 23
   emailHandle: 
   emailDomain: '@jacksonfour.co'
@@ -21,17 +21,17 @@ MonoBehaviour:
   occupation: Woodworker
   netWorth: 50000
   isLefty: 0
-  marriageNum: 1
+  marriageNum: 0
   divorceNum: 0
-  worstThing: 
-  hobby: 
+  worstThing: Lies About Hope
+  hobby: Podcasting
   hasBeenToPrison: 0
   relatedEmails:
-  - {fileID: 11400000, guid: ef331b093ad56d34b8afcccbb05e5243, type: 2}
-  - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
-  - {fileID: 11400000, guid: 11116a2bd9bf06642861c4e0d3974d0d, type: 2}
-  - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
-  relatedEmailsUsed: 00000000
-  shouldGoToHeaven: 0
+  - {fileID: 11400000, guid: 29a5b161beaf42e44ad2ff3dcad5fc98, type: 2}
+  - {fileID: 11400000, guid: 150da9e60ad3ce9409245e929181ace1, type: 2}
+  - {fileID: 11400000, guid: f833db9a33765bc4dbd24b0f61e47b65, type: 2}
+  - {fileID: 11400000, guid: f06907167aa08d7409c3cfb9e0c24078, type: 2}
+  relatedEmailsUsed: 00010000
+  shouldGoToHeaven: 1
   failedDailyParameters: 0
-  commandment: fart
+  commandment: 

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 3
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: d43add97884c0284bb764f27a8f06160, type: 2}
+  subject: HOPE JACKSON truth
+  body: ive been watching charity jackson's podcast (or listening, haha, because
+    its a podcast) and shes always saying hope is up to bad stuff! she probably set
+    the explosion up!
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: 276f089e4f1d11b4fb0a35702fd256ef, type: 2}

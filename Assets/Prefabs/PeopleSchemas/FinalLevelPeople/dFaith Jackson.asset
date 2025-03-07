@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Justice Jackson
+  m_Name: dFaith Jackson
   m_EditorClassIdentifier: 
-  personName: Justice Jackson
+  personName: Faith Jackson
   age: 23
   emailHandle: 
   emailDomain: '@jacksonfour.co'
@@ -21,17 +21,17 @@ MonoBehaviour:
   occupation: Woodworker
   netWorth: 50000
   isLefty: 0
-  marriageNum: 1
-  divorceNum: 1
-  worstThing: 
-  hobby: 
+  marriageNum: 0
+  divorceNum: 0
+  worstThing: Lies About Charity
+  hobby: Tech
   hasBeenToPrison: 0
   relatedEmails:
-  - {fileID: 11400000, guid: ef331b093ad56d34b8afcccbb05e5243, type: 2}
-  - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
-  - {fileID: 11400000, guid: 11116a2bd9bf06642861c4e0d3974d0d, type: 2}
-  - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
+  - {fileID: 11400000, guid: b715e25e415daa844925e74903ae9d4f, type: 2}
+  - {fileID: 11400000, guid: 0985d554983551542a8636a1acd1fd88, type: 2}
+  - {fileID: 11400000, guid: 53592d887c7ea3a4089b34095ac398cd, type: 2}
+  - {fileID: 11400000, guid: 4d6e13434d56c1944b494aa995890e90, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
   failedDailyParameters: 0
-  commandment: fart
+  commandment: 

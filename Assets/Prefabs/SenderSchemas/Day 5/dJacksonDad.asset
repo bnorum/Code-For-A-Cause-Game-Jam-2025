@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
   m_Name: dJacksonDad
   m_EditorClassIdentifier: 
-  senderEmail: 
-  senderName: 
-  profileImage: {fileID: 0}
+  senderEmail: jessiejacksonshusband@hmail.com
+  senderName: Janec Jackson
+  profileImage: {fileID: 8866310442046625097, guid: 180faf0f2dc341f40bee54c8482c6623, type: 3}
