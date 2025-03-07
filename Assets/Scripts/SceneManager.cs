@@ -30,7 +30,7 @@ public class SceneManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (OnOpenCanvas != null || (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0 && PersistentData.isGameOver))
+        if (OnOpenCanvas != null && ((UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0 && PersistentData.isGameOver) || UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0))
             StartCoroutine(OnOpen());
     }
 
