@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
 
         if (timeUntilNextEmail <= 0)
         {
-            timeUntilNextEmail = UnityEngine.Random.Range(15, 20);
+            timeUntilNextEmail = UnityEngine.Random.Range(24, 28);
             int spamChance = UnityEngine.Random.Range(0, 100);
             if (spamChance < 7)
             {
@@ -184,42 +184,19 @@ public class GameManager : MonoBehaviour
     }
 
     public EmailSchema GetPseudoRandomEmail() {
-        if (time is > 540 and < 620 && chosenPeople[0].relatedEmails.Count > 0 )
+        if (time is > 540 and < 650)
         {
             return SelectEmailFromPool(0);
         }
-        else if (time is > 620 and < 700 )
+        else if (time is > 650 and < 760 )
         {
-            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[0].relatedEmails.Count > 0) {
-                return SelectEmailFromPool(0);
-            }
-            else
-            {
-                return SelectEmailFromPool(1);
-            }
+            return SelectEmailFromPool(1);
         }
-        else if (time is > 700 and < 780)
+        else if (time is > 760 and < 870)
         {
-            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[1].relatedEmails.Count > 0) {
-                return SelectEmailFromPool(1);
-            }
-            else
-            {
-                return SelectEmailFromPool(2);
-            }
+            return SelectEmailFromPool(2);
         }
-        else if (time is > 860 and < 940)
-        {
-            if (UnityEngine.Random.Range(0, 100) < 70 && chosenPeople[2].relatedEmails.Count > 0) {
-                return SelectEmailFromPool(2);
-            }
-            else
-            {
-                return SelectEmailFromPool(3);
-            }
-
-        }
-        else if (time is > 940 and < 1020 && chosenPeople[3].relatedEmails.Count > 0)
+        else if (time is > 870 and < 980)
         {
             return SelectEmailFromPool(3);
         }
