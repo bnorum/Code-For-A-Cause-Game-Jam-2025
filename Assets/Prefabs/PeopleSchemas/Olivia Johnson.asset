@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Olivia Johnson
   age: 21
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: College Student
   netWorth: 1
   isLefty: 0
   marriageNum: 0
   divorceNum: 0
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: a243999c16143f448ad601d869ff18f6, type: 2}
@@ -28,3 +34,4 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
   failedDailyParameters: 0
+  commandment: fart

@@ -14,17 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Obediah Abioye
   age: 14
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: Teenager
   netWorth: 0
   isLefty: 0
   marriageNum: 0
   divorceNum: 0
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 8bc2bee0c03c2af4e8ca8a5e6e44880f, type: 2}
   - {fileID: 11400000, guid: cd7e4b907f7f84641b5f30f818cbf055, type: 2}
   - {fileID: 11400000, guid: 95ceaf8887aeafd42b01e521482de4ab, type: 2}
   - {fileID: 11400000, guid: 9fad4fdbc2708d34c966a9998641ccaf, type: 2}
-  relatedEmailsUsed: 00000000
+  relatedEmailsUsed: 00010000
   shouldGoToHeaven: 1
   failedDailyParameters: 0
+  commandment: fart
