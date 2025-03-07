@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: dWoodworkersWeekly
   m_EditorClassIdentifier: 
   senderEmail: admin@woodworkersweekly.com
-  senderName: Woodworkers Weekly
+  senderName: WWW
   profileImage: {fileID: -5551910441914147935, guid: dd2bc62b4d24c2d41a84e7faca84c0bc, type: 3}
