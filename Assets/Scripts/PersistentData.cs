@@ -4,7 +4,8 @@ using System.Numerics;
 public static class PersistentData
 {
     public static int currentDay = 0;
-    public static List<PersonSchema> remainingPeople = new List<PersonSchema>();
+    public static List<PersonSchema> remainingEmailPeople = new List<PersonSchema>();
+    public static List<PersonSchema> remainingParameterPeople = new List<PersonSchema>();
     public static List<PersonSchema> peopleDamned = new List<PersonSchema>();
     public static List<PersonSchema> peopleSaved = new List<PersonSchema>();
     public static List<CoworkerSchema> remainingCoworkers = new List<CoworkerSchema>();

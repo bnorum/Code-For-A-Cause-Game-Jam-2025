@@ -7,8 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; } // SINGLETON
 
-    public List<PersonSchema> allPeople = new List<PersonSchema>();
-    public List<PersonSchema> chosenPeople = new List<PersonSchema>();
+    public List<PersonSchema> allEmailPeople = new List<PersonSchema>();
+    public List<PersonSchema> allParameterPeople = new List<PersonSchema>();
+    
+    public List<PersonSchema> chosenEmailPeople = new List<PersonSchema>();
+    public List<PersonSchema> chosenParameterPeople = new List<PersonSchema>();
     public List<EmailSchema> spamEmails = new List<EmailSchema>();
 
     public List<PersonSchema> day5People = new List<PersonSchema>();
@@ -16,9 +19,14 @@ public class GameManager : MonoBehaviour
     public float time = 540f;
     public int datenum;
 
+    public int chosenEmailCount;
+    public int chosenParameterCount;
     public float timeUntilNextEmail = 5f;
     public float timeUntilNextCoworker = 60f;
-    public float timeUntilNextPerson = 0f; // debugging, doesnt matter //brady: SIKE!!!!!!! MATTERS NOW! //yippee
+    public float timeUntilNextEmailPerson = 0f;
+    public float timeUntilNextParameterPerson = 0f;
+    public float spawnEmailInterval;
+    public float spawnParameterInterval;
 
     public bool isPaused = false;
     public float difficultyScale = 1f;
@@ -28,9 +36,8 @@ public class GameManager : MonoBehaviour
     public GameObject physicalPerson;
     public float escalatorTravelDuration = 5.0f;
     public BoxCollider2D personBounds;
-    public float spawnInterval;
-    [SerializeField] private float reservedEndTime;
-    [SerializeField] private int totalSpawns;
+    [SerializeField] private int totalEmailSpawns;
+    [SerializeField] private int totalParameterSpawns;
     private float nextSpawnTime;
     public Transform escalatorWindowPersonHolder;
     [SerializeField] private float endTime = 1020f;
@@ -44,7 +51,8 @@ public class GameManager : MonoBehaviour
     public bool isDayOver = false;
 
     public EmailSchema quadrupletsEmail;
-    public int currentPersonSpawned=0;
+    public int currentEmailPersonSpawned=0;
+    public int currentParameterPersonSpawned=0;
 
     //HACK: I fucked up big time and have to use these four arrays. They tell if an email has been sent yet
 
@@ -77,35 +85,46 @@ public class GameManager : MonoBehaviour
 
         if (PersistentData.currentDay == 1)
         {
-            PersistentData.remainingPeople = allPeople;
+            PersistentData.remainingEmailPeople = allEmailPeople;
+            PersistentData.remainingParameterPeople = allParameterPeople;
         }
-        allPeople = PersistentData.remainingPeople;
+        allEmailPeople = PersistentData.remainingEmailPeople;
+        allParameterPeople = PersistentData.remainingParameterPeople;
         datenum = PersistentData.currentDay;
         ChoosePeople();
 
-        foreach (PersonSchema  ps in chosenPeople) {
+        foreach (PersonSchema  ps in chosenEmailPeople) {
             if (ps.shouldGoToHeaven) {
                 PersistentData.peopleWhoShouldBeSavedToday.Add(ps);
             } else {
                 PersistentData.peopleWhoShouldBeDamnedToday.Add(ps);
             }
         }
+        foreach (PersonSchema  person in chosenParameterPeople) {
+            if (person.shouldGoToHeaven) {
+                PersistentData.peopleWhoShouldBeSavedToday.Add(person);
+            } else {
+                PersistentData.peopleWhoShouldBeDamnedToday.Add(person);
+            }
+        
+        }
 
         RefreshEmailsUsed();
-        totalSpawns = chosenPeople.Count;
+        totalEmailSpawns = chosenEmailPeople.Count;
+        totalParameterSpawns = chosenParameterPeople.Count;
         difficultyScale = PersistentData.difficultyScale;
 
 
         if (PersistentData.currentDay == 5) //BOSS TIME!
         {
-            spawnInterval = 20f;
+            spawnEmailInterval = 20f;
             escalatorTravelDuration = 380f;
             SendQuadrupletsEmail();
         }
         // Ensure at least one spawn
-        SpawnPerson();
-        timeUntilNextPerson = spawnInterval;
-        totalSpawns--;
+        SpawnEmailPerson();
+        timeUntilNextEmailPerson = spawnEmailInterval;
+        totalEmailSpawns--;
     }
 
     void Update()
@@ -115,14 +134,21 @@ public class GameManager : MonoBehaviour
             time += Time.deltaTime * difficultyScale;
             timeUntilNextEmail -= Time.deltaTime * difficultyScale;
             timeUntilNextCoworker -= Time.deltaTime * difficultyScale;
-            timeUntilNextPerson -= Time.deltaTime * difficultyScale;
+            timeUntilNextEmailPerson -= Time.deltaTime * difficultyScale;
+            timeUntilNextParameterPerson -=Time.deltaTime * difficultyScale;
             // DateTimeManager.Instance.UpdateProgress(chosenPeople.Count);
             // Check if it's time to spawn the next person
-            if (timeUntilNextPerson < 0 && totalSpawns >= 1)
+            if (timeUntilNextEmailPerson < 0 && totalEmailSpawns >= 1)
             {
-                SpawnPerson();
-                timeUntilNextPerson = spawnInterval;
-                totalSpawns--;
+                SpawnEmailPerson();
+                timeUntilNextEmailPerson = spawnEmailInterval;
+                totalEmailSpawns--;
+            }
+            if (timeUntilNextParameterPerson < 0 && totalParameterSpawns >= 1)
+            {
+                SpawnParameterPerson();
+                timeUntilNextParameterPerson = spawnParameterInterval;
+                totalParameterSpawns--;
             }
         }
 
@@ -132,9 +158,6 @@ public class GameManager : MonoBehaviour
             // Call the function to end the day
             RefreshEmailsUsed();
             StartCoroutine(EndDay());
-        }
-        {
-            // End of day logic (e.g., cutscene, transition to next day)
         }
 
         if (timeUntilNextEmail <= 0)
@@ -165,25 +188,42 @@ public class GameManager : MonoBehaviour
     void ChoosePeople()
     {
         if (PersistentData.currentDay == 5) {
-            chosenPeople = day5People;
+            chosenEmailPeople = day5People;
+            for (int i = 0; i < chosenParameterCount; i++)
+            {
+                if (allParameterPeople.Count == 0) break;
+                int index = UnityEngine.Random.Range(0, allParameterPeople.Count);
+                PersonSchema selectedPerson = allParameterPeople[index];
+                chosenParameterPeople.Add(selectedPerson);
+                allParameterPeople.RemoveAt(index);
+                PersistentData.remainingParameterPeople.Remove(selectedPerson);
+            }
             return;
         }
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < chosenEmailCount; i++)
         {
-            if (allPeople.Count == 0) break;
-            int index = UnityEngine.Random.Range(0, allPeople.Count);
-            PersonSchema selectedPerson = allPeople[index];
-            chosenPeople.Add(selectedPerson);
-            allPeople.RemoveAt(index);
-            PersistentData.remainingPeople.Remove(selectedPerson);
+            if (allEmailPeople.Count == 0) break;
+            int index = UnityEngine.Random.Range(0, allEmailPeople.Count);
+            PersonSchema selectedPerson = allEmailPeople[index];
+            chosenEmailPeople.Add(selectedPerson);
+            allEmailPeople.RemoveAt(index);
+            PersistentData.remainingEmailPeople.Remove(selectedPerson);
         }
-
+        for (int i = 0; i < chosenParameterCount; i++)
+        {
+            if (allParameterPeople.Count == 0) break;
+            int index = UnityEngine.Random.Range(0, allParameterPeople.Count);
+            PersonSchema selectedPerson = allParameterPeople[index];
+            chosenParameterPeople.Add(selectedPerson);
+            allParameterPeople.RemoveAt(index);
+            PersistentData.remainingParameterPeople.Remove(selectedPerson);
+        }
     }
 
     public List<EmailSchema> GetAllEmailSchemas()
     {
         List<EmailSchema> allEmailSchemas = new List<EmailSchema>();
-        foreach (PersonSchema person in chosenPeople)
+        foreach (PersonSchema person in chosenEmailPeople)
         {
             allEmailSchemas.AddRange(person.relatedEmails);
         }
@@ -243,38 +283,49 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SpawnPerson()
+    void SpawnEmailPerson()
     {
-        if (chosenPeople.Count == 0) return;
+        if (chosenParameterPeople.Count == 0) return;
 
-        int index = currentPersonSpawned;
-        currentPersonSpawned++;
+        int index = currentEmailPersonSpawned;
+        currentEmailPersonSpawned++;
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
-        personScript.Init(chosenPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
+        personScript.Init(chosenEmailPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
+        personScript.StartMovement(escalatorTravelDuration);
+    }
+    void SpawnParameterPerson()
+    {
+        if(chosenParameterPeople.Count == 0) return;
+
+        int index = currentParameterPersonSpawned;
+        currentParameterPersonSpawned++;
+        GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
+        Person personScript = obj.GetComponent<Person>();
+        personScript.Init(chosenParameterPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
         personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
     }
 
     EmailSchema SelectEmailFromPool(int personIndex) {
-        if (!chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
+        if (!chosenEmailPeople[personIndex].relatedEmailsUsed.Contains(false))
         {
             return null;
         }
-        int index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
-        while (chosenPeople[personIndex].relatedEmailsUsed[index] && chosenPeople[personIndex].relatedEmailsUsed.Contains(false))
+        int index = UnityEngine.Random.Range(0, chosenEmailPeople[personIndex].relatedEmails.Count);
+        while (chosenEmailPeople[personIndex].relatedEmailsUsed[index] && chosenEmailPeople[personIndex].relatedEmailsUsed.Contains(false))
         {
-            index = UnityEngine.Random.Range(0, chosenPeople[personIndex].relatedEmails.Count);
+            index = UnityEngine.Random.Range(0, chosenEmailPeople[personIndex].relatedEmails.Count);
         }
 
-        chosenPeople[personIndex].relatedEmailsUsed[index] = true;
-        return chosenPeople[personIndex].relatedEmails[index];
+        chosenEmailPeople[personIndex].relatedEmailsUsed[index] = true;
+        return chosenEmailPeople[personIndex].relatedEmails[index];
     }
 
     public void RefreshEmailsUsed()
     {
         Debug.Log("Refreshing Emails");
-        foreach (PersonSchema person in chosenPeople)
+        foreach (PersonSchema person in chosenEmailPeople)
         {
 
             for (int i = 0; i < person.relatedEmailsUsed.Count; i++)

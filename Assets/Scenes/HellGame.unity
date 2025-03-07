@@ -6555,22 +6555,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba034cc0c4eeea640b72769bac87b5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allPeople:
-  - {fileID: 11400000, guid: 4ed806588edfb7f4d987656a5dcbc689, type: 2}
-  - {fileID: 11400000, guid: 52440f3fe60507846842396df6a6c87b, type: 2}
-  - {fileID: 11400000, guid: d78f1f8f68b7bb342b57e81a4c128192, type: 2}
-  - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
-  - {fileID: 11400000, guid: e9323b36df5079b47aea1f2a550ce747, type: 2}
-  - {fileID: 11400000, guid: 92a7efda47b137948b192c44024f011f, type: 2}
-  - {fileID: 11400000, guid: 06b0ace67a49d4a4290354d490434048, type: 2}
-  - {fileID: 11400000, guid: a2d2c7271ad1f1d4ca200c2f15202b56, type: 2}
-  - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
-  - {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}
-  - {fileID: 11400000, guid: 7ee6da2829e183a469a7a7f997504f16, type: 2}
-  - {fileID: 11400000, guid: 33d58a5a6ff2a0b46a84c0a74f29b9bb, type: 2}
-  - {fileID: 11400000, guid: 516526946a5582e428d333425ab1ffbb, type: 2}
-  - {fileID: 11400000, guid: 7d2174c0c6ba0c649b13f2e06e83e484, type: 2}
-  chosenPeople: []
+  allEmailPeople:
+  - {fileID: 0}
+  - {fileID: 0}
+  allParameterPeople: []
+  chosenEmailPeople: []
+  chosenParameterPeople: []
   spamEmails:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
   - {fileID: 11400000, guid: 0b7464ce10ed9ac4dbf06b50a6472232, type: 2}
@@ -6581,9 +6571,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 158036c8f10edf14991e8d01ec052779, type: 2}
   time: 540
   datenum: 0
+  chosenEmailCount: 0
+  chosenParameterCount: 0
   timeUntilNextEmail: 5
   timeUntilNextCoworker: 60
-  timeUntilNextPerson: 113
+  timeUntilNextEmailPerson: 0
+  timeUntilNextParameterPerson: 0
+  spawnEmailInterval: 0
+  spawnParameterInterval: 0
   isPaused: 0
   difficultyScale: 3
   startPoint: {fileID: 746192692}
@@ -6591,9 +6586,8 @@ MonoBehaviour:
   physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
   escalatorTravelDuration: 133
   personBounds: {fileID: 2033021944}
-  spawnInterval: 110
-  reservedEndTime: 100
-  totalSpawns: 0
+  totalEmailSpawns: 0
+  totalParameterSpawns: 0
   escalatorWindowPersonHolder: {fileID: 1774806115}
   endTime: 1020
   endDayCanvas: {fileID: 2069517475}
@@ -6604,7 +6598,8 @@ MonoBehaviour:
   clockoutEmail: {fileID: 11400000, guid: b6356a60348cc3e4d939812a566e4652, type: 2}
   isDayOver: 0
   quadrupletsEmail: {fileID: 11400000, guid: 63bbd1a10e1851b4986de309c89a6b87, type: 2}
-  currentPersonSpawned: 0
+  currentEmailPersonSpawned: 0
+  currentParameterPersonSpawned: 0
 --- !u!4 &739457595
 Transform:
   m_ObjectHideFlags: 0
@@ -17347,6 +17342,8 @@ MonoBehaviour:
   worstThing: {fileID: 1458748693}
   searchPanel: {fileID: 813863781}
   profileImage: {fileID: 0}
+  successResults: {fileID: 0}
+  failedResults: {fileID: 0}
   people:
   - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
   - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
@@ -18697,7 +18694,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a1fd6a2e02e604d83a49a132132f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandmentText: 
+  isLefty: 0
+  p1: Anyone who is a Lefty
+  isBillionaire: 0
+  p2: Send all Billionaires to Hell Today
+  isDivorded3PlusTimes: 0
+  p3: Send Anyone with 3+ Divorces to Hell Today
+  isMiddleClassAndNotMarried: 0
+  p4: Send Anyone who is Middle Class & Not Married to Hell Today
+  isCarpenter: 0
+  p5: Send All Carpenters to Hell Today
+  isNameBeginsWithC: 0
+  p6: Firstname that starts with the letter C? Stright to hell.
+  isTeenagerandMillionaire: 0
+  p7: Send All millionaire teenagers to hell
+  isNameBeginsWithGandIsPoor: 0
+  p8: Firstname that starts with the letter G & They are poor? Stright to hell.
+  hasBeenToPrisonOrisOlderThan75: 0
+  p9: Been to prison Or is older than 75? Straight to hell.
+  is40to49andMarried: 0
+  p10: Anyone in their 40s and they've been married before? To hell with them.
+  isGovernmentEmployee: 0
+  p11: Anyone who works for the government, straight to hell.
+  isZipCodeContains4: 0
+  p12: Anyone who's zip code or email contains a 4, drop em down.
+  isUsingYahooOrHobbyCoding: 0
+  p13: Send anyone who uses Yahoos or likes to Code to hell.
+  isNameBeginsWithVowelAndMiddleClass: 0
+  p14: If someone's name begins with a vowel, and they're middle class, send em to
+    hell
+  isRightyAndLowerClass: 0
+  p15: If someone is a Righty, and lower class, send em to hell, unless they also
+    like Woodworking
+  isDivordedAndEmailDoesntContainANumber: 0
+  p16: If Someone Has divorced, send them to hell! Unless their email handle contains
+    a number
+  isInvolvedWithCrypto: 0
+  p17: If the worst thing someome's ever done involves 'crypto', send em to hell!!!!!
+  isZipHasA2ButNotA1: 0
+  p18: If Someones zip has a 1 but not a 2 send em to hell
+  isAgeLessThan21: 0
+  p19: If Someone isn't legally allowed to drink, send em to hell
+  isTotalMarriages0BracketLower: 0
+  p20: If Someone was never married, and is in the lower class, send em to hell
 --- !u!1 &1954580815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18902,10 +18941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Purgatory Dept User Manual
-
-
-    Judge '
+  m_text: if you're seeing this, one of the programmers didnt do their job lol.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1765ce96a6e31ac4899fd73e8313359c, type: 2}
   m_sharedMaterial: {fileID: 3520555534629746083, guid: 1765ce96a6e31ac4899fd73e8313359c, type: 2}

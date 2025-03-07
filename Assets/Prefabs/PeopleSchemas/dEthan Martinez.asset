@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
   m_Name: dEthan Martinez
   m_EditorClassIdentifier: 
+  isEmailPerson: 1
   personName: Ethan Martinez
   age: 21
   emailHandle: emartin
@@ -31,7 +32,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76bb95dacdfe0bb4f9ef29e5ec6d71ce, type: 2}
   - {fileID: 11400000, guid: 9fdb771f96e6ff94fadfb1b4d113b8eb, type: 2}
   - {fileID: 11400000, guid: dfa3336189466ff41a88499571d2c2ef, type: 2}
-  relatedEmailsUsed: 00000000
+  relatedEmailsUsed: 00010000
   shouldGoToHeaven: 1
   failedDailyParameters: 0
   commandment: Someone has poems about them? Heaven. Seriously.

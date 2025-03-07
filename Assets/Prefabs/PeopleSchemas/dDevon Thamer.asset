@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: dDevon Thyed
+  m_Name: dDevon Thamer
   m_EditorClassIdentifier: 
-  personName: Devon Thyed
+  isEmailPerson: 1
+  personName: Devon Thamer
   age: 23
   emailHandle: devont667
   emailDomain: '@hmail.com'

@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PersonSchema", order = 1)]
 public class PersonSchema : ScriptableObject
 {
+    public bool isEmailPerson;
     public string personName;
     public int age;
     public string emailHandle;

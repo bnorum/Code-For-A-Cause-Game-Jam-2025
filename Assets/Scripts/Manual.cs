@@ -37,7 +37,6 @@ public class Manual : MonoBehaviour
         {
             "Hell.gov - Purgatory Dept PC Operator's Manual",
             "Commandments\nHere are the offical Moral Guidelines to whether someone can go to heaven:\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God (capital G).\nNo adultery.",
-            "Rotating Commandments: \n" + CommandmentsManager.Instance.DecideCommandments()
         };
         pagenumber = 0;
         manualTextBox.text = manualText[pagenumber];

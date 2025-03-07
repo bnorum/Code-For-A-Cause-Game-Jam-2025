@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
   m_Name: dAva Davis
   m_EditorClassIdentifier: 
+  isEmailPerson: 1
   personName: Ava Davis
   age: 20
   emailHandle: avad

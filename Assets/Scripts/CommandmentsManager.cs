@@ -20,37 +20,29 @@ public class CommandmentsManager : MonoBehaviour
         }
     }
 
-    public string commandmentText;
+    private string commandmentText;
 
     void Start()
     {
+        //EMAIL PEOPLE
         commandmentText = "";
-        DecideCommandments();
-    }
-
-
-    public string DecideCommandments()
-    {
-        if (PersistentData.currentDay == 5) {return "\n\n Faith lies about Charity, \nCharity lies about Hope, \nJustice lies about Hope, \nHope lies about herself. \nBut it's only one of them. \nAnd forget about lying this time.";}
-        commandmentText = "";
-        List<PersonSchema> people = GameManager.Instance.chosenPeople;
-        foreach (PersonSchema person in people)
+        //PARAMETER PEOPLE
+        SetAllParams();
+        if(PersistentData.currentDay==1)
         {
-            if (UnityEngine.Random.Range(0,2) == 0) {
-                commandmentText += "\n" + person.commandment;
-            }
+            SelectDailyParametersDayOne();
+            CheckDailyParameterMatches();
+            SetManualText();
         }
-        if (commandmentText == "") {
-            commandmentText += "\n" + GameManager.Instance.chosenPeople[0].commandment;
+        else
+        {
+            SelectDailyParameters(4);
+            CheckDailyParameterMatches();
+            SetManualText();
         }
-        return commandmentText;
     }
-}
 
 
-/*
-public class JudgementParameters : MonoBehaviour
-{
     public bool isLefty;
     public string p1 = "Anyone who is a Lefty";
     public bool P1(PersonSchema person)
@@ -240,24 +232,7 @@ public class JudgementParameters : MonoBehaviour
                 return true;
             else
                 return false;
-        }
-    void Start()
-    { 
-        if(PersistentData.currentDay==1)
-        {
-            SelectDailyParametersDayOne();
-            SetManualText();
-            CheckDailyParameterMatches();
-
-        }
-        else
-        {
-            SelectDailyParameters(4);
-            CheckDailyParameterMatches();
-            SetManualText();
-        }
-
-    }
+        }    
     void SetAllParams()
     {
         PersistentData.allParameters.Add(p1);
@@ -284,7 +259,6 @@ public class JudgementParameters : MonoBehaviour
 
     private void SelectDailyParametersDayOne()
     {//DAY ONE's PARAMETERS, preselected so it isnt too difficult.
-        SetAllParams();
         isBillionaire = true;
         PersistentData.allParameters.Remove(p2);
 
@@ -300,7 +274,6 @@ public class JudgementParameters : MonoBehaviour
 
     public void SelectDailyParameters(int num)
     {
-        SetAllParams();
         List<int> selectedIndices = new List<int>();
         System.Random rand = new System.Random();
 
@@ -401,12 +374,10 @@ public class JudgementParameters : MonoBehaviour
         }
     }
 
-    public TMPro.TMP_Text manualText;
 
     public void SetManualText()
     {
-        string parametersCombined = "Daily Parameters:\n\n";
-        
+        string parametersCombined = "";
         if (isLefty) parametersCombined += p1 + "\n";
         if (isBillionaire) parametersCombined += p2 + "\n";
         if (isDivorded3PlusTimes) parametersCombined += p3 + "\n";
@@ -427,8 +398,16 @@ public class JudgementParameters : MonoBehaviour
         if (isZipHasA2ButNotA1) parametersCombined += p18 + "\n";
         if (isAgeLessThan21) parametersCombined += p19 + "\n";
         if (isTotalMarriages0BracketLower) parametersCombined += p20 + "\n";
-
-        manualText.text = parametersCombined;
+        // if (PersistentData.currentDay == 5) parametersCombined += "Faith lies about Charity, \nCharity lies about Hope, \nJustice lies about Hope, \nHope lies about herself. \nBut it's only one of them. \nAnd forget about lying this time.";
+        // List<PersonSchema> people = GameManager.Instance.chosenEmailPeople;
+        // foreach (PersonSchema person in people)
+        // {
+        //     if (UnityEngine.Random.Range(0,2) == 0) {
+        //         commandmentText += "\n" + person.commandment;
+        //     }
+        // }
+        Debug.Log(parametersCombined);
+        Manual.Instance.manualText.Add($"Daily Hell Parameters:\n\n {parametersCombined}");
     }
 
     public void ResetAllParams()
@@ -457,7 +436,7 @@ public class JudgementParameters : MonoBehaviour
 
     public void CheckDailyParameterMatches()
     {
-        foreach (var person in GameManager.Instance.chosenPeople)
+        foreach (var person in GameManager.Instance.chosenParameterPeople)
         {
             person.failedDailyParameters = false;
             bool failed = false;
@@ -566,4 +545,3 @@ public class JudgementParameters : MonoBehaviour
         }
     }
 }
-*/
