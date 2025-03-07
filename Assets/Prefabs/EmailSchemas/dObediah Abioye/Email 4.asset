@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 4
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Obediah A Email
-  body: Subject is Good!
+  sender: {fileID: 11400000, guid: 594f1aef6bc4acb41ad6b1f6f01f58da, type: 2}
+  subject: Parting words about Brother
+  body: He was my brother. Growing up, he always talked about how excited he was
+    to start a family. Then he made one, then he died. It's beautiful how that works.
+    He lived life exactly the way one should.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}

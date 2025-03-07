@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Obediah A Email
-  body: Subject is Good!
+  sender: {fileID: 11400000, guid: 6ee8d6de8907c5d408125f30f9b2c186, type: 2}
+  subject: Obediah, My Dad
+  body: My dad died today. I don't know how to feel. On one hand, I'm his son. On
+    the other, he always preferred Jebediah to me. We got treated the same, but I
+    could tell. I guess I should go with my gut, and say he goes to Heaven.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
-  m_Name: Email 1
+  m_Name: Email 3
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: 517cb60c35c199c42a8b6139efd8112a, type: 2}
-  subject: My Father
-  body: Obediah Abioye was a man among men. And out of all his kids, he loved me
-    the most. Got that right.
+  sender: {fileID: 11400000, guid: 9c082a54434d8744aa5c5c4c75f37fa0, type: 2}
+  subject: My Evil Dad
+  body: I've known my dad was evil from the start. He was always doing things behind
+    our backs. Criminal things probably. I just don't trust him.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}
