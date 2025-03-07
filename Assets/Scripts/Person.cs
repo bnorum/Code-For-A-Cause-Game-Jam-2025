@@ -22,9 +22,6 @@ public class Person : MonoBehaviour
     private float durationReference;
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
-    public GameObject nameTagObject;
-    public Transform nameTagBounds;
-    private Transform nameTagDefaultLocation;
     public GameObject child;
     public GameObject startPointGameRef;
     public GameObject endPointGameRef;
@@ -49,8 +46,8 @@ public class Person : MonoBehaviour
         endPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
         startPointGameRef.transform.position = startPoint.transform.position;
         endPointGameRef.transform.position = endPoint.transform.position;
-        nameTagObject.SetActive(false);
-        nameTagDefaultLocation = nameTagObject.transform;
+        // nameTagObject.SetActive(false);
+        // nameTagDefaultLocation = nameTagObject.transform;
         OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
     }
 
@@ -80,7 +77,7 @@ public class Person : MonoBehaviour
             rb.angularVelocity *= 0.5f;
             rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -angularVelocityCap, angularVelocityCap);
         }
-        CheckMouseHover();
+        // CheckMouseHover();
         elapsedTime += Time.deltaTime;
         if (isBeingTransported && !isDragging && !isFalling)
         {
@@ -230,28 +227,28 @@ public class Person : MonoBehaviour
         return position;
     }
 
-    private float hoverTime = 0.0f;
-    private float hoverThreshold = 1.0f;
+    // private float hoverTime = 0.0f;
+    // private float hoverThreshold = 1.0f;
 
-    private void CheckMouseHover()
-    {
-        int layerMask = 1 << 12; 
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layerMask);
-        if (hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>() && hasBeenMicrowaved)
-        {
-            hoverTime += Time.deltaTime;
-            if (hoverTime >= hoverThreshold)
-            {
-                nameTagObject.SetActive(true);
-            }
-        }
-        else
-        {
-            hoverTime = 0.0f;
-            nameTagObject.SetActive(false);
-        }
-    }
+    // private void CheckMouseHover()
+    // {
+    //     int layerMask = 1 << 12; 
+    //     Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+    //     RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layerMask);
+    //     if (hit.collider == personCollider || hit.collider == gameObject.GetComponent<Collider2D>() && hasBeenMicrowaved)
+    //     {
+    //         hoverTime += Time.deltaTime;
+    //         if (hoverTime >= hoverThreshold)
+    //         {
+    //             nameTagObject.SetActive(true);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         hoverTime = 0.0f;
+    //         nameTagObject.SetActive(false);
+    //     }
+    // }
 
     public void ResetToDefault()
     {

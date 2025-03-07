@@ -74,7 +74,7 @@ public class SearchManager : MonoBehaviour
         hobby.text = $"Hobby: {person.personSchema.hobby}";
         worstThing.text = $"Worst Thing ever done:\n {person.personSchema.worstThing}";
     }
-    void DisplaySearch()
+    public void DisplaySearch()
     {
         profilePanel.SetActive(false);
         searchPanel.SetActive(true);

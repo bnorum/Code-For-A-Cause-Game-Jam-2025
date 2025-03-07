@@ -1516,7 +1516,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -590, y: -241.00003}
-  m_SizeDelta: {x: 5, y: 584.8}
+  m_SizeDelta: {x: 5, y: 587}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &135313157
 MonoBehaviour:
@@ -1627,7 +1627,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1774806115}
-  - {fileID: 306791539}
   - {fileID: 66983185}
   - {fileID: 700398336}
   - {fileID: 1921872623}
@@ -2734,14 +2733,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306791538}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.22799999, y: 0.038, z: 0}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 746192692}
   - {fileID: 1998478810}
-  m_Father: {fileID: 178953744}
+  m_Father: {fileID: 1722021713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310598000
 GameObject:
@@ -6465,11 +6464,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPeople:
+  - {fileID: 11400000, guid: 4ed806588edfb7f4d987656a5dcbc689, type: 2}
   - {fileID: 11400000, guid: 52440f3fe60507846842396df6a6c87b, type: 2}
+  - {fileID: 11400000, guid: d78f1f8f68b7bb342b57e81a4c128192, type: 2}
   - {fileID: 11400000, guid: 12f3057ca5b041c478bfa732cd004abf, type: 2}
+  - {fileID: 11400000, guid: e9323b36df5079b47aea1f2a550ce747, type: 2}
+  - {fileID: 11400000, guid: 92a7efda47b137948b192c44024f011f, type: 2}
+  - {fileID: 11400000, guid: 06b0ace67a49d4a4290354d490434048, type: 2}
+  - {fileID: 11400000, guid: a2d2c7271ad1f1d4ca200c2f15202b56, type: 2}
   - {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
   - {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}
+  - {fileID: 11400000, guid: 7ee6da2829e183a469a7a7f997504f16, type: 2}
   - {fileID: 11400000, guid: 33d58a5a6ff2a0b46a84c0a74f29b9bb, type: 2}
+  - {fileID: 11400000, guid: 516526946a5582e428d333425ab1ffbb, type: 2}
+  - {fileID: 11400000, guid: 7d2174c0c6ba0c649b13f2e06e83e484, type: 2}
   chosenPeople: []
   spamEmails:
   - {fileID: 11400000, guid: bbd457324a200564dbd9d9089996deca, type: 2}
@@ -6485,7 +6493,7 @@ MonoBehaviour:
   timeUntilNextCoworker: 60
   timeUntilNextPerson: 113
   isPaused: 0
-  difficultyScale: 2
+  difficultyScale: 3
   startPoint: {fileID: 746192692}
   endPoint: {fileID: 1998478810}
   physicalPerson: {fileID: 2041481681499013037, guid: 3c1239cdc959ade49814b025a1599269, type: 3}
@@ -15679,6 +15687,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 306791539}
   - {fileID: 2033021943}
   - {fileID: 51156940}
   - {fileID: 1516211921}

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      whitejeans_0: -7447127344389558819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

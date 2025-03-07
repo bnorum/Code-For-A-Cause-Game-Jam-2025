@@ -53,6 +53,8 @@ public class microwaveScript : MonoBehaviour
             collision.gameObject.GetComponent<Person>().isMicrowaving = false;
             transform.localPosition = originalPosition;
             spriteRenderer.enabled = true;
+            SearchManager.Instance.DisplaySearch();
+
         }
     }
     private Coroutine microwaveCoroutine;

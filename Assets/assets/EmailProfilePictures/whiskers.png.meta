@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      whiskers_0: -4694687813012217006
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

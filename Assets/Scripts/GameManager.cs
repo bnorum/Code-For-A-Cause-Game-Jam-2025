@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public BoxCollider2D personBounds;
     public float spawnInterval;
     [SerializeField] private float reservedEndTime;
-    private int totalSpawns;
+    [SerializeField] private int totalSpawns;
     private float nextSpawnTime;
     public Transform escalatorWindowPersonHolder;
     [SerializeField] private float endTime = 1020f;
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             timeUntilNextPerson -= Time.deltaTime * difficultyScale;
             // DateTimeManager.Instance.UpdateProgress(chosenPeople.Count);
             // Check if it's time to spawn the next person
-            if (timeUntilNextPerson < 0 && totalSpawns > 1)
+            if (timeUntilNextPerson < 0 && totalSpawns >= 1)
             {
                 SpawnPerson();
                 timeUntilNextPerson = spawnInterval;

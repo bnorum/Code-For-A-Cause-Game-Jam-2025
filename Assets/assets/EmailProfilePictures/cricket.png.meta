@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cricket_0: 5871094851771035901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
