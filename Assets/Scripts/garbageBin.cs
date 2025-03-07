@@ -6,6 +6,8 @@ public class garbageBin : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public float duration = 2f;
+    
+    public SpriteAnimator flames;
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class garbageBin : MonoBehaviour
             if (!collision.gameObject.GetComponent<Person>().personSchema.shouldGoToHeaven) {
                 PersistentData.peopleDeterminedCorrectly++;
             }
+            flames.PlayAnim();
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses();
             Destroy(collision.gameObject);
@@ -29,7 +32,7 @@ public class garbageBin : MonoBehaviour
     public void DisplayStat(Vector2 linearVelocity, float angularVelocity, float distance, bool isDragging)
     {
         text.gameObject.SetActive(true);
-
+        
         if (isDragging)
         {
             if (angularVelocity > PersistentData.bestAngularVelocity)

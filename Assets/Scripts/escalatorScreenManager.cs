@@ -10,12 +10,13 @@ public class escalatorScreenManager : MonoBehaviour
     private int currentFrame = 0;
     private float timer = 0f;
     private float frameRate = .75f; // Change frame every second
+    public string text;
 
     void Start()
     {
         if (uiText != null)
         {
-            uiText.text = "excalator.exe running" + loadingFrames[currentFrame];
+            uiText.text = text + loadingFrames[currentFrame];
         }
     }
 
@@ -29,7 +30,7 @@ public class escalatorScreenManager : MonoBehaviour
             {
                 timer = 0f;
                 currentFrame = (currentFrame + 1) % loadingFrames.Length;
-                uiText.text = $"excalator.exe running {loadingFrames[currentFrame]}";
+                uiText.text = $"{text} {loadingFrames[currentFrame]}";
             }
         }
     }
