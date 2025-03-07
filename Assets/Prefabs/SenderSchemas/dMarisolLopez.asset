@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
   m_Name: dMarisolLopez
   m_EditorClassIdentifier: 
-  senderEmail: 
-  senderName: 
-  profileImage: {fileID: 0}
+  senderEmail: marilo777@hmail.com
+  senderName: Marisol Lopez
+  profileImage: {fileID: -876971015, guid: a788befda5cced742981ddcf2241e0b6, type: 3}

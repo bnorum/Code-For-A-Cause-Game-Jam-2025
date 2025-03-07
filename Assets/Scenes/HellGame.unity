@@ -6551,6 +6551,7 @@ MonoBehaviour:
   clockOutScreenDarken: {fileID: 1507706587}
   clockoutEmail: {fileID: 11400000, guid: b6356a60348cc3e4d939812a566e4652, type: 2}
   isDayOver: 0
+  quadrupletsEmail: {fileID: 11400000, guid: 63bbd1a10e1851b4986de309c89a6b87, type: 2}
   currentPersonSpawned: 0
 --- !u!4 &739457595
 Transform:

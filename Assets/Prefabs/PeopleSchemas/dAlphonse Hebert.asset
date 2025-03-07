@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 629845c6a1a27604784afd53c4ec113b, type: 2}
   - {fileID: 11400000, guid: afd3f439af88b4d4b82053cee3c67867, type: 2}
   - {fileID: 11400000, guid: bd3afb43527dea146b24db04b29aa936, type: 2}
-  relatedEmailsUsed: 00010000
+  relatedEmailsUsed: 01010101
   shouldGoToHeaven: 0
   failedDailyParameters: 0
   commandment: fart

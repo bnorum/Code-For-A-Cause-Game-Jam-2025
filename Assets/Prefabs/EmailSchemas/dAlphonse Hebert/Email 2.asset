@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 2
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Alphose H Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: 478f57239cf1e5e4eaf0b7adaea2be6c, type: 2}
+  subject: LAST WEEK, TODAY
+  body: 'News of the week of March 4th, 2025:\nDISASTER IN CALIFORNIA: Crypto4Good,
+    a charity organization, is robbed of crypto-wallet worth billions in USD (and
+    trillions in Pesos).\n\nNo more news this week.'
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 52440f3fe60507846842396df6a6c87b, type: 2}

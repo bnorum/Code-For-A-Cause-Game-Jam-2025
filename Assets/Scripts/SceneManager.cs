@@ -74,6 +74,11 @@ public class SceneManager : MonoBehaviour
         }
     }
 
+    public void SkipToDay5() {
+        PersistentData.currentDay = 4;
+        LoadNewDay();
+    }
+
     public void QuitGame()
     {
         Application.Quit();

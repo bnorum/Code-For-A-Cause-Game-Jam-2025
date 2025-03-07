@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Alphose H Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: 478f57239cf1e5e4eaf0b7adaea2be6c, type: 2}
+  subject: Billionaire Playboy Dead at 14.
+  body: Billionaire Playboy Alphonse Herbert dead at 14. Sources say this was an
+    assassination which was planned following the events of March 6th.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 52440f3fe60507846842396df6a6c87b, type: 2}

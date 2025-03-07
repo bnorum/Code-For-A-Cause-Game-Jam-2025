@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Mikael R Email
-  body: Subject is Good!
+  sender: {fileID: 11400000, guid: 7261188ce9bf1bd4db60b52f61d43c65, type: 2}
+  subject: For Virgil's sake
+  body: 16 years ago, my dreams of moving to America were crushed, as the final days
+    of my work visa neared. I looked for solutions online, and came across a man
+    called Virgil. Virgil was happy to marry me free of charge, so that I could get
+    a green card. Today, I was sending my weekly text to thank him, and saw his number
+    was dead. If he's down there, I'm putting in a good word.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 33d58a5a6ff2a0b46a84c0a74f29b9bb, type: 2}

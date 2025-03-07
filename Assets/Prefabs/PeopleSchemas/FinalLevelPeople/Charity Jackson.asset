@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Charity Jackson
   m_EditorClassIdentifier: 
   personName: Charity Jackson
-  age: 55
+  age: 23
   emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Painter
+  emailDomain: '@jacksonfour.co'
+  address: 76 Soldier Terrace, FL
+  zipCode: 32901
+  occupation: Woodworker
   netWorth: 50000
   isLefty: 0
   marriageNum: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
   - {fileID: 11400000, guid: 11116a2bd9bf06642861c4e0d3974d0d, type: 2}
   - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
-  relatedEmailsUsed: 00000000
+  relatedEmailsUsed: 01010100
   shouldGoToHeaven: 0
   failedDailyParameters: 0
   commandment: fart

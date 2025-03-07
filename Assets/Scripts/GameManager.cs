@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public EmailSchema clockoutEmail;
     public bool isDayOver = false;
 
+    public EmailSchema quadrupletsEmail;
     public int currentPersonSpawned=0;
 
     //HACK: I fucked up big time and have to use these four arrays. They tell if an email has been sent yet
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
         endDayCanvas.SetActive(false);
         clockOutCanvas.SetActive(false);
         clockOutScreenDarken.color = new Color(0, 0, 0, 0);
@@ -81,6 +83,13 @@ public class GameManager : MonoBehaviour
         totalSpawns = chosenPeople.Count;
         difficultyScale = PersistentData.difficultyScale;
 
+
+        if (PersistentData.currentDay == 5) //BOSS TIME!
+        {
+            spawnInterval = 20f;
+            escalatorTravelDuration = 380f;
+            SendQuadrupletsEmail();
+        }
         // Ensure at least one spawn
         SpawnPerson();
         timeUntilNextPerson = spawnInterval;
@@ -289,6 +298,10 @@ public class GameManager : MonoBehaviour
 
     void SendClockOutEmail() {
         EmailManager.Instance.AddEmail(clockoutEmail);
+    }
+
+    void SendQuadrupletsEmail() {
+        EmailManager.Instance.AddEmail(quadrupletsEmail);
     }
 
     public System.Collections.IEnumerator EndDay() {

@@ -31,7 +31,7 @@ public class CommandmentsManager : MonoBehaviour
 
     public string DecideCommandments()
     {
-        if (PersistentData.currentDay == 5) {return "\n\n None found. Good luck ;)";}
+        if (PersistentData.currentDay == 5) {return "\n\n Faith lies about Charity, Charity lies about Hope, Justice lies about Hope, Hope lies about herself. But it's only one of them.";}
         commandmentText = "";
         List<PersonSchema> people = GameManager.Instance.chosenPeople;
         foreach (PersonSchema person in people)

@@ -18,12 +18,12 @@ MonoBehaviour:
   emailDomain: '@hmail.com'
   address: 254 Park Ave, MA
   zipCode: 01520
-  occupation: Developer
+  occupation: Programmer
   netWorth: 3000
   isLefty: 0
   marriageNum: 0
   divorceNum: 0
-  worstThing: Failed a Test
+  worstThing: Stepped on an ant hill.
   hobby: Game Jams
   hasBeenToPrison: 0
   relatedEmails:

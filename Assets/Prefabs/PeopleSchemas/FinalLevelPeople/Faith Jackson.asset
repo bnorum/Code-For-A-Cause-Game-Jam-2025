@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Faith Jackson
   m_EditorClassIdentifier: 
   personName: Faith Jackson
-  age: 55
+  age: 23
   emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Painter
+  emailDomain: '@jacksonfour.co'
+  address: 76 Soldier Terrace, FL
+  zipCode: 32901
+  occupation: Woodworker
   netWorth: 50000
   isLefty: 0
-  marriageNum: 0
+  marriageNum: 1
   divorceNum: 0
   worstThing: 
   hobby: 
