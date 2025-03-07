@@ -6095,7 +6095,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.22346154, y: 0.6576156}
+  m_Offset: {x: -0.001932025, y: 0.6576156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6105,7 +6105,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9576912, y: 0.88507664}
+  m_Size: {x: 1.5146322, y: 0.88507664}
   m_EdgeRadius: 0
 --- !u!1 &700398335
 GameObject:
@@ -18902,7 +18902,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Purgatory Dept User Manual
+
+
+    Judge '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1765ce96a6e31ac4899fd73e8313359c, type: 2}
   m_sharedMaterial: {fileID: 3520555534629746083, guid: 1765ce96a6e31ac4899fd73e8313359c, type: 2}
@@ -18929,8 +18932,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
