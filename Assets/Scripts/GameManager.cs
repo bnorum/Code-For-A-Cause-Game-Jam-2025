@@ -95,16 +95,16 @@ public class GameManager : MonoBehaviour
 
         foreach (PersonSchema  ps in chosenEmailPeople) {
             if (ps.shouldGoToHeaven) {
-                PersistentData.peopleWhoShouldBeSavedToday.Add(ps);
+                PersistentData.peopleShouldveSavedToday.Add(ps);
             } else {
-                PersistentData.peopleShouldveDamnedToday.Add(person);
+                PersistentData.peopleShouldveDamnedToday.Add(ps);
             }
         }
         foreach (PersonSchema  person in chosenParameterPeople) {
             if (person.shouldGoToHeaven) {
-                PersistentData.peopleWhoShouldBeSavedToday.Add(person);
+                PersistentData.peopleShouldveSavedToday.Add(person);
             } else {
-                PersistentData.peopleWhoShouldBeDamnedToday.Add(person);
+                PersistentData.peopleShouldveSavedToday.Add(person);
             }
         
         }
