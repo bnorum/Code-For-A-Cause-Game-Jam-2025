@@ -36,11 +36,11 @@ public class GameOverManager : MonoBehaviour
 
         yield return new WaitForSeconds(5);
         yield return new WaitForSeconds(1);
-        summaryText.text += "\n\nPeople Judged Correctly: "; //then get this number
+        summaryText.text += "\n\nPeople Judged Correctly: " + PersistentData.peopleDeterminedCorrectly; //then get this number
         textSFX.time = 0;
         textSFX.Play();
         yield return new WaitForSeconds(1);
-        summaryText.text += "\nPeople Judged Incorrectly: "; //then get this number
+        summaryText.text += "\nPeople Judged Incorrectly: " + (20 - PersistentData.peopleDeterminedCorrectly); //then get this number
         textSFX.time = 0;
         textSFX.Play();
         yield return new WaitForSeconds(1);
