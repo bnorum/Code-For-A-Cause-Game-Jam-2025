@@ -3930,50 +3930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a1fd6a2e02e604d83a49a132132f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLefty: 0
-  p1: Send all Lefties to Hell Today
-  isBillionaire: 0
-  p2: Send all Billionaires to Hell Today
-  isDivorded3PlusTimes: 0
-  p3: Send Anyone with 3+ Divorces to Hell Today
-  isMiddleClassAndNotMarried: 0
-  p4: Send Anyone who is Middle Class & Not Married to Hell Today
-  isCarpenter: 0
-  p5: Send All Carpenters to Hell Today
-  isNameBeginsWithC: 0
-  p6: Firstname that starts with the letter C? Stright to hell.
-  isTeenagerandMillionaire: 0
-  p7: Send All millionaire teenagers to hell
-  isNameBeginsWithGandIsPoor: 0
-  p8: Firstname that starts with the letter G & They are poor? Stright to hell.
-  hasBeenToPrisonOrisOlderThan75: 0
-  p9: Been to prison Or is older than 75? Straight to hell.
-  is40to49andMarried: 0
-  p10: Anyone in their 40s and they've been married before? To hell with them.
-  isGovernmentEmployee: 0
-  p11: Anyone who works for the government, straight to hell.
-  isZipCodeContains4: 0
-  p12: Anyone who's zip code or email contains a 4, drop em down.
-  isUsingYahooOrHobbyCoding: 0
-  p13: Send anyone who uses Yahoos or likes to Code to hell.
-  isNameBeginsWithVowelAndMiddleClass: 0
-  p14: If someone's name begins with a vowel, and they're middle class, send em to
-    hell
-  isRightyAndLowerClass: 0
-  p15: If someone is a Righty, and lower class, send em to hell, unless they also
-    like Woodworking
-  isDivordedAndEmailDoesntContainANumber: 0
-  p16: If Someone Has divorced, send them to hell! Unless their email handle contains
-    a number
-  isInvolvedWithCrypto: 0
-  p17: If the worst thing someome's ever done involves 'crypto', send em to hell!!!!!
-  isZipHasA2ButNotA1: 0
-  p18: If Someones zip has a 1 but not a 2 send em to hell
-  isAgeLessThan21: 0
-  p19: If Someone isn't legally allowed to drink, send em to hell
-  isTotalMarriages0BracketLower: 0
-  p20: If Someone was never married, and is in the lower class, send em to hell
-  manualText: {fileID: 1962533528}
+  commandmentText: 
 --- !u!1 &473224203
 GameObject:
   m_ObjectHideFlags: 0
@@ -6924,6 +6881,7 @@ MonoBehaviour:
   clockOutScreenDarken: {fileID: 1507706587}
   clockoutEmail: {fileID: 11400000, guid: b6356a60348cc3e4d939812a566e4652, type: 2}
   isDayOver: 0
+  quadrupletsEmail: {fileID: 0}
   currentPersonSpawned: 0
 --- !u!4 &739457595
 Transform:
@@ -14003,13 +13961,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510072882}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.06226356, w: 0.9980598}
-  m_LocalPosition: {x: 4.679, y: -3.768, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0013803842, w: 0.99999905}
+  m_LocalPosition: {x: 4.680984, y: -3.7213318, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1890317080}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.158}
 --- !u!61 &1510072884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14044,7 +14002,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.40009797, y: -0.040564507}
+  m_Offset: {x: 0.3456174, y: -0.040564507}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14054,7 +14012,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.19980407, y: 0.918871}
+  m_Size: {x: 0.43093753, y: 0.918871}
   m_EdgeRadius: 0
 --- !u!1 &1511321206
 GameObject:
