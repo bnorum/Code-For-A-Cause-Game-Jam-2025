@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Obediah A Email
-  body: Subject is Good!
+  sender: {fileID: 11400000, guid: 517cb60c35c199c42a8b6139efd8112a, type: 2}
+  subject: My Father
+  body: Obediah Abioye was a man among men. And out of all his kids, he loved me
+    the most. Got that right.
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: 71ef31179f95f034bbc275dcbb6ce2d5, type: 2}

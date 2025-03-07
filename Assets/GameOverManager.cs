@@ -53,6 +53,7 @@ public class GameOverManager : MonoBehaviour
         textSFX.Play();
         yield return new WaitForSeconds(1);
         summaryText.text += "\n\n Descision: ";
+        StartScreen.Instance.PlayMusic();
         yield return new WaitForSeconds(3);
         //based on the previous stats formulate a grade
         if (DetermineGrade() > 350) {

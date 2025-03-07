@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8734127e128c9cd41b06013fe5abf4fe, type: 2}
   - {fileID: 11400000, guid: bc89beb28637aaa4aa619efaf6b4268f, type: 2}
   - {fileID: 11400000, guid: 82d22063258d4744e80197ef0fad36ab, type: 2}
-  relatedEmailsUsed: 01000000
+  relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
   failedDailyParameters: 0
   commandment: 'I know we said it earlier, but I gotta stress: NO ADULTERY.'

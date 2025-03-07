@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 3
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: aa3f2630a9ce71c4fa1c9b2f358cc8e7, type: 2}
+  subject: PLEASE SEND HER UPPPP
+  body: IM CHARLANE PAPI'S BIGGEST FAN. AS YOU CAN SEE, MY PROFILE PIC IS HER FIRST
+    ALBUM, LAB RAT. PLEASE DON'T SEND HER TO HELL. I DON'T CARE IF SHE GOUGED HER
+    FANS, I DONT CARE IF SHES MEAN, SHE MADE PHI005L, WHICH IS LIKE MY FAVORITE SONG
+    BY THE WAY....
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: e9323b36df5079b47aea1f2a550ce747, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 4
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 890ca2312c2bdb34baf34b9e67e6510f, type: 2}
+  subject: Worry I accidentally killed customer
+  body: I'm a bat salesman, and I kinda struggle with organizing my stock. My client,
+    Zubair Chalhoub, came in last week to by one of my under-the-counter extra-large
+    bats. Unfortunately, I didn't notice and reached under those, giving him my under-under-the-counter
+    extra-large mega-poisonous bats. Whoops.
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: 7d2174c0c6ba0c649b13f2e06e83e484, type: 2}

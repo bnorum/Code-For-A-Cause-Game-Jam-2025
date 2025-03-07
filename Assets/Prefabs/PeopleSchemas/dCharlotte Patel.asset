@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: dCharlotte Patel
+  m_EditorClassIdentifier: 
+  personName: Charlotte Patel
+  age: 24
+  emailHandle: charlanePapi
+  emailDomain: '@yoohoo.com'
+  address: 4 Main Street, DC
+  zipCode: 499577
+  occupation: Musical Artist
+  netWorth: 1
+  isLefty: 0
+  marriageNum: 1
+  divorceNum: 0
+  worstThing: Price Gouging
+  hobby: Sound Design
+  hasBeenToPrison: 1
+  relatedEmails:
+  - {fileID: 11400000, guid: 7490c56bcb4476b49b6fd96de2e8833c, type: 2}
+  - {fileID: 11400000, guid: bd30464dcc0e9594a93cadd32660eba6, type: 2}
+  - {fileID: 11400000, guid: dc5d9de499391944f9cc290beb27c44f, type: 2}
+  - {fileID: 11400000, guid: 58e91e3b919e34541b938f8c5ef5d802, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0
+  failedDailyParameters: 0
+  commandment: The devil (your boss) has a special place for all price gougers. Oddly,
+    God has a place for them too.

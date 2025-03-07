@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
+  m_Name: dDevon Thyed
+  m_EditorClassIdentifier: 
+  personName: Devon Thyed
+  age: 23
+  emailHandle: devont667
+  emailDomain: '@hmail.com'
+  address: 135 Forest Drive, NY
+  zipCode: 11203
+  occupation: Programmer
+  netWorth: 3001
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  worstThing: Wore those damn jeans...
+  hobby: '"Fashion"'
+  hasBeenToPrison: 0
+  relatedEmails:
+  - {fileID: 11400000, guid: 54fe9045ef74908409bfcf77fada497a, type: 2}
+  - {fileID: 11400000, guid: 9d8a2ea6b4042a14ca43b3194e323930, type: 2}
+  - {fileID: 11400000, guid: 5ce8b2f817f3ada44bd39d83555e0db6, type: 2}
+  - {fileID: 11400000, guid: c547c9e6ed9aab84992cea7d3733317f, type: 2}
+  relatedEmailsUsed: 00000000
+  shouldGoToHeaven: 0
+  failedDailyParameters: 0
+  commandment: The devil wears prada, fashion sins mean straight to hell.

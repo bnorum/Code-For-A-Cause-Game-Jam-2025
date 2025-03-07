@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Obediah Abioye
   m_EditorClassIdentifier: 
   personName: Obediah Abioye
-  age: 14
-  emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: Teenager
-  netWorth: 0
-  isLefty: 0
-  marriageNum: 0
-  divorceNum: 0
-  worstThing: 
-  hobby: 
+  age: 74
+  emailHandle: obeabi22
+  emailDomain: '@hmail.com'
+  address: 24 Nkonkwo Pass
+  zipCode: 15555
+  occupation: Retired
+  netWorth: 1000000
+  isLefty: 1
+  marriageNum: 1
+  divorceNum: 1
+  worstThing: Has a favorite grandchild
+  hobby: Cash Handling
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 8bc2bee0c03c2af4e8ca8a5e6e44880f, type: 2}

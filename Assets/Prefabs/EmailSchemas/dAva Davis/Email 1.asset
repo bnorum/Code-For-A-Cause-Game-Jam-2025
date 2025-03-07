@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 1
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 3e327e6ed02eb2d479e599fee5431d41, type: 2}
+  subject: Regarding the death of Ava Davis
+  body: Our competitor, Zenith, lost an employee today. We picked up some strangeness
+    on our cameras conviently place near their windows. First, our team saw a group
+    of employees carrying a casket out the door. Next, they closed the feed because
+    they were really creeped out. We can't help but think that the circumstances
+    of her death are unusual.
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: d78f1f8f68b7bb342b57e81a4c128192, type: 2}

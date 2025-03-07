@@ -16,15 +16,15 @@ MonoBehaviour:
   age: 102
   emailHandle: virgilmikael
   emailDomain: '@hmail.com'
-  address: 20 Shadybrook Road
+  address: 20 Shadybrook Road, CA
   zipCode: 11553
   occupation: Unemployed
   netWorth: 40000
   isLefty: 1
   marriageNum: 24
   divorceNum: 24
-  worstThing: Has never truly loved.
-  hobby: Fishing
+  worstThing: Has an alter ego.
+  hobby: Helping People
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: c41fe58f6ac317344a6cf6e8285b8e62, type: 2}

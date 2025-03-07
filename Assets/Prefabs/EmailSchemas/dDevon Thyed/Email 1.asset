@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 1
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
+  subject: Inquiry
+  body: Hey, While I'm waiting in your computer, I've been looking around and found
+    2 things. First, this handy email terminal. Second, my bio. Who the hell wrote
+    that worst thing I did was "wear those damn jeans"? Those jeans are part of me,
+    my beautiful, beautiful white jeans. Anyway, hope I'm going to Heaven!
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: 06b0ace67a49d4a4290354d490434048, type: 2}

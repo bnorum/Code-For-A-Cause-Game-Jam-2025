@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 2
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: 1dba270e9dd3e7e44bd9312b8a6b016a, type: 2}
+  subject: Our Friendship
+  body: It's been a long time since I met Ethan\n We talked about God, he called
+    me heathen\n Now I don't steal, I don't lie, I don't cheat\n I am oh-so glad
+    Ethan made my life sweet.
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: a2d2c7271ad1f1d4ca200c2f15202b56, type: 2}

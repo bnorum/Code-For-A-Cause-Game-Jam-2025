@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
+  m_Name: Email 3
+  m_EditorClassIdentifier: 
+  sender: {fileID: 11400000, guid: e6da896e56f27a14dbe3e2a68ca71cce, type: 2}
+  subject: 
+  body: Hi! My friend Shiv told me to reach out. He asked if I could explain Cricket
+    to help you understand the case of Zubair. Basically, it's completely unrealistic
+    for a batter to have over a 0.5 batting average. Even the best in the world have
+    less than that. In a rec league, it's very hard to score a lot of runs, keep
+    a lookout if a player has over a couple hundred. It's easy to cheat in Cricket,
+    you just bring a bigger bat. Guy W. E. Cricket, out.
+  attachment: {fileID: 0}
+  relatedPerson: {fileID: 11400000, guid: 7d2174c0c6ba0c649b13f2e06e83e484, type: 2}
