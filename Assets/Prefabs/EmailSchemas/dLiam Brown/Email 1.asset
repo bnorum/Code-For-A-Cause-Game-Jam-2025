@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
   m_Name: Email 1
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Liam Brown Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: a519be63f69f48b428508470cb4238d6, type: 2}
+  subject: Looking for Liam
+  body: Liam Brown and I had a fantastic time together last night at a party. After
+    a passionate kiss, we parted ways, and I saw him fall in a manhole cover. Just
+    emailing Hell, to see if he's not there!
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}

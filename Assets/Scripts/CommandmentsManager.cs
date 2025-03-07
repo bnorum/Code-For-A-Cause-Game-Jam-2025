@@ -1,6 +1,54 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using TMPro;
+
+
+public class CommandmentsManager : MonoBehaviour
+{
+    public static CommandmentsManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
+    public string commandmentText;
+
+    void Start()
+    {
+        commandmentText = "";
+        DecideCommandments();
+    }
+
+
+    public string DecideCommandments()
+    {
+        if (PersistentData.currentDay == 5) {return "\n\n None found. Good luck ;)";}
+        commandmentText = "";
+        List<PersonSchema> people = GameManager.Instance.chosenPeople;
+        foreach (PersonSchema person in people)
+        {
+            if (UnityEngine.Random.Range(0,2) == 0) {
+                commandmentText += "\n" + person.commandment;
+            }
+        }
+        if (commandmentText == "") {
+            commandmentText += "\n" + GameManager.Instance.chosenPeople[0].commandment;
+        }
+        return commandmentText;
+    }
+}
+
+
+/*
 public class JudgementParameters : MonoBehaviour
 {
     public bool isLefty;
@@ -518,3 +566,4 @@ public class JudgementParameters : MonoBehaviour
         }
     }
 }
+*/

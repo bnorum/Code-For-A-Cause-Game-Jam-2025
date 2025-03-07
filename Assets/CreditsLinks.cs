@@ -20,4 +20,8 @@ public class CreditsLinks : MonoBehaviour
     public void CalamityBandCamp() {
         Application.OpenURL("https://calamity-rhapsody.bandcamp.com/album/dolavendi-mirror-sky");
     }
+
+    public void JessFloresArtStation() {
+        Application.OpenURL("https://www.artstation.com/jessflores606");
+    }
 }

@@ -10,15 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Lucas Xin
+  m_Name: dLucas Xin
   m_EditorClassIdentifier: 
   personName: Lucas Xin
   age: 33
+  emailHandle: xinvasion76
+  emailDomain: '@hmail.com'
+  address: 755 Guangzhou Terrace, CN
+  zipCode: 710000
   occupation: Police Officer
   netWorth: 200000
   isLefty: 0
-  marriageNum: 1
+  marriageNum: 2
   divorceNum: 1
+  worstThing: Tripped a bully in high school
+  hobby: Hitting snooze
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 9b4ed8db923d81b4e90fd33c2ef01785, type: 2}
@@ -27,4 +33,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3fc07fdd87c12f4da3ffd1c5f0f6081, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 1
-  failedDailyParameters: 1
+  failedDailyParameters: 0
+  commandment: Heaven is for lovers, Hell is for haters.

@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Devon Theid
   age: 44
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: Contractor
   netWorth: 0
   isLefty: 0
   marriageNum: 1
   divorceNum: 0
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: 54fe9045ef74908409bfcf77fada497a, type: 2}
@@ -28,3 +34,4 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
   failedDailyParameters: 0
+  commandment: fart

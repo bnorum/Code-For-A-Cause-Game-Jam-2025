@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Justice Jackson
   age: 55
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: Painter
   netWorth: 50000
+  isLefty: 0
+  marriageNum: 0
+  divorceNum: 0
+  worstThing: 
+  hobby: 
+  hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: ef331b093ad56d34b8afcccbb05e5243, type: 2}
   - {fileID: 11400000, guid: 522966f0cdda8aa4bb5626d1ffec9f9f, type: 2}
@@ -23,3 +33,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af61bcf3e25b3784d8bd46343d187c12, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
+  failedDailyParameters: 0
+  commandment: fart

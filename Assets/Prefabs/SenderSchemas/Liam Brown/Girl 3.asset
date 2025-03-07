@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9283990a8f98846b50a360dd2f8164, type: 3}
-  m_Name: dSampleSender
+  m_Name: Girl 3
   m_EditorClassIdentifier: 
-  senderEmail: samplesender@samplesender.com
-  senderName: Sample Sender
+  senderEmail: ymizuki24@mailers.jp
+  senderName: Yamato Mizuki
   profileImage: {fileID: 8866310442046625097, guid: 180faf0f2dc341f40bee54c8482c6623, type: 3}

@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Ethan Martinez
   age: 21
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: College Student
   netWorth: 0
   isLefty: 1
   marriageNum: 0
   divorceNum: 0
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: ea342f24ed9efa949b1b926c8895b422, type: 2}
@@ -28,3 +34,4 @@ MonoBehaviour:
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
   failedDailyParameters: 0
+  commandment: fart

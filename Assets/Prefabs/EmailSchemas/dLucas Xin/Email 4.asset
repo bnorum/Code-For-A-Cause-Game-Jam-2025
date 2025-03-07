@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
-  m_Name: Email 2
+  m_Name: Email 4
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Lucas Xin Email
-  body: Subject is Good!
-  attachment: {fileID: 0}
+  sender: {fileID: 11400000, guid: ec0654f39f07f1f4abffb21a5553ea2c, type: 2}
+  subject: Final Message
+  body: SCHEDULED EMAIL:\n\nThis is it! A few more things I miss. My mom. My dog.
+    My Grandfather. All in heaven, probably. Except maybe my dog, she liked to pee
+    on the carpet.
+  attachment: {fileID: 9109235424437194120, guid: 20659d8c573375347b493b7ad1b48ef3, type: 3}
   relatedPerson: {fileID: 11400000, guid: d42dc2b8828b8bb4fa1b3c0fc165d675, type: 2}

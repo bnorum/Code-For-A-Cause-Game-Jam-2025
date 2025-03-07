@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Ava Davis
   age: 20
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
   occupation: Carpenter
   netWorth: 2
   isLefty: 1
   marriageNum: 0
   divorceNum: 0
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails:
   - {fileID: 11400000, guid: f31db3a62dc4afb4dbf066515a383456, type: 2}
@@ -27,4 +33,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 482dfc13d7f590e4a807bc342a7b7878, type: 2}
   relatedEmailsUsed: 00000000
   shouldGoToHeaven: 0
-  failedDailyParameters: 1
+  failedDailyParameters: 0
+  commandment: fart

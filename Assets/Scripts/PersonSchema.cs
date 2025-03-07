@@ -28,4 +28,6 @@ public class PersonSchema : ScriptableObject
     public bool shouldGoToHeaven;
     public bool failedDailyParameters;
 
+    public string commandment;
+
 }

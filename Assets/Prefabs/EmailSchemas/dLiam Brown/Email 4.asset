@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 364e40367e6451d46af3bea48b1097cf, type: 3}
-  m_Name: Email 3
+  m_Name: Email 4
   m_EditorClassIdentifier: 
-  sender: {fileID: 11400000, guid: bef1d20a292f9c04fb63be18363131ac, type: 2}
-  subject: Liam Brown Email
-  body: Subject is Evil
+  sender: {fileID: 11400000, guid: 13d5efd13ff1dc143af6a43ebe4f65d1, type: 2}
+  subject: Missing my MAN
+  body: The love of my life, LIAM BROWN, hasn't texted me in days. I'm worried about
+    him. He said we'd see each other again soon...
   attachment: {fileID: 0}
   relatedPerson: {fileID: 11400000, guid: d82f191392e40d348849f2310906f9e1, type: 2}
