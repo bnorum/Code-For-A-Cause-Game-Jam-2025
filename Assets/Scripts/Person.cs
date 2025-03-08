@@ -26,6 +26,9 @@ public class Person : MonoBehaviour
     public GameObject childStart;
     public GameObject endPointGameRef;
     public GameObject childEnd;
+
+    public GameObject escalatorPL;
+    public GameObject EscalatorTab;
     
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
@@ -121,34 +124,18 @@ public class Person : MonoBehaviour
     private void MoveToPosition(float duration)
     {
         float t = elapsedTime / duration;
+        if(t<=1.0f)
+        {
         transform.position = Vector3.Lerp(childStart.transform.position, childEnd.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;
         transform.position = newPosition;
-
-        if (t >= 1.0f)
+        }
+        else
         {
-            if (transform.position == endPointGameRef.transform.position)
-            {
-
-                if (personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
-                PersistentData.peopleSaved.Add(personSchema);
-                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
-                Destroy(gameObject);
-                Destroy(startPointGameRef);
-                Destroy(endPointGameRef);
-
-
-            }
-            else
-            {
-                if (!personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
-                PersistentData.peopleDamned.Add(personSchema);
-                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
-                Destroy(gameObject);
-                Destroy(startPointGameRef);
-                Destroy(endPointGameRef);
-            }
+            Vector3 newPosition = childEnd.transform.position;
+            newPosition.z = transform.parent.position.z;
+            transform.position = newPosition;
         }
     }
 
@@ -293,5 +280,11 @@ public class Person : MonoBehaviour
         float distanceFromLastFlingPoint = Vector2.Distance(transform.position, latestFlingPoint);
         if(wasDunked)
             FindFirstObjectByType<garbageBin>().DisplayStat(lastLinearVelocity, lastAngularVelocity, distanceFromLastFlingPoint, isDragging);
+    }
+
+    public void CheckIfColliderSouldBeOff()
+    {
+        if(transform.parent.gameObject == escalatorPL && EscalatorTab.activeSelf)
+
     }
 }
