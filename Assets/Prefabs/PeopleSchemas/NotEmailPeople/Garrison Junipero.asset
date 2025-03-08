@@ -16,7 +16,7 @@ MonoBehaviour:
   personName: Garrison Junipero
   age: 12
   emailHandle: garyJpersonal
-  emailDomain: '@Hmail.com'
+  emailDomain: '@hmail.com'
   address: 90 Brentwood Lane
   zipCode: 32230
   occupation: Student

@@ -44,16 +44,16 @@ public class CommandmentsManager : MonoBehaviour
 
 
     public bool isLefty;
-    public string p1 = "Anyone who is a Lefty";
+    public string p1 = "All Lefties, unless their address contains a 5,6, or 7";
     public bool P1(PersonSchema person)
     {
-        if(person.isLefty)
+        if(person.isLefty && (!person.address.Contains("5") || !person.address.Contains("6") || !person.address.Contains("7")))
             return true;
         else
             return false;
     }
     public bool isBillionaire;
-    public string p2 = "Send all Billionaires to Hell Today";
+    public string p2 = "Anyone in the 1%.";
     public bool P2(PersonSchema person)
     {
         if(person.netWorth>=4)
@@ -80,25 +80,25 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isCarpenter;
-    public string p5 = "Send All Carpenters to Hell Today";
+    public string p5 = "People who like Video Games or who have cheated";
     public bool P5(PersonSchema person)
     {
-        if(person.occupation == "Carpenter")
+        if(person.hobby == "Video Games" || person.worstThing.Contains("Cheat"))
             return true;
         else
             return false;
     }
     public bool isNameBeginsWithC;
-    public string p6 = "Firstname that starts with the letter C? Stright to hell.";
+    public string p6 = "Anyone who's First name starts with C, or M";
     public bool P6(PersonSchema person)
     {
-        if (person.name.StartsWith("C"))
+        if (person.name.StartsWith("C") || person.name.StartsWith("M") )
             return true;
         else
             return false;
     }
     public bool isTeenagerandMillionaire;
-    public string p7 = "Send All millionaire teenagers to hell";
+    public string p7 = "All Upper-class Teenagers";
     public bool P7(PersonSchema person)
     {
         if (person.netWorth>=3 && person.age>13 && person.age<20)
@@ -107,10 +107,10 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isNameBeginsWithGandIsPoor;
-    public string p8 = "Firstname that starts with the letter G & They are poor? Stright to hell.";
+    public string p8 = "All Lower & Middle-class, if their name begins with G";
     public bool P8(PersonSchema person)
     {
-        if (person.name.StartsWith("G") && person.netWorth==0)
+        if (person.name.StartsWith("G") && (person.netWorth==0 ||person.netWorth==1) )
             return true;
         else
             return false;
@@ -125,7 +125,7 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool is40to49andMarried;
-    public string p10 = "Anyone in their 40s and they've been married before? To hell with them.";
+    public string p10 = "Anyone in their 40s and they've been married before?";
     public bool P10(PersonSchema person)
     {
         if (person.age >=40 && person.age<50 && person.marriageNum >0)
@@ -134,7 +134,7 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isGovernmentEmployee;
-    public string p11 ="Anyone who works for the government, straight to hell.";
+    public string p11 ="Anyone who works for the government";
     public bool P11(PersonSchema person)
     {
         if(person.emailDomain.Contains("gov"))
@@ -143,7 +143,7 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isZipCodeContains4;
-    public string p12 ="Anyone who's zip code or email contains a 4, drop em down.";
+    public string p12 ="Anyone who's zip code or email contains a 4";
     public bool P12(PersonSchema person)
     {
         if (person.zipCode.Contains("4") || person.emailHandle.Contains("4") || person.emailDomain.Contains("4"))
@@ -152,16 +152,16 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isUsingYahooOrHobbyCoding;
-    public string p13 ="Send anyone who uses Yahoos or likes to Code to hell.";
+    public string p13 ="Anyone who uses Yoohoo and has been married.";
     public bool P13(PersonSchema person)
     {
-        if (person.zipCode.Contains("4") || person.emailHandle.Contains("4") || person.emailDomain.Contains("4"))
+        if (person.emailDomain.Contains("yoohoo") || person.marriageNum >0)
             return true;
         else
             return false;
     }
     public bool isNameBeginsWithVowelAndMiddleClass;
-    public string p14 = "If someone's name begins with a vowel, and they're middle class, send em to hell";
+    public string p14 = "Anyone who's name starts with a vowel, and they're middle class.";
     public bool P14(PersonSchema person)
     {
         if ((person.name.StartsWith("A") || person.name.StartsWith("E") ||  person.name.StartsWith("I")||person.name.StartsWith("O")|| person.name.StartsWith("U") || person.name.StartsWith("Y")) && person.netWorth == 2)
@@ -170,62 +170,54 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isRightyAndLowerClass;
-    public string p15 = "If someone is a Righty, and lower class, send em to hell, unless they also like Woodworking";
+    public string p15 = "People who are Righties and lower class";
     public bool P15(PersonSchema person)
     {
         if (person.netWorth==0 && !person.isLefty)
-        {
-            if(person.hobby == "Woodworking")
-                return false;
-            else
-                return true;
-        }
+            return true;
         else
             return false;
     }
     public bool isDivordedAndEmailDoesntContainANumber;
-    public string p16 = "If Someone Has divorced, send them to hell! Unless their email handle contains a number";
+    public string p16 = "If Someone Has divorced, unless their email handle contains a number";
     public bool P16(PersonSchema person)
         {
-            if (person.divorceNum > 0)
-            {
-                if(person.emailHandle.Contains("1") || person.emailHandle.Contains("2") || person.emailHandle.Contains("3") || person.emailHandle.Contains("4") || person.emailHandle.Contains("5") || person.emailHandle.Contains("6") ||  person.emailHandle.Contains("7") || person.emailHandle.Contains("8") || person.emailHandle.Contains("9") || person.emailHandle.Contains("0"))
-                    return false;
-                else
-                    return true;
+            if (person.divorceNum > 0 && (person.emailHandle.Contains("1") || person.emailHandle.Contains("2") || person.emailHandle.Contains("3") || person.emailHandle.Contains("4") || person.emailHandle.Contains("5") || person.emailHandle.Contains("6") ||  person.emailHandle.Contains("7") || person.emailHandle.Contains("8") || person.emailHandle.Contains("9") || person.emailHandle.Contains("0")))
+            {   
+                return true;
             }
             else
                 return false;
         }
     public bool isInvolvedWithCrypto;
-    public string p17 = "If the worst thing someome's ever done involves 'crypto', send em to hell!!!!!";
+    public string p17 = "If someone lives on a 'Lane', or is a Married Student";
     public bool P17(PersonSchema person)
         {
-            if (person.worstThing.Contains("crypto"))
+            if (person.address.Contains("Lane") || person.occupation.Contains("Student") && person.marriageNum>0)
                 return true;
             else
                 return false;
         }
     public bool isZipHasA2ButNotA1;
-    public string p18 = "If Someones zip has a 1 but not a 2 send em to hell";
+    public string p18 = "If Someone's zip does not contain a 1, 2, 3, 5, or 8";
     public bool P18(PersonSchema person)
         {
-            if (person.zipCode.Contains("1") && !person.zipCode.Contains("2"))
+            if (!person.zipCode.Contains("1") && !person.zipCode.Contains("2")&& !person.zipCode.Contains("3")&& !person.zipCode.Contains("5")&& !person.zipCode.Contains("8"))
                 return true;
             else
                 return false;
         }
     public bool isAgeLessThan21;
-    public string p19 = "If Someone isn't legally allowed to drink, send em to hell";
+    public string p19 = "Anyone who isn't legally allowed to drink and uses Hmail,";
     public bool P19(PersonSchema person)
         {
-            if (person.age <21)
+            if (person.age <21 && person.emailDomain.Contains("hmail"))
                 return true;
             else
                 return false;
         }
     public bool isTotalMarriages0BracketLower;
-    public string p20 = "If Someone was never married, and is in the lower class, send em to hell";
+    public string p20 = "All in the lower class who are yet to marry";
     public bool P20(PersonSchema person)
         {
             if (person.marriageNum == 0 && person.netWorth==0)
@@ -265,8 +257,8 @@ public class CommandmentsManager : MonoBehaviour
         isMiddleClassAndNotMarried = true;
         PersistentData.allParameters.Remove(p4);
 
-        isNameBeginsWithGandIsPoor = true;
-        PersistentData.allParameters.Remove(p8);
+        isDivordedAndEmailDoesntContainANumber = true;
+        PersistentData.allParameters.Remove(p16);
 
         isZipCodeContains4 = true;
         PersistentData.allParameters.Remove(p12);

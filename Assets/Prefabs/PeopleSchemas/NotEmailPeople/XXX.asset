@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: Beatrice Vogel
+  m_Name: XXX
   m_EditorClassIdentifier: 
   isEmailPerson: 0
-  personName: Beatrice Vogel
-  age: 30
-  emailHandle: beautifulbeatrice39
-  emailDomain: '@cfc.gov'
-  address: 74 West Elm Lane
-  zipCode: 22046
-  occupation: Secretary
+  personName: 
+  age: 0
+  emailHandle: 
+  emailDomain: 
+  address: 
+  zipCode: 
+  occupation: 
   netWorth: 0
-  isLefty: 1
+  isLefty: 0
   marriageNum: 0
   divorceNum: 0
-  worstThing: Document Forgery
-  hobby: Laminating documents
+  worstThing: 
+  hobby: 
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 
-  shouldGoToHeaven: 1
+  shouldGoToHeaven: 0
   failedDailyParameters: 0
   commandment: 

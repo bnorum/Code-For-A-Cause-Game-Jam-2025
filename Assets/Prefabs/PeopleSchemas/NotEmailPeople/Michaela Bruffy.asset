@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEmailPerson: 0
   personName: Michaela Bruffy
-  age: 45
-  emailHandle: rPaskel546
-  emailDomain: '@Hmail.com'
-  address: 164 Pimrose Blvd
-  zipCode: 66324
-  occupation: Pediatrist
-  netWorth: 2
+  age: 66
+  emailHandle: BruffyAutoparts
+  emailDomain: '@Bruffy.com'
+  address: 2 Bruffy Lane
+  zipCode: 85342
+  occupation: CEO
+  netWorth: 4
   isLefty: 0
   marriageNum: 2
-  divorceNum: 1
+  divorceNum: 2
   worstThing: Committed Adultery
   hobby: Custom Nails
   hasBeenToPrison: 0

@@ -74,7 +74,7 @@ public class SearchManager : MonoBehaviour
                 netWorthField.text = "Wealth Bracket: Upper Class";
                 break;
                 case 4:
-                netWorthField.text = "Wealth Bracket: Billionaire";
+                netWorthField.text = "Wealth Bracket: 1%";
                 break;
                 default:
                 netWorthField.text = "Wealth Bracket: Unknown";
