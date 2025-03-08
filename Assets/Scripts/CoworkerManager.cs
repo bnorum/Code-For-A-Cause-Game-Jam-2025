@@ -83,6 +83,10 @@ public class CoworkerManager : MonoBehaviour
             float step = speed * Time.deltaTime;
             coworkerHolder.transform.position = Vector3.MoveTowards(coworkerHolder.transform.position, targetPosition, step);
 
+            float sinWave = Mathf.Sin(Time.time * speed) * 0.1f;
+            coworkerHolder.transform.position = new Vector3(coworkerHolder.transform.position.x, coworkerHolder.transform.position.y + sinWave/80, coworkerHolder.transform.position.z);
+            coworkerArms.transform.position = new Vector3(coworkerArms.transform.position.x, coworkerArms.transform.position.y + sinWave/80, coworkerArms.transform.position.z);
+
             if (Vector3.Distance(coworkerHolder.transform.position, targetPosition) < 0.001f) {
                 isMoving = false;
                 if (coworkers[coworkerIndex].armsImage != null) {
@@ -102,6 +106,9 @@ public class CoworkerManager : MonoBehaviour
             float speed = 2f;
             float step = speed * Time.deltaTime;
             coworkerHolder.transform.position = Vector3.MoveTowards(coworkerHolder.transform.position, targetPosition, step);
+            float sinWave = Mathf.Sin(Time.time * speed) * 0.1f;
+            coworkerHolder.transform.position = new Vector3(coworkerHolder.transform.position.x, coworkerHolder.transform.position.y + sinWave/80, coworkerHolder.transform.position.z);
+            coworkerArms.transform.position = new Vector3(coworkerArms.transform.position.x, coworkerArms.transform.position.y + sinWave/80, coworkerArms.transform.position.z);
 
             if (Vector3.Distance(coworkerHolder.transform.position, targetPosition) < 0.001f) {
                 isActive = false;
