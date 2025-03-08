@@ -22,14 +22,9 @@ public class Person : MonoBehaviour
     private float durationReference;
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
+    public GameObject child;
     public GameObject startPointGameRef;
-    public GameObject childStart;
     public GameObject endPointGameRef;
-    public GameObject childEnd;
-
-    private GameObject escalatorPL;
-    private GameObject EscalatorTab;
-    
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
     public GameObject cursorPoint;
@@ -47,15 +42,13 @@ public class Person : MonoBehaviour
     {
         this.personSchema = personSchema;
         boundsCollider = collider;
-        startPointGameRef = Instantiate(childStart, GameManager.Instance.gameObject.transform);
-        endPointGameRef = Instantiate(childEnd, GameManager.Instance.gameObject.transform);
+        startPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
+        endPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
         startPointGameRef.transform.position = startPoint.transform.position;
         endPointGameRef.transform.position = endPoint.transform.position;
         // nameTagObject.SetActive(false);
         // nameTagDefaultLocation = nameTagObject.transform;
         OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
-        escalatorPL = FindFirstObjectByType<physicalPersonHolder>().gameObject;
-        EscalatorTab = FindFirstObjectByType<escalatorScreenManager>().gameObject;
     }
 
     private void Awake()
@@ -70,9 +63,6 @@ public class Person : MonoBehaviour
 
     private void Update()
     {
-        CheckIfColliderSouldBeOff();
-        childStart.transform.position = startPointGameRef.transform.position;
-        childEnd.transform.position = endPointGameRef.transform.position;
         if (Input.GetMouseButtonDown(0))
         {
             TryStartDragging();
@@ -127,18 +117,36 @@ public class Person : MonoBehaviour
     private void MoveToPosition(float duration)
     {
         float t = elapsedTime / duration;
-        if(t<=1.0f)
-        {
-        transform.position = Vector3.Lerp(childStart.transform.position, childEnd.transform.position, t);
+        transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;
         transform.position = newPosition;
-        }
-        else
+
+        if (t >= 1.0f)
         {
-            Vector3 newPosition = childEnd.transform.position;
-            newPosition.z = transform.parent.position.z;
-            transform.position = newPosition;
+            if (transform.position == endPointGameRef.transform.position)
+            {
+
+                if (personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
+                PersistentData.peopleSaved.Add(personSchema);
+                PersistentData.peopleSavedToday.Add(personSchema);
+                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
+                Destroy(gameObject);
+                Destroy(startPointGameRef);
+                Destroy(endPointGameRef);
+
+
+            }
+            else
+            {
+                if (!personSchema.shouldGoToHeaven) PersistentData.peopleDeterminedCorrectly++;
+                PersistentData.peopleDamned.Add(personSchema);
+                PersistentData.peopleDamnedToday.Add(personSchema);
+                OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
+                Destroy(gameObject);
+                Destroy(startPointGameRef);
+                Destroy(endPointGameRef);
+            }
         }
     }
 
@@ -283,18 +291,5 @@ public class Person : MonoBehaviour
         float distanceFromLastFlingPoint = Vector2.Distance(transform.position, latestFlingPoint);
         if(wasDunked)
             FindFirstObjectByType<garbageBin>().DisplayStat(lastLinearVelocity, lastAngularVelocity, distanceFromLastFlingPoint, isDragging);
-    }
-
-    public void CheckIfColliderSouldBeOff()
-    {
-        if(transform.parent.gameObject == escalatorPL && EscalatorTab.activeSelf)
-        {
-            personCollider.isTrigger = true;
-        }
-        else
-        {
-            personCollider.isTrigger = false;          
-        }
-
     }
 }

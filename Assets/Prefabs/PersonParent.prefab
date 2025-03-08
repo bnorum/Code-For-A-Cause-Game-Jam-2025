@@ -371,12 +371,9 @@ MonoBehaviour:
   endGravity: 10
   personCollider: {fileID: 7929187778803082458}
   isBeingTransported: 0
+  child: {fileID: 4923007510211763043}
   startPointGameRef: {fileID: 0}
-  childStart: {fileID: 4923007510211763043}
   endPointGameRef: {fileID: 0}
-  childEnd: {fileID: 5561433017965045336}
-  escalatorPL: {fileID: 2507661675531489346, guid: 309652d53a6d85f4caf446304e7f1b7b, type: 3}
-  EscalatorTab: {fileID: 1022911876240101463, guid: 211ad8a4bce68fb42871dbfccd9af381, type: 3}
   isMicrowaving: 0
   hasBeenMicrowaved: 0
   cursorPoint: {fileID: 3809505968826213225}
