@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 15730ec8c30961b448c763ad28ed0798
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3619186138636159684
+    second: headcrab_body_0
+  - first:
+      213: -4445643998147059387
+    second: headcrab_body_1
+  - first:
+      213: -4862261723281869192
+    second: headcrab_body_2
+  - first:
+      213: 2558421303711165415
+    second: headcrab_body_3
+  - first:
+      213: -8908231868063193485
+    second: headcrab_body_4
+  - first:
+      213: 1360179261871167718
+    second: headcrab_body_5
+  - first:
+      213: 4132675756346812133
+    second: headcrab_body_6
+  - first:
+      213: -1729088003698030260
+    second: headcrab_body_7
+  - first:
+      213: 5371880140995305887
+    second: headcrab_body_8
+  - first:
+      213: 4760053779499368442
+    second: headcrab_body_9
+  - first:
+      213: 2911044455547025577
+    second: headcrab_body_10
+  - first:
+      213: 8844957679250165423
+    second: headcrab_body_11
+  - first:
+      213: 1803503376634993125
+    second: headcrab_body_12
+  - first:
+      213: -8049387777729452655
+    second: headcrab_body_13
+  - first:
+      213: 5149323437199983587
+    second: headcrab_body_14
+  - first:
+      213: -5193705891760497764
+    second: headcrab_body_15
+  - first:
+      213: -5518097054203162805
+    second: headcrab_body_16
+  - first:
+      213: 700177598191129835
+    second: headcrab_body_17
+  - first:
+      213: 3304844597021959425
+    second: headcrab_body_18
+  - first:
+      213: -200905128755429074
+    second: headcrab_body_19
+  - first:
+      213: 5454538962783389930
+    second: headcrab_body_20
+  - first:
+      213: -6647329194913878049
+    second: headcrab_body_21
+  - first:
+      213: 2300702570609609217
+    second: headcrab_body_22
+  - first:
+      213: 2128504840289482562
+    second: headcrab_body_23
+  - first:
+      213: -3684315390613383471
+    second: headcrab_body_24
+  - first:
+      213: 7149553373024991943
+    second: headcrab_body_25
+  - first:
+      213: 4117544845055750781
+    second: headcrab_body_26
+  - first:
+      213: 6166570236555305576
+    second: headcrab_body_27
+  - first:
+      213: 6389776264702137754
+    second: headcrab_body_28
+  - first:
+      213: 2934933941895469288
+    second: headcrab_body_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.1661608}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: headcrab_body_0
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 574
+        width: 1384
+        height: 1364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca0d692e9ee93230800000000000000
+      internalID: 3619186138636159684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_1
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1921
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541e8947656ed42c0800000000000000
+      internalID: -4445643998147059387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_2
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1924
+        width: 61
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8763eca59b6c58cb0800000000000000
+      internalID: -4862261723281869192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_3
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1918
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebee71ee96518320800000000000000
+      internalID: 2558421303711165415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_4
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1918
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3766747505a9f5480800000000000000
+      internalID: -8908231868063193485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_5
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1917
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e81fa605d350e210800000000000000
+      internalID: 1360179261871167718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_6
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1922
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6abec54b63a5930800000000000000
+      internalID: 4132675756346812133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_7
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1917
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49803a2f9b0108e0800000000000000
+      internalID: -1729088003698030260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_8
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 581
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91200cd680cc8a40800000000000000
+      internalID: 5371880140995305887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 580
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affb0de41bb1f0240800000000000000
+      internalID: 4760053779499368442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_10
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 587
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8304a428b166820800000000000000
+      internalID: 2911044455547025577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_11
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 197
+        width: 904
+        height: 1057
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faec11d852a9fba70800000000000000
+      internalID: 8844957679250165423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_12
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 576
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9db8304c4570910800000000000000
+      internalID: 1803503376634993125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_13
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 264
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195a011b674da4090800000000000000
+      internalID: -8049387777729452655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_14
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 260
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e306e34262167740800000000000000
+      internalID: 5149323437199983587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_15
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 259
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b13c542004ce7b0800000000000000
+      internalID: -5193705891760497764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_16
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 253
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f471027f7cb63b0800000000000000
+      internalID: -5518097054203162805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_17
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 262
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be45edbd0d787b900800000000000000
+      internalID: 700177598191129835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_18
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 259
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105ec53b6aa2ddd20800000000000000
+      internalID: 3304844597021959425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_19
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 264
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e218afe89dd363df0800000000000000
+      internalID: -200905128755429074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_20
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 252
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae84b3a894a62bb40800000000000000
+      internalID: 5454538962783389930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_21
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 258
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf2318f051ffb3a0800000000000000
+      internalID: -6647329194913878049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_22
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 256
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a830f5cccbdef10800000000000000
+      internalID: 2300702570609609217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_23
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 249
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247772cffd7f98d10800000000000000
+      internalID: 2128504840289482562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_24
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 255
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d61cfd2caeaedcc0800000000000000
+      internalID: -3684315390613383471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_25
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 245
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cab9dda9e0583360800000000000000
+      internalID: 7149553373024991943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_26
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 250
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72f94c8835742930800000000000000
+      internalID: 4117544845055750781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_27
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 244
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862206055fe049550800000000000000
+      internalID: 6166570236555305576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_28
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 240
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a951bc388ab0da850800000000000000
+      internalID: 6389776264702137754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: headcrab_body_29
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 241
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e89ae5cedafab820800000000000000
+      internalID: 2934933941895469288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      headcrab_body_0: 3619186138636159684
+      headcrab_body_1: -4445643998147059387
+      headcrab_body_10: 2911044455547025577
+      headcrab_body_11: 8844957679250165423
+      headcrab_body_12: 1803503376634993125
+      headcrab_body_13: -8049387777729452655
+      headcrab_body_14: 5149323437199983587
+      headcrab_body_15: -5193705891760497764
+      headcrab_body_16: -5518097054203162805
+      headcrab_body_17: 700177598191129835
+      headcrab_body_18: 3304844597021959425
+      headcrab_body_19: -200905128755429074
+      headcrab_body_2: -4862261723281869192
+      headcrab_body_20: 5454538962783389930
+      headcrab_body_21: -6647329194913878049
+      headcrab_body_22: 2300702570609609217
+      headcrab_body_23: 2128504840289482562
+      headcrab_body_24: -3684315390613383471
+      headcrab_body_25: 7149553373024991943
+      headcrab_body_26: 4117544845055750781
+      headcrab_body_27: 6166570236555305576
+      headcrab_body_28: 6389776264702137754
+      headcrab_body_29: 2934933941895469288
+      headcrab_body_3: 2558421303711165415
+      headcrab_body_4: -8908231868063193485
+      headcrab_body_5: 1360179261871167718
+      headcrab_body_6: 4132675756346812133
+      headcrab_body_7: -1729088003698030260
+      headcrab_body_8: 5371880140995305887
+      headcrab_body_9: 4760053779499368442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
