@@ -71,10 +71,10 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isMiddleClassAndNotMarried;
-    private string p4 = "Anyone who is Middle Class & Not Married";
+    private string p4 = "Anyone who is Middle Class & Not currently married";
     public bool P4(PersonSchema person)
     {
-        if(person.netWorth==2 && person.marriageNum==0)
+        if(person.netWorth==2 && person.marriageNum==person.divorceNum)
             return true;
         else
             return false;
@@ -107,7 +107,7 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isNameBeginsWithGandIsPoor;
-    public string p8 = "All Lower & Middle-class, if their name begins with G";
+    private string p8 = "All Lower & Middle-class, if their name begins with G";
     public bool P8(PersonSchema person)
     {
         if (person.name.StartsWith("G") && (person.netWorth==0 ||person.netWorth==1) )
@@ -116,7 +116,7 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool hasBeenToPrisonOrisOlderThan75;
-    public string p9 = "Anyone older than 75 but younger than 85";
+    private string p9 = "Anyone older than 75 but younger than 85";
     public bool P9(PersonSchema person)
     {
         if (person.age>75 && person.age <85)
@@ -252,16 +252,9 @@ public class CommandmentsManager : MonoBehaviour
     private void SelectDailyParametersDayOne()
     {//DAY ONE's PARAMETERS, preselected so it isnt too difficult.
         isBillionaire = true;
-        PersistentData.allParameters.Remove(p2);
-
         isMiddleClassAndNotMarried = true;
-        PersistentData.allParameters.Remove(p4);
-
         isDivordedAndEmailDoesntContainANumber = true;
-        PersistentData.allParameters.Remove(p16);
-
         isZipCodeContains4 = true;
-        PersistentData.allParameters.Remove(p12);
     }
 
     public void SelectDailyParameters(int num)
