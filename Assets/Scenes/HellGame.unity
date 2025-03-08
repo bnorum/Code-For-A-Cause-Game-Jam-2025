@@ -18585,6 +18585,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5710497200747299978, guid: b30bab0fd6fd3064aa21ff854a9aac55, type: 3}
+      propertyPath: coworkers.Array.size
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710497200747299978, guid: b30bab0fd6fd3064aa21ff854a9aac55, type: 3}
+      propertyPath: 'coworkers.Array.data[20]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e3373bd8c3f37464db46a86df62e01f1, type: 2}
+    - target: {fileID: 5710497200747299978, guid: b30bab0fd6fd3064aa21ff854a9aac55, type: 3}
+      propertyPath: 'coworkers.Array.data[21]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bc6a17a6a02985429efcd7626d63750, type: 2}
     - target: {fileID: 5729794705632034964, guid: b30bab0fd6fd3064aa21ff854a9aac55, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

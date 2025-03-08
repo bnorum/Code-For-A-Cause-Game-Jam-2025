@@ -47,7 +47,7 @@ public class CoworkerManager : MonoBehaviour
 
         coworkerText.transform.parent.gameObject.SetActive(false);
 
-        coworkerIndex = 0;
+        coworkerIndex = 1;
 
         if (PersistentData.currentDay == 1) {
             PersistentData.remainingCoworkers = coworkers;
