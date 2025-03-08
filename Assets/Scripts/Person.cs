@@ -27,8 +27,8 @@ public class Person : MonoBehaviour
     public GameObject endPointGameRef;
     public GameObject childEnd;
 
-    public GameObject escalatorPL;
-    public GameObject EscalatorTab;
+    private GameObject escalatorPL;
+    private GameObject EscalatorTab;
     
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
@@ -54,6 +54,8 @@ public class Person : MonoBehaviour
         // nameTagObject.SetActive(false);
         // nameTagDefaultLocation = nameTagObject.transform;
         OutOfBoundsScript.Instance.UpdateAlivePeople(gameObject);
+        escalatorPL = FindFirstObjectByType<physicalPersonHolder>().gameObject;
+        EscalatorTab = FindFirstObjectByType<escalatorScreenManager>().gameObject;
     }
 
     private void Awake()
@@ -68,6 +70,7 @@ public class Person : MonoBehaviour
 
     private void Update()
     {
+        CheckIfColliderSouldBeOff();
         childStart.transform.position = startPointGameRef.transform.position;
         childEnd.transform.position = endPointGameRef.transform.position;
         if (Input.GetMouseButtonDown(0))
@@ -285,6 +288,13 @@ public class Person : MonoBehaviour
     public void CheckIfColliderSouldBeOff()
     {
         if(transform.parent.gameObject == escalatorPL && EscalatorTab.activeSelf)
+        {
+            personCollider.isTrigger = true;
+        }
+        else
+        {
+            personCollider.isTrigger = false;          
+        }
 
     }
 }
