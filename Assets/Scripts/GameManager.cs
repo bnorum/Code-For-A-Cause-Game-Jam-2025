@@ -72,10 +72,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        PersistentData.peopleShouldveDamnedToday = new List<PersonSchema>();
-        PersistentData.peopleShouldveSavedToday = new List<PersonSchema>();
-        PersistentData.peopleDamnedToday = new List<PersonSchema>();
-        PersistentData.peopleSavedToday = new List<PersonSchema>();
+        PersistentData.peopleShouldveDamnedToday.Clear();
+        PersistentData.peopleShouldveSavedToday.Clear();
+        PersistentData.peopleDamnedToday.Clear();
+        PersistentData.peopleSavedToday.Clear();
 
         endDayCanvas.SetActive(false);
         clockOutCanvas.SetActive(false);
