@@ -15,7 +15,7 @@ MonoBehaviour:
   coworkerImage: {fileID: 21300000, guid: a490c3ee4750eac4daa5db22e3b538c5, type: 3}
   armsImage: {fileID: 21300000, guid: eb254da37412a434e8c8d64cf6f6cb46, type: 3}
   coworkerSpeech: What's deal with airline food.
-  responseOption1: Not idulging this.
+  responseOption1: Not indulging this.
   responseOption2: Here we go.
   response1Response: C'mon, my little employee, let me have fun!
   response2Response: Some about it. It's stale, it's gross, and moreover it's something

@@ -24,4 +24,12 @@ public class CreditsLinks : MonoBehaviour
     public void JessFloresArtStation() {
         Application.OpenURL("https://www.artstation.com/jessflores606");
     }
+
+    public void DylanWeb() {
+        Application.OpenURL("https://dylanthyer.com/");
+    }
+
+    public void BradyWeb() {
+        Application.OpenURL("https://bradynorum.com/");
+    }
 }
