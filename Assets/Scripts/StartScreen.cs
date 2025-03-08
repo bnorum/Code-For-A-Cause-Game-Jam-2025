@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -36,10 +37,16 @@ public class StartScreen : MonoBehaviour
 
     public Canvas creditsCanvas;
     public Canvas gameOverCanvas;
+
+    public Image titleImage;
+    public Sprite titleSprite1;
+    public Sprite titleSprite2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (!PersistentData.isGameOver) PlayMusic();
+
+        StartCoroutine(titleSwap());
 
     }
 
@@ -91,6 +98,15 @@ public class StartScreen : MonoBehaviour
     public void OnWin() {
         foreach (AudioSource stem in stems) {
             stem.pitch = 1;
+        }
+    }
+
+    public IEnumerator titleSwap() {
+        while (true) {
+            yield return new WaitForSeconds(0.2f);
+            titleImage.sprite = titleSprite1;
+            yield return new WaitForSeconds(0.2f);
+            titleImage.sprite = titleSprite2;
         }
     }
 }
