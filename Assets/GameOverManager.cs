@@ -1,9 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-using UnityEngine.SocialPlatforms.Impl;
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 
 public class GameOverManager : MonoBehaviour
 {

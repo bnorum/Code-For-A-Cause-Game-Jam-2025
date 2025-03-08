@@ -7,6 +7,7 @@ public class garbageBin : MonoBehaviour
     public TextMeshProUGUI text;
     public float duration = 2f;
     public AudioSource dunkSFX;
+    public AudioSource correct;
     
     public SpriteAnimator flames;
 
@@ -21,6 +22,8 @@ public class garbageBin : MonoBehaviour
             PersistentData.peopleDamned.Add(collision.gameObject.GetComponent<Person>().personSchema);
             if (!collision.gameObject.GetComponent<Person>().personSchema.shouldGoToHeaven) {
                 PersistentData.peopleDeterminedCorrectly++;
+                GameManager.Instance.DeterminedCorrectly(true);
+
             }
             PersistentData.peopleDamnedToday.Add(collision.gameObject.GetComponent<Person>().personSchema);
             flames.PlayAnim();
