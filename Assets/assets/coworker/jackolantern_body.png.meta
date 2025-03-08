@@ -1,0 +1,1768 @@
+fileFormatVersion: 2
+guid: 89d8c39081152404db8080394a4eb307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4518600536733692542
+    second: jackolantern_body_0
+  - first:
+      213: -731943755638656177
+    second: jackolantern_body_1
+  - first:
+      213: 8783626490939849268
+    second: jackolantern_body_2
+  - first:
+      213: -8996685989997746937
+    second: jackolantern_body_3
+  - first:
+      213: -5165758550320736821
+    second: jackolantern_body_4
+  - first:
+      213: 6283011326601914647
+    second: jackolantern_body_5
+  - first:
+      213: 8892197475351282355
+    second: jackolantern_body_6
+  - first:
+      213: 4568899526510451353
+    second: jackolantern_body_7
+  - first:
+      213: -5690846899834884910
+    second: jackolantern_body_8
+  - first:
+      213: 279292179905728681
+    second: jackolantern_body_9
+  - first:
+      213: 8042530535223592952
+    second: jackolantern_body_10
+  - first:
+      213: 7180034804417965682
+    second: jackolantern_body_11
+  - first:
+      213: -2820501561149198488
+    second: jackolantern_body_12
+  - first:
+      213: -387123098700739401
+    second: jackolantern_body_13
+  - first:
+      213: 5212083709313028732
+    second: jackolantern_body_14
+  - first:
+      213: -902537250186504307
+    second: jackolantern_body_15
+  - first:
+      213: -916674625743600211
+    second: jackolantern_body_16
+  - first:
+      213: 86628906058570713
+    second: jackolantern_body_17
+  - first:
+      213: 6640774178086818733
+    second: jackolantern_body_18
+  - first:
+      213: 4506253050304169260
+    second: jackolantern_body_19
+  - first:
+      213: 7388475685934397112
+    second: jackolantern_body_20
+  - first:
+      213: -5882440645193546685
+    second: jackolantern_body_21
+  - first:
+      213: -2450051777135734688
+    second: jackolantern_body_22
+  - first:
+      213: 7352526410244959687
+    second: jackolantern_body_23
+  - first:
+      213: -8988263204836039411
+    second: jackolantern_body_24
+  - first:
+      213: -4824684288818078545
+    second: jackolantern_body_25
+  - first:
+      213: 6979215512664857837
+    second: jackolantern_body_26
+  - first:
+      213: 9011242577803888632
+    second: jackolantern_body_27
+  - first:
+      213: -4387242168265888343
+    second: jackolantern_body_28
+  - first:
+      213: -713161249052103292
+    second: jackolantern_body_29
+  - first:
+      213: 8992660808920765420
+    second: jackolantern_body_30
+  - first:
+      213: 2568004002904026663
+    second: jackolantern_body_31
+  - first:
+      213: -4151124423265181817
+    second: jackolantern_body_32
+  - first:
+      213: 1983973294177629153
+    second: jackolantern_body_33
+  - first:
+      213: 2994183157505891235
+    second: jackolantern_body_34
+  - first:
+      213: -7063303589303223315
+    second: jackolantern_body_35
+  - first:
+      213: 4166421696544532474
+    second: jackolantern_body_36
+  - first:
+      213: -6820193684241701543
+    second: jackolantern_body_37
+  - first:
+      213: -3869872836667640448
+    second: jackolantern_body_38
+  - first:
+      213: 7884907007053775285
+    second: jackolantern_body_39
+  - first:
+      213: 3013882137298587721
+    second: jackolantern_body_40
+  - first:
+      213: -2265911626026112102
+    second: jackolantern_body_41
+  - first:
+      213: 117262582810330665
+    second: jackolantern_body_42
+  - first:
+      213: 9014438987036831117
+    second: jackolantern_body_43
+  - first:
+      213: 5889616482402632025
+    second: jackolantern_body_44
+  - first:
+      213: 8782722405799211880
+    second: jackolantern_body_45
+  - first:
+      213: 1338471824708387788
+    second: jackolantern_body_46
+  - first:
+      213: -6431467076232751712
+    second: jackolantern_body_47
+  - first:
+      213: -8890208099540303388
+    second: jackolantern_body_48
+  - first:
+      213: -6461125506886286155
+    second: jackolantern_body_49
+  - first:
+      213: 2441182922372660755
+    second: jackolantern_body_50
+  - first:
+      213: 7678030123304713484
+    second: jackolantern_body_51
+  - first:
+      213: 2291821153773558628
+    second: jackolantern_body_52
+  - first:
+      213: 1684143295391288147
+    second: jackolantern_body_53
+  - first:
+      213: 2550408337819286508
+    second: jackolantern_body_54
+  - first:
+      213: 5198233798352137655
+    second: jackolantern_body_55
+  - first:
+      213: 5361002354440771627
+    second: jackolantern_body_56
+  - first:
+      213: 8239928031043159707
+    second: jackolantern_body_57
+  - first:
+      213: 8667559956581800396
+    second: jackolantern_body_58
+  - first:
+      213: 4385852665213506302
+    second: jackolantern_body_59
+  - first:
+      213: -4055337114356798829
+    second: jackolantern_body_60
+  - first:
+      213: -840356667599959855
+    second: jackolantern_body_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jackolantern_body_0
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 138
+        width: 1847
+        height: 2143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d491e90c4ba41c0800000000000000
+      internalID: -4518600536733692542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_1
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1675
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43b791480d97d5f0800000000000000
+      internalID: -731943755638656177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_2
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1663
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a3e2081c5b5e970800000000000000
+      internalID: 8783626490939849268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_3
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1652
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705637232c9552380800000000000000
+      internalID: -8996685989997746937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_4
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1646
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc512b4c7f98f48b0800000000000000
+      internalID: -5165758550320736821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_5
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1638
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719ecd1438db13750800000000000000
+      internalID: 6283011326601914647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_6
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 1624
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b240fead7e676b70800000000000000
+      internalID: 8892197475351282355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_7
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1621
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a1b1c89edf76f30800000000000000
+      internalID: 4568899526510451353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_8
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1606
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc653065ec0601b0800000000000000
+      internalID: -5690846899834884910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_9
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1612
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a053d302ce30e300800000000000000
+      internalID: 279292179905728681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_10
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1611
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f70c3f19eecc9f60800000000000000
+      internalID: 8042530535223592952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_11
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1588
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e2648fc9b94a360800000000000000
+      internalID: 7180034804417965682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_12
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1592
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f644716c09bd8d0800000000000000
+      internalID: -2820501561149198488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_13
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1578
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc0891c799a0aaf0800000000000000
+      internalID: -387123098700739401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_14
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1580
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c721431d48a055840800000000000000
+      internalID: 5212083709313028732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_15
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1568
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87531e172b8973f0800000000000000
+      internalID: -902537250186504307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_16
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1564
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da540fdd8415743f0800000000000000
+      internalID: -916674625743600211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_17
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1559
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbd6e4f784c33100800000000000000
+      internalID: 86628906058570713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_18
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 1552
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3937e3ee4c82c50800000000000000
+      internalID: 6640774178086818733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_19
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1549
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25866b264d698e30800000000000000
+      internalID: 4506253050304169260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_20
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 1548
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6fab39d73298660800000000000000
+      internalID: 7388475685934397112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_21
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1548
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3444be2566f5d5ea0800000000000000
+      internalID: -5882440645193546685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_22
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 1518
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060928eb3eaaffdd0800000000000000
+      internalID: -2450051777135734688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_23
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1537
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd245490db690660800000000000000
+      internalID: 7352526410244959687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_24
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1522
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05a800bc36434380800000000000000
+      internalID: -8988263204836039411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_25
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 1523
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac179b93374b0db0800000000000000
+      internalID: -4824684288818078545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_26
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 1504
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decd84308872bd060800000000000000
+      internalID: 6979215512664857837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_27
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1514
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f740e2816d5e0d70800000000000000
+      internalID: 9011242577803888632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_28
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1500
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ada5e81e726d13c0800000000000000
+      internalID: -4387242168265888343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_29
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1491
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48decaa5f975a16f0800000000000000
+      internalID: -713161249052103292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_30
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 1502
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce39c4d4c595ccc70800000000000000
+      internalID: 8992660808920765420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_31
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1498
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e20e6e80263a320800000000000000
+      internalID: 2568004002904026663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_32
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1485
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f94d4a45e3466c0800000000000000
+      internalID: -4151124423265181817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_33
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1491
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3b153133d788b10800000000000000
+      internalID: 1983973294177629153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_34
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1469
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab9897c7b97d8920800000000000000
+      internalID: 2994183157505891235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_35
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1478
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: debf6dafeca1afd90800000000000000
+      internalID: -7063303589303223315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_36
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 1442
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af76407557a12d930800000000000000
+      internalID: 4166421696544532474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_37
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1453
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9552967aafdc951a0800000000000000
+      internalID: -6820193684241701543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_38
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 1463
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085fd7498237b4ac0800000000000000
+      internalID: -3869872836667640448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_39
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1457
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1cd6a9521dc6d60800000000000000
+      internalID: 7884907007053775285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_40
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1434
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940d39ce5d573d920800000000000000
+      internalID: 3013882137298587721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_41
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 1427
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b2946a16ddd80e0800000000000000
+      internalID: -2265911626026112102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_42
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1431
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926cad1a2b990a100800000000000000
+      internalID: 117262582810330665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_43
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1417
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d23c78f78b91d70800000000000000
+      internalID: 9014438987036831117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_44
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1423
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95105e87cfe1cb150800000000000000
+      internalID: 5889616482402632025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_45
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1409
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863b686ce7f72e970800000000000000
+      internalID: 8782722405799211880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_46
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1401
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3cc957805339210800000000000000
+      internalID: 1338471824708387788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_47
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 1392
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5d68005c6deb6a0800000000000000
+      internalID: -6431467076232751712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_48
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1375
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e18997f5d2af9480800000000000000
+      internalID: -8890208099540303388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_49
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1371
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4c3d085987556a0800000000000000
+      internalID: -6461125506886286155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_50
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1376
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31eb5c71fe2d0e120800000000000000
+      internalID: 2441182922372660755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_51
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1353
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d735a97b7dd8a60800000000000000
+      internalID: 7678030123304713484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_52
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1345
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b166f523f2ecf10800000000000000
+      internalID: 2291821153773558628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_53
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1328
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b47a877674f5710800000000000000
+      internalID: 1684143295391288147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_54
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 1338
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebb9efdeded46320800000000000000
+      internalID: 2550408337819286508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_55
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 556
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd65322916d32840800000000000000
+      internalID: 5198233798352137655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_56
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 492
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b289970dc3b166a40800000000000000
+      internalID: 5361002354440771627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_57
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 107
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b968c1123ea1a5270800000000000000
+      internalID: 8239928031043159707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_58
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 104
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc955799bdb594870800000000000000
+      internalID: 8667559956581800396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_59
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 107
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2504303cdaddc30800000000000000
+      internalID: 4385852665213506302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_60
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 104
+        width: 439
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a2e4e616c88b7c0800000000000000
+      internalID: -4055337114356798829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jackolantern_body_61
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 104
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8c21f20147654f0800000000000000
+      internalID: -840356667599959855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jackolantern_body_0: -4518600536733692542
+      jackolantern_body_1: -731943755638656177
+      jackolantern_body_10: 8042530535223592952
+      jackolantern_body_11: 7180034804417965682
+      jackolantern_body_12: -2820501561149198488
+      jackolantern_body_13: -387123098700739401
+      jackolantern_body_14: 5212083709313028732
+      jackolantern_body_15: -902537250186504307
+      jackolantern_body_16: -916674625743600211
+      jackolantern_body_17: 86628906058570713
+      jackolantern_body_18: 6640774178086818733
+      jackolantern_body_19: 4506253050304169260
+      jackolantern_body_2: 8783626490939849268
+      jackolantern_body_20: 7388475685934397112
+      jackolantern_body_21: -5882440645193546685
+      jackolantern_body_22: -2450051777135734688
+      jackolantern_body_23: 7352526410244959687
+      jackolantern_body_24: -8988263204836039411
+      jackolantern_body_25: -4824684288818078545
+      jackolantern_body_26: 6979215512664857837
+      jackolantern_body_27: 9011242577803888632
+      jackolantern_body_28: -4387242168265888343
+      jackolantern_body_29: -713161249052103292
+      jackolantern_body_3: -8996685989997746937
+      jackolantern_body_30: 8992660808920765420
+      jackolantern_body_31: 2568004002904026663
+      jackolantern_body_32: -4151124423265181817
+      jackolantern_body_33: 1983973294177629153
+      jackolantern_body_34: 2994183157505891235
+      jackolantern_body_35: -7063303589303223315
+      jackolantern_body_36: 4166421696544532474
+      jackolantern_body_37: -6820193684241701543
+      jackolantern_body_38: -3869872836667640448
+      jackolantern_body_39: 7884907007053775285
+      jackolantern_body_4: -5165758550320736821
+      jackolantern_body_40: 3013882137298587721
+      jackolantern_body_41: -2265911626026112102
+      jackolantern_body_42: 117262582810330665
+      jackolantern_body_43: 9014438987036831117
+      jackolantern_body_44: 5889616482402632025
+      jackolantern_body_45: 8782722405799211880
+      jackolantern_body_46: 1338471824708387788
+      jackolantern_body_47: -6431467076232751712
+      jackolantern_body_48: -8890208099540303388
+      jackolantern_body_49: -6461125506886286155
+      jackolantern_body_5: 6283011326601914647
+      jackolantern_body_50: 2441182922372660755
+      jackolantern_body_51: 7678030123304713484
+      jackolantern_body_52: 2291821153773558628
+      jackolantern_body_53: 1684143295391288147
+      jackolantern_body_54: 2550408337819286508
+      jackolantern_body_55: 5198233798352137655
+      jackolantern_body_56: 5361002354440771627
+      jackolantern_body_57: 8239928031043159707
+      jackolantern_body_58: 8667559956581800396
+      jackolantern_body_59: 4385852665213506302
+      jackolantern_body_6: 8892197475351282355
+      jackolantern_body_60: -4055337114356798829
+      jackolantern_body_61: -840356667599959855
+      jackolantern_body_7: 4568899526510451353
+      jackolantern_body_8: -5690846899834884910
+      jackolantern_body_9: 279292179905728681
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
