@@ -36,7 +36,7 @@ public class CommandmentsManager : MonoBehaviour
         }
         else
         {
-            SelectDailyParameters(4);
+            SelectDailyParameters(5);
             CheckDailyParameterMatches();
             SetManualText();
         }
@@ -143,10 +143,10 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isZipCodeContains4;
-    private string p12 ="Anyone who's zip code or email contains a 4";
+    private string p12 ="Anyone who's zip code and email contain a 4";
     public bool P12(PersonSchema person)
     {
-        if (person.zipCode.Contains("4") || person.emailHandle.Contains("4") || person.emailDomain.Contains("4"))
+        if (person.zipCode.Contains("4") && person.emailHandle.Contains("4") || person.emailDomain.Contains("4"))
             return true;
         else
             return false;
@@ -179,10 +179,10 @@ public class CommandmentsManager : MonoBehaviour
             return false;
     }
     public bool isDivordedAndEmailDoesntContainANumber;
-    private string p16 = "If Someone Has divorced, unless their email handle contains a number";
+    private string p16 = "Anyone whos divorced more than once, unless their email handle contains a number";
     public bool P16(PersonSchema person)
         {
-            if (person.divorceNum > 0 && (person.emailHandle.Contains("1") || person.emailHandle.Contains("2") || person.emailHandle.Contains("3") || person.emailHandle.Contains("4") || person.emailHandle.Contains("5") || person.emailHandle.Contains("6") ||  person.emailHandle.Contains("7") || person.emailHandle.Contains("8") || person.emailHandle.Contains("9") || person.emailHandle.Contains("0")))
+            if (person.divorceNum > 1 && (person.emailHandle.Contains("1") || person.emailHandle.Contains("2") || person.emailHandle.Contains("3") || person.emailHandle.Contains("4") || person.emailHandle.Contains("5") || person.emailHandle.Contains("6") ||  person.emailHandle.Contains("7") || person.emailHandle.Contains("8") || person.emailHandle.Contains("9") || person.emailHandle.Contains("0")))
             {   
                 return true;
             }
@@ -199,10 +199,10 @@ public class CommandmentsManager : MonoBehaviour
                 return false;
         }
     public bool isZipHasA2ButNotA1;
-    private string p18 = "If Someone's zip does not contain a 1, 2, 3, 5, or 8";
+    private string p18 = "If Someone's zip does not contain a    2, 3, 5, or 8";
     public bool P18(PersonSchema person)
         {
-            if (!person.zipCode.Contains("1") && !person.zipCode.Contains("2")&& !person.zipCode.Contains("3")&& !person.zipCode.Contains("5")&& !person.zipCode.Contains("8"))
+            if (!person.zipCode.Contains("2")&& !person.zipCode.Contains("3")&& !person.zipCode.Contains("5")&& !person.zipCode.Contains("8"))
                 return true;
             else
                 return false;
@@ -384,15 +384,17 @@ public class CommandmentsManager : MonoBehaviour
         if (isAgeLessThan21) parametersCombined += p19 + "\n";
         if (isTotalMarriages0BracketLower) parametersCombined += p20 + "\n";
         if (PersistentData.currentDay == 5) parametersCombined += "Faith lies about Charity, \nCharity lies about Hope, \nJustice lies about Hope, \nHope lies about herself. \nBut it's only one of them. \nAnd forget about lying this time.";
-        // List<PersonSchema> people = GameManager.Instance.chosenEmailPeople;
-        // foreach (PersonSchema person in people)
-        // {
-        //     if (UnityEngine.Random.Range(0,2) == 0) {
-        //         commandmentText += "\n" + person.commandment;
-        //     }
-        // }
         Debug.Log(parametersCombined);
-        Manual.Instance.manualText.Add($"Daily Hell Parameters\nHere's todays list of what to send to hell:\n\n\n {parametersCombined}");
+        List<PersonSchema> people = GameManager.Instance.chosenEmailPeople;
+        foreach (PersonSchema person in people)
+        {
+            if (UnityEngine.Random.Range(0,2) == 0) {
+                commandmentText += "\n" + person.commandment;
+            }
+        }
+        Manual.Instance.manualText.Add($"Commandments\nHere are the offical commandments a human must uphold in order to be permitted to heaven:\n\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God (capital G).\nNo adultery.\n\nExtra Notes:\n{commandmentText}");
+        Manual.Instance.manualText.Add($"Daily Hell Parameters\nHere's God's list for today ofwhat he wants you to send to hell:\n\n\n {parametersCombined}");
+
     }
 
     public void ResetAllParams()
