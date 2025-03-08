@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -18,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     public float time = 540f;
     public int datenum;
-
     public int chosenEmailCount;
     public int chosenParameterCount;
     public float timeUntilNextEmail = 5f;
@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
     public EmailSchema quadrupletsEmail;
     public int currentEmailPersonSpawned=0;
     public int currentParameterPersonSpawned=0;
+    public AudioSource plop;
+    public AudioSource succeeded;
+    public AudioSource missed;
+
 
     //HACK: I fucked up big time and have to use these four arrays. They tell if an email has been sent yet
 
@@ -302,6 +306,7 @@ public class GameManager : MonoBehaviour
         currentParameterPersonSpawned++;
         GameObject obj = Instantiate(physicalPerson, startPoint.position, Quaternion.identity, escalatorWindowPersonHolder);
         Person personScript = obj.GetComponent<Person>();
+        plop.Play();
         personScript.Init(chosenParameterPeople[index], personBounds, startPoint.gameObject, endPoint.gameObject);
         personScript.StartMovement(escalatorTravelDuration);
         Debug.Log("Spawned Person");
@@ -358,6 +363,11 @@ public class GameManager : MonoBehaviour
             clockOutMachine.transform.position = Vector3.Lerp(clockOutMachine.transform.position, clockOutMachineTarget.transform.position, Time.deltaTime * 2.0f);
             yield return null;
         }
-
+    }
+    public IEnumerator DeterminedCorrectly(bool didSucceed)
+    {
+        yield return new WaitForSeconds(1f);
+        if(didSucceed) succeeded.Play();
+        else missed.Play();
     }
 }

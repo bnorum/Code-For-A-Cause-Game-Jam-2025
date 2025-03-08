@@ -6,6 +6,7 @@ public class garbageBin : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public float duration = 2f;
+    public AudioSource dunkSFX;
     
     public SpriteAnimator flames;
 
@@ -23,6 +24,7 @@ public class garbageBin : MonoBehaviour
             }
             PersistentData.peopleDamnedToday.Add(collision.gameObject.GetComponent<Person>().personSchema);
             flames.PlayAnim();
+
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses(true);
             Destroy(collision.gameObject);

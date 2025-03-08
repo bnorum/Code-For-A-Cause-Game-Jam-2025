@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class heavenCollider : MonoBehaviour
 {
+    public AudioSource aaah;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Person")
@@ -14,6 +15,7 @@ public class heavenCollider : MonoBehaviour
             OutOfBoundsScript.Instance.UpdateAlivePeople(collision.gameObject);
             collision.gameObject.GetComponent<Person>().GetBonuses(false);
             Destroy(collision.gameObject);
+            aaah.Play();
             Destroy(collision.gameObject.GetComponent<Person>().startPointGameRef);
             Destroy(collision.gameObject.GetComponent<Person>().endPointGameRef);
 
