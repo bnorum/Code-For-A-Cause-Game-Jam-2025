@@ -22,9 +22,11 @@ public class Person : MonoBehaviour
     private float durationReference;
     private float elapsedTime = 0.0f;
     public bool isBeingTransported = false;
-    public GameObject child;
     public GameObject startPointGameRef;
+    public GameObject childStart;
     public GameObject endPointGameRef;
+    public GameObject childEnd;
+    
     public bool isMicrowaving = false;
     public bool hasBeenMicrowaved = false;
     public GameObject cursorPoint;
@@ -42,8 +44,8 @@ public class Person : MonoBehaviour
     {
         this.personSchema = personSchema;
         boundsCollider = collider;
-        startPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
-        endPointGameRef = Instantiate(child, GameManager.Instance.gameObject.transform);
+        startPointGameRef = Instantiate(childStart, GameManager.Instance.gameObject.transform);
+        endPointGameRef = Instantiate(childEnd, GameManager.Instance.gameObject.transform);
         startPointGameRef.transform.position = startPoint.transform.position;
         endPointGameRef.transform.position = endPoint.transform.position;
         // nameTagObject.SetActive(false);
@@ -63,6 +65,8 @@ public class Person : MonoBehaviour
 
     private void Update()
     {
+        childStart.transform.position = startPointGameRef.transform.position;
+        childEnd.transform.position = endPointGameRef.transform.position;
         if (Input.GetMouseButtonDown(0))
         {
             TryStartDragging();
@@ -117,7 +121,7 @@ public class Person : MonoBehaviour
     private void MoveToPosition(float duration)
     {
         float t = elapsedTime / duration;
-        transform.position = Vector3.Lerp(startPointGameRef.transform.position, endPointGameRef.transform.position, t);
+        transform.position = Vector3.Lerp(childStart.transform.position, childEnd.transform.position, t);
         Vector3 newPosition = transform.position;
         newPosition.z = transform.parent.position.z;
         transform.position = newPosition;
