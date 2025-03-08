@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
   m_Name: Coworker 14
   m_EditorClassIdentifier: 
-  coworkerImage: {fileID: 934683400, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
+  coworkerImage: {fileID: 21300000, guid: 5e31f0629851a684eb463bad63a8b4e8, type: 3}
   armsImage: {fileID: 0}
   coworkerSpeech: I just went to the bathroom.
   responseOption1: Cool

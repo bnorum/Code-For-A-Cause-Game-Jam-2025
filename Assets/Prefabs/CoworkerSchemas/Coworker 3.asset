@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
   m_Name: Coworker 3
   m_EditorClassIdentifier: 
-  coworkerImage: {fileID: -1017651442, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
-  armsImage: {fileID: 0}
+  coworkerImage: {fileID: 21300000, guid: 8c8b35d154651174ba220bb6d1ea01a2, type: 3}
+  armsImage: {fileID: 21300000, guid: 6476eedf2379800418c25f3299e33eea, type: 3}
   coworkerSpeech: Wanna skip work on Saturday?
   responseOption1: There's no work on Saturday
   responseOption2: No

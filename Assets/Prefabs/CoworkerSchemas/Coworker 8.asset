@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
   m_Name: Coworker 8
   m_EditorClassIdentifier: 
-  coworkerImage: {fileID: -986331008, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
-  armsImage: {fileID: 0}
+  coworkerImage: {fileID: 21300000, guid: c2810d4c7cf648445b448fcf3078511b, type: 3}
+  armsImage: {fileID: 21300000, guid: d1cb7a73648385646ab5fac9cdc406bd, type: 3}
   coworkerSpeech: Hey dude, what religion are you?
   responseOption1: Satanist
   responseOption2: Other

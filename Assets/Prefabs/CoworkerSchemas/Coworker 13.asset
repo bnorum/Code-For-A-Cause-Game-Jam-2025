@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662a15b3bd6013b4fb89642b343826d9, type: 3}
   m_Name: Coworker 13
   m_EditorClassIdentifier: 
-  coworkerImage: {fileID: 686991572, guid: 24ce3a4f0ae12da448661db479fc468f, type: 3}
+  coworkerImage: {fileID: 21300000, guid: e2f9b4b1b014c2a41851c1e5d151704f, type: 3}
   armsImage: {fileID: 0}
   coworkerSpeech: Vo'hedoq-gluth!
   responseOption1: I don't speak demon

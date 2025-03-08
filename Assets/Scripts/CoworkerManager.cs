@@ -140,6 +140,7 @@ public class CoworkerManager : MonoBehaviour
             coworkerImage.sprite = coworkers[randomIndex].coworkerImage;
             if (coworkers[coworkerIndex].armsImage != null)
                 coworkerArms.sprite = coworkers[randomIndex].armsImage;
+            AlignPivot();
             coworkerText.text = coworkers[randomIndex].coworkerSpeech;
             responseOption1.text = coworkers[randomIndex].responseOption1;
             responseOption2.text = coworkers[randomIndex].responseOption2;
@@ -187,5 +188,47 @@ public class CoworkerManager : MonoBehaviour
             PersistentData.coworkerFriendlinessScore -= coworkers[coworkerIndex].friendlinessScore;
         }
         Debug.Log("Friendliness score: " + PersistentData.coworkerFriendlinessScore);
+    }
+
+    public void AlignPivot() {
+        if (coworkerImage != null && coworkerImage.sprite != null)
+        {
+            // Get the sprite's pivot
+            Vector2 spritePivot = coworkerImage.sprite.pivot;
+
+            // Get the sprite's dimensions
+            float spriteWidth = coworkerImage.sprite.rect.width;
+            float spriteHeight = coworkerImage.sprite.rect.height;
+
+            // Convert to normalized RectTransform pivot
+            Vector2 rectTransformPivot = new Vector2(spritePivot.x / spriteWidth, spritePivot.y / spriteHeight);
+
+            // Set the RectTransform's pivot
+            coworkerImage.rectTransform.pivot = rectTransformPivot;
+        }
+        else
+        {
+            //something here
+        }
+
+        if (coworkerArms != null && coworkerArms.sprite != null)
+        {
+            // Get the sprite's pivot
+            Vector2 spritePivot = coworkerArms.sprite.pivot;
+
+            // Get the sprite's dimensions
+            float spriteWidth = coworkerArms.sprite.rect.width;
+            float spriteHeight = coworkerArms.sprite.rect.height;
+
+            // Convert to normalized RectTransform pivot
+            Vector2 rectTransformPivot = new Vector2(spritePivot.x / spriteWidth, spritePivot.y / spriteHeight);
+
+            // Set the RectTransform's pivot
+            coworkerArms.rectTransform.pivot = rectTransformPivot;
+        }
+        else
+        {
+            //something here
+        }
     }
 }
