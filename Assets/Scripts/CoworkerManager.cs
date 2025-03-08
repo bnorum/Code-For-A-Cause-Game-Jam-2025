@@ -144,8 +144,8 @@ public class CoworkerManager : MonoBehaviour
             responseOption1.text = coworkers[randomIndex].responseOption1;
             responseOption2.text = coworkers[randomIndex].responseOption2;
             coworkerText.transform.parent.gameObject.SetActive(false);
-            coworkerArms.SetNativeSize();
-            coworkerImage.SetNativeSize();
+            //coworkerArms.SetNativeSize();
+            //coworkerImage.SetNativeSize();
         } else {
             SummonCoworker();
         }

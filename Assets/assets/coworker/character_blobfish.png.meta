@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: -8699543505612566928
     second: character_blobfish_1
-  - first:
-      213: -9025814638879287711
-    second: character_blobfish_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,10 +52,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.50000006, y: 0.11557916}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 227, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -148,12 +145,12 @@ TextureImporter:
       name: character_blobfish_0
       rect:
         serializedVersion: 2
-        x: 181
-        y: 216
+        x: 140
+        y: 182
         width: 1735
         height: 1751
-      alignment: 9
-      pivot: {x: 0.50000006, y: 0.023849461}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,12 +167,12 @@ TextureImporter:
       name: character_blobfish_1
       rect:
         serializedVersion: 2
-        x: 2041
-        y: 160
-        width: 41
-        height: 129
+        x: 1040
+        y: 76
+        width: 77
+        height: 58
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,34 +185,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: character_blobfish_2
-      rect:
-        serializedVersion: 2
-        x: 1081
-        y: 110
-        width: 77
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1665411286dddb280800000000000000
-      internalID: -9025814638879287711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 87297a5d3b448b74b8776c80a04344c9
-    internalID: -1645006754
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -226,7 +201,6 @@ TextureImporter:
     nameFileIdTable:
       character_blobfish_0: -8803006087238561040
       character_blobfish_1: -8699543505612566928
-      character_blobfish_2: -9025814638879287711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

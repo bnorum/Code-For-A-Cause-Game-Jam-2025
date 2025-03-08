@@ -20,18 +20,6 @@ TextureImporter:
   - first:
       213: 5451610355298301749
     second: character_headcrab_5
-  - first:
-      213: 6471905201553816205
-    second: character_headcrab_6
-  - first:
-      213: 5612966061828497955
-    second: character_headcrab_7
-  - first:
-      213: 384401695878319345
-    second: character_headcrab_8
-  - first:
-      213: 1813524049010366366
-    second: character_headcrab_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,10 +64,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.16616079}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 136, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -169,12 +157,12 @@ TextureImporter:
       name: character_headcrab_0
       rect:
         serializedVersion: 2
-        x: 186
-        y: 157
-        width: 2358
-        height: 1965
+        x: 7
+        y: 199
+        width: 1967
+        height: 1639
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +179,12 @@ TextureImporter:
       name: character_headcrab_1
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 2105
-        width: 40
-        height: 38
+        x: 838
+        y: 1824
+        width: 34
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +201,12 @@ TextureImporter:
       name: character_headcrab_2
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 2108
-        width: 65
+        x: 881
+        y: 1821
+        width: 54
         height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +223,12 @@ TextureImporter:
       name: character_headcrab_3
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 2102
-        width: 8
-        height: 6
+        x: 936
+        y: 1825
+        width: 34
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +245,12 @@ TextureImporter:
       name: character_headcrab_4
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 2102
-        width: 8
-        height: 9
+        x: 751
+        y: 190
+        width: 64
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +267,12 @@ TextureImporter:
       name: character_headcrab_5
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 2100
-        width: 10
-        height: 9
+        x: 883
+        y: 174
+        width: 48
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,100 +285,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: character_headcrab_6
-      rect:
-        serializedVersion: 2
-        x: 1300
-        y: 2106
-        width: 40
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8a3e9ebd73d0d950800000000000000
-      internalID: 6471905201553816205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_headcrab_7
-      rect:
-        serializedVersion: 2
-        x: 1335
-        y: 2101
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3226c9bf4e245ed40800000000000000
-      internalID: 5612966061828497955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_headcrab_8
-      rect:
-        serializedVersion: 2
-        x: 1078
-        y: 146
-        width: 75
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fc82e54e4ba55500800000000000000
-      internalID: 384401695878319345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_headcrab_9
-      rect:
-        serializedVersion: 2
-        x: 1236
-        y: 127
-        width: 57
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9714ec938eea2910800000000000000
-      internalID: 1813524049010366366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -405,10 +305,6 @@ TextureImporter:
       character_headcrab_3: -2160496871637364593
       character_headcrab_4: -2011122703139810331
       character_headcrab_5: 5451610355298301749
-      character_headcrab_6: 6471905201553816205
-      character_headcrab_7: 5612966061828497955
-      character_headcrab_8: 384401695878319345
-      character_headcrab_9: 1813524049010366366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

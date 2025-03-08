@@ -26,9 +26,6 @@ TextureImporter:
   - first:
       213: -5542748129478873756
     second: character_jackolantern_7
-  - first:
-      213: -2500308379905756955
-    second: character_jackolantern_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,8 +70,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.17290513}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -166,12 +163,12 @@ TextureImporter:
       name: character_jackolantern_0
       rect:
         serializedVersion: 2
-        x: 241
-        y: 53
-        width: 1892
-        height: 2493
+        x: 248
+        y: 8
+        width: 1517
+        height: 1992
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +185,12 @@ TextureImporter:
       name: character_jackolantern_1
       rect:
         serializedVersion: 2
-        x: 2088
-        y: 513
-        width: 87
-        height: 246
+        x: 1729
+        y: 392
+        width: 64
+        height: 182
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +207,12 @@ TextureImporter:
       name: character_jackolantern_2
       rect:
         serializedVersion: 2
-        x: 2159
-        y: 444
-        width: 38
-        height: 59
+        x: 1786
+        y: 321
+        width: 31
+        height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +229,12 @@ TextureImporter:
       name: character_jackolantern_3
       rect:
         serializedVersion: 2
-        x: 2151
-        y: 423
-        width: 20
-        height: 15
+        x: 1779
+        y: 304
+        width: 17
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +251,12 @@ TextureImporter:
       name: character_jackolantern_4
       rect:
         serializedVersion: 2
-        x: 2209
-        y: 420
-        width: 17
-        height: 16
+        x: 1826
+        y: 302
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +273,12 @@ TextureImporter:
       name: character_jackolantern_5
       rect:
         serializedVersion: 2
-        x: 2226
-        y: 427
-        width: 17
-        height: 11
+        x: 1840
+        y: 301
+        width: 90
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +295,12 @@ TextureImporter:
       name: character_jackolantern_6
       rect:
         serializedVersion: 2
-        x: 2241
-        y: 419
-        width: 98
-        height: 15
+        x: 213
+        y: 264
+        width: 33
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +317,12 @@ TextureImporter:
       name: character_jackolantern_7
       rect:
         serializedVersion: 2
-        x: 193
-        y: 372
-        width: 48
-        height: 26
+        x: 742
+        y: 0
+        width: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -338,34 +335,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: character_jackolantern_8
-      rect:
-        serializedVersion: 2
-        x: 854
-        y: 21
-        width: 38
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e0f8c296ce1d4dd0800000000000000
-      internalID: -2500308379905756955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -382,7 +357,6 @@ TextureImporter:
       character_jackolantern_5: -6691109426693118184
       character_jackolantern_6: -562138290700564396
       character_jackolantern_7: -5542748129478873756
-      character_jackolantern_8: -2500308379905756955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: 5774063170589284490
     second: character_canine1_1
-  - first:
-      213: 8955324534992575716
-    second: character_canine1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,10 +52,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.49841887, y: 0.07511375}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 168, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -148,12 +145,12 @@ TextureImporter:
       name: character_canine1_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 1342
-        width: 11
-        height: 6
+        x: 6
+        y: 1081
+        width: 78
+        height: 73
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,12 +167,12 @@ TextureImporter:
       name: character_canine1_1
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1294
-        width: 72
-        height: 78
+        x: 27
+        y: 0
+        width: 1906
+        height: 1966
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,34 +185,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: character_canine1_2
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 126
-        width: 2029
-        height: 2111
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ec929c9734b74c70800000000000000
-      internalID: 8955324534992575716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -226,7 +201,6 @@ TextureImporter:
     nameFileIdTable:
       character_canine1_0: 9004970832106669230
       character_canine1_1: 5774063170589284490
-      character_canine1_2: 8955324534992575716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

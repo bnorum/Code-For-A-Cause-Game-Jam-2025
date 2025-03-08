@@ -23,9 +23,6 @@ TextureImporter:
   - first:
       213: 8929817099678480263
     second: jackolantern_arm_6
-  - first:
-      213: 9081077157401968266
-    second: jackolantern_arm_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,8 +67,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.1729051}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -163,12 +160,12 @@ TextureImporter:
       name: jackolantern_arm_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 185
-        width: 1646
-        height: 1385
+        x: 444
+        y: 8
+        width: 1317
+        height: 1109
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,12 +182,12 @@ TextureImporter:
       name: jackolantern_arm_1
       rect:
         serializedVersion: 2
-        x: 2064
-        y: 645
-        width: 44
-        height: 79
+        x: 1760
+        y: 391
+        width: 29
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,12 +204,12 @@ TextureImporter:
       name: jackolantern_arm_2
       rect:
         serializedVersion: 2
-        x: 2092
-        y: 576
-        width: 38
-        height: 59
+        x: 1782
+        y: 321
+        width: 31
+        height: 45
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -229,12 +226,12 @@ TextureImporter:
       name: jackolantern_arm_3
       rect:
         serializedVersion: 2
-        x: 2084
-        y: 555
-        width: 20
-        height: 15
+        x: 1776
+        y: 304
+        width: 16
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -251,12 +248,12 @@ TextureImporter:
       name: jackolantern_arm_4
       rect:
         serializedVersion: 2
-        x: 2142
-        y: 552
-        width: 17
-        height: 16
+        x: 1822
+        y: 301
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -273,12 +270,12 @@ TextureImporter:
       name: jackolantern_arm_5
       rect:
         serializedVersion: 2
-        x: 2159
-        y: 559
-        width: 17
-        height: 11
+        x: 1836
+        y: 307
+        width: 27
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,12 +292,12 @@ TextureImporter:
       name: jackolantern_arm_6
       rect:
         serializedVersion: 2
-        x: 2174
-        y: 559
-        width: 18
-        height: 7
+        x: 739
+        y: 0
+        width: 25
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,34 +310,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: jackolantern_arm_7
-      rect:
-        serializedVersion: 2
-        x: 787
-        y: 153
-        width: 38
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8ebbd0af87760e70800000000000000
-      internalID: 9081077157401968266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -356,7 +331,6 @@ TextureImporter:
       jackolantern_arm_4: -7249360963378403710
       jackolantern_arm_5: 5066641346297466158
       jackolantern_arm_6: 8929817099678480263
-      jackolantern_arm_7: 9081077157401968266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
