@@ -36,7 +36,6 @@ public class Manual : MonoBehaviour
         manualText = new List<string>
         {
             "Contents\n\nPage 1: Contents\nPage 2: Commandments\nPage 3: Daily Parameters\n\n",
-            "Commandments\nHere are the offical commandments a human must uphold in order to be permitted to heaven:\n\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God (capital G).\nNo adultery.",
         };
         pagenumber = 0;
         manualTextBox.text = manualText[pagenumber];

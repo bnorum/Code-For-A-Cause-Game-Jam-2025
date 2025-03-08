@@ -135,6 +135,8 @@ MonoBehaviour:
   - {fileID: -6875558426017249961, guid: 34df1f5a4809006449292a047cde21b7, type: 3}
   - {fileID: 1741848061314110212, guid: 34df1f5a4809006449292a047cde21b7, type: 3}
   - {fileID: -329492321866047933, guid: 34df1f5a4809006449292a047cde21b7, type: 3}
+  parent: {fileID: 2041481681499013037}
+  LABRAT: {fileID: -7437019228305108301, guid: 1f297f9ba38805849957729266262369, type: 3}
 --- !u!1 &1498972382933887564
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,9 +163,9 @@ Transform:
   m_GameObject: {fileID: 1498972382933887564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.02}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5928846598622561822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
