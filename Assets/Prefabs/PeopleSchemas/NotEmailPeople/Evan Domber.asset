@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b6c972e5ce3d040b74fdcd5b07c032, type: 3}
-  m_Name: XXX
+  m_Name: Evan Domber
   m_EditorClassIdentifier: 
   isEmailPerson: 0
-  personName: 
-  age: 0
-  emailHandle: 
-  emailDomain: 
-  address: 
-  zipCode: 
-  occupation: 
-  netWorth: 0
-  isLefty: 0
-  marriageNum: 0
-  divorceNum: 0
-  worstThing: 
-  hobby: 
+  personName: Evan Domber
+  age: 29
+  emailHandle: edman63
+  emailDomain: '@hmail.com'
+  address: 77 Hartsfield Lane
+  zipCode: 17425
+  occupation: Florist
+  netWorth: 2
+  isLefty: 1
+  marriageNum: 1
+  divorceNum: 1
+  worstThing: Cheated on his driving exam
+  hobby: Trucks
   hasBeenToPrison: 0
   relatedEmails: []
   relatedEmailsUsed: 
-  shouldGoToHeaven: 0
+  shouldGoToHeaven: 1
   failedDailyParameters: 0
   commandment: 

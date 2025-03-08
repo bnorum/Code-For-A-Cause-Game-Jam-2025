@@ -35,8 +35,8 @@ public class Manual : MonoBehaviour
         startPosition = transform.position;
         manualText = new List<string>
         {
-            "Hell.gov - Purgatory Dept PC Operator's Manual",
-            "Commandments\nHere are the offical Moral Guidelines to whether someone can go to heaven:\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God (capital G).\nNo adultery.",
+            "Contents\n\nPage 1: Contents\nPage 2: Commandments\nPage 3: Daily Parameters\n\n",
+            "Commandments\nHere are the offical commandments a human must uphold in order to be permitted to heaven:\n\n\nNo lying.\nNo stealing.\nNo choosing other gods aside from God (capital G).\nNo adultery.",
         };
         pagenumber = 0;
         manualTextBox.text = manualText[pagenumber];
